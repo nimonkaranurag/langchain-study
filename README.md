@@ -1,3 +1,24 @@
+## Quick Run
+
+Download and set-up `Ollama` then:
+```bash
+ollama pull llama3.1:8b
+```
+
+For tracing with `langsmith`, set-up a `.env` file at the project root that has the following keys:
+```
+export LANGSMITH_TRACING=true
+LANGSMITH_API_KEY=<your_langsmith_api_key>
+export LANGSMITH_PROJECT=langchain-study
+```
+
+**Run the following commands in a Python (>=3.12) environment:**
+
+```bash
+pip install -e .
+python -m assistants.hr_assistant.main
+```
+
 # Notes
 
 - A langchain `chain` is a sequence of operations where the O/P of one step is the I/P to the next step.
