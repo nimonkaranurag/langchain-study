@@ -3,9 +3,12 @@ import os
 from dataclasses import dataclass
 from typing import List
 
+from dotenv import load_dotenv
 from rich.console import Console
 
 from assistants.hr_assistant.hr_assistant_builder import HRAssistantBuilder
+
+load_dotenv("langchain-study/.env")
 
 console = Console()
 
