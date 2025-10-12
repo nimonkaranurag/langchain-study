@@ -8,7 +8,14 @@ from rich.console import Console
 
 from assistants.hr_assistant.hr_assistant_builder import HRAssistantBuilder
 
-load_dotenv("langchain-study/.env")
+__root_dir__ = os.path.dirname(__file__)
+HR_SYSTEM_INSTRUCTIONS_PATH = os.path.join(
+    __root_dir__,
+    "resources",
+    "system_prompt.json",
+)
+ENV_FILE_PATH = os.path.join(__root_dir__, "..", "..", ".env")
+load_dotenv(ENV_FILE_PATH)
 
 console = Console()
 
@@ -17,14 +24,6 @@ console = Console()
 class SystemInstructions:
     raw_system_instructions: str
     system_instruction_variables: List[str]
-
-
-__root_dir__ = os.path.dirname(__file__)
-HR_SYSTEM_INSTRUCTIONS_PATH = os.path.join(
-    __root_dir__,
-    "resources",
-    "system_prompt.json",
-)
 
 
 def _load_system_instructions() -> SystemInstructions:
