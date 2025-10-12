@@ -3,19 +3,19 @@ import os
 from dataclasses import dataclass
 from typing import List
 
-from dotenv import load_dotenv
 from rich.console import Console
 
+from assistants import __root_dir__, init_env
 from assistants.hr_assistant.hr_assistant_builder import HRAssistantBuilder
 
-__root_dir__ = os.path.dirname(__file__)
 HR_SYSTEM_INSTRUCTIONS_PATH = os.path.join(
     __root_dir__,
+    "hr_assistant",
     "resources",
     "system_prompt.json",
 )
-ENV_FILE_PATH = os.path.join(__root_dir__, "..", "..", ".env")
-load_dotenv(ENV_FILE_PATH)
+
+init_env()
 
 console = Console()
 
