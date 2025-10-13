@@ -18,12 +18,16 @@ console = Console()
 
 tools = [TavilySearch()]
 llm = get_provider()
+structured_llm = llm.with_structured_output(
+    schema=SearchAgentResponse,
+)
 
-"""
+
 PROMPT_OWNER_STRING = "hwchase17/react"
 react_prompt: PromptTemplate = hub.pull(PROMPT_OWNER_STRING)
-"""
 
+
+"""
 output_parser = PydanticOutputParser(
     pydantic_object=SearchAgentResponse,
 )
@@ -39,6 +43,7 @@ react_prompt = PromptTemplate(
     template=get_search_agent_react_template(),
     template_format="jinja2",
 ).partial(format_instructions=output_parser.get_format_instructions())
+"""
 
 agent = create_react_agent(
     llm=llm,
@@ -54,12 +59,14 @@ agent_executor = AgentExecutor(
 
 response_output_extractor = RunnableLambda(lambda response: response["output"])
 
+"""
 response_output_formatter = RunnableLambda(
     lambda response_output: output_parser.parse(response_output)
 )
+"""
 
 agent_query_pipeline = (
-    agent_executor | response_output_extractor | response_output_formatter
+    agent_executor | response_output_extractor | structured_llm
 )
 
 

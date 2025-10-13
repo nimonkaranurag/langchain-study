@@ -106,7 +106,7 @@ python -m assistants.react_agent.main
     - Basically, it will make the `invoke(..)` method call available on that function.
     - Since it can be "invoked": it can be chained into a `RunnableSequence` using LCEL.
     ```python
-    from langchain_core.
+    from langchain_core.runnables import RunnableLambda
     ```
     
 ## ReAct architecture
@@ -202,8 +202,27 @@ python -m assistants.react_agent.main
         # the expectation set by `get_format_instructions()` is: the LLM will generate an output in a JSON format
         ```
         - The `.partial(<input_variable>=<variable_value>,...)` is useful for returning a "partially formatted" `PromptTemplate` => this is useful when you have *some* variable values beforehand but not all.
-        - REMEMBER: this will return a `PromptTemplate` while `.format(...)` returns a string. 
+        - REMEMBER: this will return a `PromptTemplate` while `.format(...)` returns a string.
+    - Using "pydantic parsing" in the aforementioned fashion is not favoured because: in this case, **we are expecting the LLM to comply with the formatting requirements.**
+        - Depending on the model size (if a smaller model like `gpt-3` is used), this might not always work and will often lead to parsing errors.
+        - This is a prompt-level/text-based enforcement of the expected output format and not very robust.
 - The landscape has evolved now, modern LLMs support **native function calling**.
+    - As an extension to the above discussion of "text-based" tool-calling, there is now a more modern and favoured approach for *models which support this feature:*
+        ```python
+        llm = ChatGroq(model="openai/gpt-oss-120b")
+        structured_llm = llm.with_structured_output(
+            <your_pydantic_data_model>
+        )
+        ```
+        - Models which support **native function/tool calling** can be chained with the `.with_structured_output(..)` call for formatting the response returned.
+        - Now, you can:
+            - remove the explicit "formatting_instructions" (saving input tokens) passed via text to the "regular" `llm`.
+            - use the `structured_llm` to format the output response using the simple text response returned by the "regular" llm.
+        - This is also preferred because:
+            - easier to use (plug and play parsing)
+            - higher reliability
+            - all modern state of the art models support native function calling
+        - `.with_structured_output(..)` **falls back** to using output parsers when native function calling isn't supported by the model!
 - "Agents" in the langchain ecosystem have evolved in the following manner:
     ```
     Text-based tool calling through prompt itself ->
