@@ -7,9 +7,14 @@ ollama pull llama3.1:8b
 
 For tracing with `langsmith`, set-up a `.env` file at the project root that has the following keys:
 ```
-export LANGSMITH_TRACING=true
+LANGSMITH_TRACING=true
 LANGSMITH_API_KEY=<your_langsmith_api_key>
-export LANGSMITH_PROJECT=langchain-study
+LANGSMITH_PROJECT=langchain-study
+```
+
+To use the react agent, you must also provide:
+```python
+TAVILY_API_KEY=<your_tavily_api_key>
 ```
 
 **Run the following commands in a Python (>=3.12) environment:**
@@ -108,7 +113,7 @@ python -m assistants.hr_assistant.main
 
     When you have resolved the question:
         Thought: I now think I have a final answer
-        Action: the final answer to the question
+        Final Answer: the final answer to the question
     
     Begin!
 
@@ -116,6 +121,53 @@ python -m assistants.hr_assistant.main
     Thought: {agent_scratch_pad}
     ```
     - the `Action` and `Action Input` were then parsed by the system backend to finally execute the "tool call".
+    - The `agent_scratch_pad` is initially an empty string:
+        ```python
+        ""
+        ```
+        - The `agent_scratch_pad` captures the context of the model's recommended `Action`, `Action Input` and `Observation` thus far.
+        - It expands like so:
+            ```python
+            Action: <tool_name>
+            Action Input: <tool_args>
+            Observation: <tool_output>
+            (...)
+            Action: <tool_name>
+            Action Input: <tool_args>
+            Observation: <tool_output>
+            Thought:
+
+            # the `Thought:` is always an empty placeholder prompt appended after the last `Observation` (at the end).
+            ```
+        - So the prompt iself would go from:
+            *first iteration*
+            ```python
+            <aforementioned ReAct instructions>
+
+            (...)
+
+            Begin!
+
+            Question: <user_query>
+            Thought:
+            ```
+            *n-th iteration*
+            ```python
+            <aforementioned ReAct instructions>
+
+            (...)
+
+            Begin!
+
+            Action: <tool_name>
+            Action Input: <tool_args>
+            Observation: <tool_output>
+            (...)
+            Action: <tool_name>
+            Action Input: <tool_args>
+            Observation: <tool_output>
+            Thought:
+            ```
 - The landscape has evolved now, modern LLMs support **native function calling**.
 - "Agents" in the langchain ecosystem have evolved in the following manner:
     ```

@@ -32,19 +32,16 @@ agent_executor = AgentExecutor(
 
 
 def main():
+        
+    user_input = console.input("[b magenta]User🙋🏽‍♂️:")
 
-    while True:
-        user_input = console.input("[b magenta]User🙋🏽‍♂️:")
-        if "QUIT" in user_input:
-            break
+    assistant_response = agent_executor.invoke(
+        input={
+            "input": user_input,
+        }
+    )
 
-        assistant_response = agent_executor.invoke(
-            input={
-                "input": user_input,
-            }
-        )
-
-        console.print(f"[b cyan]HR🤖:[/b cyan]{assistant_response}")
+    console.print(f"[b cyan]Search Assistant🔎:[/b cyan]{assistant_response}")
 
 
 if __name__ == "__main__":
