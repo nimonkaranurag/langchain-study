@@ -8,8 +8,7 @@ from langchain_tavily import TavilySearch
 from rich.console import Console
 
 from assistants import init_env
-from assistants.react_agent.resources.react_prompt import \
-    SEARCH_ENGINE_REACT_PROMPT
+from assistants.react_agent import get_search_agent_react_template
 from assistants.react_agent.schemas import SearchAgentResponse
 from assistants.utils import get_ollama_provider
 
@@ -37,7 +36,8 @@ react_prompt = PromptTemplate(
         "input",
         "agent_scratchpad",
     ],
-    template=SEARCH_ENGINE_REACT_PROMPT,
+    template=get_search_agent_react_template(),
+    template_format="jinja2",
 ).partial(format_instructions=output_parser.get_format_instructions())
 
 agent = create_react_agent(

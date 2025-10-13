@@ -24,6 +24,10 @@ pip install -e .
 python -m assistants.hr_assistant.main
 ```
 
+### Expected Output
+
+![hr assistant](output/hr_assistant.png)
+
 ```bash
 pip install -e .
 python -m assistants.react_agent.main
