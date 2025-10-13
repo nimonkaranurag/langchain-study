@@ -31,7 +31,6 @@ class HRAssistantBuilder:
             input_variables=list(self.system_instruction_variables.keys()),
             template=self.raw_system_instructions,
             template_format="f-string",
-            validate_template=True if self.system_instruction_variables else False,
         ).format(
             **self.system_instruction_variables,
         )

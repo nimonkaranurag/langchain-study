@@ -24,6 +24,15 @@ pip install -e .
 python -m assistants.hr_assistant.main
 ```
 
+```bash
+pip install -e .
+python -m assistants.react_agent.main
+```
+
+### Expected Output
+
+![react agent](output/react_agent.png)
+
 ## Langchain Notes
 
 - A langchain `chain` is a sequence of operations where the O/P of one step is the I/P to the next step.
@@ -168,6 +177,22 @@ python -m assistants.hr_assistant.main
             Observation: <tool_output>
             Thought:
             ```
+    - To support structured LLM outputs, langchain provides `output_parsers` that work with `pydantic` data models to generate expected formats:
+        ```python
+        from langchain_core.output_parsers.pydantic import PydanticOutputParser
+
+        output_parser = PydanticOutputParser(
+            pydantic_object=<your_data_model>
+        )
+        # this is only an output parser.
+
+        prompt_template_with_format_instructions = PromptTemplate(...).partial(
+            <input_variable_used_as_placeholder_for_instructions_in_text_template>=output_parser.get_format_instructions()
+        )
+        # the expectation set by `get_format_instructions()` is: the LLM will generate an output in a JSON format
+        ```
+        - The `.partial(<input_variable>=<variable_value>,...)` is useful for returning a "partially formatted" `PromptTemplate` => this is useful when you have *some* variable values beforehand but not all.
+        - REMEMBER: this will return a `PromptTemplate` while `.format(...)` returns a string. 
 - The landscape has evolved now, modern LLMs support **native function calling**.
 - "Agents" in the langchain ecosystem have evolved in the following manner:
     ```
