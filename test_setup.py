@@ -2,7 +2,7 @@ import rich
 from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 
-from assistants.utils import get_ollama_provider
+from assistants.utils import get_provider
 
 load_dotenv(".env")
 
@@ -24,7 +24,7 @@ he is known for his varying musical style and polarizing cultural and political 
         template=instructions_template,
     )
 
-    llm = get_ollama_provider()
+    llm = get_provider()
 
     chain = prompt | llm
 

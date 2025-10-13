@@ -1,8 +1,8 @@
 ## Quick Run
 
-Download and set-up `Ollama` then:
-```bash
-ollama pull llama3.1:8b
+Sign into `Groq` (this is the inference endpoint provider/model provider default) and create an `.env` file with the key:
+```
+GROQ_API_KEY=<your_groq_api_key>
 ```
 
 For tracing with `langsmith`, set-up a `.env` file at the project root that has the following keys:
@@ -102,6 +102,12 @@ python -m assistants.react_agent.main
         - description
         - expected args
     - The model itself doesn't execute a tool, this is done by the langchain backend. The model only produces the arguments need for the call.
+- The `RunnableLambda` wrapper allows you type-cast any Python function(usually a lambda function) into a langchain `Runnable`. 
+    - Basically, it will make the `invoke(..)` method call available on that function.
+    - Since it can be "invoked": it can be chained into a `RunnableSequence` using LCEL.
+    ```python
+    from langchain_core.
+    ```
     
 ## ReAct architecture
 

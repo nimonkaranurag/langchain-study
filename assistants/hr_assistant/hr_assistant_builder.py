@@ -3,7 +3,7 @@ from typing import Dict, Optional
 from langchain.prompts import PromptTemplate
 
 from assistants.hr_assistant.hr_assistant import HRAssistant
-from assistants.utils import get_ollama_provider
+from assistants.utils import get_provider
 
 
 class HRAssistantBuilder:
@@ -18,7 +18,7 @@ class HRAssistantBuilder:
 
     def build(self) -> HRAssistant:
 
-        llm = get_ollama_provider()
+        llm = get_provider()
         rendered_system_instructions = self.render_prompt()
 
         return HRAssistant(
