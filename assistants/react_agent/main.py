@@ -1,16 +1,17 @@
 from langchain import hub
-from langchain_core.output_parsers.pydantic import PydanticOutputParser
-from langchain_core.runnables import RunnableLambda
 from langchain.agents import AgentExecutor
 from langchain.agents.react.agent import create_react_agent
 from langchain.prompts import PromptTemplate
+from langchain_core.output_parsers.pydantic import PydanticOutputParser
+from langchain_core.runnables import RunnableLambda
 from langchain_tavily import TavilySearch
 from rich.console import Console
 
 from assistants import init_env
-from assistants.utils import get_ollama_provider
-from assistants.react_agent.resources.react_prompt import SEARCH_ENGINE_REACT_PROMPT
+from assistants.react_agent.resources.react_prompt import \
+    SEARCH_ENGINE_REACT_PROMPT
 from assistants.react_agent.schemas import SearchAgentResponse
+from assistants.utils import get_ollama_provider
 
 init_env()
 
@@ -35,11 +36,9 @@ react_prompt = PromptTemplate(
         "format_instructions",
         "input",
         "agent_scratchpad",
-        ],
+    ],
     template=SEARCH_ENGINE_REACT_PROMPT,
-).partial(
-    format_instructions=output_parser.get_format_instructions()
-)
+).partial(format_instructions=output_parser.get_format_instructions())
 
 agent = create_react_agent(
     llm=llm,
@@ -68,7 +67,9 @@ def main():
         assistant_response["output"]
     )
 
-    console.print(f"[b cyan]Search Assistant🔎:[/b cyan]{formatted_response.agent_response}")
+    console.print(
+        f"[b cyan]Search Assistant🔎:[/b cyan]{formatted_response.agent_response}"
+    )
     console.print(f"[b yellow][dim]Sources:{formatted_response.sources}")
 
 
