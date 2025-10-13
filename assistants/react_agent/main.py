@@ -52,16 +52,16 @@ agent_executor = AgentExecutor(
     handle_parsing_errors=True,
 )
 
-response_output_extractor=RunnableLambda(
-    lambda response: response["output"]
-)
+response_output_extractor = RunnableLambda(lambda response: response["output"])
 
-response_output_formatter=RunnableLambda(
+response_output_formatter = RunnableLambda(
     lambda response_output: output_parser.parse(response_output)
 )
 
-agent_query_pipeline = \
+agent_query_pipeline = (
     agent_executor | response_output_extractor | response_output_formatter
+)
+
 
 def main():
 
@@ -76,9 +76,7 @@ def main():
     console.print(
         f"[b cyan]Search Assistant🔎:[/b cyan]{formatted_assistant_response.agent_response}"
     )
-    console.print(
-        f"[b yellow][dim]Sources:{formatted_assistant_response.sources}"
-    )
+    console.print(f"[b yellow][dim]Sources:{formatted_assistant_response.sources}")
 
 
 if __name__ == "__main__":

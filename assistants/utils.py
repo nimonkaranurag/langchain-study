@@ -1,7 +1,7 @@
 from typing import Optional
 
-from langchain_ollama import ChatOllama
 from langchain_groq import ChatGroq
+from langchain_ollama import ChatOllama
 
 
 def _get_ollama_provider(
@@ -13,8 +13,9 @@ def _get_ollama_provider(
         num_predict=256,
     )
 
+
 def _get_groq_provider(
-        model: Optional[str] = "llama-3.3-70b-versatile",
+    model: Optional[str] = "llama-3.3-70b-versatile",
 ) -> ChatGroq:
     return ChatGroq(
         model=model,
@@ -22,15 +23,16 @@ def _get_groq_provider(
         max_tokens=256,
     )
 
+
 def get_provider(
-        provider_name: str = "groq",
-        model: str = "llama-3.3-70b-versatile",
+    provider_name: str = "groq",
+    model: str = "llama-3.3-70b-versatile",
 ):
-    if provider_name=="groq":
+    if provider_name == "groq":
         return _get_groq_provider(
             model=model,
         )
-    elif provider_name=="ollama":
+    elif provider_name == "ollama":
         return _get_ollama_provider(
             model=model,
         )
