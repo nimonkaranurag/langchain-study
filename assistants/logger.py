@@ -1,4 +1,5 @@
 import logging
+import os
 
 from rich.console import Console
 from rich.logging import RichHandler
@@ -45,10 +46,14 @@ def setup_logger(
     CONFIGURED_LOGGER = True
 
 
-def get_logger(
-    name: str = __package__,
-    level: int = logging.INFO,
-):
+def get_logger():
+
+    level_str = os.getenv(
+        "LANGCHAIN_STUDY_LOG_LEVEL",
+        "INFO",
+    )
+
+    level = getattr(logging, level_str.upper(), logging.INFO)
 
     if not CONFIGURED_LOGGER:
         setup_logger(
@@ -56,5 +61,5 @@ def get_logger(
         )
 
     return logging.getLogger(
-        name=name,
+        name=__package__,
     )

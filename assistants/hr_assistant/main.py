@@ -7,6 +7,10 @@ from rich.console import Console
 
 from assistants import __root_dir__, init_env
 from assistants.hr_assistant.hr_assistant_builder import HRAssistantBuilder
+from assistants.hr_assistant.tools import request_time_off
+from assistants.logger import get_logger
+
+logger = get_logger()
 
 HR_SYSTEM_INSTRUCTIONS_PATH = os.path.join(
     __root_dir__,
@@ -42,20 +46,25 @@ def _load_system_instructions() -> SystemInstructions:
 
 def main():
 
-    console.print("[dim]⚙️ loading system instructions...")
+    logger.info("[b d]⚙️ Loading system instructions...")
 
     system_instructions = _load_system_instructions()
 
-    console.print("[dim]🪄 building assistant...")
+    logger.info("[b d]🪄 Building assistant...")
 
     hr_assistant_builder = HRAssistantBuilder(
         raw_system_instructions=system_instructions.raw_system_instructions,
         system_instruction_variables=system_instructions.system_instruction_variables,
+        tools=[
+            request_time_off,
+        ],
     )
 
     hr_assistant = hr_assistant_builder.build()
 
-    console.print("[dim]success!")
+    logger.info("[b d]Assistant built successfully!")
+
+    logger.info("[b d]Beginning user-assistant interaction")
 
     while True:
         user_input = console.input("[b magenta]User🙋🏽‍♂️:")

@@ -17,9 +17,14 @@ To use the react agent, you must also provide:
 TAVILY_API_KEY=<your_tavily_api_key>
 ```
 
+Set the logging level using:
+```bash
+export LANGCHAIN_STUDY_LOG_LEVEL=DEBUG
+```
+
 **Run the following commands in a Python (>=3.12) environment:**
 
-_a basic HR assistant, with no tools or special prompting - can be used for testing local setup/sanity checks_
+_a basic HR assistant, for now - it can apply for time-off requests for "nimo@ibm.com"_
 
 ```bash
 pip install -e .
