@@ -1,6 +1,8 @@
-from typing import Optional
+from __future__ import annotations
 
-from pydantic import BaseModel
+import datetime
+
+from pydantic import BaseModel, model_validator
 
 
 class Date(BaseModel):
@@ -14,6 +16,20 @@ class Date(BaseModel):
 
     def __str__(self) -> str:
         return f"{self.day}/{self.month}/{self.year}"
+
+    @model_validator(mode="after")
+    def validate_date_time(self) -> "Date":
+
+        try:
+            datetime.date(self.year, self.month, self.day)
+
+        except Exception as e:
+            raise ValueError(
+                f"Invalid date: '{self.day}/{self.month}/{self.year}'\n"
+                f"Error: {e}"
+            )
+
+        return self
 
 
 class TimeOffRequest(BaseModel):
