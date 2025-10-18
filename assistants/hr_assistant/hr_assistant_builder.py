@@ -1,7 +1,6 @@
 from typing import Dict, Optional
 
 from langchain.prompts import PromptTemplate
-from langchain.tools.render import render_text_description_and_args
 
 from assistants.assistant_builder import AssistantBuilder
 from assistants.hr_assistant.hr_assistant import HRAssistant

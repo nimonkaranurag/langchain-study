@@ -22,7 +22,9 @@ logger = get_logger()
 
 class SearchAssistantBuilder(AssistantBuilder):
 
-    def __init__(self, prompt_template: Optional[PromptTemplate] = react_prompt):
+    def __init__(
+        self, prompt_template: Optional[PromptTemplate] = react_prompt
+    ):
         self.prompt_template = prompt_template
 
     def build(
@@ -63,7 +65,9 @@ class SearchAssistantBuilder(AssistantBuilder):
             handle_parsing_errors=True,
         )
 
-        response_output_extractor = RunnableLambda(lambda response: response["output"])
+        response_output_extractor = RunnableLambda(
+            lambda response: response["output"]
+        )
 
         logger.info("[b d]Creating an assistant query pipeline")
         assistant_query_pipeline = (

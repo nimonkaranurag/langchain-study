@@ -1,7 +1,11 @@
 from typing import Any, List
 
-from langchain_core.messages import (AIMessage, HumanMessage, SystemMessage,
-                                     ToolMessage)
+from langchain_core.messages import (
+    AIMessage,
+    HumanMessage,
+    SystemMessage,
+    ToolMessage,
+)
 from langchain_core.tools import BaseTool
 
 from assistants.assistant import Assistant
@@ -35,7 +39,9 @@ class HRAssistant(Assistant):
 
     def query(self, user_input: str) -> str:
 
-        logger.debug(f"[b d]Sending the user message: {user_input} to the assistant")
+        logger.debug(
+            f"[b d]Sending the user message: {user_input} to the assistant"
+        )
 
         self.conversation_history.append(
             HumanMessage(
@@ -49,7 +55,9 @@ class HRAssistant(Assistant):
 
         for _ in range(MAX_RETRIES):
 
-            assistant_response: AIMessage = self.llm.invoke(self.conversation_history)
+            assistant_response: AIMessage = self.llm.invoke(
+                self.conversation_history
+            )
 
             self.conversation_history.append(
                 assistant_response,
