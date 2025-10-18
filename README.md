@@ -19,6 +19,8 @@ TAVILY_API_KEY=<your_tavily_api_key>
 
 **Run the following commands in a Python (>=3.12) environment:**
 
+_a basic HR assistant, with no tools or special prompting - can be used for testing local setup/sanity checks_
+
 ```bash
 pip install -e .
 python -m assistants.hr_assistant.main
@@ -27,6 +29,8 @@ python -m assistants.hr_assistant.main
 ### Expected Output
 
 ![hr assistant](output/hr_assistant.png)
+
+_a ReAct seach agent with structured outputs, can perform summarization of search results, powered by `TavilySearch`_
 
 ```bash
 pip install -e .
