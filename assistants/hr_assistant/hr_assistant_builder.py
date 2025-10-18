@@ -2,11 +2,12 @@ from typing import Dict, Optional
 
 from langchain.prompts import PromptTemplate
 
+from assistants.assistant_builder import AssistantBuilder
 from assistants.hr_assistant.hr_assistant import HRAssistant
 from assistants.utils import get_provider
 
 
-class HRAssistantBuilder:
+class HRAssistantBuilder(AssistantBuilder):
 
     def __init__(
         self,

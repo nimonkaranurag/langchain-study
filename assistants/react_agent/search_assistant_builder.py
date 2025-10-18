@@ -8,6 +8,7 @@ from langchain_core.runnables import RunnableLambda
 from langchain_tavily import TavilySearch
 from pydantic import BaseModel
 
+from assistants.assistant_builder import AssistantBuilder
 from assistants.logger import get_logger
 from assistants.react_agent.schemas import SearchAgentResponse
 from assistants.react_agent.search_assistant import SearchAssistant
@@ -19,7 +20,7 @@ react_prompt: PromptTemplate = hub.pull(PROMPT_OWNER_STRING)
 logger = get_logger()
 
 
-class SearchAssistantBuilder:
+class SearchAssistantBuilder(AssistantBuilder):
 
     def __init__(self, prompt_template: Optional[PromptTemplate] = react_prompt):
         self.prompt_template = prompt_template

@@ -5,8 +5,7 @@ from assistants.logger import get_logger
 from assistants.react_agent import get_search_agent_react_template
 from assistants.react_agent.schemas import SearchAgentResponse
 from assistants.react_agent.search_assistant import SearchAssistant
-from assistants.react_agent.search_assistant_builder import \
-    SearchAssistantBuilder
+from assistants.react_agent.search_assistant_builder import SearchAssistantBuilder
 
 logger = get_logger()
 
