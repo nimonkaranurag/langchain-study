@@ -19,8 +19,6 @@ def setup_logger(
         __package__,
     )
 
-    print(__package__)
-
     package_logger.setLevel(
         level,
     )
