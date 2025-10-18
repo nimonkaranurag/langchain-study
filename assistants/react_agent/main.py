@@ -1,83 +1,30 @@
-from langchain import hub
-from langchain.agents import AgentExecutor
-from langchain.agents.react.agent import create_react_agent
-from langchain.prompts import PromptTemplate
-from langchain_core.output_parsers.pydantic import PydanticOutputParser
-from langchain_core.runnables import RunnableLambda
-from langchain_tavily import TavilySearch
 from rich.console import Console
 
 from assistants import init_env
+from assistants.logger import get_logger
 from assistants.react_agent import get_search_agent_react_template
 from assistants.react_agent.schemas import SearchAgentResponse
-from assistants.utils import get_provider
+from assistants.react_agent.search_assistant import SearchAssistant
+from assistants.react_agent.search_assistant_builder import \
+    SearchAssistantBuilder
 
-init_env()
+logger = get_logger()
 
 console = Console()
-
-tools = [TavilySearch()]
-llm = get_provider()
-structured_llm = llm.with_structured_output(
-    schema=SearchAgentResponse,
-)
-
-
-PROMPT_OWNER_STRING = "hwchase17/react"
-react_prompt: PromptTemplate = hub.pull(PROMPT_OWNER_STRING)
-
-
-"""
-output_parser = PydanticOutputParser(
-    pydantic_object=SearchAgentResponse,
-)
-
-react_prompt = PromptTemplate(
-    input_variables=[
-        "tools",
-        "tool_names",
-        "format_instructions",
-        "input",
-        "agent_scratchpad",
-    ],
-    template=get_search_agent_react_template(),
-    template_format="jinja2",
-).partial(format_instructions=output_parser.get_format_instructions())
-"""
-
-agent = create_react_agent(
-    llm=llm,
-    tools=tools,
-    prompt=react_prompt,
-)
-agent_executor = AgentExecutor(
-    agent=agent,
-    tools=tools,
-    verbose=True,
-    handle_parsing_errors=True,
-)
-
-response_output_extractor = RunnableLambda(lambda response: response["output"])
-
-"""
-response_output_formatter = RunnableLambda(
-    lambda response_output: output_parser.parse(response_output)
-)
-"""
-
-agent_query_pipeline = (
-    agent_executor | response_output_extractor | structured_llm
-)
 
 
 def main():
 
+    logger.info("[b d]Initializing environment")
+    init_env()
+
+    logger.info("[b d]Building search assistant")
+    search_assistant: SearchAssistant = SearchAssistantBuilder().build()
+
     user_input = console.input("[b magenta]User🙋🏽‍♂️:")
 
-    formatted_assistant_response: SearchAgentResponse = agent_query_pipeline.invoke(
-        input={
-            "input": user_input,
-        }
+    formatted_assistant_response: SearchAgentResponse = search_assistant.query(
+        user_input=user_input,
     )
 
     console.print(
