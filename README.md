@@ -232,6 +232,39 @@ python -m assistants.search_assistant.main
             - higher reliability
             - all modern state of the art models support native function calling
         - `.with_structured_output(..)` **falls back** to using output parsers when native function calling isn't supported by the model!
+    - Having _native tool calling support_ implies that the model provider offers a `tools=` argument through their own API.
+        - Previously, you would have to supply a "Stop Token" like so:
+            ```python
+            llm = ChatOpenAI(
+                **kwargs,
+                stop=[
+                    "...",
+                    "\nObservation:", # for example
+                    "...", # can pass any number of "stop tokens"
+                ]
+            )
+            ```
+            - The `stop=` argument defines a list of tokens at which point the LLM stops generating further text.
+            - Setting this to `"\nObservation:"` will cause:
+                ```bash
+                ❌ Without stop sequence:
+                    Thought: I need to search for this
+                    Action: Wikipedia
+                    Action Input: "Python programming"
+                    Observation: Python is a high-level language... [HALLUCINATED!]
+                    Thought: Based on that... [reasoning based on made-up data]
+                
+                ✅ With stop=["\nObservation:"]:
+                    Thought: I need to search for this
+                    Action: Wikipedia  
+                    Action Input: "Python programming"
+                    [STOPS HERE - agent executes tool]
+                    Observation: [REAL Wikipedia result inserted by framework]  
+                    [Feed back to LLM for next iteration]
+                ```
+            - The "stop token" itself is not included in the response returned by the LLM; generation stops at the token just before it.
+            - The problem with this approach was un-timely and unexpected parsing issues, which further supported the move to native-function calling.
+        - The `langchain` framework would then parse the: `"\nAction:"` and `"\nAction Input:"` recommended by the LLM and then execute it to continue the ReAct loop.
 - "Agents" in the langchain ecosystem have evolved in the following manner:
     ```
     Text-based tool calling through prompt itself ->
