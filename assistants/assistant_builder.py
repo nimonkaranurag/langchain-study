@@ -7,4 +7,4 @@ class AssistantBuilder(ABC):
 
     @abstractmethod
     def build(self) -> Assistant:
-        pass
+        raise NotImplementedError

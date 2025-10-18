@@ -252,6 +252,7 @@ python -m assistants.search_assistant.main
             - Langchain offers built-in parsing which you can use to build your own ReAct loop; the parser will output either of these two objects based on the LLM's response:
                 - `AgentAction` : if the model recommends an `\nAction:` with an `\nAction Input:`
                 - `AgentFinish` : if the model declares that it knows the "final answer".
+                _This is useful for individual agent step parsing viz a viz the final output parsing discussed so far_.
 - The landscape has evolved now, modern LLMs support **native function calling**.
     - As an extension to the above discussion of "text-based" tool-calling, there is now a more modern and favoured approach for *models which support this feature:*
         ```python
@@ -270,6 +271,12 @@ python -m assistants.search_assistant.main
             - all modern state of the art models support native function calling
         - `.with_structured_output(..)` **falls back** to using output parsers when native function calling isn't supported by the model!
     - Having _native tool calling support_ implies that the model provider offers a `tools=` argument through their own API.
+    - For production-grade scaling of LLM applications, this is the recommended practice: rely on the model provider to give you structured JSON outputs through their native function calling capabilities.
+    - The **only drawback** of using a vendor-provided function calling capability is that the reasoning process of the LLM is a black box however, the tool selection process is considered reliable enough to depend on. 
+        - The models are fine-tuned by the vendors to be able to select the right tool for a task.
+        - However the reasoning process itself is a blackbox from a debugging perspective.
+        - For fine-grained control: use Chain of Thought prompting with few-shot examples.
+        - If you want the vendor to do the "heavy lifting" of tool selection then use native function calling.
 - "Agents" in the langchain ecosystem have evolved in the following manner:
     ```
     Text-based tool calling through prompt itself ->

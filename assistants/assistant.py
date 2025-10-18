@@ -6,4 +6,4 @@ class Assistant(ABC):
 
     @abstractmethod
     def query(sel, user_input: str) -> Any:
-        pass
+        raise NotImplementedError
