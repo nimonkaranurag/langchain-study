@@ -252,6 +252,9 @@ python -m assistants.search_assistant.main
             - Langchain offers built-in parsing which you can use to build your own ReAct loop; the parser will output either of these two objects based on the LLM's response:
                 - `AgentAction` : if the model recommends an `\nAction:` with an `\nAction Input:`
                 - `AgentFinish` : if the model declares that it knows the "final answer".
+                
+                In the backend, all of this is done through RegEx parsing.
+
                 _This is useful for individual agent step parsing viz a viz the final output parsing discussed so far_.
 - The landscape has evolved now, modern LLMs support **native function calling**.
     - As an extension to the above discussion of "text-based" tool-calling, there is now a more modern and favoured approach for *models which support this feature:*
@@ -277,6 +280,10 @@ python -m assistants.search_assistant.main
         - However the reasoning process itself is a blackbox from a debugging perspective.
         - For fine-grained control: use Chain of Thought prompting with few-shot examples.
         - If you want the vendor to do the "heavy lifting" of tool selection then use native function calling.
+        - The LLM doesn't actually make the tool call. The onus is still on you to take the args returned by the vendor and actually execute the tool.
+    - `langchain` provides a unified interface for using vendor provided native tool calling capabilities of LLMs.
+        - `ChatModel.bind_tools()` to attach tool definitions to model calls.
+        - Then the `AIMessage` returned by the model would have an `AIMessage.tool_calls` which is an attribute for easily accessing the tool calls the model has decided to make.
 - "Agents" in the langchain ecosystem have evolved in the following manner:
     ```
     Text-based tool calling through prompt itself ->

@@ -35,7 +35,7 @@ class HRAssistantBuilder(AssistantBuilder):
         )
 
         logger.debug(
-            "[b d]Rendering HR assistant to the prompt template:\n"
+            "[b d]Rendering HR assistant input variables to the prompt template:\n"
             f"[b d]{self.raw_system_instructions[:100]} ..."
         )
 
