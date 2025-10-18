@@ -66,6 +66,9 @@ def main():
 
     logger.info("[b d]Beginning user-assistant interaction")
 
+    console.print(
+        "[b green] Type [b yellow]'QUIT'[/b yellow] to terminate interaction."
+    )
     while True:
         user_input = console.input("[b magenta]User🙋🏽‍♂️:")
         if "QUIT" in user_input:

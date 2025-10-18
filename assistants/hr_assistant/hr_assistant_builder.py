@@ -4,7 +4,10 @@ from langchain.prompts import PromptTemplate
 
 from assistants.assistant_builder import AssistantBuilder
 from assistants.hr_assistant.hr_assistant import HRAssistant
+from assistants.logger import get_logger
 from assistants.utils import get_provider
+
+logger = get_logger()
 
 
 class HRAssistantBuilder(AssistantBuilder):
@@ -22,8 +25,18 @@ class HRAssistantBuilder(AssistantBuilder):
     def build(self) -> HRAssistant:
 
         llm = get_provider()
+
+        logger.debug(
+            f"[b d]Binding tools to model: {type(llm)}/{llm.model_name}"
+        )
+
         llm_with_tools = llm.bind_tools(
             self.tools,
+        )
+
+        logger.debug(
+            "[b d]Rendering HR assistant to the prompt template:\n"
+            f"[b d]{self.raw_system_instructions[:100]} ..."
         )
 
         rendered_system_instructions = self.render_prompt()
