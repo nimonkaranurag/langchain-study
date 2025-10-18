@@ -215,24 +215,8 @@ python -m assistants.search_assistant.main
     - Using "pydantic parsing" in the aforementioned fashion is not favoured because: in this case, **we are expecting the LLM to comply with the formatting requirements.**
         - Depending on the model size (if a smaller model like `gpt-3` is used), this might not always work and will often lead to parsing errors.
         - This is a prompt-level/text-based enforcement of the expected output format and not very robust.
-- The landscape has evolved now, modern LLMs support **native function calling**.
-    - As an extension to the above discussion of "text-based" tool-calling, there is now a more modern and favoured approach for *models which support this feature:*
-        ```python
-        llm = ChatGroq(model="openai/gpt-oss-120b")
-        structured_llm = llm.with_structured_output(
-            <your_pydantic_data_model>
-        )
-        ```
-        - Models which support **native function/tool calling** can be chained with the `.with_structured_output(..)` call for formatting the response returned.
-        - Now, you can:
-            - remove the explicit "formatting_instructions" (saving input tokens) passed via text to the "regular" `llm`.
-            - use the `structured_llm` to format the output response using the simple text response returned by the "regular" llm.
-        - This is also preferred because:
-            - easier to use (plug and play parsing)
-            - higher reliability
-            - all modern state of the art models support native function calling
-        - `.with_structured_output(..)` **falls back** to using output parsers when native function calling isn't supported by the model!
-    - Having _native tool calling support_ implies that the model provider offers a `tools=` argument through their own API.
+        **How to built the `AgentExecutor` from scratch?**
+        - This can be done using a simple while loop, expanding the `{agent_scratchpad}` with subsequent conversation turns and parsing the output at each agent step to execute tools.
         - Previously, you would have to supply a "Stop Token" like so:
             ```python
             llm = ChatOpenAI(
@@ -265,6 +249,27 @@ python -m assistants.search_assistant.main
             - The "stop token" itself is not included in the response returned by the LLM; generation stops at the token just before it.
             - The problem with this approach was un-timely and unexpected parsing issues, which further supported the move to native-function calling.
         - The `langchain` framework would then parse the: `"\nAction:"` and `"\nAction Input:"` recommended by the LLM and then execute it to continue the ReAct loop.
+            - Langchain offers built-in parsing which you can use to build your own ReAct loop; the parser will output either of these two objects based on the LLM's response:
+                - `AgentAction` : if the model recommends an `\nAction:` with an `\nAction Input:`
+                - `AgentFinish` : if the model declares that it knows the "final answer".
+- The landscape has evolved now, modern LLMs support **native function calling**.
+    - As an extension to the above discussion of "text-based" tool-calling, there is now a more modern and favoured approach for *models which support this feature:*
+        ```python
+        llm = ChatGroq(model="openai/gpt-oss-120b")
+        structured_llm = llm.with_structured_output(
+            <your_pydantic_data_model>
+        )
+        ```
+        - Models which support **native function/tool calling** can be chained with the `.with_structured_output(..)` call for formatting the response returned.
+        - Now, you can:
+            - remove the explicit "formatting_instructions" (saving input tokens) passed via text to the "regular" `llm`.
+            - use the `structured_llm` to format the output response using the simple text response returned by the "regular" llm.
+        - This is also preferred because:
+            - easier to use (plug and play parsing)
+            - higher reliability
+            - all modern state of the art models support native function calling
+        - `.with_structured_output(..)` **falls back** to using output parsers when native function calling isn't supported by the model!
+    - Having _native tool calling support_ implies that the model provider offers a `tools=` argument through their own API.
 - "Agents" in the langchain ecosystem have evolved in the following manner:
     ```
     Text-based tool calling through prompt itself ->
