@@ -10,8 +10,8 @@ from pydantic import BaseModel
 
 from assistants.assistant_builder import AssistantBuilder
 from assistants.logger import get_logger
-from assistants.react_agent.schemas import SearchAgentResponse
-from assistants.react_agent.search_assistant import SearchAssistant
+from assistants.search_assistant.schemas import SearchAgentResponse
+from assistants.search_assistant.search_assistant import SearchAssistant
 from assistants.utils import get_provider
 
 PROMPT_OWNER_STRING = "hwchase17/react"

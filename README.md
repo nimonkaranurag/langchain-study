@@ -34,12 +34,12 @@ _a ReAct seach agent with structured outputs, can perform summarization of searc
 
 ```bash
 pip install -e .
-python -m assistants.react_agent.main
+python -m assistants.search_assistant.main
 ```
 
 ### Expected Output
 
-![react agent](output/react_agent.png)
+![react agent](output/search_assistant.png)
 
 ## Langchain Notes
 

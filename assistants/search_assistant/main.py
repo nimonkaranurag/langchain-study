@@ -2,10 +2,10 @@ from rich.console import Console
 
 from assistants import init_env
 from assistants.logger import get_logger
-from assistants.react_agent import get_search_agent_react_template
-from assistants.react_agent.schemas import SearchAgentResponse
-from assistants.react_agent.search_assistant import SearchAssistant
-from assistants.react_agent.search_assistant_builder import SearchAssistantBuilder
+from assistants.search_assistant import get_search_agent_react_template
+from assistants.search_assistant.schemas import SearchAgentResponse
+from assistants.search_assistant.search_assistant import SearchAssistant
+from assistants.search_assistant.search_assistant_builder import SearchAssistantBuilder
 
 logger = get_logger()
 

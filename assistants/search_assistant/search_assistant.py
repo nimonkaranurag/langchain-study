@@ -2,7 +2,7 @@ from langchain_core.runnables import RunnableSequence
 
 from assistants.assistant import Assistant
 from assistants.logger import get_logger
-from assistants.react_agent.schemas import SearchAgentResponse
+from assistants.search_assistant.schemas import SearchAgentResponse
 
 logger = get_logger()
 
