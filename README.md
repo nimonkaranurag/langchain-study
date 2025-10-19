@@ -291,6 +291,22 @@ python -m assistants.search_assistant.main
     LangGraph ReAct agents for production demands.
     ```
 
+## RAG Notes
+
+- **Problem Statement:** When the answer to our question exists inside a specific part of a large document, we need an effective mechanism for breaking up the document into chunks.
+    - The entire document as a whole is too big to fit within the token limit.
+    - Using multiple API calls to send chunked versions of the document in sequence is also unnecessary since the information needed is condensed in a specific part.
+    - There is a solution to this problem and it is called **"retrieval augmentation".**
+- You can use an embedding model to generate vector embeddings out of a document and store it in a vector database.
+    - A user query on the document like:
+        ```
+        Tell me what happens in page 546 of book XYZ?
+        ```
+        - is also converted into an embedding vector and stored in the database.
+        - now, you can calculate the nearest neighbours of the user query to get relevant chunks of the document stored in the DB.
+    - a good embedding model will be able to organize the vectors in the vector space so that semantically similar vectors are close to each other.
+    - now, we can simply add the relevant chunks of the document as "context" and send it to our LLM.
+
 ## Agentic AI Notes
 
 - Providing links to resources (real and accurate references) for answers is called "grounding".
