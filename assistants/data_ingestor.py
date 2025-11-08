@@ -13,14 +13,9 @@ class Ingestor(ABC):
     def split_document_into_chunks(document: Any):
         raise NotImplementedError
 
-    @staticmethod
-    @abstractmethod
-    def get_document_embeddings(chunked_document: List[Any]):
-        raise NotImplementedError
-
     @abstractmethod
     def store_embeddings(
-        self, chunked_document: List[Any], embedding: Optional[Any] = None
+        self, chunked_document: List[Any], embedding_model: Any,
     ) -> int:
         raise NotImplementedError
 

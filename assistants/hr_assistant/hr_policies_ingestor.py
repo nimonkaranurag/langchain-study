@@ -4,7 +4,7 @@ from typing import Any, List, Optional, Union
 
 from langchain_community.document_loaders import UnstructuredMarkdownLoader
 from langchain_core.documents.base import Document
-from langchain_pinecone import PineconeVectorStore
+from langchain_pinecone import PineconeVectorStore, PineconeEmbeddings
 from langchain_text_splitters import (
     CharacterTextSplitter,
     MarkdownHeaderTextSplitter,
@@ -43,10 +43,9 @@ class HRPoliciesIngestor(Ingestor):
 
         self.index_name = index_name
         if not self.index_name:
-            logger.error(
+            raise ValueError(
                 "Please set `PINECONE_INDEX_NAME` to the name of the pinecone vector store in the `.env` file"
             )
-            raise ValueError
 
     def load_document(self) -> Document:
 
@@ -63,7 +62,7 @@ class HRPoliciesIngestor(Ingestor):
     @staticmethod
     def split_document_into_chunks(document: Document) -> List[Document]:
 
-        logger.info("Splitting markdown policies document by headers")
+        logger.info("[b d]Splitting markdown policies document by headers")
 
         header_splitter: MarkdownHeaderTextSplitter = (
             HRPoliciesIngestor._get_header_splitter()
@@ -72,40 +71,38 @@ class HRPoliciesIngestor(Ingestor):
             document.page_content
         )
 
-        logger.info("Splitting header sections into smaller chunks")
+        logger.info("[b d]Splitting header sections into smaller chunks")
 
         text_splitter = HRPoliciesIngestor._get_text_splitter()
         chunked_document: List[Document] = text_splitter.split_documents(
             documents=document_split_by_headers,
         )
 
-        logger.debug(f"Final chunks count: {len(chunked_document)}")
+        logger.debug(f"[b d]Final chunks count: {len(chunked_document)}")
 
         return chunked_document
 
     @staticmethod
-    def get_document_embeddings(
-        chunked_document: List[Document],
+    def get_embedding_model(
     ) -> Optional[Any]:
 
         logger.info(
-            "Pinecone handles auto-generation of embeddings, given the raw document.\n"
-            "Skipping manual embedding generation ..."
+            "[b d]Using Pinecone's integrated embeddings model"
         )
 
-        return None
+        return PineconeEmbeddings(model="llama-text-embed-v2")
 
     def store_embeddings(
-        self, chunked_document: List[Document], embedding: Optional[Any] = None
+        self, chunked_document: List[Document], embedding_model: PineconeEmbeddings,
     ) -> int:
 
         logger.info(
-            f"Storing embeddings in the vector index: {self.index_name}"
+            f"[b d]Storing embeddings in the vector index: {self.index_name}"
         )
 
         PineconeVectorStore.from_documents(
             documents=chunked_document,
-            embedding=embedding,
+            embedding=embedding_model,
             index_name=self.index_name,
         )
 
@@ -144,25 +141,25 @@ class HRPoliciesIngestionPipeline(IngestionPipeline):
     def run(self):
 
         logger.info(
-            "Running policies ingestion pipeline ..."
+            "[b d]Running policies ingestion pipeline ..."
         )
 
         document = self.policies_ingestor.load_document()
         chunked_document = self.policies_ingestor.split_document_into_chunks(document=document)
-        embedding = self.policies_ingestor.get_document_embeddings(chunked_document=chunked_document)
+        embedding_model = self.policies_ingestor.get_embedding_model()
 
         logger.info(
-            "Storing chunked documents and their embeddings into the vector store ..."
+            "[b d]Storing chunked documents and their embeddings into the vector store ..."
         )
 
         status_code: int = self.policies_ingestor.store_embeddings(
             chunked_document=chunked_document,
-            embedding=embedding,
+            embedding_model=embedding_model,
         )
 
         if status_code == 200:
             logger.info(
-                f"Policies ingested successfully into the vector index: {self.policies_ingestor.index_name}"
+                f"[b d]Policies ingested successfully into the vector index: {self.policies_ingestor.index_name}"
             )
         
 
