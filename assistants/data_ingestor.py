@@ -15,7 +15,9 @@ class Ingestor(ABC):
 
     @abstractmethod
     def store_embeddings(
-        self, chunked_document: List[Any], embedding_model: Any,
+        self,
+        chunked_document: List[Any],
+        embedding_model: Any,
     ) -> int:
         raise NotImplementedError
 

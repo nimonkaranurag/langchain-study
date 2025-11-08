@@ -7,7 +7,10 @@ from rich.console import Console
 
 from assistants import __root_dir__, init_env
 from assistants.hr_assistant.hr_assistant_builder import HRAssistantBuilder
-from assistants.hr_assistant.tools import request_time_off
+from assistants.hr_assistant.tools import (
+    get_relevant_company_policies,
+    request_time_off,
+)
 from assistants.logger import get_logger
 
 logger = get_logger()
@@ -57,6 +60,7 @@ def main():
         system_instruction_variables=system_instructions.system_instruction_variables,
         tools=[
             request_time_off,
+            get_relevant_company_policies,
         ],
     )
 

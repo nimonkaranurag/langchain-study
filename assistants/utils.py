@@ -1,8 +1,14 @@
+from __future__ import annotations
+
 from typing import Optional
 
 from langchain_core.callbacks.base import BaseCallbackHandler
 from langchain_groq import ChatGroq
-from langchain_ollama import ChatOllama
+
+try:
+    from langchain_ollama import ChatOllama
+except ImportError:
+    pass
 
 from assistants.logger import get_logger
 

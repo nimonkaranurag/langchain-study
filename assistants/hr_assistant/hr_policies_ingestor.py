@@ -4,16 +4,15 @@ from typing import Any, List, Optional, Union
 
 from langchain_community.document_loaders import UnstructuredMarkdownLoader
 from langchain_core.documents.base import Document
-from langchain_pinecone import PineconeVectorStore, PineconeEmbeddings
+from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
 from langchain_text_splitters import (
     CharacterTextSplitter,
     MarkdownHeaderTextSplitter,
 )
 
-from assistants import __root_dir__
-from assistants.data_ingestor import Ingestor, IngestionPipeline
+from assistants import __root_dir__, init_env
+from assistants.data_ingestor import IngestionPipeline, Ingestor
 from assistants.logger import get_logger
-from assistants import init_env
 
 init_env()
 
@@ -28,6 +27,7 @@ POLICIES_DOCUMENT_PATH = os.path.join(
 PINECONE_INDEX_NAME = os.getenv(
     "PINECONE_INDEX_NAME",
 )
+PINECONE_INDEX_POLICIES_NAMESPACE = "hr_policies"
 
 
 class HRPoliciesIngestor(Ingestor):
@@ -38,6 +38,7 @@ class HRPoliciesIngestor(Ingestor):
             Union[str, Path]
         ] = POLICIES_DOCUMENT_PATH,
         index_name: Optional[str] = PINECONE_INDEX_NAME,
+        policies_namespace: Optional[str] = PINECONE_INDEX_POLICIES_NAMESPACE,
     ):
         self.policies_document_path = policies_document_path
 
@@ -46,29 +47,28 @@ class HRPoliciesIngestor(Ingestor):
             raise ValueError(
                 "Please set `PINECONE_INDEX_NAME` to the name of the pinecone vector store in the `.env` file"
             )
+        self.policies_namespace = policies_namespace
 
-    def load_document(self) -> Document:
+    def load_document(self) -> str:
 
-        document_loader: UnstructuredMarkdownLoader = self._get_loader()
-        document: Document = document_loader.load()[0]
+        with open(self.policies_document_path, "r", encoding="utf-8") as f:
+            document = f.read()
 
         logger.debug(
-            f"[b d]Successfully loaded the policies document from: {document.metadata["source"]}\n"
-            f"[b d]Document Preview: {document.page_content[:256]} ..."
+            f"[b d]Successfully loaded policies from: {self.policies_document_path}"
         )
+        logger.debug(f"[b d]Content length: {len(document)} characters")
 
         return document
 
     @staticmethod
-    def split_document_into_chunks(document: Document) -> List[Document]:
-
-        logger.info("[b d]Splitting markdown policies document by headers")
+    def split_document_into_chunks(document: str) -> List[Document]:
 
         header_splitter: MarkdownHeaderTextSplitter = (
             HRPoliciesIngestor._get_header_splitter()
         )
         document_split_by_headers: List[Document] = header_splitter.split_text(
-            document.page_content
+            document
         )
 
         logger.info("[b d]Splitting header sections into smaller chunks")
@@ -78,22 +78,28 @@ class HRPoliciesIngestor(Ingestor):
             documents=document_split_by_headers,
         )
 
-        logger.debug(f"[b d]Final chunks count: {len(chunked_document)}")
+        if chunked_document:
+            logger.debug(f"[b d]Final chunks count: {len(chunked_document)}")
+            for document_chunk in chunked_document:
+                logger.debug(
+                    f"[b i d]Chunk preview:{document_chunk.page_content}"
+                )
+        else:
+            raise RuntimeError("Chunking unsuccessful")
 
         return chunked_document
 
     @staticmethod
-    def get_embedding_model(
-    ) -> Optional[Any]:
+    def get_embedding_model() -> Optional[Any]:
 
-        logger.info(
-            "[b d]Using Pinecone's integrated embeddings model"
-        )
+        logger.info("[b d]Using Pinecone's integrated embeddings model")
 
         return PineconeEmbeddings(model="llama-text-embed-v2")
 
     def store_embeddings(
-        self, chunked_document: List[Document], embedding_model: PineconeEmbeddings,
+        self,
+        chunked_document: List[Document],
+        embedding_model: PineconeEmbeddings,
     ) -> int:
 
         logger.info(
@@ -104,6 +110,7 @@ class HRPoliciesIngestor(Ingestor):
             documents=chunked_document,
             embedding=embedding_model,
             index_name=self.index_name,
+            namespace=self.policies_namespace,
         )
 
         return 200
@@ -134,18 +141,19 @@ class HRPoliciesIngestor(Ingestor):
             chunk_overlap=200,
         )
 
+
 class HRPoliciesIngestionPipeline(IngestionPipeline):
     def __init__(self, ingestor: HRPoliciesIngestor):
         self.policies_ingestor = ingestor
 
     def run(self):
 
-        logger.info(
-            "[b d]Running policies ingestion pipeline ..."
-        )
+        logger.info("[b d]Running policies ingestion pipeline ...")
 
         document = self.policies_ingestor.load_document()
-        chunked_document = self.policies_ingestor.split_document_into_chunks(document=document)
+        chunked_document = self.policies_ingestor.split_document_into_chunks(
+            document=document
+        )
         embedding_model = self.policies_ingestor.get_embedding_model()
 
         logger.info(
@@ -161,9 +169,9 @@ class HRPoliciesIngestionPipeline(IngestionPipeline):
             logger.info(
                 f"[b d]Policies ingested successfully into the vector index: {self.policies_ingestor.index_name}"
             )
-        
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
 
     dummy_ingestor = HRPoliciesIngestor()
     dummy_ingestion_pipeline = HRPoliciesIngestionPipeline(
