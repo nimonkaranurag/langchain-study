@@ -24,7 +24,9 @@ export LANGCHAIN_STUDY_LOG_LEVEL=DEBUG
 
 **Run the following commands in a Python (>=3.12) environment:**
 
-_a basic HR assistant, for now - it can apply for time-off requests for "nimo@ibm.com"_
+_a basic HR assistant, for now - it can:_
+- apply for time-off requests for `"nimo@ibm.com"`
+- explain company policy, sample query: `"Can you tell me the company policy on data privacy?"`
 
 ```bash
 pip install -e .
@@ -117,7 +119,72 @@ python -m assistants.search_assistant.main
     ```python
     from langchain_core.runnables import RunnableLambda
     ```
-    
+
+### Markdown 
+- For chunking documents with markdown formatting, `langchain` offers some useful resources:
+    ```python
+    from langchain_text_splitters import (
+        MarkdownHeaderTextSplitter
+    )
+    ```
+    - A `MarkdownHeaderTextSplitter` is used in conjuction with some loading mechanism **which preserves the original markdown formatting** to read the document as a string.
+    - For example, you can use Python's built-in file handling:
+        ```python
+        with open(md_file_path, "r") as f:
+            document: str = f.read()
+        ```
+    - **NOTE:** These tools can be used to load a markdown file as a langchain `Document` but they *<ins>do not preserve the original markdown formatting</ins> and hence, cannot be used in conjunction with the `MarkdownHeaderTextSplitter` however, could be useful*:
+        ```python
+        from langchain_core.documents import Document
+        from langchain_community.document_loaders import UnstructuredMarkdownLoader
+
+        document_loader = UnstructuredMarkdownLoader(
+            file_path=md_file_path,
+            mode="single",
+            # for chunking the document at this step, you can also pass the mode = "elements".
+        )
+        document: list[Document] = list(document_loader.lazy_load())
+        document_content: str = document[0].page_content # only 1 chunk (the entire document).
+        document_metadata: dict = document[0].metadata # only contains a "source" key which maps to the path this document was loaded from.
+        ```
+        - For `mode="single"`: the entire document is loaded as-is without chunking (1 item in the `list[Document]`).
+        - For `mode="elements"`: the entire document is loaded as chunks, broken using the internal parsing logic into categories such as: `Text`, `NarrativeText` and `UncategorizedText` (multiple items in the `list[Document]`).
+- Once the document has been loaded, it can be split by the headers in the following manner:
+    ```python
+    # Step 1
+    # Initialize splitter
+    document_splitter = MarkdownHeaderTextSplitter(
+        headers_to_split_on=[
+                ("##", "Section"),
+                ("###", "Policy"),
+        ],
+        strip_headers=False,
+    )
+    # Step 2
+    # Split document into chunks
+    chunked_document: list[Document] = document_splitter.split_text(document)
+    ```
+    - The `strip_headers` flag can be used to control whether the actual header split on will be included in the `.page_content` field of the different `Document` chunks:
+    ```bash
+    # when strip_headers = False
+    Chunk 1
+    ### Policy 1 <-- this text is not included if strip_headers = True
+    ....
+
+    Chunk 2
+    ### Policy 2
+    ....
+    ```
+    - The `name` field of the list of tuples to split on is set as a key in the `.metadata` field of each `Document` chunk:
+    ```bash
+    Chunk 1
+    {
+        'Section': 'Header starting with ##',
+        'Policy': 'Policy 1'
+    }
+    ```
+    - In this case, the lowest "level" header has three hashtags: "###" therefore, `len(chunked_documents)` = number of headers at the level `###`.
+    - Headers with a higher level (`#` and `##`) are included in the first chunk (assuming the remaining document only has headers at the level `###`).
 ## ReAct architecture
 
 - A `ReAct` styled agent implements the following loop for query resolution:
