@@ -165,24 +165,24 @@ python -m assistants.search_assistant.main
     chunked_document: list[Document] = document_splitter.split_text(document)
     ```
     - The `strip_headers` flag can be used to control whether the actual header split on will be included in the `.page_content` field of the different `Document` chunks:
-    ```bash
-    # when strip_headers = False
-    Chunk 1
-    ### Policy 1 <-- this text is not included if strip_headers = True
-    ....
+        ```bash
+        # when strip_headers = False
+        Chunk 1
+        ### Policy 1 <-- this text is not included if strip_headers = True
+        ....
 
-    Chunk 2
-    ### Policy 2
-    ....
-    ```
+        Chunk 2
+        ### Policy 2
+        ....
+        ```
     - The `name` field of the list of tuples to split on is set as a key in the `.metadata` field of each `Document` chunk:
-    ```bash
-    Chunk 1
-    {
-        'Section': 'Header starting with ##',
-        'Policy': 'Policy 1'
-    }
-    ```
+        ```bash
+        Chunk 1
+        {
+            'Section': 'Header starting with ##',
+            'Policy': 'Policy 1'
+        }
+        ```
     - In this case, the lowest "level" header has three hashtags: "###" therefore, `len(chunked_documents)` = number of headers at the level `###`.
     - Headers with a higher level (`#` and `##`) are included in the first chunk (assuming the remaining document only has headers at the level `###`).
 ## ReAct architecture
