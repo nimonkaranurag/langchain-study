@@ -104,6 +104,7 @@ class LangChainNotesIngestor(Ingestor):
                 exc_info=True,
                 stack_info=True,
             )
+            return 500
 
         return 200
 
@@ -118,13 +119,14 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
         logger.info("[b d]Beginning ingestion pipeline")
 
         documents = self.ingestor.load_document()
+        embedding_model = LangChainNotesIngestor.get_embedding_model()
+
         for count, document in enumerate(documents):
 
             chunked_document = self.ingestor.split_document_into_chunks(
                 document=document,
             )
 
-            embedding_model = LangChainNotesIngestor.get_embedding_model()
             status_code = self.ingestor.store_embeddings(
                 chunked_document=chunked_document,
                 embedding_model=embedding_model,
