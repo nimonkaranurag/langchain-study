@@ -7,7 +7,7 @@ from langchain_core.documents import Document
 class Ingestor(ABC):
 
     @abstractmethod
-    def load_document(self) -> str:
+    def load_document(self) -> Any:
         raise NotImplementedError
 
     @staticmethod
