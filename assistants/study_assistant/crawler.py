@@ -48,20 +48,28 @@ SSL certificate.
 - certifi.where() always returns a valid path: /path/to/site-packages/certifi/cacert.pem
     - This `.pem` file contains ~150 root CA certificates from Mozilla's program.
 """
-
-    results = await TavilyCrawl().ainvoke(
-        input={
-            "url": "https://python.langchain.com/",
-            "max_depth": 5,
-            "extract_depth": "advanced",
-        },
-    )
+    try:
+        results = await TavilyCrawl().ainvoke(
+            input={
+                "url": "https://python.langchain.com/",
+                "max_depth": 5,
+                "extract_depth": "advanced",
+            },
+        )
+    except Exception as e:
+        raise RuntimeError(
+            f"Failed to performing web crawling: {e}"
+        )
 
     logger.info(
-        f"Finished web crawling operation, retrieved {len(results)} pages"
+        f"[b d]Finished web crawling operation, retrieved {len(results['results'])} pages"
     )
 
     for doc_idx, result in enumerate(results["results"]):
+
+        if not result.get("raw_content"):
+            logger.error(f"[b d]Skipping doc_{doc_idx} - no content retrieved")
+            continue
 
         file_name = f"doc_{doc_idx}.md"
         file_path = LANGCHAIN_NOTES_PATH / file_name
@@ -69,7 +77,7 @@ SSL certificate.
         with open(file_path, "w+", encoding="utf-8") as f:
             f.write(result["raw_content"])
 
-        logger.debug(f"Wrote scraped page to: {file_path}")
+        logger.debug(f"[b d]Wrote scraped page to: {file_path}")
 
     langchain_documents = [
         Document(
@@ -78,7 +86,8 @@ SSL certificate.
                 "source": result["url"],
             },
         )
-        for result in results["results"]
+        for result in results["results"] if \
+        result.get("raw_content") is not None
     ]
 
     return langchain_documents
