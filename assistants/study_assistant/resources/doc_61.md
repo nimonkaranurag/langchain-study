@@ -1,146 +1,52 @@
-[Skip to content](#start-of-content)   
+[Skip to main content](#main-container)
 
 
 
-## Navigation Menu
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Ftopics) 
 
-Appearance settings
 
-# Search code, repositories, users, issues, pull requests...
+Welcome to the LangChain Forum
 
-[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+[​](/search?expanded=true "Open advanced search")
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Ftopics)
+Welcome to LangChain Forum!
 
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Ftopics&source=header) 
+[​](/search?expanded=true "Open advanced search")
 
-Appearance settings
+**Welcome to the LangChain Forum** – a space for developers to ask questions and connect with others building with LangChain products.
 
-You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
+Looking for broader conversation, events, or want to showcase your agents? Join our **[LangChain Slack Community](https://www.langchain.com/join-community)**.
 
-{{ message }}
+Before you dive in, here’s what to know:
 
-# Topics
+* This forum is **community-run** and not all posts are monitored by the LangChain team.
+* Keep discussions **focused on technical topics related to LangChain**. Promotional content or solicitation of any kind will result in an immediate ban.
+* Before starting a new topic, please **search** to see if the topic has already been discussed.
+* If you are helping someone, **do** **not** answer by linking to an external link (unless it is the LangChain Docs), as external articles may be incorrect and are impossible for us to update.
 
-Browse popular topics on GitHub.
+By participating, you agree to follow our Community Code of Conduct. Read the full guidelines **[here](https://www.langchain.com/community-code)**.
 
-* [TypeScript
 
-  TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.](/topics/typescript)
-* [CSS
 
-  Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.](/topics/css)
-* [Scala
+# All categories
 
-  Scala is an object-oriented programming language.](/topics/scala)
+1. categories
+2. tags
 
-## All featured topics
+* [Categories](/categories)
+* [Latest](/latest)
+* [Hot](/hot)
 
-[Awesome Lists
+| Category | Topics |
+| --- | --- |
+| [Announcements](/c/announcements/15)  Official updates from the LangChain team including product updates. | 3 / month |
 
-An awesome list is a list of awesome things curated by the community.](/topics/awesome)
+| [OSS Product Help](/c/oss-product-help-lc-and-lg/16)  Get help with using our OSS frameworks from experts in the community.  [LangGraph](/c/oss-product-help-lc-and-lg/langgraph/13)      [LangChain](/c/oss-product-help-lc-and-lg/langchain/14) | 119 / month |
 
-[Star](/login?return_to=%2Ftopic.awesome)
+| [LangSmith Product Help](/c/help/9)  Get help with using LangSmith from experts in the community.  [Deployment](/c/help/langsmith-deployment/6)      [Observability & Evals](/c/help/langsmith/8) | 38 / month |
 
-[Chrome
+| [LangChain Academy](/c/langchain-academy/10)  For questions and discussions about LangChain Academy courses. | 8 / month |
 
-Chrome is a web browser from the tech company Google.](/topics/chrome)
+| [Talking Shop](/c/talking-shop/12)  For discussion about LangChain or anything related to building agentic applications. | 9 / month |
 
-[Star](/login?return_to=%2Ftopic.chrome)
-
-[#](/topics/code-quality) [Code quality
-
-Automate your code review with style, quality, security, and test‑coverage checks when you need them.](/topics/code-quality)
-
-[Star](/login?return_to=%2Ftopic.code-quality)
-
-[#](/topics/compiler) [Compiler
-
-Compilers are software that translate higher-level programming languages to lower-level languages (e.g. machine code).](/topics/compiler)
-
-[Star](/login?return_to=%2Ftopic.compiler)
-
-[CSS
-
-Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.](/topics/css)
-
-[Star](/login?return_to=%2Ftopic.css)
-
-[Database
-
-A database is a structured set of data held in a computer, usually a server.](/topics/database)
-
-[Star](/login?return_to=%2Ftopic.database)
-
-[#](/topics/frontend) [Front end
-
-Front end is the programming and layout that people see and interact with.](/topics/frontend)
-
-[Star](/login?return_to=%2Ftopic.frontend)
-
-[JavaScript
-
-JavaScript (JS) is a lightweight interpreted programming language with first-class functions.](/topics/javascript)
-
-[Star](/login?return_to=%2Ftopic.javascript)
-
-[Node.js
-
-Node.js is a tool for executing JavaScript in a variety of environments.](/topics/nodejs)
-
-[Star](/login?return_to=%2Ftopic.nodejs)
-
-[npm is a package manager for JavaScript included with Node.js.](/topics/npm)
-
-[Star](/login?return_to=%2Ftopic.npm)
-
-[#](/topics/project-management) [Project management
-
-Project management is about building scope and executing on the project's goals.](/topics/project-management)
-
-[Star](/login?return_to=%2Ftopic.project-management)
-
-[Python is a dynamically typed programming language.](/topics/python)
-
-[Star](/login?return_to=%2Ftopic.python)
-
-[React is an open source JavaScript library used for designing user interfaces.](/topics/react)
-
-[Star](/login?return_to=%2Ftopic.react)
-
-[React Native
-
-React Native is a JavaScript mobile framework developed by Facebook.](/topics/react-native)
-
-[Star](/login?return_to=%2Ftopic.react-native)
-
-[Scala
-
-Scala is an object-oriented programming language.](/topics/scala)
-
-[Star](/login?return_to=%2Ftopic.scala)
-
-[TypeScript
-
-TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.](/topics/typescript)
-
-[Star](/login?return_to=%2Ftopic.typescript)
-
-## Popular topics
-
-* [python](/topics/python "Topic: python")
-* [docker](/topics/docker "Topic: docker")
-* [rust](/topics/rust "Topic: rust")
-* [machine-learning](/topics/machine-learning "Topic: machine-learning")
-* [typescript](/topics/typescript "Topic: typescript")
-* [ai](/topics/ai "Topic: ai")
-* [fork](/topics/fork "Topic: fork")
-* [tailwindcss](/topics/tailwindcss "Topic: tailwindcss")
-* [social-media-analytics](/topics/social-media-analytics "Topic: social-media-analytics")
-* [llm](/topics/llm "Topic: llm")
-
-You can’t perform that action at this time.
-
- 
+| [Forum Feedback](/c/forum-feedback/2)  Discussion about our Help Forums, its organization, how it works, and how we can improve it. | 1 / month |

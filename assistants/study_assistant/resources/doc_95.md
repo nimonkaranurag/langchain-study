@@ -1,293 +1,457 @@
-[Skip to content](#start-of-content)   
+LangChain
 
+===============
 
+![Image 1: Revisit consent button](https://uploads-ssl.webflow.com/65ff950538088944d66126b3/662ef3209b872e92e41212f6_cookieicon.png)
 
-## Navigation Menu
+We value your privacy
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Ftopics%2Fapi) 
+We use cookies to analyze our traffic. By clicking "Accept All", you consent to our use of cookies.[Privacy Policy](https://www.langchain.com/privacy-policy)
 
-Appearance settings
+Customize Reject All Accept All
 
-# Search code, repositories, users, issues, pull requests...
+Customize Consent Preferences![Image 2: Close](https://cdn-cookieyes.com/assets/images/close.svg)
 
-[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+We may use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Ftopics%2Fapi)
+The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site....Show more
 
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Ftopics%2Fapi&source=header) 
+Necessary Always Active
 
-Appearance settings
+Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.
 
-You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
+Functional
 
-{{ message }}
+- [x] 
 
-#
+Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.
 
-# API
+Analytics
 
-[Star](/login?return_to=%2Ftopic.api)
+- [x] 
 
-An **API** can be thought of as an instruction manual for communication between multiple software apparatuses. For example, an API may be used for database communication between web applications. By extracting the implementation and relinquishing data into objects, an API simplifies programming.
+Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
 
-## Here are 128,061 public repositories matching this topic...
+Performance
 
-*Language:* All  
+Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
 
-Filter by language
+Advertisement
 
-[All 128,061](https://github.com/topics/api)   [JavaScript 40,232](https://github.com/topics/api?l=javascript)   [Python 19,113](https://github.com/topics/api?l=python)   [TypeScript 12,194](https://github.com/topics/api?l=typescript)   [PHP 7,738](https://github.com/topics/api?l=php)   [Java 7,059](https://github.com/topics/api?l=java)   [HTML 6,965](https://github.com/topics/api?l=html)   [Go 4,973](https://github.com/topics/api?l=go)   [C# 4,728](https://github.com/topics/api?l=c%23)   [CSS 4,368](https://github.com/topics/api?l=css)   [Jupyter Notebook 2,277](https://github.com/topics/api?l=jupyter+notebook)
+- [x] 
 
-    *Sort:* Most stars  
+Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.
 
-Sort options
+Uncategorized
 
-[Most stars](/topics/api?o=desc&s=stars)   [Fewest stars](/topics/api?o=asc&s=stars)   [Most forks](/topics/api?o=desc&s=forks)   [Fewest forks](/topics/api?o=asc&s=forks)   [Recently updated](/topics/api?o=desc&s=updated)   [Least recently updated](/topics/api?o=asc&s=updated)
+- [x] 
 
-### [public-apis](/public-apis) / [public-apis](/public-apis/public-apis)
+Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
 
-[Star  376k](/login?return_to=%2Fpublic-apis%2Fpublic-apis)
+Reject All Save My Preferences Accept All
 
-A collective list of free APIs
+[](https://www.langchain.com/)
 
-[api](/topics/api "Topic: api") [lists](/topics/lists "Topic: lists") [open-source](/topics/open-source "Topic: open-source") [list](/topics/list "Topic: list") [development](/topics/development "Topic: development") [public](/topics/public "Topic: public") [resources](/topics/resources "Topic: resources") [dataset](/topics/dataset "Topic: dataset") [free](/topics/free "Topic: free") [software](/topics/software "Topic: software") [apis](/topics/apis "Topic: apis") [public-api](/topics/public-api "Topic: public-api") [public-apis](/topics/public-apis "Topic: public-apis")
+Products
 
-* Updated May 20, 2025
-* Python
+Open Source Frameworks
 
-### [neovim](/neovim) / [neovim](/neovim/neovim)
+[![Image 3](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8e27023585643370a6471_icons.svg) LangChain Quick start agents with any model provider](https://www.langchain.com/langchain)[![Image 4](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8e270417338c7f027082d_d035ce400e48f9bc4dd0578d0e3e3211_icons-1.svg) LangGraph Build custom agents with low-level control](https://www.langchain.com/langgraph)[![Image 5](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68f20863b71dbae1af829979_DeepAgents.svg) Deep Agents New Use planning, memory, and sub-agents for complex, long-running tasks](https://docs.langchain.com/oss/python/deepagents/overview#deep-agents-overview)
 
-[Sponsor](/sponsors/neovim) 
+LangSmith
 
-[Star  94k](/login?return_to=%2Fneovim%2Fneovim)
+[![Image 6](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8e270df09334914882b88_Frame%209.svg) Observability Debug and monitor in-depth traces](https://www.langchain.com/langsmith/observability)[![Image 7](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8e270f9e8de1d368764a8_Frame%20206.svg) Evaluation Iterate on prompts and models](https://www.langchain.com/langsmith/evaluation)[![Image 8](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8e2709eef27fc61465416_Frame%20100039.svg) Deployment Ship and scale agents in production](https://www.langchain.com/langsmith/deployment)
 
-Vim-fork focused on extensibility and usability
+Resources
 
-[c](/topics/c "Topic: c") [vim](/topics/vim "Topic: vim") [api](/topics/api "Topic: api") [lua](/topics/lua "Topic: lua") [neovim](/topics/neovim "Topic: neovim") [nvim](/topics/nvim "Topic: nvim") [text-editor](/topics/text-editor "Topic: text-editor")
+[LangChain Academy](https://academy.langchain.com/)[Blog](https://blog.langchain.com/)[Customer Stories](https://www.langchain.com/customers)[Community](https://www.langchain.com/community)[Events](https://lu.ma/langchain)[Changelog](https://changelog.langchain.com/)[Guides](https://www.langchain.com/resources)[Trust Center](https://trust.langchain.com/)
 
-* Updated Nov 4, 2025
-* Vim Script
+[Docs](https://docs.langchain.com/)
 
-### [fastapi](/fastapi) / [fastapi](/fastapi/fastapi)
+Company
 
-[Star  91.5k](/login?return_to=%2Ffastapi%2Ffastapi)
+[About](https://www.langchain.com/about)[Careers](https://www.langchain.com/careers)
 
-FastAPI framework, high performance, easy to learn, fast to code, ready for production
+[Pricing](https://www.langchain.com/pricing)
 
-[python](/topics/python "Topic: python") [api](/topics/api "Topic: api") [json](/topics/json "Topic: json") [framework](/topics/framework "Topic: framework") [web](/topics/web "Topic: web") [rest](/topics/rest "Topic: rest") [json-schema](/topics/json-schema "Topic: json-schema") [async](/topics/async "Topic: async") [swagger](/topics/swagger "Topic: swagger") [openapi](/topics/openapi "Topic: openapi") [python3](/topics/python3 "Topic: python3") [asyncio](/topics/asyncio "Topic: asyncio") [swagger-ui](/topics/swagger-ui "Topic: swagger-ui") [redoc](/topics/redoc "Topic: redoc") [openapi3](/topics/openapi3 "Topic: openapi3") [python-types](/topics/python-types "Topic: python-types") [uvicorn](/topics/uvicorn "Topic: uvicorn") [starlette](/topics/starlette "Topic: starlette") [pydantic](/topics/pydantic "Topic: pydantic") [fastapi](/topics/fastapi "Topic: fastapi")
+[Get a demo](https://www.langchain.com/contact-sales)
 
-* Updated Nov 4, 2025
-* Python
+[Sign up](https://smith.langchain.com/)
 
-### [hoppscotch](/hoppscotch) / [hoppscotch](/hoppscotch/hoppscotch)
+Engineer reliable agents
+========================
 
-[Sponsor](/sponsors/hoppscotch) 
+Ship agents to production with LangChain's comprehensive platform for agent engineering.
 
-[Star  76.8k](/login?return_to=%2Fhoppscotch%2Fhoppscotch)
+[Request a demo](https://www.langchain.com/contact-sales)[Sign up](https://smith.langchain.com/)
 
-Open-Source API Development Ecosystem • <https://hoppscotch.io> • Offline, On-Prem & Cloud • Web, Desktop & CLI • Open-Source Alternative to Postman, Insomnia
+We've raised a **$125M Series B** to build the platform for agent engineering.
 
-[testing](/topics/testing "Topic: testing") [api](/topics/api "Topic: api") [graphql](/topics/graphql "Topic: graphql") [http](/topics/http "Topic: http") [vuejs](/topics/vuejs "Topic: vuejs") [spa](/topics/spa "Topic: spa") [tools](/topics/tools "Topic: tools") [pwa](/topics/pwa "Topic: pwa") [rest](/topics/rest "Topic: rest") [vue](/topics/vue "Topic: vue") [rest-api](/topics/rest-api "Topic: rest-api") [websocket](/topics/websocket "Topic: websocket") [http-client](/topics/http-client "Topic: http-client") [api-client](/topics/api-client "Topic: api-client") [developer-tools](/topics/developer-tools "Topic: developer-tools") [api-rest](/topics/api-rest "Topic: api-rest") [testing-tools](/topics/testing-tools "Topic: testing-tools") [api-testing](/topics/api-testing "Topic: api-testing")
+[Read more](http://blog.langchain.com/series-b/?utm_medium=internal&utm_source=banner&utm_campaign=q4-2025_october-launch-week_aw)
 
-* Updated Nov 4, 2025
-* TypeScript
+#### LangChain products power top engineering teams, from AI startups to global enterprises
 
-### [strapi](/strapi) / [strapi](/strapi/strapi)
+![Image 9: Writer](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b4885446216e903b99a_logo_Writer.svg)
 
-[Star  70.2k](/login?return_to=%2Fstrapi%2Fstrapi)
+![Image 10: Harvey](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b539e4d30b1da59801f_logo_Harvey.svg)
 
-🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript/TypeScript, fully customizable, and developer-first.
+![Image 11: Vanta](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b61b55203228fab9833_logo_vanta.svg)
 
-[nodejs](/topics/nodejs "Topic: nodejs") [javascript](/topics/javascript "Topic: javascript") [mysql](/topics/mysql "Topic: mysql") [api](/topics/api "Topic: api") [graphql](/topics/graphql "Topic: graphql") [cms](/topics/cms "Topic: cms") [koa](/topics/koa "Topic: koa") [typescript](/topics/typescript "Topic: typescript") [rest](/topics/rest "Topic: rest") [dashboard](/topics/dashboard "Topic: dashboard") [content-management](/topics/content-management "Topic: content-management") [customizable](/topics/customizable "Topic: customizable") [koa2](/topics/koa2 "Topic: koa2") [strapi](/topics/strapi "Topic: strapi") [cms-framework](/topics/cms-framework "Topic: cms-framework") [jamstack](/topics/jamstack "Topic: jamstack") [hacktoberfest](/topics/hacktoberfest "Topic: hacktoberfest") [content-management-system](/topics/content-management-system "Topic: content-management-system") [headless-cms](/topics/headless-cms "Topic: headless-cms") [no-code](/topics/no-code "Topic: no-code")
+![Image 12: Modern Treasury](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b53e127f180320752c8ca_logo_modern%20treasury.svg)
 
-* Updated Nov 4, 2025
-* TypeScript
+![Image 13: Clay](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b541fe451e978c3ccddd2_logo_clay.png)
 
-### [ocornut](/ocornut) / [imgui](/ocornut/imgui)
+![Image 14: Rippling](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680f49cea075b0f09f44edc0_logo_rippling.svg)
 
-[Star  69.1k](/login?return_to=%2Focornut%2Fimgui)
+![Image 15: Mercor](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b5451dc7557134110823a_logo_mercor.png)
 
-Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies
+![Image 16: dbt Labs](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b70b288f67d107deae7_logo_dbt%20labs.svg)
 
-[api](/topics/api "Topic: api") [gamedev](/topics/gamedev "Topic: gamedev") [multi-platform](/topics/multi-platform "Topic: multi-platform") [gui](/topics/gui "Topic: gui") [library](/topics/library "Topic: library") [framework](/topics/framework "Topic: framework") [ui](/topics/ui "Topic: ui") [tools](/topics/tools "Topic: tools") [cplusplus](/topics/cplusplus "Topic: cplusplus") [native](/topics/native "Topic: native") [game-engine](/topics/game-engine "Topic: game-engine") [toolkit](/topics/toolkit "Topic: toolkit") [imgui](/topics/imgui "Topic: imgui") [immediate-gui](/topics/immediate-gui "Topic: immediate-gui") [game-development](/topics/game-development "Topic: game-development")
+![Image 17: Klarna](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b77461846a7cf254d8391_Klarna_Logo_black%201.svg)
 
-* Updated Nov 3, 2025
-* C++
+![Image 18: Ally](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b772708796f17630c2c12_logo_Ally.svg)
 
-### [meilisearch](/meilisearch) / [meilisearch](/meilisearch/meilisearch)
+![Image 19: Rakuten](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1aa251143166667aec3_logo_Rakuten.svg)
 
-[Star  54.3k](/login?return_to=%2Fmeilisearch%2Fmeilisearch)
+![Image 20: LinkedIn](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68e63bc524be687757a9ab4c_logo_linkedin.svg)
 
-A lightning-fast search engine API bringing AI-powered hybrid search to your sites and applications.
+![Image 21: Elastic](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1c1c55df212370b53fd_logo_Elastic.svg)
 
-[search](/topics/search "Topic: search") [api](/topics/api "Topic: api") [search-engine](/topics/search-engine "Topic: search-engine") [database](/topics/database "Topic: database") [ai](/topics/ai "Topic: ai") [fuzzy-search](/topics/fuzzy-search "Topic: fuzzy-search") [full-text-search](/topics/full-text-search "Topic: full-text-search") [vectors](/topics/vectors "Topic: vectors") [instantsearch](/topics/instantsearch "Topic: instantsearch") [semantic-search](/topics/semantic-search "Topic: semantic-search") [enterprise-search](/topics/enterprise-search "Topic: enterprise-search") [geosearch](/topics/geosearch "Topic: geosearch") [typo-tolerance](/topics/typo-tolerance "Topic: typo-tolerance") [site-search](/topics/site-search "Topic: site-search") [faceting](/topics/faceting "Topic: faceting") [search-as-you-type](/topics/search-as-you-type "Topic: search-as-you-type") [vector-search](/topics/vector-search "Topic: vector-search") [app-search](/topics/app-search "Topic: app-search") [vector-database](/topics/vector-database "Topic: vector-database") [hybrid-search](/topics/hybrid-search "Topic: hybrid-search")
+![Image 22: Workday](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b9f6a8a90cb7e12aa8a_logo_Workday.svg)
 
-* Updated Nov 4, 2025
-* Rust
+![Image 23: Monday.com](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29ec51fd39bd91154fa44_logo_Monday.svg)
 
-### [ccxt](/ccxt) / [ccxt](/ccxt/ccxt)
+![Image 24: NU](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b55bb766a5757e88c5d11_logo_nubank.svg)
 
-[Star  39.7k](/login?return_to=%2Fccxt%2Fccxt)
+![Image 25: Bridgewater](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b55f873808ce291c32de7_logo_bridgewater.svg)
 
-A cryptocurrency trading API with more than 100 exchanges in JavaScript / TypeScript / Python / C# / PHP / Go
+![Image 26: Cloudflare](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b8987150129e3e32608_logo_Cloudflare.svg)
 
-[api](/topics/api "Topic: api") [bot](/topics/bot "Topic: bot") [library](/topics/library "Topic: library") [crypto](/topics/crypto "Topic: crypto") [bitcoin](/topics/bitcoin "Topic: bitcoin") [trading](/topics/trading "Topic: trading") [ethereum](/topics/ethereum "Topic: ethereum") [cryptocurrency](/topics/cryptocurrency "Topic: cryptocurrency") [exchange](/topics/exchange "Topic: exchange") [market-data](/topics/market-data "Topic: market-data") [strategy](/topics/strategy "Topic: strategy") [btc](/topics/btc "Topic: btc") [cryptocurrencies](/topics/cryptocurrencies "Topic: cryptocurrencies") [trade](/topics/trade "Topic: trade") [eth](/topics/eth "Topic: eth") [arbitrage](/topics/arbitrage "Topic: arbitrage") [altcoin](/topics/altcoin "Topic: altcoin") [merchant](/topics/merchant "Topic: merchant") [invest](/topics/invest "Topic: invest") [memecoin](/topics/memecoin "Topic: memecoin")
+![Image 27: GitLab](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1d39b2c6c806093f171_GitLab_logo_(2)%201.svg)
 
-* Updated Nov 4, 2025
-* Python
+![Image 28: The Home Depot](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b77b2f63a9dcf3b2fac9f_The_Home_Depot-Logo.wine%201.svg)
 
-### [trpc](/trpc) / [trpc](/trpc/trpc)
+![Image 29: Cisco](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b568070e9f341ed73b877_logo_Cisco.svg)
 
-[Sponsor](/sponsors/trpc) 
+![Image 30: Moody's](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68ecdd021c62ba96d46e562b_logo_Moody%27s.svg)
 
-[Star  38.8k](/login?return_to=%2Ftrpc%2Ftrpc)
+![Image 31: Writer](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b4885446216e903b99a_logo_Writer.svg)
 
-🧙‍♀️ Move Fast and Break Nothing. End-to-end typesafe APIs made easy.
+![Image 32: Harvey](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b539e4d30b1da59801f_logo_Harvey.svg)
 
-[react](/topics/react "Topic: react") [api](/topics/api "Topic: api") [typescript](/topics/typescript "Topic: typescript") [nextjs](/topics/nextjs "Topic: nextjs") [next](/topics/next "Topic: next") [prisma](/topics/prisma "Topic: prisma")
+![Image 33: Vanta](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b61b55203228fab9833_logo_vanta.svg)
 
-* Updated Oct 28, 2025
-* TypeScript
+![Image 34: Modern Treasury](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b53e127f180320752c8ca_logo_modern%20treasury.svg)
 
-### [QuivrHQ](/QuivrHQ) / [quivr](/QuivrHQ/quivr)
+![Image 35: Clay](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b541fe451e978c3ccddd2_logo_clay.png)
 
-[Star  38.6k](/login?return_to=%2FQuivrHQ%2Fquivr)
+![Image 36: Rippling](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680f49cea075b0f09f44edc0_logo_rippling.svg)
 
-Opiniated RAG for integrating GenAI in your apps 🧠 Focus on your product rather than the RAG. Easy integration in existing products with customisation! Any LLM: GPT4, Groq, Llama. Any Vectorstore: PGVector, Faiss. Any Files. Anyway you want.
+![Image 37: Mercor](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b5451dc7557134110823a_logo_mercor.png)
 
-[react](/topics/react "Topic: react") [javascript](/topics/javascript "Topic: javascript") [html](/topics/html "Topic: html") [api](/topics/api "Topic: api") [docker](/topics/docker "Topic: docker") [security](/topics/security "Topic: security") [privacy](/topics/privacy "Topic: privacy") [framework](/topics/framework "Topic: framework") [typescript](/topics/typescript "Topic: typescript") [database](/topics/database "Topic: database") [ai](/topics/ai "Topic: ai") [frontend](/topics/frontend "Topic: frontend") [vector](/topics/vector "Topic: vector") [chatbot](/topics/chatbot "Topic: chatbot") [postgresql](/topics/postgresql "Topic: postgresql") [openai](/topics/openai "Topic: openai") [rag](/topics/rag "Topic: rag") [groq](/topics/groq "Topic: groq") [llm](/topics/llm "Topic: llm") [chatgpt](/topics/chatgpt "Topic: chatgpt")
+![Image 38: dbt Labs](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b70b288f67d107deae7_logo_dbt%20labs.svg)
 
-* Updated Jul 9, 2025
-* Python
+![Image 39: Klarna](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b77461846a7cf254d8391_Klarna_Logo_black%201.svg)
 
-### [Kong](/Kong) / [insomnia](/Kong/insomnia)
+![Image 40: Writer](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b4885446216e903b99a_logo_Writer.svg)
 
-[Star  37.5k](/login?return_to=%2FKong%2Finsomnia)
+![Image 41: Harvey](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b539e4d30b1da59801f_logo_Harvey.svg)
 
-The open-source, cross-platform API client for GraphQL, REST, WebSockets, SSE and gRPC. With Cloud, Local and Git storage.
+![Image 42: Vanta](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b61b55203228fab9833_logo_vanta.svg)
 
-[api](/topics/api "Topic: api") [graphql](/topics/graphql "Topic: graphql") [curl](/topics/curl "Topic: curl") [rest-api](/topics/rest-api "Topic: rest-api") [websockets](/topics/websockets "Topic: websockets") [grpc](/topics/grpc "Topic: grpc") [http-client](/topics/http-client "Topic: http-client") [api-client](/topics/api-client "Topic: api-client") [electron-app](/topics/electron-app "Topic: electron-app") [api-design](/topics/api-design "Topic: api-design")
+![Image 43: Modern Treasury](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b53e127f180320752c8ca_logo_modern%20treasury.svg)
 
-* Updated Nov 4, 2025
-* TypeScript
+![Image 44: Clay](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b541fe451e978c3ccddd2_logo_clay.png)
 
-### [httpie](/httpie) / [cli](/httpie/cli)
+![Image 45: Rippling](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680f49cea075b0f09f44edc0_logo_rippling.svg)
 
-[Star  36.9k](/login?return_to=%2Fhttpie%2Fcli)
+![Image 46: Mercor](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b5451dc7557134110823a_logo_mercor.png)
 
-🥧 HTTPie CLI — modern, user-friendly command-line HTTP client for the API era. JSON support, colors, sessions, downloads, plugins & more.
+![Image 47: dbt Labs](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b70b288f67d107deae7_logo_dbt%20labs.svg)
 
-[python](/topics/python "Topic: python") [api](/topics/api "Topic: api") [debugging](/topics/debugging "Topic: debugging") [cli](/topics/cli "Topic: cli") [http](/topics/http "Topic: http") [client](/topics/client "Topic: client") [devops](/topics/devops "Topic: devops") [json](/topics/json "Topic: json") [development](/topics/development "Topic: development") [terminal](/topics/terminal "Topic: terminal") [web](/topics/web "Topic: web") [rest](/topics/rest "Topic: rest") [curl](/topics/curl "Topic: curl") [rest-api](/topics/rest-api "Topic: rest-api") [http-client](/topics/http-client "Topic: http-client") [api-client](/topics/api-client "Topic: api-client") [developer-tools](/topics/developer-tools "Topic: developer-tools") [usability](/topics/usability "Topic: usability") [api-testing](/topics/api-testing "Topic: api-testing") [httpie](/topics/httpie "Topic: httpie")
+![Image 48: Klarna](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b77461846a7cf254d8391_Klarna_Logo_black%201.svg)
 
-* Updated Dec 17, 2024
-* Python
+![Image 49: Ally](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b772708796f17630c2c12_logo_Ally.svg)
 
-### [mudler](/mudler) / [LocalAI](/mudler/LocalAI)
+![Image 50: Rakuten](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1aa251143166667aec3_logo_Rakuten.svg)
 
-[Sponsor](/sponsors/mudler) 
+![Image 51: LinkedIn](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68e63bc524be687757a9ab4c_logo_linkedin.svg)
 
-[Star  36.8k](/login?return_to=%2Fmudler%2FLocalAI)
+![Image 52: Elastic](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1c1c55df212370b53fd_logo_Elastic.svg)
 
-🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference
+![Image 53: Workday](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b9f6a8a90cb7e12aa8a_logo_Workday.svg)
 
-[api](/topics/api "Topic: api") [ai](/topics/ai "Topic: ai") [mcp](/topics/mcp "Topic: mcp") [decentralized](/topics/decentralized "Topic: decentralized") [text-generation](/topics/text-generation "Topic: text-generation") [distributed](/topics/distributed "Topic: distributed") [tts](/topics/tts "Topic: tts") [image-generation](/topics/image-generation "Topic: image-generation") [llama](/topics/llama "Topic: llama") [object-detection](/topics/object-detection "Topic: object-detection") [mamba](/topics/mamba "Topic: mamba") [libp2p](/topics/libp2p "Topic: libp2p") [gemma](/topics/gemma "Topic: gemma") [mistral](/topics/mistral "Topic: mistral") [audio-generation](/topics/audio-generation "Topic: audio-generation") [llm](/topics/llm "Topic: llm") [stable-diffusion](/topics/stable-diffusion "Topic: stable-diffusion") [rwkv](/topics/rwkv "Topic: rwkv") [musicgen](/topics/musicgen "Topic: musicgen") [rerank](/topics/rerank "Topic: rerank")
+![Image 54: Monday.com](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29ec51fd39bd91154fa44_logo_Monday.svg)
 
-* Updated Nov 4, 2025
-* Go
+![Image 55: NU](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b55bb766a5757e88c5d11_logo_nubank.svg)
 
-### [slatedocs](/slatedocs) / [slate](/slatedocs/slate)
+![Image 56: Bridgewater](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b55f873808ce291c32de7_logo_bridgewater.svg)
 
-[Star  36.2k](/login?return_to=%2Fslatedocs%2Fslate)
+![Image 57: Cloudflare](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b8987150129e3e32608_logo_Cloudflare.svg)
 
-Beautiful static documentation for your API
+![Image 58: GitLab](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1d39b2c6c806093f171_GitLab_logo_(2)%201.svg)
 
-[api](/topics/api "Topic: api") [static-site-generator](/topics/static-site-generator "Topic: static-site-generator") [api-documentation](/topics/api-documentation "Topic: api-documentation") [slate](/topics/slate "Topic: slate")
+![Image 59: The Home Depot](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b77b2f63a9dcf3b2fac9f_The_Home_Depot-Logo.wine%201.svg)
 
-* Updated Jun 13, 2024
-* SCSS
+![Image 60: Cisco](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b568070e9f341ed73b877_logo_Cisco.svg)
 
-### [chatanywhere](/chatanywhere) / [GPT\_API\_free](/chatanywhere/GPT_API_free)
+![Image 61: Moody's](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68ecdd021c62ba96d46e562b_logo_Moody%27s.svg)
 
-[Star  34k](/login?return_to=%2Fchatanywhere%2FGPT_API_free)
+![Image 62: Ally](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b772708796f17630c2c12_logo_Ally.svg)
 
-Free ChatGPT&DeepSeek API Key，免费ChatGPT&DeepSeek API。免费接入DeepSeek API和GPT4 API，支持 gpt | deepseek | claude | gemini | grok 等排名靠前的常用大模型。
+![Image 63: Rakuten](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1aa251143166667aec3_logo_Rakuten.svg)
 
-[api](/topics/api "Topic: api") [gemini](/topics/gemini "Topic: gemini") [gpt](/topics/gpt "Topic: gpt") [grok](/topics/grok "Topic: grok") [claude](/topics/claude "Topic: claude") [chatgpt](/topics/chatgpt "Topic: chatgpt") [deepseek](/topics/deepseek "Topic: deepseek")
+![Image 64: LinkedIn](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68e63bc524be687757a9ab4c_logo_linkedin.svg)
 
-* Updated Oct 10, 2025
-* Python
+![Image 65: Elastic](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1c1c55df212370b53fd_logo_Elastic.svg)
 
-### [directus](/directus) / [directus](/directus/directus)
+![Image 66: Workday](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b9f6a8a90cb7e12aa8a_logo_Workday.svg)
 
-[Sponsor](/sponsors/directus) 
+![Image 67: Monday.com](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29ec51fd39bd91154fa44_logo_Monday.svg)
 
-[Star  33.4k](/login?return_to=%2Fdirectus%2Fdirectus)
+![Image 68: NU](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b55bb766a5757e88c5d11_logo_nubank.svg)
 
-The flexible backend for all your projects 🐰 Turn your DB into a headless CMS, admin panels, or apps with a custom UI, instant APIs, auth & more.
+![Image 69: Bridgewater](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b55f873808ce291c32de7_logo_bridgewater.svg)
 
-[javascript](/topics/javascript "Topic: javascript") [mysql](/topics/mysql "Topic: mysql") [api](/topics/api "Topic: api") [graphql](/topics/graphql "Topic: graphql") [cms](/topics/cms "Topic: cms") [app](/topics/app "Topic: app") [node](/topics/node "Topic: node") [typescript](/topics/typescript "Topic: typescript") [sql](/topics/sql "Topic: sql") [database](/topics/database "Topic: database") [vue](/topics/vue "Topic: vue") [sqlite](/topics/sqlite "Topic: sqlite") [postgresql](/topics/postgresql "Topic: postgresql") [mariadb](/topics/mariadb "Topic: mariadb") [data-visualization](/topics/data-visualization "Topic: data-visualization") [mssql](/topics/mssql "Topic: mssql") [directus](/topics/directus "Topic: directus") [composable](/topics/composable "Topic: composable") [headless-cms](/topics/headless-cms "Topic: headless-cms") [no-code](/topics/no-code "Topic: no-code")
+![Image 70: Cloudflare](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68f29b8987150129e3e32608_logo_Cloudflare.svg)
 
-* Updated Nov 4, 2025
-* TypeScript
+![Image 71: GitLab](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6811d1d39b2c6c806093f171_GitLab_logo_(2)%201.svg)
 
-### [hasura](/hasura) / [graphql-engine](/hasura/graphql-engine)
+![Image 72: The Home Depot](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/680b77b2f63a9dcf3b2fac9f_The_Home_Depot-Logo.wine%201.svg)
 
-[Star  31.8k](/login?return_to=%2Fhasura%2Fgraphql-engine)
+![Image 73: Cisco](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/681b568070e9f341ed73b877_logo_Cisco.svg)
 
-Blazing fast, instant realtime GraphQL APIs on all your data with fine grained access control, also trigger webhooks on database events.
+![Image 74: Moody's](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/68ecdd021c62ba96d46e562b_logo_Moody%27s.svg)
 
-[api](/topics/api "Topic: api") [graphql](/topics/graphql "Topic: graphql") [bigquery](/topics/bigquery "Topic: bigquery") [postgres](/topics/postgres "Topic: postgres") [haskell](/topics/haskell "Topic: haskell") [sql-server](/topics/sql-server "Topic: sql-server") [mongodb](/topics/mongodb "Topic: mongodb") [rest-api](/topics/rest-api "Topic: rest-api") [graphql-server](/topics/graphql-server "Topic: graphql-server") [access-control](/topics/access-control "Topic: access-control") [hasura](/topics/hasura "Topic: hasura") [graphql-api](/topics/graphql-api "Topic: graphql-api") [subgraph](/topics/subgraph "Topic: subgraph") [automatic-api](/topics/automatic-api "Topic: automatic-api") [supergraph](/topics/supergraph "Topic: supergraph")
+![Image 75](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8ca3e52ab9d39ab1dd175_Frame%2054.svg)
 
-* Updated Oct 30, 2025
-* TypeScript
+#### Visibility &control
 
-### [Binaryify](/Binaryify) / [NeteaseCloudMusicApi](/Binaryify/NeteaseCloudMusicApi)
+See exactly what's happening at every step of your agent. Steer your agent to accomplish critical tasks the way you intended.
 
-[Star  30.3k](/login?return_to=%2FBinaryify%2FNeteaseCloudMusicApi)
+![Image 76](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8ca3ef3bb80acf529c879_Frame%2052.svg)
 
-网易云音乐 Node.js API service
+#### Fast iteration
 
-[nodejs](/topics/nodejs "Topic: nodejs") [javascript](/topics/javascript "Topic: javascript") [api](/topics/api "Topic: api") [apis](/topics/apis "Topic: apis") [neteasecloud](/topics/neteasecloud "Topic: neteasecloud") [cloudmusic](/topics/cloudmusic "Topic: cloudmusic")
+Rapidly move through build, test, deploy, learn, repeat with workflows across the entire agent engineering lifecycle.
 
-* Updated Feb 28, 2024
+![Image 77](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8ca3e6fed3563f000e2b8_Vector%20(Stroke).svg)
 
-### [encode](/encode) / [django-rest-framework](/encode/django-rest-framework)
+#### Durable performance
 
-[Sponsor](/sponsors/encode) 
+Ship at scale with agent infrastructure designed for long-running workloads and human oversight.
 
-[Star  29.6k](/login?return_to=%2Fencode%2Fdjango-rest-framework)
+![Image 78](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68f20c01d1c6d0de365a83f3_Frame%20633607.svg)
 
-Web APIs for Django. 🎸
+#### Model neutral
 
-[python](/topics/python "Topic: python") [api](/topics/api "Topic: api") [django](/topics/django "Topic: django") [rest](/topics/rest "Topic: rest")
+Swap models, tools, and databases without rewriting your app. Future-proof your stack as AI advances with no vendor lock-in.
 
-* Updated Nov 3, 2025
-* Python
+#### Your agent engineering stack
 
-### [songquanpeng](/songquanpeng) / [one-api](/songquanpeng/one-api)
+Open Source Frameworks
 
-[Star  27.8k](/login?return_to=%2Fsongquanpeng%2Fone-api)
+![Image 79](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee0ae1e9e6a4e9a2528077_Group%2049.svg)
 
-LLM API 管理 & 分发系统，支持 OpenAI、Azure、Anthropic Claude、Google Gemini、DeepSeek、字节豆包、ChatGLM、文心一言、讯飞星火、通义千问、360 智脑、腾讯混元等主流模型，统一 API 适配，可用于 key 管理与二次分发。单可执行文件，提供 Docker 镜像，一键部署，开箱即用。LLM API management & key redistribution system, unifying multiple providers under a single API. Single binary, Docker-ready, with an English UI.
+LangChain
 
-[api](/topics/api "Topic: api") [api-gateway](/topics/api-gateway "Topic: api-gateway") [proxy](/topics/proxy "Topic: proxy") [gemini](/topics/gemini "Topic: gemini") [openai](/topics/openai "Topic: openai") [gpt](/topics/gpt "Topic: gpt") [claude](/topics/claude "Topic: claude") [openai-api](/topics/openai-api "Topic: openai-api") [chatgpt](/topics/chatgpt "Topic: chatgpt") [ernie-bot](/topics/ernie-bot "Topic: ernie-bot") [azure-openai-api](/topics/azure-openai-api "Topic: azure-openai-api")
+LangChain helps you ship quickly with less code using a pre-built agent architecture and model integrations.
 
-* Updated Jul 18, 2025
-* JavaScript
+![Image 80](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee0ae159c7faa9b4244452_LangGraph-symbol.svg)
 
-Followers
-:   105k followers
+LangGraph
 
-Website
-:   [github.com/topics/api](https://github.com/topics/api)
+LangGraph puts you in control with low-level primitives to build custom agent workflows.
 
-Wikipedia
-:   [Wikipedia](https://en.wikipedia.org/wiki/Application_programming_interface)
+Agent Engineering Platform
 
-## Related topics
+![Image 81](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee190874d0eff38a1a9dd9_Vector.svg)
 
- [graphql-api](/topics/graphql-api "Topic: graphql-api")   [rest-api](/topics/rest-api "Topic: rest-api")   [rpc](/topics/rpc "Topic: rpc")   [soap](/topics/soap "Topic: soap")   [wsdl](/topics/wsdl "Topic: wsdl")
+LangSmith
 
-You can’t perform that action at this time.
+[![Image 82](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee1a15c256f9574fca2db6_Frame%209.svg)![Image 83](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efbb6dd8cae07aab9beaef_Frame%209.svg) Observability](https://www.langchain.com/#)[![Image 84](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee1a15d23a92962b39eea8_Frame%20633547.svg)![Image 85](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efbb6da3e6d145b26815c4_Frame%20633547.svg) Evaluation](https://www.langchain.com/#)[![Image 86](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee1a150a755218f0dc9015_Frame%20100040.svg)![Image 87](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efbb6dd64210cebef69e0f_Frame%20100040.svg) Deployment](https://www.langchain.com/#)
 
- 
+![Image 88](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee3bbd8168220d41626faa_Frame%20633571.svg)
+
+[![Image 89](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68de52545f74590b1a1bc70c_Frame%208.svg)![Image 90](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e37454778f383c5935fa77_Frame%208.svg) Observability](https://www.langchain.com/#observability)[![Image 91](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68de52562b9450fc86124553_ae995c36c11ae305d411c6fa8ed1d2f4_Frame%206.svg)![Image 92](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e374542795000a452a647f_Frame%207.svg) Evaluation](https://www.langchain.com/#evaluation)[![Image 93](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68de52547dc5dae72f51a7d7_Frame%20100039.svg)![Image 94](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e374541ccfbc7c5bc70db0_Frame%20100039.svg) Deployment](https://www.langchain.com/#deployment)
+
+See exactly what your agent is doing
+------------------------------------
+
+Agents create dense outputs that make debugging hard. Tracing gives you clear visibility into each step, so you can quickly identify issues and confidently explain what your agent is actually doing.
+
+[LangSmith Observability](https://www.langchain.com/langsmith/observability)
+
+Improve agent quality with evals
+--------------------------------
+
+LLMs are non-deterministic and output natural language, making responses hard to evaluate for accuracy and quality. Build realistic test sets from production data, score performance with evaluators and expert feedback, and iterate to get your agent from 'okay' to 'great'.
+
+[LangSmith Evaluation](https://www.langchain.com/langsmith/evaluation)
+
+Deploy with infrastructure built for agents
+-------------------------------------------
+
+Standard infrastructure can’t handle long-running agent workloads that need human collaboration. Deploy in one click with APIs that handle memory, auto-scaling, and enterprise-grade security out of the box — built for agent workflows that run for hours or days.
+
+[LangSmith Deployment](https://www.langchain.com/langsmith/deployment)
+
+![Image 95](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68f2d14c221400b03d4c5e35_LS-Obs.webp)![Image 96](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efcfa32d850cf17c19c19b_LS-evals-1%203.webp)![Image 97](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e3a4338f47dbbfd2ec67ad_a9a0b16a0a19549de08d29fcb762b22f_LS-Depl.webp)
+
+### Build agents your way, with templates or custom control
+
+Bring your own framework
+------------------------
+
+LangSmith is framework-agnostic. Trace using the TypeScript or Python SDK to gain visibility into your agent interactions, whether you use LangChain's frameworks or not.
+
+Open Source Frameworks
+
+Bring your own
+
+Agent Engineering Platform
+
+![Image 98](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee190874d0eff38a1a9dd9_Vector.svg)
+
+LangSmith
+
+[![Image 99](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee1a15c256f9574fca2db6_Frame%209.svg)![Image 100](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efbb6dd8cae07aab9beaef_Frame%209.svg) Observability](https://www.langchain.com/#)[![Image 101](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee1a15d23a92962b39eea8_Frame%20633547.svg)![Image 102](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efbb6da3e6d145b26815c4_Frame%20633547.svg) Evaluation](https://www.langchain.com/#)[![Image 103](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68ee1a150a755218f0dc9015_Frame%20100040.svg)![Image 104](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efbb6dd64210cebef69e0f_Frame%20100040.svg) Deployment](https://www.langchain.com/#)
+
+#### Your agent engineering stack
+
+Open Source Frameworks
+
+### Build agents your way, with templates or custom control
+
+![Image 105](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68f1045a37643200af0d0aed_Frame%2099910.svg)
+LangChain helps you ship quickly with less code using a pre-built agent architecture and model integrations.
+
+![Image 106](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68f104da622c48c315adac84_Frame%2099906.svg)
+LangGraph puts you in control with low-level primitives to build custom agent workflows.
+
+LangSmith Agent Engineering Platform
+
+### See exactly what your agent is doing
+
+Agents create dense outputs that make debugging hard. Tracing gives you clear visibility into each step, so you can quickly identify issues and confidently explain what your agent is actually doing.
+
+[LangSmith Observability](https://www.langchain.com/langsmith/observability)
+
+![Image 107](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68f2d14c221400b03d4c5e35_LS-Obs.webp)
+
+LangSmith Agent Engineering Platform
+
+### Improve agent quality with evals
+
+LLMs are non-deterministic and output natural language, making responses hard to evaluate for accuracy and quality. Build realistic test sets from production data, score performance with evaluators and expert feedback, and iterate to get your agent from 'okay' to 'great'.
+
+[LangSmith Evaluation](https://www.langchain.com/langsmith/evaluation)
+
+![Image 108](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68efcfa32d850cf17c19c19b_LS-evals-1%203.webp)
+
+LangSmith Agent Engineering Platform
+
+### Deploy with infrastructure built for agents
+
+Standard infrastructure can’t handle long-running agent workloads that need human collaboration. Deploy in one click with APIs that handle memory, auto-scaling, and enterprise-grade security out of the box — built for agent workflows that run for hours or days.
+
+[LangSmith Deployment](https://www.langchain.com/langsmith/deployment)
+
+![Image 109](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e3a4338f47dbbfd2ec67ad_a9a0b16a0a19549de08d29fcb762b22f_LS-Depl.webp)
+
+Explore top agent use cases
+---------------------------
+
+#### Copilots
+
+Build native co-pilots into your application to unlock new end user experiences for domain-specific tasks.
+
+[![Image 110](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/690a66cbccecd406a09ca9cd_logo_rippling_light%20mode.svg)](https://www.langchain.com/#)
+
+#### Enterprise GPT
+
+Give all employees access to information and tools in a compliant manner so they can perform their best.
+
+[![Image 111](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/680a1dfda253f7223b13bac8_d9e260826e5b7426f8f02e0eee665d8b_logo_rakuten.svg)![Image 112](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/681c7597a78988d463e5d100_Group%2070.svg)](https://blog.langchain.dev/customers-rakuten/)
+
+#### Customer Support
+
+Improve the speed and efficiency of support teams that handle customer requests.
+
+[![Image 113](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6819fde80c00e748f53c881f_logo_klarna.svg)![Image 114](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/681c7597a78988d463e5d100_Group%2070.svg)](https://blog.langchain.dev/customers-klarna/)
+
+#### Research
+
+Synthesize data, summarize sources, and uncover insights faster for knowledge work.
+
+[![Image 115](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6819fe5973e7714382bddd35_logo_morningstar.svg)![Image 116](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/681c7597a78988d463e5d100_Group%2070.svg)](https://blog.langchain.dev/morningstar-intelligence-engine-puts-personalized-investment-insights-at-analysts-fingertips/)
+
+#### Code generation
+
+Accelerate software development by automating code writing, refactoring, and documentation for your team.
+
+[![Image 117](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6819fe7f44e8a32e29c579f7_logo_lovable.svg)![Image 118](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/681c7597a78988d463e5d100_Group%2070.svg)](https://blog.langchain.dev/customers-lovable/)
+
+#### AI Search
+
+Offer a concierge experience to guide users to products or information in a personalized way.
+
+[![Image 119](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6819fda7d5be8df12d501368_The_Home_Depot-Logo.wine%201.svg)](https://www.langchain.com/#)
+
+Get inspired by companies who have done it
+------------------------------------------
+
+Teams building with LangChain products are driving operational efficiency, increasing discovery & personalization, and delivering premium products that generate revenue.
+
+[Read their stories](https://www.langchain.com/customers)
+
+[![Image 120](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/680a2845c7235e92f485a254_Klarna_Logo_black%201.svg) Financial Services Klarna's AI assistant reduced customer query resolution time by 80%, powered by LangSmith and LangGraph.](https://blog.langchain.dev/customers-klarna/)[![Image 121](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/68e8de0dceca1502358e8e8f_logo_Elastic.svg) B2B SaaS Elastic’s AI security assistant, built with LangSmith and LangGraph, cut alert response times for 20,000+ customers.](https://blog.langchain.com/langchain-partners-with-elastic-to-launch-the-elastic-ai-assistant/)[![Image 122](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/680a1dfda253f7223b13bac8_d9e260826e5b7426f8f02e0eee665d8b_logo_rakuten.svg) AI/ML Rakuten’s GenAI platform, built with LangGraph and LangSmith, lets employees across 70+ businesses create AI agents.](https://www.youtube.com/watch?v=gD1LIjCkuA8&list=PLfaIDFEXuae1aUEcWMYTKwbnc1E2cFH7Y&index=5)
+
+#### Learn alongside the 1 million+ practitioners who are pushing the industry forward
+
+#### 90M
+
+#### Monthly downloads
+
+#### 100k+
+
+#### GitHub stars
+
+#### #1
+
+#### Downloaded agent framework
+
+#### 1000
+
+#### Integrations
+
+Ready to start shipping reliable agents faster?
+-----------------------------------------------
+
+Get started with tools from the LangChain product suite for every step of the agent development lifecycle.
+
+[Get a demo](https://www.langchain.com/contact-sales)[Sign up for free](https://smith.langchain.com/)
+
+Products
+
+[LangChain](https://www.langchain.com/langchain)[LangGraph](https://www.langchain.com/langgraph)[LangSmith Observability](https://www.langchain.com/langsmith/observability)[LangSmith Evaluation](https://www.langchain.com/langsmith/evaluation)[LangSmith Deployment](https://www.langchain.com/langsmith/deployment)
+
+Resources
+
+[Guides](https://www.langchain.com/resources)[Blog](https://blog.langchain.com/)[Customer Stories](https://www.langchain.com/customers)[LangChain Academy](https://academy.langchain.com/)[Community](https://www.langchain.com/join-community)[Events](https://lu.ma/langchain)[Changelog](https://changelog.langchain.com/)[Docs](http://docs.langchain.com/)
+
+Company
+
+[About](https://www.langchain.com/about)[Careers](https://www.langchain.com/careers)[X](https://twitter.com/LangChainAI)[LinkedIn](https://www.linkedin.com/company/langchain/)[YouTube](https://www.youtube.com/@LangChain)[Marketing Assets](https://drive.google.com/drive/folders/17xybjzmVBdsQA-VxouuGLxF6bDsHDe80?usp=sharing)[Security](https://trust.langchain.com/)
+
+Sign up for our newsletter to stay up to date
+
+Thank you! Your submission has been received!
+
+Oops! Something went wrong while submitting the form.
+
+![Image 123](https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/65c6a38f9c53ec71f5fc73de_langchain-word.svg)
+
+[All systems operational](https://status.smith.langchain.com/)
+
+[Privacy Policy](https://www.langchain.com/privacy-policy)[Terms of Service](https://www.langchain.com/terms-of-service)

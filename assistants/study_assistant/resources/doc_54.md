@@ -1,101 +1,195 @@
-# GitHub Skills
+|Trust Center
 
-Learn how to use GitHub with interactive courses designed for beginners and experts.
+# LangSmith Security Hub
 
-[Start with *Introduction to GitHub*](https://github.com/skills/introduction-to-github)
+LangSmith is an all-in-one developer platform for every step of the LLM-powered application lifecycle, whether you’re building with LangChain or not.
 
-## Our courses
+To track LangSmith & LangGraph Platform incidents and health, please go to: <https://status.smith.langchain.com/>
 
-### [First day on GitHub](#first-day-on-github)
+fa-envelope alpaca-fa-regular
 
-#### [Introduction to GitHub](https://github.com/skills/introduction-to-github)
+[trust@langchain.dev](mailto:trust@langchain.dev)
 
-Get started using GitHub in less than an hour.
+fa-link alpaca-fa-regular
 
-#### [Communicate using Markdown](https://github.com/skills/communicate-using-markdown)
+[Privacy Policy](https://www.langchain.com/privacy-policy)
 
-Organize ideas and collaborate using Markdown, a lightweight language for text formatting.
+[Controls](/controls)[FAQ](/faq)[Updates](/updates)
 
-#### [GitHub Pages](https://github.com/skills/github-pages)
+## Compliance
 
-Create a site or blog from your GitHub repositories with GitHub Pages.
+SOC 2 Type II
 
-### [First week on GitHub](#first-week-on-github)
+GDPR
 
-#### [Review pull requests](https://github.com/skills/review-pull-requests)
+HIPAA
 
-Collaborate and work together on GitHub.
+## Resources
 
-#### [Resolve merge conflicts](https://github.com/skills/resolve-merge-conflicts)
+[View all 26 resources](/resources)
 
-Learn why conflicts happen and how to resolve them.
+#### Audit Reports
 
-#### [Release-based workflow](https://github.com/skills/release-based-workflow)
+#### Policies
 
-Practice a release-based workflow and explore branching strategies.
+#### Assessments
 
-#### [Connect the dots](https://github.com/skills/connect-the-dots)
+#### Other Security Docs
 
-Find relevant conversations, commits, and projects in a repository.
+#### Other resources
 
-#### [Code with Codespaces](https://github.com/skills/code-with-codespaces)
+## Subprocessors
 
-Develop code using GitHub Codespaces and Visual Studio Code.
+[View all 4 subprocessors](/subprocessors)
 
-#### [Code with Copilot](https://github.com/skills/copilot-codespaces-vscode)
+Google Cloud Platform
 
-Develop with AI-powered code suggestions using GitHub Copilot, Codespaces, and VS Code.
+•
 
-### [Automate workflows with GitHub Actions](#automate-workflows-with-github-actions)
+Cloud provider
 
-#### [Hello GitHub Actions](https://github.com/skills/hello-github-actions)
+GCP US-Central-1 (Iowa, USA) or EU West-4 (Netherlands)
 
-Create a GitHub Action and use it in a workflow.
+GCP is LangChain's Cloud hosting provider.
 
-#### [Test with Actions](https://github.com/skills/test-with-actions)
+We offer hosting options in either in GCP US-Central-1 (Iowa, USA) or EU West-4 (Netherlands)
 
-Create workflows that enable you to use Continuous Integration (CI) for your projects.
+Supabase
 
-#### [Publish packages](https://github.com/skills/publish-packages)
+•
 
-Use GitHub Actions to publish your project to a Docker image.
+Database provider
 
-#### [Deploy to Azure](https://github.com/skills/deploy-to-azure)
+Clickhouse
 
-Create a deployment workflow using GitHub Actions and Microsoft Azure.
+•
 
-#### [Write JavaScript actions](https://github.com/skills/write-javascript-actions)
+Database provider
 
-Write your own GitHub JavaScript Action.
+Elastic
 
-#### [Reusable workflows](https://github.com/skills/reusable-workflows)
+•
 
-Make a workflow reusable in other workflows.
+Indexing for the few-shot datasets search feature
 
-### [Code security and analysis](#code-security-and-analysis)
+## Controls
 
-#### [Secure your repository supply chain](https://github.com/skills/secure-repository-supply-chain)
+### placeholder
 
-Secure your supply chain, patch dependency vulnerabilities.
+fa-chevron-right alpaca-fa-regular
 
-#### [Secure code game](https://github.com/skills/secure-code-game)
+fa-circle-check alpaca-fa-solid
 
-Learn about software security in a fun, educational environment.
+### placeholder
 
-#### [Introduction to CodeQL](https://github.com/skills/introduction-to-codeql)
+fa-chevron-right alpaca-fa-regular
 
-Learn how to enable CodeQL to secure your code.
+fa-circle-check alpaca-fa-solid
 
-#### [Change commit history](https://github.com/skills/change-commit-history)
+### placeholder
 
-A skills course on changing the commit history with Git.
+fa-chevron-right alpaca-fa-regular
 
-#### [Introduction to secret scanning](https://github.com/skills/introduction-to-secret-scanning)
+fa-circle-check alpaca-fa-solid
 
-Enable secret scanning and take a feature tour.
+### placeholder
 
-Have an idea for a course? Build your own with our quickstart guide.
+fa-chevron-right alpaca-fa-regular
 
-[View quickstart guide](/quickstart)
+fa-circle-check alpaca-fa-solid
 
- 
+### placeholder
+
+fa-chevron-right alpaca-fa-regular
+
+fa-circle-check alpaca-fa-solid
+
+### placeholder
+
+fa-chevron-right alpaca-fa-regular
+
+fa-circle-check alpaca-fa-solid
+
+## Data collected
+
+fa-check alpaca-fa-regular
+
+Customer personally identifiable information
+
+fa-check alpaca-fa-regular
+
+Employee personally identifiable information
+
+fa-xmark-large alpaca-fa-solid
+
+Credit card information
+
+fa-xmark-large alpaca-fa-solid
+
+Personal health information
+
+## Updates
+
+[View all 3 updates](/updates)
+
+### Product naming changes: LangSmith Deployment and LangSmith Studio
+
+General
+
+Published October 17, 2025
+
+We’ve updated product names across the LangSmith UI, docs, and website to make it clearer how our tools fit together.
+
+What changed?
+
+* LangGraph Platform is now LangSmith Deployment
+* LangGraph Studio is now LangSmith Studio
+* LangSmith has 3 services: LangSmith Observability, LangSmith Evaluation, and LangSmith Deployment
+
+You’ll see these new names reflected everywhere — including in the in-product navigation, website (<https://langchain.com/>), and documentation (<https://docs.langchain.com/>).
+
+Why we made this change
+As our platform evolves, we want our naming to better reflect what each product does and how they work together:
+
+* LangSmith Deployment (formerly LangGraph Platform) provides purpose-built infrastructure for deploying and managing long-running agent workloads.
+* LangSmith Studio (formerly LangGraph Studio) provides an interactive IDE for debugging and improving your agents. Users of LangSmith Deployment on all plan types will have access to LangSmith Studio
+
+These updates make it easier to understand the relationship between LangSmith’s observability, evaluation, and deployment capabilities.
+
+* LangSmith Observability: Complete visibility into agent behavior with tracing, real-time monitoring, alerting, and high-level insights into usage.
+* LangSmith Evaluation: Run evals before and after shipping, gather expert feedback on real performance, and iterate on prompts with your team.
+* LangSmith Deployment: Purpose-built infrastructure for deploying and managing long-running agent workloads.
+
+What’s not changing
+
+* Anything related to security
+* All existing deployments, APIs, and workflows continue to work as they do today.
+* No updates are needed on your end — this is a naming change only.
+* Pricing, configurations, and contracts remain exactly the same.
+  + Users do not need to use LangSmith Observability or Evaluation to use Deployment
+
+Official Release: <https://changelog.langchain.com/announcements/product-naming-changes-langsmith-deployment-and-langsmith-studio>
+
+### New SOC 2 Type II Report Available
+
+General
+
+Published July 31, 2025
+
+We’ve successfully completed our latest SOC 2 Type II audit, covering the period from July 4, 2024 to June 30, 2025. This independent assessment validates the design and operating effectiveness of our internal controls and covers the Security Trust Service Criteria.
+
+The report covers both of our enterprise products, LangSmith and LangGraph, including their underlying infrastructure, organizational practices, and technical safeguards.
+
+### LangSmith Availability Impacted
+
+General
+
+Published June 12, 2025
+
+LangSmith Availability Impacted: Please follow our status page for more information [https://status.smith.langchain.com](https://t.co/Ek0v26mEgr) We've identified an underlying cloud provider issue causing failures in the LangSmith application, API, and LangGraph Platform including run ingestion. We are working closely with our provider and will continue to post updates.
+
+## Ask LangChain a question
+
+---
+
+Please verify answers for accuracy.

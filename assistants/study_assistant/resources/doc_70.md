@@ -14,308 +14,375 @@ Catch up on the latest keynote highlights.  • 00 : 00 : 00 : 00
 
 ## Navigation Menu
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fcustomer-stories)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fenterprise)
 
 # Search code, repositories, users, issues, pull requests...
 
 [Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fcustomer-stories)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fenterprise)
 
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fcustomer-stories&source=header)
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fenterprise&source=header)
 
 You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
 {{ message }}
 
-[Customer Stories](/customer-stories)
+# The AI-powered developer platform for the agent-ready enterprise
 
-[Enterprise](/customer-stories/enterprise) [Team](/customer-stories/team) [All stories](/customer-stories/all)
+Bring your DevOps together on one secure platform built for speed, scale, and the agent-driven future of software.
 
-[Start a free trial](/organizations/enterprise_plan?ref_cta=Start+a+free+trial&ref_loc=customer+stories+nav&ref_page=%2Fcustomer-stories)
+[Start a 30-day free trial](https://github.com/account/enterprises/new?locale=en-US)[Contact sales](https://github.com/enterprise/contact?ref_cta=Contact+Sales&ref_loc=hero&ref_page=%2Fenterprise&scid=&utm_campaign=Enterprise&utm_content=Enterprise&utm_medium=referral&utm_source=github&locale=en-US)
 
-# Meet the companies who build with GitHub
+## /enterprise Section - logo
 
-[See all stories](/customer-stories/all)
+## Enterprise-grade by design
 
-[With 12,000 developers using GitHub Copilot, Accenture doubles down on GitHub’s platform.
+A centrally governed foundation that provides the control and visibility you need to innovate securely at scale.
 
-Read the story](/customer-stories/accenture) [Automotive excellence at Mercedes-Benz and seamless developer experience on GitHub go hand in hand.
+### Security built into every stage of the software lifecycle
 
-Read the story](/customer-stories/mercedes-benz) [Cathay embraces AI-powered development to deliver securely at scale.
+*Security built into every stage of the software lifecycle.* GitHub integrates automated, developer-first security that keeps teams moving fast.
 
-Read the story](/customer-stories/cathay)
+* *Find and fix vulnerabilities natively.* Automate code, secret, and dependency scanning with [GitHub Advanced Security](https://github.com/security/advanced-security?locale=en-US), built directly into the workflow.
+* *Secure your software supply chain.* Visualize and maintain the dependencies in your [software supply chain](https://github.com/security/advanced-security/software-supply-chain?locale=en-US).
+* *Control the location of your code.* Enjoy SaaS agility with enhanced governance, security, and [flexible data residency](https://github.com/enterprise/data-residency?locale=en-US).
 
-## The world's largest developer platform
+## Built for your most valuable asset: your developers
 
-Leading organizations choose GitHub to plan, build, secure and ship software.
+GitHub transforms your engineering team into a high-performing, AI-powered force for innovation and growth.
 
-* 180M+ Developers
-* 90% Fortune 100
-* 4M+ Organizations
+### The complete development workflow, end to end
 
-Businesses that utilize GitHub Enterprise:
+Bring every stage of the development lifecycle together on one secure platform.
 
-## GitHub Enterprise provides an end-to-end developer platform to accelerate businesses.
+[Explore all features](https://github.com/features?locale=en-US)
 
-* [All](/customer-stories/enterprise?industry=All#browse)
-* [Advertising & Marketing](/customer-stories/enterprise?industry=Advertising%2B%2526%2BMarketing#browse)
-* [Automotive](/customer-stories/enterprise?industry=Automotive#browse)
-* [Education](/customer-stories/enterprise?industry=Education#browse)
-* [Energy & Utilities](/customer-stories/enterprise?industry=Energy%2B%2526%2BUtilities#browse)
-* [Financial services](/customer-stories/enterprise?industry=Financial%2Bservices#browse)
-* [Food & Beverage](/customer-stories/enterprise?industry=Food%2B%2526%2BBeverage#browse)
-* [Government](/customer-stories/enterprise?industry=Government#browse)
-* [Healthcare & Life Sciences](/customer-stories/enterprise?industry=Healthcare%2B%2526%2BLife%2BSciences#browse)
-* [Manufacturing](/customer-stories/enterprise?industry=Manufacturing#browse)
-* [Media & Entertainment](/customer-stories/enterprise?industry=Media%2B%2526%2BEntertainment#browse)
-* [Nonprofit](/customer-stories/enterprise?industry=Nonprofit#browse)
-* [Professional services](/customer-stories/enterprise?industry=Professional%2Bservices#browse)
-* [Real Estate](/customer-stories/enterprise?industry=Real%2BEstate#browse)
-* [Retail & ecommerce](/customer-stories/enterprise?industry=Retail%2B%2526%2Becommerce#browse)
-* [Social & Messaging](/customer-stories/enterprise?industry=Social%2B%2526%2BMessaging#browse)
-* [Software, Hardware & Technology](/customer-stories/enterprise?industry=Software%252C%2BHardware%2B%2526%2BTechnology#browse)
-* [Telecommunications](/customer-stories/enterprise?industry=Telecommunications#browse)
-* [Transportation & Logistics](/customer-stories/enterprise?industry=Transportation%2B%2526%2BLogistics#browse)
-* [Travel & Hospitality](/customer-stories/enterprise?industry=Travel%2B%2526%2BHospitality#browse)
+### Scale your talent with GitHub Copilot
+
+Go beyond code completion with AI that improves quality and problem-solving and fuels innovation.
+
+[Explore Copilot for Business](https://github.com/features/copilot/copilot-business?locale=en-US)
+
+### Hit the ground coding
+
+Skip the ramp-up and accelerate impact with the platform trusted by over 180 million developers.
+
+[Read the Octoverse 2025 report](https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1)
+
+### Flexibility to build your way
+
+Tap into our ecosystem of apps, actions, and models to accelerate innovation.
+
+[Explore the GitHub Marketplace](https://github.com/marketplace?locale=en-US)
+
+### From reactive administration to strategic platform leadership.
+
+*From reactive administration to strategic platform leadership.* Take control with centralized governance and automation that scales with your enterprise.
+
+* Manage multiple orgs from one place. Create and assign [custom roles](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/enterprise-fundamentals/roles-in-an-enterprise) and [teams](https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/enterprise-fundamentals/teams-in-an-enterprise) to streamline management across your enterprise.
+* *Define and enforce policies*. [Apply consistent, non-overridable rulesets](https://docs.github.com/en/enterprise-cloud@latest/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-code-governance) across every repository in your enterprise.
+* *Take command of your AI agents.* [See and control every agent and action](https://docs.github.com/copilot/concepts/agents/enterprise-management) from a single dashboard.
+
+## Adopted by the world's leading organizations
+
+### [Mercado Libre developers code 50% faster with GitHub Copilot](https://github.com/customer-stories/mercado-libre?locale=en-US)
+
+Read customer story
+
+### [Wayfair migrates 15,000 repositories to GitHub, saving $150,000 a year](https://resources.github.com/enterprise/wayfair-enterprise-scale-migration/)
+
+Read customer story
+
+### [TELUS saves $16.9 million by unifying DevOps on GitHub](https://github.com/customer-stories/telus?locale=en-US)
+
+Read customer story
+
+### Start your journey with GitHub
+
+Whether you’re a startup or Fortune 500, GitHub Enterprise gives you everything you need to innovate securely on the platform developers love.
+
+[Start a 30-day free trial](https://github.com/account/enterprises/new?locale=en-US)[Contact sales](https://github.com/enterprise/contact?ref_cta=Contact+Sales&ref_loc=footer&ref_page=%2Fenterprise&scid=&utm_campaign=Enterprise&utm_content=Enterprise&utm_medium=referral&utm_source=github&locale=en-US)
+
+## Get the most out of GitHub Enterprise
+
+### [Get executive insights built for leaders and admins](https://github.com/solutions/executive-insights?locale=en-US)
+
+Learn more
+
+### [Stay ahead with our quarterly product roadmap webinar](https://github.com/roadmap-webinar-series?locale=en-US)
+
+See what's new
+
+### [Accelerate adoption with proven guidance](https://resources.github.com/well-architected/)
+
+Discover GitHub’s framework
+
+### [See the cost savings and ROI of GitHub Enterprise Cloud](https://github.com/resources/whitepapers/forrester?locale=en-US)
+
+Get the Forrester® Total Economic Impact™ study
+
+### [Discover why GitHub leads the Forrester Wave™ for DevOps platforms](https://github.com/resources/whitepapers/forrester-wave-2025?locale=en-US)
+
+Read the report
+
+### [Explore the full documentation for GitHub Enterprise Cloud](https://docs.github.com/en/get-started/onboarding/getting-started-with-github-enterprise-cloud)
+
+View the docs
+
+### Frequently asked questions
+
+#### About GitHub Enterprise
+
+#### What is GitHub Enterprise?
+
+GitHub Enterprise is an enterprise-grade software development platform designed for the complex workflows of modern development.
+
+As an extensible platform solution, GitHub Enterprise enables organizations to [seamlessly integrate additional tools and functionalities](https://github.com/marketplace?type=&locale=en-US), tailoring their development environment to meet specific needs and enhancing overall productivity.
+
+#### Why should organizations use GitHub Enterprise
+
+There are several reasons why organizations should consider using GitHub Enterprise:
+
+1. **Accelerate development at scale with AI-powered development:** GitHub is the world’s most widely adopted Copilot-powered developer platform helping organizations build, secure, and deliver innovative software at scale.
+2. **Application security made simpler:** Native security tools embedded into the developer workflow, such as GitHub Advanced Security, help developers easily fix security issues, while providing more visibility and controls.
+3. **Centralize governance and compliance:** Customers can access a range of administration features to help manage governance at scale and enforce business rules and policies to meet their specific needs.
+4. **Boost productivity and collaboration:** Increase productivity with automated CI/CD workflows using GitHub Actions, collaborate effectively with GitHub Projects and GitHub Issues, manage hosted packages with GitHub Packages, and utilize prebuilt and configured development environments with GitHub Codespaces.
+5. **Greater flexibility and control over data:** Whether self-hosting with GitHub Enterprise Server or using GitHub Enterprise Cloud, GitHub provides customers with flexibility and control over their data. And now with [GitHub Enterprise Cloud with data residency](https://github.com/enterprise/data-residency?locale=en-US), customers have enhanced control where certain data, like their code, resides. [Start a free 30 day trial](https://github.com/account/enterprises/new?locale=en-US) today or [contact our sales team](https://github.com/enterprise/contact/data-residency?locale=en-US) for more information.
+
+#### Who uses GitHub Enterprise?
+
+GitHub Enterprise is used by organizations of all sizes that require greater productivity, collaboration, and security capabilities for their software development process. GitHub Enterprise can scale with teams, all the way from a small startup to a large corporation.
+
+#### What is GitHub Enterprise Cloud?
+
+GitHub Enterprise Cloud is the cloud-based solution of GitHub Enterprise, hosted on GitHub’s servers. This eliminates the need for organizations to maintain their own servers, infrastructure, and updates, allowing them to focus on development.
+
+In addition to the core productivity and collaboration features it provides, GitHub Enterprise Cloud provides access to additional features and add-ons for security, support, managed users, and many more.
+
+Customers can easily add or remove users as needed, and they can also increase storage capacity or processing power as their needs change.
+
+And for customers desiring more control over their data, [GitHub Enterprise Cloud with data residency](https://github.com/enterprise/data-residency?locale=en-US) provides improved enterprise-grade features and more control over where code is stored. [Start a free 30 day trial](https://github.com/account/enterprises/new?locale=en-US) today or [contact our sales team](https://github.com/enterprise/contact/data-residency?locale=en-US) for more information.
+
+#### What is GitHub Enterprise Server?
+
+[GitHub Enterprise Server](https://docs.github.com/enterprise-server@3.5/admin/overview/about-github-enterprise-server) is the self-hosted version of GitHub Enterprise. It is installed on-premises or on a private cloud and provides organizations with a secure and customizable source code management and collaboration platform.
+
+One of the key advantages of GitHub Enterprise Server is that it provides organizations with complete control over their source code and data. Organizations can choose where to store their repositories and can control who has access to them. Administrators can also customize the platform to meet specific needs, such as integrating other tools or implementing custom workflows.
+
+GitHub Enterprise Server also offers enhanced security and compliance features. Organizations can configure their instance to meet their specific security requirements, such as using LDAP or SAML for authentication, setting up two-factor authentication, or implementing network security measures. Compliance features are also included, such as audit logs, access controls, and vulnerability scanning.
+
+#### How secure is GitHub Enterprise?
+
+GitHub Enterprise is designed with security in mind and includes a range of features to help organizations protect their code and data. Here are some of the key security features that GitHub Enterprise offers:
+
+1. Authentication and access controls: GitHub Enterprise includes two-factor authentication, LDAP and Active Directory integration, and OAuth authentication. This helps organizations ensure that only authorized users can access their repositories and data.
+2. Encryption: All data in transit between the user's computer and GitHub Enterprise server is encrypted using HTTPS. All data at rest uses AES-256 encryption.
+3. Vulnerability scanning: GitHub Enterprise includes built-in security scanning features that can detect known vulnerabilities and alert users.
+4. Audit logs: The platform provides detailed audit logs that record all user actions, including repository access, changes, and deletions. This helps organizations track and monitor user activity and identify potential security issues.
+5. Customizable policies: GitHub Enterprise allows organizations to create custom policies for repository access. This can help enforce compliance requirements and prevent unauthorized access to sensitive data.
+6. Regular security updates: There is also a dedicated security team that provides regular updates, monitors for potential security threats, and responds quickly to any issues that arise.
+
+#### Is GitHub Enterprise free?
+
+No, GitHub Enterprise is not free. It is a paid product that can be paid for either as a metered service on a monthly basis or as a subscription, with the cost determined by the number of users and the level of support required. For organizations interested in trying out the platform before making a commitment, GitHub Enterprise offers a [free trial](https://github.com/enterprise/contact?locale=en-US). Furthermore, organizations can contact the [GitHub Sales team](https://github.com/enterprise/contact?locale=en-US) for the option to request a custom quote to meet their specific needs.
+
+#### Using GitHub Enterprise
+
+#### How can developers collaborate with GitHub Enterprise?
+
+Developers can collaborate with GitHub Enterprise using a variety of tools that are built into the platform, including:
+
+* Pull requests: Allows developers to propose changes to a repository and submit them for review. Other team members can review the changes, leave comments, and suggest further improvements.
+* GitHub Projects: Enables developers to track issues, assign tasks, and prioritize work. This helps teams stay on track, identify and resolve issues quickly, and ensure that everyone is working towards the same goals.
+* GitHub Discussions: Empowers developers to have conversations about specific topics. This can be particularly useful for triaging complex issues or making decisions about the direction of a project.
+
+#### Choosing your plan
+
+#### How can organizations get started with GitHub Enterprise?
+
+To get started with GitHub Enterprise, [try a free trial today](https://github.com/account/enterprises/new?locale=en-US) or contact our [sales team](https://github.com/enterprise/contact?locale=en-US).
+
+#### What GitHub Enterprise plans are available?
+
+GitHub Enterprise [offers several plans](https://docs.github.com/get-started/learning-about-github/githubs-products#github-enterprise) that vary in price and features. They are designed to accommodate different types of organizations and teams, from small startups to large enterprises. These plans include:
+
+1. **GitHub Enterprise Server:** This is the self-hosted version of GitHub Enterprise. It is installed on-premises or on a private cloud, and offers all the features of the cloud-based version of GitHub, including pull requests, code reviews, and project management tools. Pricing depends on the number of users and support requirements.
+2. **GitHub Enterprise Cloud:** This is the cloud-based version of GitHub Enterprise. It is hosted on GitHub's servers, and it offers all the features of GitHub Enterprise Server. The price depends on the number of users and storage requirements.
+
+#### How much does GitHub Enterprise cost?
+
+For more information on cost, please see our [pricing page](https://github.com/pricing?locale=en-US).
+
+#### Getting started with enterprise software development platforms
+
+#### What is a DevOps platform?
+
+A DevOps platform is a set of tools, technologies, and practices that enable software development and IT operations teams to collaborate and automate the software delivery process. It typically includes version control, continuous integration and continuous delivery (CI/CD), automated testing, deployment automation, and monitoring.
+
+The main goal of a DevOps platform is to provide a single environment for software development and IT operations teams. By automating the software delivery process, a DevOps platform helps organizations reduce the time and cost of delivering software, while also improving the reliability, security, and scalability of their applications.
+
+#### What is developer experience?
+
+Developer experience (DevEx) refers to the overall experience that software developers have when using development tools, frameworks, and platforms to create software applications. It encompasses all aspects of a developer's interaction with the tools, including onboarding, maintaining, ease of use, and productivity.
+
+The goal of optimizing DevEx is to make it as easy as possible for developers to create high-quality software quickly. This can involve designing tools with intuitive interfaces, providing clear and concise documentation, seamlessly integrating tools into workflows, and offering comprehensive support to help developers overcome challenges and obstacles.
+
+By prioritizing DevEx, organizations can improve the speed and quality of their software development processes, increase developer satisfaction and retention, and ultimately deliver better products.
+
+#### What is a software development platform?
+
+A software development platform is a set of tools, technologies, and resources that enable software developers to create, test, deploy, and maintain software applications. This typically includes a programming language or framework, an integrated development environment (IDE), libraries, code repositories, debugging and testing tools, and deployment and hosting options.
+
+The goal of a software development platform is to provide developers with a comprehensive set of tools and resources that make it easier to develop high-quality software. By providing an integrated environment for software development, a software development platform can help developers streamline their workflows, reduce errors, and improve the speed and quality of their work. Additionally, many software development platforms also provide access to a community of developers who can offer support, advice, and resources for improving software development practices.
+
+#### What is an application development platform?
+
+An application development platform is a set of tools that enables developers to build, deploy, and manage custom software applications.
+
+This kind of platform typically includes a programming language, software development kits (SDKs), application programming interfaces (APIs), libraries, and testing and debugging tools.
+
+These tools are designed to make it easier for developers to create and deploy custom applications for a specific platform, such as a mobile device or web browser.
+
+The goal of an application development platform is to provide developers with a comprehensive set of tools that makes it easier to create high-quality applications that meet the specific requirements of a particular platform or device.
+
+#### What is software development collaboration?
+
+Software development collaboration is the process of working together as a team to create, test, and deploy software applications. It can involve a range of activities, such as brainstorming, planning, code reviews, testing, and deployment. Collaboration is an essential component of the software development process, as it allows multiple developers and stakeholders to work together.
+
+Effective collaboration requires open communication, clear goals and objectives, shared resources, and a commitment to working together as a team. Collaboration tools such as version control systems, collaborative coding environments, and project management software, can also provide a centralized location for team members to share information, coordinate tasks, and track progress.
+
+Ultimately, software development collaboration is essential to creating high-quality software that’s reliable, scalable, and meets the needs of end-users and stakeholders.
+
+### About GitHub Enterprise
+
+#### What is GitHub Enterprise?
+
+GitHub Enterprise is an enterprise-grade software development platform designed for the complex workflows of modern development.
+
+As an extensible platform solution, GitHub Enterprise enables organizations to [seamlessly integrate additional tools and functionalities](https://github.com/marketplace?type=&locale=en-US), tailoring their development environment to meet specific needs and enhancing overall productivity.
+
+#### Why should organizations use GitHub Enterprise
+
+There are several reasons why organizations should consider using GitHub Enterprise:
+
+1. **Accelerate development at scale with AI-powered development:** GitHub is the world’s most widely adopted Copilot-powered developer platform helping organizations build, secure, and deliver innovative software at scale.
+2. **Application security made simpler:** Native security tools embedded into the developer workflow, such as GitHub Advanced Security, help developers easily fix security issues, while providing more visibility and controls.
+3. **Centralize governance and compliance:** Customers can access a range of administration features to help manage governance at scale and enforce business rules and policies to meet their specific needs.
+4. **Boost productivity and collaboration:** Increase productivity with automated CI/CD workflows using GitHub Actions, collaborate effectively with GitHub Projects and GitHub Issues, manage hosted packages with GitHub Packages, and utilize prebuilt and configured development environments with GitHub Codespaces.
+5. **Greater flexibility and control over data:** Whether self-hosting with GitHub Enterprise Server or using GitHub Enterprise Cloud, GitHub provides customers with flexibility and control over their data. And now with [GitHub Enterprise Cloud with data residency](https://github.com/enterprise/data-residency?locale=en-US), customers have enhanced control where certain data, like their code, resides. [Start a free 30 day trial](https://github.com/account/enterprises/new?locale=en-US) today or [contact our sales team](https://github.com/enterprise/contact/data-residency?locale=en-US) for more information.
+
+#### Who uses GitHub Enterprise?
+
+GitHub Enterprise is used by organizations of all sizes that require greater productivity, collaboration, and security capabilities for their software development process. GitHub Enterprise can scale with teams, all the way from a small startup to a large corporation.
+
+#### What is GitHub Enterprise Cloud?
+
+GitHub Enterprise Cloud is the cloud-based solution of GitHub Enterprise, hosted on GitHub’s servers. This eliminates the need for organizations to maintain their own servers, infrastructure, and updates, allowing them to focus on development.
+
+In addition to the core productivity and collaboration features it provides, GitHub Enterprise Cloud provides access to additional features and add-ons for security, support, managed users, and many more.
+
+Customers can easily add or remove users as needed, and they can also increase storage capacity or processing power as their needs change.
+
+And for customers desiring more control over their data, [GitHub Enterprise Cloud with data residency](https://github.com/enterprise/data-residency?locale=en-US) provides improved enterprise-grade features and more control over where code is stored. [Start a free 30 day trial](https://github.com/account/enterprises/new?locale=en-US) today or [contact our sales team](https://github.com/enterprise/contact/data-residency?locale=en-US) for more information.
+
+#### What is GitHub Enterprise Server?
+
+[GitHub Enterprise Server](https://docs.github.com/enterprise-server@3.5/admin/overview/about-github-enterprise-server) is the self-hosted version of GitHub Enterprise. It is installed on-premises or on a private cloud and provides organizations with a secure and customizable source code management and collaboration platform.
+
+One of the key advantages of GitHub Enterprise Server is that it provides organizations with complete control over their source code and data. Organizations can choose where to store their repositories and can control who has access to them. Administrators can also customize the platform to meet specific needs, such as integrating other tools or implementing custom workflows.
+
+GitHub Enterprise Server also offers enhanced security and compliance features. Organizations can configure their instance to meet their specific security requirements, such as using LDAP or SAML for authentication, setting up two-factor authentication, or implementing network security measures. Compliance features are also included, such as audit logs, access controls, and vulnerability scanning.
+
+#### How secure is GitHub Enterprise?
+
+GitHub Enterprise is designed with security in mind and includes a range of features to help organizations protect their code and data. Here are some of the key security features that GitHub Enterprise offers:
+
+1. Authentication and access controls: GitHub Enterprise includes two-factor authentication, LDAP and Active Directory integration, and OAuth authentication. This helps organizations ensure that only authorized users can access their repositories and data.
+2. Encryption: All data in transit between the user's computer and GitHub Enterprise server is encrypted using HTTPS. All data at rest uses AES-256 encryption.
+3. Vulnerability scanning: GitHub Enterprise includes built-in security scanning features that can detect known vulnerabilities and alert users.
+4. Audit logs: The platform provides detailed audit logs that record all user actions, including repository access, changes, and deletions. This helps organizations track and monitor user activity and identify potential security issues.
+5. Customizable policies: GitHub Enterprise allows organizations to create custom policies for repository access. This can help enforce compliance requirements and prevent unauthorized access to sensitive data.
+6. Regular security updates: There is also a dedicated security team that provides regular updates, monitors for potential security threats, and responds quickly to any issues that arise.
+
+#### Is GitHub Enterprise free?
+
+No, GitHub Enterprise is not free. It is a paid product that can be paid for either as a metered service on a monthly basis or as a subscription, with the cost determined by the number of users and the level of support required. For organizations interested in trying out the platform before making a commitment, GitHub Enterprise offers a [free trial](https://github.com/enterprise/contact?locale=en-US). Furthermore, organizations can contact the [GitHub Sales team](https://github.com/enterprise/contact?locale=en-US) for the option to request a custom quote to meet their specific needs.
+
+### Using GitHub Enterprise
+
+#### How can developers collaborate with GitHub Enterprise?
+
+Developers can collaborate with GitHub Enterprise using a variety of tools that are built into the platform, including:
+
+* Pull requests: Allows developers to propose changes to a repository and submit them for review. Other team members can review the changes, leave comments, and suggest further improvements.
+* GitHub Projects: Enables developers to track issues, assign tasks, and prioritize work. This helps teams stay on track, identify and resolve issues quickly, and ensure that everyone is working towards the same goals.
+* GitHub Discussions: Empowers developers to have conversations about specific topics. This can be particularly useful for triaging complex issues or making decisions about the direction of a project.
+
+### Choosing your plan
+
+#### How can organizations get started with GitHub Enterprise?
+
+To get started with GitHub Enterprise, [try a free trial today](https://github.com/account/enterprises/new?locale=en-US) or contact our [sales team](https://github.com/enterprise/contact?locale=en-US).
+
+#### What GitHub Enterprise plans are available?
+
+GitHub Enterprise [offers several plans](https://docs.github.com/get-started/learning-about-github/githubs-products#github-enterprise) that vary in price and features. They are designed to accommodate different types of organizations and teams, from small startups to large enterprises. These plans include:
+
+1. **GitHub Enterprise Server:** This is the self-hosted version of GitHub Enterprise. It is installed on-premises or on a private cloud, and offers all the features of the cloud-based version of GitHub, including pull requests, code reviews, and project management tools. Pricing depends on the number of users and support requirements.
+2. **GitHub Enterprise Cloud:** This is the cloud-based version of GitHub Enterprise. It is hosted on GitHub's servers, and it offers all the features of GitHub Enterprise Server. The price depends on the number of users and storage requirements.
+
+#### How much does GitHub Enterprise cost?
+
+For more information on cost, please see our [pricing page](https://github.com/pricing?locale=en-US).
+
+### Getting started with enterprise software development platforms
+
+#### What is a DevOps platform?
+
+A DevOps platform is a set of tools, technologies, and practices that enable software development and IT operations teams to collaborate and automate the software delivery process. It typically includes version control, continuous integration and continuous delivery (CI/CD), automated testing, deployment automation, and monitoring.
+
+The main goal of a DevOps platform is to provide a single environment for software development and IT operations teams. By automating the software delivery process, a DevOps platform helps organizations reduce the time and cost of delivering software, while also improving the reliability, security, and scalability of their applications.
+
+#### What is developer experience?
+
+Developer experience (DevEx) refers to the overall experience that software developers have when using development tools, frameworks, and platforms to create software applications. It encompasses all aspects of a developer's interaction with the tools, including onboarding, maintaining, ease of use, and productivity.
+
+The goal of optimizing DevEx is to make it as easy as possible for developers to create high-quality software quickly. This can involve designing tools with intuitive interfaces, providing clear and concise documentation, seamlessly integrating tools into workflows, and offering comprehensive support to help developers overcome challenges and obstacles.
+
+By prioritizing DevEx, organizations can improve the speed and quality of their software development processes, increase developer satisfaction and retention, and ultimately deliver better products.
+
+#### What is a software development platform?
+
+A software development platform is a set of tools, technologies, and resources that enable software developers to create, test, deploy, and maintain software applications. This typically includes a programming language or framework, an integrated development environment (IDE), libraries, code repositories, debugging and testing tools, and deployment and hosting options.
+
+The goal of a software development platform is to provide developers with a comprehensive set of tools and resources that make it easier to develop high-quality software. By providing an integrated environment for software development, a software development platform can help developers streamline their workflows, reduce errors, and improve the speed and quality of their work. Additionally, many software development platforms also provide access to a community of developers who can offer support, advice, and resources for improving software development practices.
+
+#### What is an application development platform?
+
+An application development platform is a set of tools that enables developers to build, deploy, and manage custom software applications.
+
+This kind of platform typically includes a programming language, software development kits (SDKs), application programming interfaces (APIs), libraries, and testing and debugging tools.
+
+These tools are designed to make it easier for developers to create and deploy custom applications for a specific platform, such as a mobile device or web browser.
+
+The goal of an application development platform is to provide developers with a comprehensive set of tools that makes it easier to create high-quality applications that meet the specific requirements of a particular platform or device.
+
+#### What is software development collaboration?
+
+Software development collaboration is the process of working together as a team to create, test, and deploy software applications. It can involve a range of activities, such as brainstorming, planning, code reviews, testing, and deployment. Collaboration is an essential component of the software development process, as it allows multiple developers and stakeholders to work together.
+
+Effective collaboration requires open communication, clear goals and objectives, shared resources, and a commitment to working together as a team. Collaboration tools such as version control systems, collaborative coding environments, and project management software, can also provide a centralized location for team members to share information, coordinate tasks, and track progress.
+
+Ultimately, software development collaboration is essential to creating high-quality software that’s reliable, scalable, and meets the needs of end-users and stakeholders.
+
+## Footnotes
+
+The Total Economic Impact™ Of GitHub Enterprise Cloud, a commissioned study conducted by Forrester Consulting, 2025. Results are for a composite organization based on interviewed customers.
+
+Forrester Wave™: DevOps Platforms, Q2 2025. Forrester does not endorse any company, product, brand, or service included in its research publications and does not advise any person to select the products or services of any company or brand based on the ratings included in such publications. Information is based on the best available resources. Opinions reflect judgment at the time and are subject to change. For more information, read about Forrester’s objectivity [here](https://www.forrester.com/about-us/objectivity/).
 
      
-
-* [All](/customer-stories/enterprise?feature=All#browse)
-* [GitHub Actions](/customer-stories/enterprise?feature=GitHub%2BActions#browse)
-* [GitHub Advanced Security](/customer-stories/enterprise?feature=GitHub%2BAdvanced%2BSecurity#browse)
-* [GitHub Codespaces](/customer-stories/enterprise?feature=GitHub%2BCodespaces#browse)
-* [GitHub Copilot](/customer-stories/enterprise?feature=GitHub%2BCopilot#browse)
-* [GitHub Discussions](/customer-stories/enterprise?feature=GitHub%2BDiscussions#browse)
-* [GitHub Enterprise](/customer-stories/enterprise?feature=GitHub%2BEnterprise#browse)
-* [GitHub Expert Services](/customer-stories/enterprise?feature=GitHub%2BExpert%2BServices#browse)
-* [GitHub Issues](/customer-stories/enterprise?feature=GitHub%2BIssues#browse)
-* [GitHub Packages](/customer-stories/enterprise?feature=GitHub%2BPackages#browse)
-* [GitHub Team](/customer-stories/enterprise?feature=GitHub%2BTeam#browse)
-
-     
-
-* [All](/customer-stories/enterprise?region=All#browse)
-* [Americas](/customer-stories/enterprise?region=Americas#browse)
-* [Asia Pacific](/customer-stories/enterprise?region=Asia%2BPacific#browse)
-* [Europe](/customer-stories/enterprise?region=Europe#browse)
-* [Middle East & Africa](/customer-stories/enterprise?region=Middle%2BEast%2B%2526%2BAfrica#browse)
-
-     
-
-* [Startup](/customer-stories/enterprise?size=Startup#browse)
-* [Growth](/customer-stories/enterprise?size=Growth#browse)
-* [Enterprise](/customer-stories/enterprise?size=Enterprise#browse)
-
-[Learn more about Enterprise](/enterprise)   [View Enterprise stories](/customer-stories/enterprise)
-
-[Read more about 3M's customer story
-
-### 3M
-
-3M transforms its software toolchain to bring cutting-edge science to customers, faster.
-
-Read story](/customer-stories/3m)
-
-[Read more about ADEO's customer story
-
-### ADEO
-
-ADEO works more efficiently across teams and time zones with a global innersource program.
-
-Read story](/customer-stories/adeo)
-
-[Read more about Adobe's customer story
-
-### Adobe
-
-Adobe’s family of technology services finds common ground in GitHub.
-
-Read story](/customer-stories/adobe)
-
-[Read more about Ahold Delhaize's customer story
-
-### Ahold Delhaize
-
-Ahold Delhaize keeps engineers focused on code through automation with GitHub Enterprise and Actions.
-
-Read story](/customer-stories/ahold-delhaize)
-
-[Read more about American Airlines's customer story
-
-### American Airlines
-
-American Airlines fosters innovation by using GitHub as an incubator for ideas.
-
-Read story](/customer-stories/american-airlines)
-
-[Read more about Amplifon's customer story
-
-### Amplifon
-
-Amplifon centralizes development on GitHub to accelerate healthcare innovation.
-
-Read story](/customer-stories/amplifon)
-
-GitHub Enterprise
-
-### Duolingo empowers its engineers to be force multipliers for expertise with GitHub Copilot.
-
- [Read more about Duolingo and GitHub's story Read story](/customer-stories/duolingo) 
-
-* 25% increase in developer speed with GitHub Copilot
-* 1m set-up time for largest repo with Codespaces
-* 67% decrease in median code review turnaround time
-* 70% increase in pull requests
-
-Problem
-:   Inconsistent standards and workflows limited developer mobility and efficiency, limiting Duolingo’s ability to expand its content and deliver on its core mission.
-
-Solution
-:   GitHub Copilot, Codespaces, and custom API integrations enforce code consistency, accelerate developer speed, and remove the barriers to using engineering as a force multiplier for expertise.
-
-Products
-:   * [GitHub Enterprise](/enterprise)
-    * [GitHub Codespaces](/features/codespaces)
-    * [GitHub Copilot](/features/copilot)
-
-## Discover how high-growth companies innovate faster with GitHub Team.
-
-* [All](/customer-stories/team?industry=All#browse)
-* [Advertising & Marketing](/customer-stories/team?industry=Advertising%2B%2526%2BMarketing#browse)
-* [Automotive](/customer-stories/team?industry=Automotive#browse)
-* [Education](/customer-stories/team?industry=Education#browse)
-* [Energy & Utilities](/customer-stories/team?industry=Energy%2B%2526%2BUtilities#browse)
-* [Financial services](/customer-stories/team?industry=Financial%2Bservices#browse)
-* [Food & Beverage](/customer-stories/team?industry=Food%2B%2526%2BBeverage#browse)
-* [Government](/customer-stories/team?industry=Government#browse)
-* [Healthcare & Life Sciences](/customer-stories/team?industry=Healthcare%2B%2526%2BLife%2BSciences#browse)
-* [Manufacturing](/customer-stories/team?industry=Manufacturing#browse)
-* [Media & Entertainment](/customer-stories/team?industry=Media%2B%2526%2BEntertainment#browse)
-* [Nonprofit](/customer-stories/team?industry=Nonprofit#browse)
-* [Professional services](/customer-stories/team?industry=Professional%2Bservices#browse)
-* [Real Estate](/customer-stories/team?industry=Real%2BEstate#browse)
-* [Retail & ecommerce](/customer-stories/team?industry=Retail%2B%2526%2Becommerce#browse)
-* [Social & Messaging](/customer-stories/team?industry=Social%2B%2526%2BMessaging#browse)
-* [Software, Hardware & Technology](/customer-stories/team?industry=Software%252C%2BHardware%2B%2526%2BTechnology#browse)
-* [Telecommunications](/customer-stories/team?industry=Telecommunications#browse)
-* [Transportation & Logistics](/customer-stories/team?industry=Transportation%2B%2526%2BLogistics#browse)
-* [Travel & Hospitality](/customer-stories/team?industry=Travel%2B%2526%2BHospitality#browse)
-
-     
-
-* [All](/customer-stories/team?feature=All#browse)
-* [GitHub Actions](/customer-stories/team?feature=GitHub%2BActions#browse)
-* [GitHub Advanced Security](/customer-stories/team?feature=GitHub%2BAdvanced%2BSecurity#browse)
-* [GitHub Codespaces](/customer-stories/team?feature=GitHub%2BCodespaces#browse)
-* [GitHub Copilot](/customer-stories/team?feature=GitHub%2BCopilot#browse)
-* [GitHub Discussions](/customer-stories/team?feature=GitHub%2BDiscussions#browse)
-* [GitHub Enterprise](/customer-stories/team?feature=GitHub%2BEnterprise#browse)
-* [GitHub Expert Services](/customer-stories/team?feature=GitHub%2BExpert%2BServices#browse)
-* [GitHub Issues](/customer-stories/team?feature=GitHub%2BIssues#browse)
-* [GitHub Packages](/customer-stories/team?feature=GitHub%2BPackages#browse)
-* [GitHub Team](/customer-stories/team?feature=GitHub%2BTeam#browse)
-
-     
-
-* [All](/customer-stories/team?region=All#browse)
-* [Americas](/customer-stories/team?region=Americas#browse)
-* [Asia Pacific](/customer-stories/team?region=Asia%2BPacific#browse)
-* [Europe](/customer-stories/team?region=Europe#browse)
-* [Middle East & Africa](/customer-stories/team?region=Middle%2BEast%2B%2526%2BAfrica#browse)
-
-     
-
-* [Startup](/customer-stories/team?size=Startup#browse)
-* [Growth](/customer-stories/team?size=Growth#browse)
-* [Enterprise](/customer-stories/team?size=Enterprise#browse)
-
-[Learn more about Team](/team)   [View Team stories](/customer-stories/team)
-
-[Read more about Trustpilot's customer story
-
-### Trustpilot
-
-Global review platform Trustpilot uses GitHub Team to build a better product, faster, with 300 releases per week.
-
-Read story](/customer-stories/trustpilot)
-
-[Read more about Buffer's customer story
-
-### Buffer
-
-Buffer goes from siloed to synced for better production releases.
-
-Read story](/customer-stories/buffer)
-
-[Read more about Cesium's customer story
-
-### Cesium
-
-Cesium leverages an open source community to support the development of 3D geospatial applications.
-
-Read story](/customer-stories/cesium)
-
-[Read more about Knock's customer story
-
-### Knock
-
-Knock pivots to new products, with the help of GitHub’s fast, flexible developer workflows.
-
-Read story](/customer-stories/knock)
-
-[Read more about Tray.io's customer story
-
-### Tray.io
-
-GitHub Team helps the general automation platform build, package, and deploy code faster than ever.
-
-Read story](/customer-stories/trayio)
-
-[Read more about Sketch's customer story
-
-### Sketch
-
-Sketch streamlines their workflows to provide teams with a comprehensive digital design editor.
-
-Read story](/customer-stories/sketch)
-
-### Here's what software leaders have to say about GitHub Testimonials from our developers.
-
-1 / 4 1 of 4
-
-## What will your story be?
-
-Start collaborating with your team on GitHub
-
-### Free
-
-The basics for individuals and organizations
-
-**$0 USD** per month
-
- [Create a free organization](/account/organizations/new?plan=free&ref_cta=Create+a+free+organization&ref_loc=Footer+cards&ref_page=%2Fcustomer-stories)
-
-### Team
-
-Advanced collaboration for individuals and organizations
-
-**$4 USD** per month
-
- [Continue with Team](/join?plan=business&ref_cta=Continue+with+Team&ref_loc=Footer+Cards&ref_page=%2Fcustomer-stories)
-
-### Enterprise
-
-Security, compliance, and flexible deployment
-
-**$21 USD** per month
-
- [Enterprise](/organizations/enterprise_plan?ref_cta=Enterprise&ref_loc=Footer+Cards&ref_page=%2Fcustomer-stories)
-
-Want to use GitHub on your own?   
- [Check out our plans for individuals](/pricing)
-
-   
 
 You can’t perform that action at this time.
 

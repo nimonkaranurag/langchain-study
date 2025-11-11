@@ -1,108 +1,116 @@
 [Skip to content](#start-of-content)   
-  Explore GitHub's latest Universe launches —   [join the Product Roadmap webinar](https://github.com/resources/events/github-roadmap-webinar-q4?utm_source=github&utm_medium=banner&utm_campaign=AMER-FY26Q2-AMER_EMEA-WBRL-Roadmap_website_banner-20251113&utm_content=website_banner) 
+ 
+
+[GitHub Universe 2025](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post)
+
+---
+
+Catch up on the latest keynote highlights.  • 00 : 00 : 00 : 00
+
+---
+
+  [See what’s new](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post) 
 
 
 ## Navigation Menu
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fsponsors)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fabout)
 
 # Search code, repositories, users, issues, pull requests...
 
 [Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fsponsors)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fabout)
 
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fsponsors&source=header)
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fabout&source=header)
 
 You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
 {{ message }}
 
-GitHub Sponsors
+# Let's build from here
 
-# Support the developers who power open source
+The complete developer platform to build, scale, and deliver secure software.
 
-[See your top dependencies](https://github.com/sponsors/explore?locale=en-US)[Get sponsored](https://github.com/sponsors/accounts?locale=en-US)
+150M+Developers
 
-## *GitHub Sponsors allows the developer community* to financially support the open source projects they depend on, directly on GitHub
+4M+Organizations
 
-### $40M+
+420M+Repositories
 
-Given back to our maintainers
+90%Fortune 100
 
-### 103
+## [Blog](https://github.blog/)
 
-Regions supported globally
+Read up on product innovations and updates, company announcements, community spotlights, and more.
 
-### 4.2K+
+Learn more
 
-Organizations sponsoring
+## [Brand assets](https://github.com/logos?locale=en-US)
 
-### For maintainers
+Want to use Mona the octocat? Looking for the right way to display the GitHub logo for your latest project? Download the assets and see how and where to use them.
 
-Launch a page in minutes and showcase Sponsors buttons on your GitHub profile and repositories! You will automatically appear in worldwide recommendations to partners who are eager to invest in their open source dependencies.
+Learn more
 
-[Get sponsored](https://github.com/sponsors/accounts?locale=en-US)
+## [Community stories](https://github.com/readme?locale=en-US)
 
-### For sponsors
+Developers are building the future on GitHub every day, explore their stories, celebrate their accomplishments, and find inspiration for your own work.
 
-Find and fund your dependencies in a single transaction. The discovery and bulk sponsorship tools are easy to use. Flexible payment enables you to choose when and how you pay. Corporations like Microsoft like it because all their payments go out as a single invoice.
+Learn more
 
-[Learn about invoiced billing](https://docs.github.com/en/billing/managing-billing-for-github-sponsors/about-billing-for-github-sponsors)
+## [Customer stories](https://github.com/customer-stories?type=enterprise&locale=en-US)
 
-### Help open source thrive
+See how some of the most influential businesses around the world use GitHub to provide the best services, products, and experiences for their customers.
 
-Everyone should be able to contribute to open source. Making open source a viable, financially rewarding career path helps contribute to our digital infrastructure. More funding, more projects, more software to power our world.
+Learn more
 
-[See your top dependencies](https://github.com/sponsors/explore?locale=en-US)
+## [Careers](https://github.careers/)
 
-### Invest in open source. It powers your world.
+Help us build the home for all developers. We’re a passionate group of people dedicated to software development and collaboration. Come join us!
 
-[See your top dependencies](https://github.com/sponsors/explore?locale=en-US)[Get sponsored](https://github.com/sponsors/accounts?locale=en-US)
+Learn more
 
-### The internet depends on open source, everywhere
+## [Diversity, Inclusions & Belonging](https://github.com/about/diversity?locale=en-US)
 
-### [Comprehensive website security and health monitoring with performance analysis](https://github.com/sponsors/Lissy93?locale=en-US)
+We are dedicated to building a community and team that reflects the world we live in and pushes the boundaries of software innovation.
 
-web-check
+Learn more
 
-Web-Check provides real-time monitoring for uptime, speed, and user experience, trusted by businesses like Amazon, Shopify, and Airbnb.
+## [GitHub Status](https://www.githubstatus.com/)
 
-Sponsor web-check
+We are always monitoring the status of github.com and all its related services. Updates and status interruptions are posted in real-time here.
 
-### [Intuitive, open-source interface for native GenAI applications](https://github.com/sponsors/tjbck?locale=en-US)
+Learn more
 
-OpenWebUI
+## [Leadership](https://github.com/about/leadership?locale=en-US)
 
-OpenWebUI simplifies the development of interactive GenAI apps using LLMs, used by developers at companies like Microsoft, IBM, and GitHub.
+Meet the leadership team guiding us as we continue on this journey building the world’s largest and most advanced software development platform in the world.
 
-Sponsor OpenWebUI
+Learn more
 
-### [A command line tool and library for transferring data with URL syntax](https://github.com/sponsors/curl?locale=en-US)
+## [Octoverse](https://octoverse.github.com/)
 
-cURL
+Dive into the details with our annual State of the Octoverse report looking at the trends and patterns in the code and communities that build on GitHub.
 
-cURL is included in almost every modern device–smartphones, cars, TVs, laptops, servers, consoles, printers, and beyond.
+Learn more
 
-Sponsor cURL
+## [Policy](https://github.com/about/developer-policy?locale=en-US)
 
-### Frequently asked questions
+We’re focused on fighting for developer rights by shaping the policies that promote their interests and the future of software.
 
-#### How do I sponsor a project?
+Learn more
 
-Sign in and start by navigating to [your dependencies](https://github.com/sponsors/explore?locale=en-US), your [explore tab](https://github.com/explore?locale=en-US), [trending repositories](https://github.com/explore?locale=en-US), or [collections](https://github.com/collections?locale=en-US). When a repository has the Sponsor graphic, you can sponsor them directly.
+## [Press](https://github.com/about/press?locale=en-US)
 
-#### How do I get paid for my contributions?
+Explore the latest press stories on our company, products, and global community.
 
-You can become a sponsored developer by joining GitHub Sponsors, completing your sponsored developer profile, creating sponsorship tiers, submitting your bank and tax information, and enabling two-factor authentication for your account on GitHub.com. [Learn more about getting paid for contributions](https://docs.github.com/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-personal-account)
+Learn more
 
-#### Do I need to fill out a tax form to receive sponsorships?
+## [Social Impact](https://github.com/social-impact?locale=en-US)
 
-Yes. Your tax information must be on file in order for GitHub to make payments to your bank account. The required tax documents may vary based on your location.
+Learn about how GitHub’s people, products, and platform are creating positive and lasting change around the world.
 
-Note that we do our best to help you with the Sponsors program, but we’re unable to provide tax guidance.
-
-[Learn more about tax information for GitHub Sponsors](https://docs.github.com/sponsors/receiving-sponsorships-through-github-sponsors/tax-information-for-github-sponsors)
+Learn more
 
    
 

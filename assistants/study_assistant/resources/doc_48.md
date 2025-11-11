@@ -1,201 +1,253 @@
-### Introducing Apache Beam
+LangChain (@LangChainAI) / X
 
-# The Unified Apache Beam Model
+===============
 
-## The easiest way to do batch and streaming data processing. Write once, run anywhere data processing for mission-critical production workloads.
+Don’t miss what’s happening
 
-### Introducing Apache Beam
+People on X are the first to know.
 
-# The Unified Apache Beam Model
+[Log in](https://twitter.com/login)
 
-## The easiest way to do batch and streaming data processing. Write once, run anywhere data processing for mission-critical production workloads.
+[Sign up](https://twitter.com/i/flow/signup)
 
-[Learn more](/get-started/beam-overview/)
+[](https://twitter.com/)
+========================
 
-[Java Quickstart](/get-started/quickstart-java/)
+LangChain
+---------
 
-[Python Quickstart](/get-started/quickstart-py/)
+9,641 posts
 
-[Go Quickstart](/get-started/quickstart-go/)
+See new posts
 
-[Try Playground](https://play.beam.apache.org)
+[![Image 1](https://pbs.twimg.com/profile_banners/1589007443853340672/1760970172/600x200)](https://twitter.com/LangChainAI/header_photo)
 
-[Tour of Beam](https://tour.beam.apache.org)
+[![Image 2: Opens profile photo](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_200x200.jpg)](https://twitter.com/LangChainAI/photo)
 
-## How Does It Work?
+Follow
 
-#### Data Sourcing
+Click to Follow LangChainAI
 
-Beam reads your data from a diverse set of supported sources, no matter if it’s on-prem or in the cloud.
+LangChain
 
-#### Data Processing
+@LangChainAI
 
-Beam executes your business logic for both batch and streaming use cases.
+The platform for agent engineering.
 
-#### Data Writing
+[langchain.com](https://t.co/Sh5ftHbph2)Joined November 2022
 
-Beam writes the results of your data processing logic to the most popular data sinks in the industry.
+[73 Following](https://twitter.com/LangChainAI/following)
 
-## Apache Beam Features
+[219.9K Followers](https://twitter.com/LangChainAI/verified_followers)
 
-##### Unified
+[Posts](https://twitter.com/LangChainAI)
 
-A simplified, single programming model for both batch and streaming use cases for every member of your data and application teams.
+[Replies](https://twitter.com/LangChainAI/with_replies)
 
-##### Extensible
+[Highlights](https://twitter.com/LangChainAI/highlights)
 
-Apache Beam is extensible, with projects such as TensorFlow Extended and Apache Hop built on top of Apache Beam.
+[Media](https://twitter.com/LangChainAI/media)
 
-##### Portable
+LangChain’s posts
+=================
 
-Execute pipelines on multiple execution environments (runners), providing flexibility and avoiding lock-in.
+Pinned
 
-##### Open Source
+[![Image 3](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://twitter.com/LangChainAI)
 
-Open, community-based development and support to help evolve your application and meet the needs of your specific use cases.
+[LangChain](https://twitter.com/LangChainAI)
 
-Write Once, Run Anywhere
+[@LangChainAI](https://twitter.com/LangChainAI)
 
-Create Multi-language Pipelines
+·
 
-# Try Beam Playground
+[Oct 21](https://twitter.com/LangChainAI/status/1980678921839603948)
 
-Beam Playground is an interactive environment to try out Beam transforms and examples without having to install Apache Beam in your environment.
-You can try the Apache Beam examples at [Beam Playground](https://play.beam.apache.org/).
+We raised $125M to build the platform for agent engineering. Thank you to our investors (
 
-  
-  
+[@IVP](https://twitter.com/IVP)
 
-* Java
-* Python
-* Go
-* SCIO
+, 
 
-Case Studies Powered by Apache Beam
+[@sequoia](https://twitter.com/sequoia)
 
-##### Apache Beam fuels LinkedIn’s streaming infrastructure, processing 4 trillion events daily through 3K+ pipelines in near-real time. Beam enabled unified pipelines, yielding 2x cost savings and remarkable improvements for many use cases.
+, 
 
-[Learn more](case-studies/linkedin/index.html)
+[@benchmark](https://twitter.com/benchmark)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+, 
 
-##### With Apache Beam, OCTO accelerated the migration of one of France’s largest grocery retailers to streaming processing for transactional data, achieving 5x reduced infrastructure costs and 4x improved performance.
+[@AmplifyPartners](https://twitter.com/AmplifyPartners)
 
-[Learn more](case-studies/octo/index.html)
+, 
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[@SapphireVC](https://twitter.com/SapphireVC)
 
-##### HSBC leveraged Apache Beam as a computational platform and a risk engine that enabled 100x scaling, 2x faster performance, and simplified data distribution for assessing and managing XVA and counterparty credit risk at HSBC’s global scale.
+, 
 
-[Learn more](case-studies/hsbc/index.html)
+[@CapitalG](https://twitter.com/CapitalG)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+, and more) for their belief in us, and to our customers like 
 
-##### Apache Beam supports Project Shield’s mission to protect freedom of speech and make the web a safer space by enabling ~2x streaming efficiency at >10,000 QPS and real-time visibility into attack data for their >3K customers.
+[@Replit](https://twitter.com/Replit)
 
-[Learn more](case-studies/projectshield/index.html)
+, 
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[@clay](https://twitter.com/clay)
 
-##### Apache Beam powers the Booking.com global ad bidding for performance marketing and scans 2PB+ of data daily, accelerating processing by an eye-opening 36x and expediting time-to-market by as much as 4x.
+, 
 
-[Learn more](case-studies/booking/index.html)
+[@TrustVanta](https://twitter.com/TrustVanta)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+, 
 
-##### Apache Beam has future-proofed Credit Karma’s data and ML platform for scalability and efficiency, enabling MLOps with unified pipelines, processing 5-10 TB daily at 5K events per second, and managing 20K+ ML features.
+[@Cloudflare](https://twitter.com/Cloudflare)
 
-[Learn more](case-studies/creditkarma/index.html)
+, 
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[@Rippling](https://twitter.com/Rippling)
 
-##### Apache Beam is a central component to Intuit’s Stream Processing Platform, which has driven 3x faster time-to-production for authoring a stream processing pipeline.
+, 
 
-[Learn more](case-studies/intuit/index.html)
+[@Cisco](https://twitter.com/Cisco)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+,
 
-##### Apache Beam enabled real-time ML streaming feature generation and model execution playing a pivotal role in optimizing Lyft’s Marketplace ML predictions, processing ~4mil events per minute to generate ~100 features.
+Show more
 
-[Learn more](case-studies/lyft/index.html)
+1:14
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+45
 
-##### Seznam, a Czech search engine, has been an early contributor and adopter of Apache Beam, and they migrated several petabyte-scale workloads to Apache Beam pipelines.
+128
 
-[Learn more](case-studies/seznam/index.html)
+648
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[147K](https://twitter.com/LangChainAI/status/1980678921839603948/analytics)
 
-##### Palo Alto Networks, Inc. is a global cybersecurity leader that uses Apache Beam to process ~10 millions of security log events per second for their real-time streaming infrastructure.
+[![Image 4](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://twitter.com/LangChainAI)
 
-[Learn more](case-studies/paloalto/index.html)
+[LangChain](https://twitter.com/LangChainAI)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[@LangChainAI](https://twitter.com/LangChainAI)
 
-##### Apache Beam provides Ricardo, a leading Swiss second hand marketplace, with a scalable and reliable data processing framework that supports fundamental business scenarios and enables real-time and ML data processing.
+·
 
-[Learn more](case-studies/ricardo/index.html)
+[Nov 6, 2023](https://twitter.com/LangChainAI/status/1721605114639892493)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+![Image 5: 🦜](https://abs-0.twimg.com/emoji/v2/svg/1f99c.svg)![Image 6: 🤖](https://abs-0.twimg.com/emoji/v2/svg/1f916.svg)OpenGPTs OpenAI just announced "GPTs" - chatbots augmented with custom tools and custom instructions that anyone can create We're excited to announce OpenGPTs - a open source GitHub repo enabling similar functionality. This will allow: ![Image 7: 🛠️](https://abs-0.twimg.com/emoji/v2/svg/1f6e0.svg)Easier tool definition ![Image 8: 🧠](https://abs-0.twimg.com/emoji/v2/svg/1f9e0.svg)Usage of
 
-##### Apache Hop, an open-source data orchestration platform, uses Apache Beam to “design once, run anywhere” and creates a value-add for Apache Beam users by enabling visual pipeline development and lifecycle management.
+Show more
 
-[Learn more](case-studies/hop/index.html)
+[![Image 9: Image](https://pbs.twimg.com/media/F-RehxYaYAEyKnm?format=jpg&name=small)](https://twitter.com/LangChainAI/status/1721605114639892493/photo/1)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+64
 
-##### At Yelp, Apache Beam allows teams to create custom streaming pipelines using Python, eliminating the need to switch to Scala or Java.
+484
 
-[Learn more](case-studies/yelp_streaming/index.html)
+1.9K
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[450K](https://twitter.com/LangChainAI/status/1721605114639892493/analytics)
 
-##### Accenture Baltics uses Apache Beam on Google Cloud to build a robust data processing infrastructure for a sustainable energy leader.They use Beam to democratize data access, process data in real-time, and handle complex ETL tasks.
+[![Image 10](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://twitter.com/LangChainAI)
 
-[Learn more](case-studies/accenture_baltics/index.html)
+[LangChain](https://twitter.com/LangChainAI)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[@LangChainAI](https://twitter.com/LangChainAI)
 
-##### Akvelon built Beam-based solutions for Protegrity and a major North American credit reporting company, enabling tokenization with Dataflow Flex Templates and reducing infrastructure and deployment complexity.
+·
 
-[Learn more](case-studies/akvelon/index.html)
+[Aug 1, 2024](https://twitter.com/LangChainAI/status/1819052975295270949)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+![Image 11: 🚀](https://abs-0.twimg.com/emoji/v2/svg/1f680.svg)Announcing LangGraph Studio: The first agent IDE LangGraph Studio offers a new way to develop LLM applications by providing a specialized agent IDE that enables visualization, interaction, and debugging of complex agentic applications With visual graphs and the ability to
 
-##### With Apache Beam and Dataflow, Credit Karma achieved a 99% uptime for critical data pipelines, a significant jump from 80%. This reliability, coupled with faster development (1 engineer vs. 3 estimated), has been crucial for enabling real-time financial insights for our more than 140 million members.
+Show more
 
-[Learn more](case-studies/creditkarmainsights/index.html)
+![Image 12](https://pbs.twimg.com/ext_tw_video_thumb/1819050889925042187/pu/img/JNCZAhBa_oEIW14A.jpg)
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+47
 
-##### Have a story to share? Your logo could be here.
+414
 
-[Share your story](mailto:dev@beam.apache.org?subject=Beam)
+1.8K
 
-[Share your story](https://github.com/apache/beam/blob/master/website/ADD_CASE_STUDY.md)
+[185K](https://twitter.com/LangChainAI/status/1819052975295270949/analytics)
 
-## Stay Up To Date with Beam
+[![Image 13](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://twitter.com/LangChainAI)
 
-[blog & release
+[LangChain](https://twitter.com/LangChainAI)
 
-2025/08/12
+[@LangChainAI](https://twitter.com/LangChainAI)
 
-Apache Beam 2.67.0
+·
 
-Vitalii Terentev](/blog/beam-2.67.0/)[blog
+[Jan 4](https://twitter.com/LangChainAI/status/1875603106328637905)
 
-2025/07/08
+![Image 14: 🎃](https://abs-0.twimg.com/emoji/v2/svg/1f383.svg)Khoj - your AI second brain Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, qwen, mistral) [https://github.com/khoj-ai/khoj](https://t.co/kv74zyBxyI)
 
-Our Experience at Beam College 2025: 1st Place Hackathon Winners
+[![Image 15: Image](https://pbs.twimg.com/media/Ggd4UCQbIAAaKfY?format=jpg&name=small)](https://twitter.com/LangChainAI/status/1875603106328637905/photo/1)
 
-Aditya Shukla &
-Darshan Kanade](/blog/beam-summit-2025-hackathon-pcollectors-blog/)
+25
 
-|  |  |
-| --- | --- |
-|  |  |
+279
 
-|  |  |
-| --- | --- |
-|  |  |
+1.6K
+
+[108K](https://twitter.com/LangChainAI/status/1875603106328637905/analytics)
+
+[![Image 16](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://twitter.com/LangChainAI)
+
+[LangChain](https://twitter.com/LangChainAI)
+
+[@LangChainAI](https://twitter.com/LangChainAI)
+
+·
+
+[Jan 15](https://twitter.com/LangChainAI/status/1879576930347073873)
+
+![Image 17: 📲](https://abs-0.twimg.com/emoji/v2/svg/1f4f2.svg) Open Source Social Media Agent For the past three weeks, we've been using an ambient agent to draft and schedule social media posts highlighting community content Think of it as an "AI Social media intern" Today we're releasing it as an open source repo ![Image 18: 🧵](https://abs-0.twimg.com/emoji/v2/svg/1f9f5.svg)
+
+[![Image 19: The image showcases a screenshot of a software interface titled "LangGraph" with the text "Open Source Social Media Agent" prominently displayed. The interface appears to be part of a tool named AgentInbox, which is used for generating and scheduling social media posts. The background features a gradient of purple and red, giving a modern and tech-savvy aesthetic. The post context reveals that this tool has been utilized for three weeks to draft and schedule social media posts, highlighting community content, and is now being released as an open-source repository. This suggests the image is promoting the tool's functionality and its availability to the public.](https://pbs.twimg.com/media/GhWY2QwakAA25S8?format=jpg&name=small)](https://twitter.com/LangChainAI/status/1879576930347073873/photo/1)
+
+26
+
+202
+
+1.3K
+
+[198K](https://twitter.com/LangChainAI/status/1879576930347073873/analytics)
+
+New to X?
+---------
+
+Sign up now to get your own personalized timeline!
+
+Sign up with Apple
+
+[Create account](https://twitter.com/i/flow/signup)
+
+By signing up, you agree to the [Terms of Service](https://x.com/tos) and [Privacy Policy](https://x.com/privacy), including [Cookie Use.](https://help.x.com/rules-and-policies/twitter-cookies)
+
+[Terms of Service](https://x.com/tos)
+
+|
+
+[Privacy Policy](https://x.com/privacy)
+
+|
+
+[Cookie Policy](https://support.x.com/articles/20170514)
+
+|
+
+[Accessibility](https://help.x.com/resources/accessibility)
+
+|
+
+[Ads info](https://business.x.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo)
+
+|
+
+More
+
+© 2025 X Corp.

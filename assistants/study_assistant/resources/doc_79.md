@@ -1,121 +1,129 @@
-[Skip to main content](#content-area)
+[GitHub Docs](/en)
 
-* [Overview](/oss/python/langgraph/overview)
+Search or ask Copilot
 
-##### LangGraph v1.0
+Select language: current language is English
 
-* [Release notes](/oss/python/releases/langgraph-v1)
-* [Migration guide](/oss/python/migrate/langgraph-v1)
+Search or ask Copilot
 
-##### Get started
+Open menu
 
-* [Install](/oss/python/langgraph/install)
-* [Quickstart](/oss/python/langgraph/quickstart)
-* [Local server](/oss/python/langgraph/local-server)
-* [Thinking in LangGraph](/oss/python/langgraph/thinking-in-langgraph)
-* [Workflows + agents](/oss/python/langgraph/workflows-agents)
+# GitHub Docs
 
-##### Capabilities
+Help for wherever you are on your GitHub journey.
 
-* [Persistence](/oss/python/langgraph/persistence)
-* [Durable execution](/oss/python/langgraph/durable-execution)
-* [Streaming](/oss/python/langgraph/streaming)
-* [Interrupts](/oss/python/langgraph/interrupts)
-* [Time travel](/oss/python/langgraph/use-time-travel)
-* [Memory](/oss/python/langgraph/add-memory)
-* [Subgraphs](/oss/python/langgraph/use-subgraphs)
+## Get started
 
-##### Production
+* [Get started](/en/get-started)
+* [Migrations](/en/migrations)
+* [Account and profile](/en/account-and-profile)
+* [Subscriptions & notifications](/en/subscriptions-and-notifications)
+* [Authentication](/en/authentication)
+* [Billing and payments](/en/billing)
+* [Site policy](/en/site-policy)
 
-* [Application structure](/oss/python/langgraph/application-structure)
-* [Studio](/oss/python/langgraph/studio)
-* [Test](/oss/python/langgraph/test)
-* [Deploy](/oss/python/langgraph/deploy)
-* [Agent Chat UI](/oss/python/langgraph/ui)
-* [Observability](/oss/python/langgraph/observability)
+## Collaborative coding
 
-##### LangGraph APIs
+* [Codespaces](/en/codespaces)
+* [Repositories](/en/repositories)
+* [Pull requests](/en/pull-requests)
+* [GitHub Discussions](/en/discussions)
+* [Integrations](/en/integrations)
 
-* [Runtime](/oss/python/langgraph/pregel)
+## GitHub Copilot
 
-* [Install](#install)
-* [Core benefits](#core-benefits)
-* [LangGraph ecosystem](#langgraph-ecosystem)
-* [Acknowledgements](#acknowledgements)
+* [GitHub Copilot](/en/copilot)
+* [Plans](/en/copilot/get-started/plans)
+* [Get IDE code suggestions](/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions)
+* [Coding agent](/en/copilot/how-tos/use-copilot-agents/coding-agent)
+* [Tutorials](/en/copilot/tutorials)
+* [GitHub Copilot Chat Cookbook](/en/copilot/tutorials/copilot-chat-cookbook)
+* [Customization library](/en/copilot/tutorials/customization-library)
 
-# LangGraph overview
+## CI/CD and DevOps
 
-**LangGraph v1.0 is now available!**For a complete list of changes and instructions on how to upgrade your code, see the [release notes](/oss/python/releases/langgraph-v1) and [migration guide](/oss/python/migrate/langgraph-v1).If you encounter any issues or have feedback, please [open an issue](https://github.com/langchain-ai/docs/issues/new?template=02-langgraph.yml&labels=langgraph,python) so we can improve. To view v0.x documentation, [go to the archived content](https://github.com/langchain-ai/langgraph/tree/main/docs/docs).
+* [GitHub Actions](/en/actions)
+* [GitHub Packages](/en/packages)
+* [GitHub Pages](/en/pages)
 
-Trusted by companies shaping the future of agents— including Klarna, Replit, Elastic, and more— LangGraph is a low-level orchestration framework and runtime for building, managing, and deploying long-running, stateful agents.
-LangGraph is very low-level, and focused entirely on agent **orchestration**. Before using LangGraph, we recommend you familiarize yourself with some of the components used to build agents, starting with [models](/oss/python/langchain/models) and [tools](/oss/python/langchain/tools).
-We will commonly use [LangChain](/oss/python/langchain/overview) components throughout the documentation to integrate models and tools, but you don’t need to use LangChain to use LangGraph. If you are just getting started with agents or want a higher-level abstraction, we recommend you use LangChain’s [agents](/oss/python/langchain/agents) that provide pre-built architectures for common LLM and tool-calling loops.
-LangGraph is focused on the underlying capabilities important for agent orchestration: durable execution, streaming, human-in-the-loop, and more.
+## Security and quality
 
-## [​](#install) Install
+* [Secret scanning](/en/code-security/secret-scanning)
+* [Supply chain security](/en/code-security/supply-chain-security)
+* [Dependabot](/en/code-security/dependabot)
+* [Code scanning](/en/code-security/code-scanning)
+* [GitHub Code Quality](/en/code-security/code-quality)
 
-Copy
+## Client apps
 
-Ask AI
+* [GitHub CLI](/en/github-cli)
+* [GitHub Mobile](/en/get-started/using-github/github-mobile)
+* [GitHub Desktop](/en/desktop)
 
-```
-pip install -U langgraph
+## Project management
 
-```
+* [GitHub Issues](/en/issues)
+* [Projects](/en/issues/planning-and-tracking-with-projects)
+* [Search on GitHub](/en/search-github)
 
-Then, create a simple hello world example:
+## Enterprise and teams
 
-Copy
+* [Organizations](/en/organizations)
+* [Secure your organization](/en/code-security/securing-your-organization)
+* [Enterprise onboarding](/en/enterprise-cloud@latest/enterprise-onboarding)
+* [Enterprise administrators](/en/enterprise-cloud@latest/admin)
+* [GitHub Well-Architected](https://wellarchitected.github.com/)
 
-Ask AI
+## Developers
 
-```
-from langgraph.graph import StateGraph, MessagesState, START, END
+* [Apps](/en/apps)
+* [REST API](/en/rest)
+* [GraphQL API](/en/graphql)
+* [Webhooks](/en/webhooks)
+* [GitHub Models](/en/github-models)
 
-def mock_llm(state: MessagesState):
-    return {"messages": [{"role": "ai", "content": "hello world"}]}
+## Community
 
-graph = StateGraph(MessagesState)
-graph.add_node(mock_llm)
-graph.add_edge(START, "mock_llm")
-graph.add_edge("mock_llm", END)
-graph = graph.compile()
+* [Building communities](/en/communities)
+* [GitHub Sponsors](/en/sponsors)
+* [GitHub Education](/en/education)
+* [GitHub for Nonprofits](/en/nonprofit)
+* [GitHub Support](/en/support)
+* [Contribute to GitHub Docs](/en/contributing)
 
-graph.invoke({"messages": [{"role": "user", "content": "hi!"}]})
+## More docs
 
-```
+* [CodeQL query writing](https://codeql.github.com/docs)
+* [Electron](https://electronjs.org/docs/latest)
+* [npm](https://docs.npmjs.com/)
+* [GitHub Well-Architected](https://wellarchitected.github.com/)
 
-## [​](#core-benefits) Core benefits
+## Getting started
 
-LangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent. LangGraph does not abstract prompts or architecture, and provides the following central benefits:
+* [### Set up Git
 
-* [Durable execution](/oss/python/langgraph/durable-execution): Build agents that persist through failures and can run for extended periods, resuming from where they left off.
-* [Human-in-the-loop](/oss/python/langgraph/interrupts): Incorporate human oversight by inspecting and modifying agent state at any point.
-* [Comprehensive memory](/oss/python/concepts/memory): Create stateful agents with both short-term working memory for ongoing reasoning and long-term memory across sessions.
-* [Debugging with LangSmith](/langsmith/home): Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.
-* [Production-ready deployment](/langsmith/deployments): Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.
+  At the heart of GitHub is an open-source version control system (VCS) called Git. Git is responsible for everything GitHub-related that happens locally on your computer.](/en/get-started/git-basics/set-up-git)
+* [### Connecting to GitHub with SSH
 
-## [​](#langgraph-ecosystem) LangGraph ecosystem
+  You can connect to GitHub using the Secure Shell Protocol (SSH), which provides a secure channel over an unsecured network.](/en/authentication/connecting-to-github-with-ssh)
+* [### Creating and managing repositories
 
-While LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents. To improve your LLM application development, pair LangGraph with:
+  You can create a repository on GitHub to store and collaborate on your project's files, then manage the repository's name and location.](/en/repositories/creating-and-managing-repositories)
+* [### Basic writing and formatting syntax
 
-* [LangSmith](http://www.langchain.com/langsmith) — Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.
-* [LangSmith](/langsmith/home) — Deploy and scale agents effortlessly with a purpose-built deployment platform for long running, stateful workflows. Discover, reuse, configure, and share agents across teams — and iterate quickly with visual prototyping in [Studio](/langsmith/studio).
-* [LangChain](/oss/python/langchain/overview) - Provides integrations and composable components to streamline LLM application development. Contains agent abstractions built on top of LangGraph.
+  Create sophisticated formatting for your prose and code on GitHub with simple syntax.](/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-## [​](#acknowledgements) Acknowledgements
+## Popular
 
-LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
+* [### About pull requests
 
+  Learn about pull requests and draft pull requests on GitHub. Pull requests communicate changes to a branch in a repository. Once a pull request is opened, you can review changes with collaborators and add follow-up commits.](/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+* [### Authentication documentation
 
----
+  Keep your account and data secure with features like two-factor authentication, SSH, and commit signature verification.](/en/authentication)
+* [### Getting code suggestions in your IDE with GitHub Copilot
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langgraph/overview.mdx)
+  Use GitHub Copilot to get code suggestions in your editor.](/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions)
+* [### Managing remote repositories
 
-[Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
-
-Was this page helpful?
-
-[What's new in v1
-
-Next](/oss/python/releases/langgraph-v1)
+  Learn to work with your local repositories on your computer and remote repositories hosted on GitHub.](/en/get-started/git-basics/managing-remote-repositories)

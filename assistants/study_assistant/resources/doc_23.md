@@ -2,83 +2,57 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 
 [Docs by LangChain home page](/)
 
-[Get started](/langsmith/home)[Observability](/langsmith/observability)[Evaluation](/langsmith/evaluation)[Prompt engineering](/langsmith/prompt-engineering)[Deployment](/langsmith/deployments)[Agent Builder](/langsmith/agent-builder)[Platform setup](/langsmith/platform-setup)
+[LangChain](/oss/python/langchain/overview)[LangGraph](/oss/python/langgraph/overview)[Deep Agents](/oss/python/deepagents/overview)[Integrations](/oss/python/integrations/providers/overview)[Learn](/oss/python/learn)[Reference](/oss/python/reference/overview)[Contribute](/oss/python/contributing/overview)
 
-* [Overview](/langsmith/home)
+* [Overview](/oss/python/contributing/overview)
 
-* [Plans](https://langchain.com/pricing)
+##### Contribute
 
-* [Create an account and API key](/langsmith/create-account-api-key)
+* [Documentation](/oss/python/contributing/documentation)
+* [Code](/oss/python/contributing/code)
 
-##### Account administration
+##### Integrations
 
-* [Overview](/langsmith/administration-overview)
-* [Set up a workspace](/langsmith/set-up-a-workspace)
-* [Manage organizations using the API](/langsmith/manage-organization-by-api)
-* [Manage billing](/langsmith/billing)
-* [Set up resource tags](/langsmith/set-up-resource-tags)
-* [User management](/langsmith/user-management)
+* [Co-marketing](/oss/python/contributing/comarketing)
 
-##### Reference
+* [Content we’re excited to promote](#content-we%E2%80%99re-excited-to-promote)
 
-* [LangSmith Python SDK](https://reference.langchain.com/python/langsmith/observability/sdk/)
-* [LangSmith JS/TS SDK](https://reference.langchain.com/javascript/modules/langsmith.html)
-* [LangGraph Python SDK](https://reference.langchain.com/python/langgraph/)
-* [LangGraph JS/TS SDK](https://reference.langchain.com/javascript/modules/_langchain_langgraph-sdk.html)
-* [LangSmith API](https://api.smith.langchain.com/redoc)
+[Integrations](/oss/python/contributing/integrations-langchain)
 
-##### Additional resources
+# Co-marketing
 
-* [Scalability & resilience](/langsmith/scalability-and-resilience)
-* [Authentication methods](/langsmith/authentication-methods)
-* [FAQs](/langsmith/faq)
-* [Regions FAQ](/langsmith/regions-faq)
-* [Pricing FAQ](/langsmith/pricing-faq)
+With over 60 million monthly downloads, LangChain has a large audience of developers building LLM applications. Beyond just listing integrations, we aim to highlight high-quality, educational examples that inspire developers and advance the ecosystem.
 
-# LangSmith docs
+While we occasionally share integrations, we prioritize content that provides meaningful insights and best practices. Our main social channels are [Twitter](https://x.com/LangChainAI) and [LinkedIn](https://www.linkedin.com/company/langchain/), where we highlight the best examples.
 
-**LangSmith provides tools for developing, debugging, and deploying LLM applications.** It helps you trace requests, evaluate outputs, test prompts, and manage deployments in one place. LangSmith is framework agnostic, so you can use it with or without LangChain’s open-source libraries [`langchain`](/oss/python/langchain/overview) and [`langgraph`](/oss/python/langgraph/overview). Prototype locally, then move to production with integrated monitoring and evaluation to build more reliable AI systems.
+### [​](#content-we%E2%80%99re-excited-to-promote) Content we’re excited to promote
 
-LangGraph Platform is now [LangSmith Deployment](/langsmith/deployments). For more information, check out the [Changelog](https://changelog.langchain.com/announcements/product-naming-changes-langsmith-deployment-and-langsmith-studio).
+Educational content
 
-## [​](#get-started) Get started
+Blogs, YouTube videos and other media showcasing educational content. Note that we prefer content that is NOT framed as “here’s how to use integration XYZ”, but rather “here’s how to do ABC”, as we find that is more educational and helpful for developers.
 
-Create an account
+End-to-end applications
 
-Sign up at [smith.langchain.com](https://smith.langchain.com) (no credit card required). You can log in with **Google**, **GitHub**, or **email**.
+End-to-end applications are great resources for developers looking to build. We prefer to highlight applications that are more complex/agentic in nature, and that use [LangGraph](https://github.com/langchain-ai/langgraph) as the orchestration framework. We get particularly excited about anything involving:
 
-Create an API key
+* Long-term memory systems
+* Human-in-the-loop interaction patterns
+* Multi-agent architectures
 
-Go to your [Settings page](https://smith.langchain.com/settings) → **API Keys** → **Create API Key**. Copy the key and save it securely.
+Research
 
-Once your account and API key are ready, choose a quickstart to begin building with LangSmith:
-
-[## Observability
-
-Gain visibility into every step your application takes to debug faster and improve reliability.](/langsmith/observability-quickstart)[## Evaluation
-
-Measure and track quality over time to ensure your AI applications are consistent and trustworthy.](/langsmith/evaluation-quickstart)[## Deployment
-
-Deploy your agents as Agent Servers, ready to scale in production.](/langsmith/deployments)[## Platform setup
-
-Use LangSmith in managed cloud, in a self-hosted environment, or hybrid to match your infrastructure and compliance needs.](/langsmith/platform-setup)[## Prompt Testing
-
-Iterate on prompts with built-in versioning and collaboration to ship improvements faster.](/langsmith/prompt-engineering-quickstart)[## Studio
-
-Use a visual interface to design, test, and refine applications end-to-end.](/langsmith/quick-start-studio)
-
-LangSmith meets the highest standards of data security and privacy with HIPAA, SOC 2 Type 2, and GDPR compliance. For more information, see the [Trust Center](https://trust.langchain.com/).
-
-## [​](#workflow) Workflow
-
-LangSmith combines observability, evaluation, deployment, and platform setup in one integrated workflow—from local development to production.   
+We love highlighting novel research! Whether it is research built on top of LangChain or that integrates with it.
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/langsmith/home.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/contributing/comarketing.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Pricing plans](/langsmith/pricing-plans)
+[Publish an integration
+
+Previous](/oss/python/contributing/publish-langgraph)
+
+⌘I

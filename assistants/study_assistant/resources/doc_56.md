@@ -1,101 +1,163 @@
-[Skip to content](#main)
+[Built for fast-moving teams](/startups)[Scalable for large organizations](/enterprise)[Seamless migration tools](/switch)
 
-[## Why We Rebuilt LangChain’s Chatbot and What We Learned
+[Join our growing team](/careers)[Wall of Love
 
-By Liam Bush
-Background
-Every successful platform needs reliable support, but we realized our own team was spending hours tracking down answers to technical questions.](/rebuilding-chat-langchain/)
+Customer testimonials](/wall-of-love)[Guides
 
-### Featured
+Guide to technical writing](/guides)
 
-[## LangChain raises $125M to build the platform for agent engineering](/series-b/)
+Documentation
 
-3 min read
+Guides
 
-[## Building LangGraph: Designing an Agent Runtime from first principles](/building-langgraph/)
+[Getting Started
 
-15 min read
+Deploy in minutes](/docs)[Components
 
-[## LangChain & LangGraph 1.0 alpha releases](/langchain-langchain-1-0-alpha-releases/)
+Customizable components library](/docs/components)
 
-3 min read
+Developers
 
-[## Context Engineering](/context-engineering-for-agents/)
+[API Reference
 
-11 min read
+Build integrations and custom workflows](/docs/api-reference)[Changelog
 
-[## Introducing DeepAgents CLI
+Learn what's new](/docs/changelog)
 
-By Vivek Trivedy
-We're excited to introduce DeepAgents CLI for coding, research, and building agents with persistent memory. Now you can easily create](/introducing-deepagents-cli/)
+[Customers](/customers)[Blog](/blog)[Pricing](/pricing)
 
-3 min read
+[Contact sales](/contact/sales)[Start for free](https://dashboard.mintlify.com/signup)
 
-[## Introducing LangSmith’s No Code Agent Builder
+[Contact sales](/contact/sales)[Start for free](https://dashboard.mintlify.com/signup)
 
-By Brace Sproul and Sam Crowder
-Today, we’re expanding who can build agents beyond developers. While a lot of the highest volume, customer-facing agents](/langsmith-agent-builder/)
+# The Intelligent Documentation Platform
 
-4 min read
+Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for collaboration.
 
-[## Doubling down on DeepAgents
+## Built for the intelligence age
 
-Two months ago we wrote about Deep Agents - a term we coined for agents that are able to do complex, open ended tasks over](/doubling-down-on-deepagents/)
+Integrate AI into every part of your docs lifecycle. Woven into how your knowledge is written, maintained, and understood by both users and LLMs.
 
-3 min read
+LLMs.txt & MCP
 
-[## Agent Frameworks, Runtimes, and Harnesses- oh my!
+### Built for both people and AI
 
-There are few different open source packages we maintain: LangChain and LangGraph being the biggest ones, but DeepAgents being an increasingly popular one. I’ve](/agent-frameworks-runtimes-and-harnesses-oh-my/)
+Ensure your product shows up in the AI workflows users already rely on. We support llms.txt, MCP, and whatever comes next.
 
-3 min read
+agent
 
-[## Improve agent quality with Insights Agent and Multi-turn Evals, now in LangSmith
+### Self-updating knowledge management
 
-LangSmith's new Insights Agent and Multi-turn Evals help you understand what your agents are doing in production and whether they're accomplishing user goals.](/insights-agent-multiturn-evals-langsmith/)
+Draft, edit, and maintain content with a context-aware agent. Move faster and more consistently without the documentation debt.
 
-4 min read
+Assistant
 
-[## LangChain and LangGraph Agent Frameworks Reach v1.0 Milestones
+#### Intelligent assistance for your users
 
-By Sydney Runkle and the LangChain OSS team
-We're releasing LangChain 1.0 and LangGraph 1.0 — our first major versions of our](/langchain-langgraph-1dot0/)
+Turn every documentation visit into a guided conversation. Your AI assistant understands context and delivers what users need.
 
-7 min read
+#### Enterprise-reinvention
 
-[## LangChain raises $125M to build the platform for agent engineering
+### Bring intelligence to enterprise knowledge
 
-We raised $125M at a $1.25B valuation to build the platform for agent engineering.](/series-b/)
+Modernize without the rebuild with enterprise-grade professional service & security.
 
-3 min read
+[Explore for enterprise](/enterprise)
 
-[## Reflections on Three Years of Building LangChain
+#### Build with partnership
 
-by Harrison Chase
-Almost exactly 3 years ago, I pushed the first lines of code to langchain as an open source package. There was no](/three-years-langchain/)
+Direct, white-glove access to our documentation experts. Dedicated migration support and guidance tailored to your setup, and elevated support SLAs.
 
-[In the Loop](/tag/in-the-loop/)
-6 min read
+#### Compliance and access control
 
-[## Securing your agents with authentication and authorization
+Compliant with SOC 2, GDPR, and ISO/27001 to meet your internal and external data requirements. Secure access and provisioning with SAML-based SSO.
 
-Agents can take action which makes proper authentication and authorization critical. Read on for how to implement and evolve agent auth.](/agent-authorization-explainer/)
+[Customer story
 
-6 min read
+### See how Anthropic accelerates AI development with Mintlify
 
-[## Not Another Workflow Builder
+Read story
 
-By Harrison Chase
-One of the most common requests we’ve gotten from day zero of LangChain has been a visual workflow builder. We never](/not-another-workflow-builder/)
+2M+
 
-[In the Loop](/tag/in-the-loop/)
-4 min read
+Monthly active developers
 
-[## How to turn Claude Code into a domain specific coding agent
+3+
 
-Authored by: Aliyan Ishfaq
-Coding agents are great at writing code that uses popular libraries on which LLMs have been heavily trained on. But point](/how-to-turn-claude-code-into-a-domain-specific-coding-agent/)
+Products serviced: Claude API, MCP, and Claude Code](/customers/anthropic)
 
-[## Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith
+customers
 
-See how Monte Carlo built its AI Troubleshooting Agent on LangGraph and debugged with LangSmith to help data teams resolve issues faster](/customers-monte-carlo/)
+## Unlock knowledge for any industry
+
+From frontier AI companies to consumer brands, leaders across industries scale with Mintlify.
+
+[How Perplexity transformed its documentation into an AI-native developer experience that matches the pace of its product development
+
+Read story](/customers/perplexity)
+
+[How Cursor scaled with just 12 employees by turning documentation into a self-serve engine that lets developers find answers instantly while their lean team ships product at breakneck speed.
+
+Read story](/customers/cursor)
+
+[How X is using Mintlify to power the developer experience for the global town square
+
+Read story](/customers/x)
+
+[How Kalshi helps developers discover what's possible faster and ultimately drive broader adoption of its prediction markets.
+
+Read story](/customers/kalshi)
+
+[How Cognition scaled their documentation to mirror their product ethods
+
+Read story](/customers/cognition)
+
+[How Together AI scaled their documentation into a developer experience that mirrors their own ethos
+
+Read story](/customers/togetherai)
+
+[How Laravel scaled world-class documentation across 10+ products
+
+Read story](/customers/laravel)
+
+[Learn how Replit transformed their documentation to scale with their rapid growth
+
+Read story](/customers/replit)
+
+[How Glean unified its scattered documentation from Google Docs to Zendesk to custom markdown into a single branded hub where enterprise customers self-serve answers and developers ship faster.
+
+Read story](/customers/glean)
+
+[How Lovable scaled their onboarding and support with Mintlify's AI-native documentation
+
+Read story](/customers/lovable)
+
+[How Vercel scaled their API reference collection with Mintlify to meet the needs of their growing developer community
+
+Read story](/customers/vercel)
+
+[Read more about how Fidelity meets enterprise-level documentation needs with Mintlify
+
+Read story](/customers/fidelity)
+
+[Anaconda freed its engineers from maintaining custom documentation infrastructure to focus on what matters: helping 50 million data scientists build better models faster.
+
+Read story](/customers/anaconda)
+
+### Make documentation your winning advantage
+
+Join the leaders of tomorrow to future proof your documentation today.
+
+[Get started for free](https://dashboard.mintlify.com/signup)[Get a demo](/contact/sales)
+
+#### Pricing on your terms
+
+Pick the plan that works best for you
+
+[Pricing details](/pricing)
+
+#### Start building
+
+Deploy your documentation in minutes
+
+[Quickstart](/docs)

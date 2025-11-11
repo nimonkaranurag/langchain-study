@@ -1,273 +1,346 @@
-Memory overview - Docs by LangChain
-
-===============
-
-[Skip to main content](https://docs.langchain.com/oss/python/concepts/memory#content-area)
-
 We've raised a $125M Series B to build the platform for agent engineering. [Read more](https://blog.langchain.com/series-b/?utm_medium=internal&utm_source=docs&utm_campaign=q4-2025_october-launch-week_aw).
 
-[Docs by LangChain home page![Image 1: light logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-teal.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=16111530672bf976cb54ef2143478342)![Image 2: dark logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-lilac.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=b70fb1a2208670492ef94aef14b680be)](https://docs.langchain.com/)LangChain + LangGraph
+[Docs by LangChain home page](/)
 
-Search...
+[LangChain](/oss/python/langchain/overview)[LangGraph](/oss/python/langgraph/overview)[Deep Agents](/oss/python/deepagents/overview)[Integrations](/oss/python/integrations/providers/overview)[Learn](/oss/python/learn)[Reference](/oss/python/reference/overview)[Contribute](/oss/python/contributing/overview)
 
-Ctrl K
+##### Contribute
 
-*   [GitHub](https://github.com/langchain-ai)
-*   [Try LangSmith](https://smith.langchain.com/)
-*   [Try LangSmith](https://smith.langchain.com/)
+* [Co-marketing](/oss/python/contributing/comarketing)
 
-Search...
+* [Getting started](#getting-started)
+* [Quick edit: fix a typo](#quick-edit%3A-fix-a-typo)
+* [Full development IDE setup](#full-development-ide-setup)
+* [Documentation types](#documentation-types)
+* [Conceptual guides](#conceptual-guides)
+* [References](#references)
+* [Writing standard](#writing-standard)
+* [Mintlify components](#mintlify-components)
+* [Page structure](#page-structure)
+* [Co-locate Python and JavaScript/TypeScript content](#co-locate-python-and-javascript%2Ftypescript-content)
+* [Localization](#localization)
+* [Quality standards](#quality-standards)
+* [General guidelines](#general-guidelines)
+* [Accessibility requirements](#accessibility-requirements)
+* [Testing and validation](#testing-and-validation)
+* [In-code documentation](#in-code-documentation)
+* [Language and style](#language-and-style)
+* [Code examples](#code-examples)
+* [Getting help](#getting-help)
 
-Navigation
+[Contribute](/oss/python/contributing/documentation)
 
-Conceptual overviews
+# Contributing to documentation
 
-Memory overview
+Accessible documentation is a vital part of LangChain. We welcome both documentation for new features/[integrations](/oss/python/contributing/publish-langchain#adding-documentation), as well as community improvements to existing docs.
 
-[LangChain](https://docs.langchain.com/oss/python/langchain/overview)[LangGraph](https://docs.langchain.com/oss/python/langgraph/overview)[Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview)[Integrations](https://docs.langchain.com/oss/python/integrations/providers/overview)[Learn](https://docs.langchain.com/oss/python/learn)[Reference](https://docs.langchain.com/oss/python/reference/overview)[Contribute](https://docs.langchain.com/oss/python/contributing/overview)
+We generally do not merge new tutorials from outside contributors without an acute need. If you feel that a certain topic is missing from docs or is not sufficiently covered, please [open a new issue](https://github.com/langchain-ai/docs/issues).
 
-Python
+All documentation falls under one of four categories:
 
-*   [Learn](https://docs.langchain.com/oss/python/learn)
+[## Conceptual guides
 
-##### Tutorials
+Explanations that provide deeper understanding and insights](#conceptual-guides)[## References
 
-*   LangChain 
-    *   [Semantic search](https://docs.langchain.com/oss/python/langchain/knowledge-base)
-    *   [RAG agent](https://docs.langchain.com/oss/python/langchain/rag)
-    *   [SQL agent](https://docs.langchain.com/oss/python/langchain/sql-agent)
-    *   [Supervisor agent](https://docs.langchain.com/oss/python/langchain/supervisor)
+Technical descriptions of APIs and implementation details](#references)[## Tutorials (Learn)
 
-*   LangGraph 
-    *   [Custom RAG agent](https://docs.langchain.com/oss/python/langgraph/agentic-rag)
-    *   [Custom SQL agent](https://docs.langchain.com/oss/python/langgraph/sql-agent)
+Lessons that guide users through practical activities to build understanding](/oss/python/learn)
 
-##### Conceptual overviews
+## How-to guides
 
-*   [Memory](https://docs.langchain.com/oss/python/concepts/memory)
-*   [Context](https://docs.langchain.com/oss/python/concepts/context)
-*   [Graph API](https://docs.langchain.com/oss/python/langgraph/graph-api)
-*   [Functional API](https://docs.langchain.com/oss/python/langgraph/functional-api)
+Task-oriented instructions for users who know what they want to accomplish
 
-##### Additional resources
+---
 
-*   [LangChain Academy](https://academy.langchain.com/)
-*   [Case studies](https://docs.langchain.com/oss/python/langgraph/case-studies)
+## [​](#getting-started) Getting started
 
-close
+### [​](#quick-edit%3A-fix-a-typo) Quick edit: fix a typo
 
-On this page
-*   [Short-term memory](https://docs.langchain.com/oss/python/concepts/memory#short-term-memory)
-*   [Manage short-term memory](https://docs.langchain.com/oss/python/concepts/memory#manage-short-term-memory)
-*   [Long-term memory](https://docs.langchain.com/oss/python/concepts/memory#long-term-memory)
-*   [Semantic memory](https://docs.langchain.com/oss/python/concepts/memory#semantic-memory)
-*   [Profile](https://docs.langchain.com/oss/python/concepts/memory#profile)
-*   [Collection](https://docs.langchain.com/oss/python/concepts/memory#collection)
-*   [Episodic memory](https://docs.langchain.com/oss/python/concepts/memory#episodic-memory)
-*   [Procedural memory](https://docs.langchain.com/oss/python/concepts/memory#procedural-memory)
-*   [Writing memories](https://docs.langchain.com/oss/python/concepts/memory#writing-memories)
-*   [In the hot path](https://docs.langchain.com/oss/python/concepts/memory#in-the-hot-path)
-*   [In the background](https://docs.langchain.com/oss/python/concepts/memory#in-the-background)
-*   [Memory storage](https://docs.langchain.com/oss/python/concepts/memory#memory-storage)
+For simple changes like fixing typos, you can edit directly on GitHub without setting up a local development environment:
 
-[Conceptual overviews](https://docs.langchain.com/oss/python/concepts/memory)
+**Prerequisites:**
 
-Memory overview
-===============
+* A [GitHub](https://github.com/) account
+* Basic familiarity of the [fork-and-pull workflow](https://graphite.dev/guides/understanding-git-fork-pull-request-workflow) for contributing
 
-Copy page
+1
 
-Copy page
+Find the page
 
-[Memory](https://docs.langchain.com/oss/python/langgraph/add-memory) is a system that remembers information about previous interactions. For AI agents, memory is crucial because it lets them remember previous interactions, learn from feedback, and adapt to user preferences. As agents tackle more complex tasks with numerous user interactions, this capability becomes essential for both efficiency and user satisfaction.This conceptual guide covers two types of memory, based on their recall scope:
-*   [Short-term memory](https://docs.langchain.com/oss/python/concepts/memory#short-term-memory), or [thread](https://docs.langchain.com/oss/python/langgraph/persistence#threads)-scoped memory, tracks the ongoing conversation by maintaining message history within a session. LangGraph manages short-term memory as a part of your agent’s [state](https://docs.langchain.com/oss/python/langgraph/graph-api#state). State is persisted to a database using a [checkpointer](https://docs.langchain.com/oss/python/langgraph/persistence#checkpoints) so the thread can be resumed at any time. Short-term memory updates when the graph is invoked or a step is completed, and the State is read at the start of each step.
-*   [Long-term memory](https://docs.langchain.com/oss/python/concepts/memory#long-term-memory) stores user-specific or application-level data across sessions and is shared _across_ conversational threads. It can be recalled _at any time_ and _in any thread_. Memories are scoped to any custom namespace, not just within a single thread ID. LangGraph provides [stores](https://docs.langchain.com/oss/python/langgraph/persistence#memory-store) ([reference doc](https://langchain-ai.github.io/langgraph/reference/store/#langgraph.store.base.BaseStore)) to let you save and recall long-term memories.
+Navigate to any documentation page, scroll to the bottom of the page, and click the link “Edit the source of this page on GitHub”
 
-![Image 3](https://mintcdn.com/langchain-5e9cc07a/dL5Sn6Cmy9pwtY0V/oss/images/short-vs-long.png?fit=max&auto=format&n=dL5Sn6Cmy9pwtY0V&q=85&s=62665893848db800383dffda7367438a)
-[​](https://docs.langchain.com/oss/python/concepts/memory#short-term-memory)
+2
 
-Short-term memory
------------------------------------------------------------------------------------------------
+Fork the repository
 
-[Short-term memory](https://docs.langchain.com/oss/python/langgraph/add-memory#add-short-term-memory) lets your application remember previous interactions within a single [thread](https://docs.langchain.com/oss/python/langgraph/persistence#threads) or conversation. A [thread](https://docs.langchain.com/oss/python/langgraph/persistence#threads) organizes multiple interactions in a session, similar to the way email groups messages in a single conversation.LangGraph manages short-term memory as part of the agent’s state, persisted via thread-scoped checkpoints. This state can normally include the conversation history along with other stateful data, such as uploaded files, retrieved documents, or generated artifacts. By storing these in the graph’s state, the bot can access the full context for a given conversation while maintaining separation between different threads.
-### [​](https://docs.langchain.com/oss/python/concepts/memory#manage-short-term-memory)
+GitHub will prompt you to fork the repository to your account. Make sure to fork into your
 
-Manage short-term memory
+3
 
-Conversation history is the most common form of short-term memory, and long conversations pose a challenge to today’s LLMs. A full history may not fit inside an LLM’s context window, resulting in an irrecoverable error. Even if your LLM supports the full context length, most LLMs still perform poorly over long contexts. They get “distracted” by stale or off-topic content, all while suffering from slower response times and higher costs.Chat models accept context using messages, which include developer provided instructions (a system message) and user inputs (human messages). In chat applications, messages alternate between human inputs and model responses, resulting in a list of messages that grows longer over time. Because context windows are limited and token-rich message lists can be costly, many applications can benefit from using techniques to manually remove or forget stale information.![Image 4](https://mintcdn.com/langchain-5e9cc07a/-_xGPoyjhyiDWTPJ/oss/images/filter.png?fit=max&auto=format&n=-_xGPoyjhyiDWTPJ&q=85&s=89c50725dda7add80732bd2096e07ef2)For more information on common techniques for managing messages, see the [Add and manage memory](https://docs.langchain.com/oss/python/langgraph/add-memory#manage-short-term-memory) guide.
-[​](https://docs.langchain.com/oss/python/concepts/memory#long-term-memory)
+Make your changes
 
-Long-term memory
----------------------------------------------------------------------------------------------
+Correct the typo directly in GitHub’s web editor
 
-[Long-term memory](https://docs.langchain.com/oss/python/langgraph/add-memory#add-long-term-memory) in LangGraph allows systems to retain information across different conversations or sessions. Unlike short-term memory, which is **thread-scoped**, long-term memory is saved within custom “namespaces.”Long-term memory is a complex challenge without a one-size-fits-all solution. However, the following questions provide a framework to help you navigate the different techniques:
-*   What is the type of memory? Humans use memories to remember facts ([semantic memory](https://docs.langchain.com/oss/python/concepts/memory#semantic-memory)), experiences ([episodic memory](https://docs.langchain.com/oss/python/concepts/memory#episodic-memory)), and rules ([procedural memory](https://docs.langchain.com/oss/python/concepts/memory#procedural-memory)). AI agents can use memory in the same ways. For example, AI agents can use memory to remember specific facts about a user to accomplish a task.
-*   [When do you want to update memories?](https://docs.langchain.com/oss/python/concepts/memory#writing-memories) Memory can be updated as part of an agent’s application logic (e.g., “on the hot path”). In this case, the agent typically decides to remember facts before responding to a user. Alternatively, memory can be updated as a background task (logic that runs in the background / asynchronously and generates memories). We explain the tradeoffs between these approaches in the [section below](https://docs.langchain.com/oss/python/concepts/memory#writing-memories).
+4
 
-Different applications require various types of memory. Although the analogy isn’t perfect, examining [human memory types](https://www.psychologytoday.com/us/basics/memory/types-of-memory?ref=blog.langchain.dev) can be insightful. Some research (e.g., the [CoALA paper](https://arxiv.org/pdf/2309.02427)) have even mapped these human memory types to those used in AI agents.
+Commit your changes
 
-| Memory Type | What is Stored | Human Example | Agent Example |
-| --- | --- | --- | --- |
-| [Semantic](https://docs.langchain.com/oss/python/concepts/memory#semantic-memory) | Facts | Things I learned in school | Facts about a user |
-| [Episodic](https://docs.langchain.com/oss/python/concepts/memory#episodic-memory) | Experiences | Things I did | Past agent actions |
-| [Procedural](https://docs.langchain.com/oss/python/concepts/memory#procedural-memory) | Instructions | Instincts or motor skills | Agent system prompt |
+Click `Commit changes...` and give your commit a descriptive title like `fix(docs): summary of change`. If applicable, add an [extended description](https://www.gitkraken.com/learn/git/best-practices/git-commit-message#git-commit-message-structure)
 
-### [​](https://docs.langchain.com/oss/python/concepts/memory#semantic-memory)
+5
 
-Semantic memory
+Create pull request
 
-[Semantic memory](https://en.wikipedia.org/wiki/Semantic_memory), both in humans and AI agents, involves the retention of specific facts and concepts. In humans, it can include information learned in school and the understanding of concepts and their relationships. For AI agents, semantic memory is often used to personalize applications by remembering facts or concepts from past interactions.
+GitHub will redirect you to create a pull request. Give it a title (often the same as the commit) and follow the PR template checklist, if present
 
-Semantic memory is different from “semantic search,” which is a technique for finding similar content using “meaning” (usually as embeddings). Semantic memory is a term from psychology, referring to storing facts and knowledge, while semantic search is a method for retrieving information based on meaning rather than exact matches.
+Docs PRs are typically reviewed within a few days. Keep an eye on your PR to address any feedback from maintainers. Do not bump the PR unless you have new information to provide - maintainers will address it as their availability permits.
 
-Semantic memories can be managed in different ways:
-#### [​](https://docs.langchain.com/oss/python/concepts/memory#profile)
+### [​](#full-development-ide-setup) Full development IDE setup
 
-Profile
+For larger changes or ongoing contributions, it’s important to set up a local development environment on your machine. Our documentation build pipeline offers local preview and live reload as you edit, important for ensuring your changes appear as intended before submitting. Please review the steps to set up your environment outlined in the docs repo [`README.md`](https://github.com/langchain-ai/docs?tab=readme-ov-file#contributing). 
 
-Memories can be a single, continuously updated “profile” of well-scoped and specific information about a user, organization, or other entity (including the agent itself). A profile is generally just a JSON document with various key-value pairs you’ve selected to represent your domain.When remembering a profile, you will want to make sure that you are **updating** the profile each time. As a result, you will want to pass in the previous profile and [ask the model to generate a new profile](https://github.com/langchain-ai/memory-template) (or some [JSON patch](https://github.com/hinthornw/trustcall) to apply to the old profile). This can be become error-prone as the profile gets larger, and may benefit from splitting a profile into multiple documents or **strict** decoding when generating documents to ensure the memory schemas remains valid.![Image 5](https://mintcdn.com/langchain-5e9cc07a/ybiAaBfoBvFquMDz/oss/images/update-profile.png?fit=max&auto=format&n=ybiAaBfoBvFquMDz&q=85&s=8843788f6afd855450986c4cc4cd6abf)
-#### [​](https://docs.langchain.com/oss/python/concepts/memory#collection)
+---
 
-Collection
+## [​](#documentation-types) Documentation types
 
-Alternatively, memories can be a collection of documents that are continuously updated and extended over time. Each individual memory can be more narrowly scoped and easier to generate, which means that you’re less likely to **lose** information over time. It’s easier for an LLM to generate _new_ objects for new information than reconcile new information with an existing profile. As a result, a document collection tends to lead to [higher recall downstream](https://en.wikipedia.org/wiki/Precision_and_recall).However, this shifts some complexity memory updating. The model must now _delete_ or _update_ existing items in the list, which can be tricky. In addition, some models may default to over-inserting and others may default to over-updating. See the [Trustcall](https://github.com/hinthornw/trustcall) package for one way to manage this and consider evaluation (e.g., with a tool like [LangSmith](https://docs.smith.langchain.com/tutorials/Developers/evaluation)) to help you tune the behavior.Working with document collections also shifts complexity to memory **search** over the list. The `Store` currently supports both [semantic search](https://langchain-ai.github.io/langgraph/reference/store/#langgraph.store.base.SearchOp.query) and [filtering by content](https://langchain-ai.github.io/langgraph/reference/store/#langgraph.store.base.SearchOp.filter).Finally, using a collection of memories can make it challenging to provide comprehensive context to the model. While individual memories may follow a specific schema, this structure might not capture the full context or relationships between memories. As a result, when using these memories to generate responses, the model may lack important contextual information that would be more readily available in a unified profile approach.![Image 6](https://mintcdn.com/langchain-5e9cc07a/ybiAaBfoBvFquMDz/oss/images/update-list.png?fit=max&auto=format&n=ybiAaBfoBvFquMDz&q=85&s=38851b242981cc87128620091781f7c9)Regardless of memory management approach, the central point is that the agent will use the semantic memories to [ground its responses](https://docs.langchain.com/oss/python/langchain/retrieval), which often leads to more personalized and relevant interactions.
-### [​](https://docs.langchain.com/oss/python/concepts/memory#episodic-memory)
+Where applicable, all documentation must have translations in both Python and JavaScript/TypeScript. See [our localization guide](#localization) for details.
 
-Episodic memory
+### [​](#conceptual-guides) Conceptual guides
 
-[Episodic memory](https://en.wikipedia.org/wiki/Episodic_memory), in both humans and AI agents, involves recalling past events or actions. The [CoALA paper](https://arxiv.org/pdf/2309.02427) frames this well: facts can be written to semantic memory, whereas _experiences_ can be written to episodic memory. For AI agents, episodic memory is often used to help an agent remember how to accomplish a task.In practice, episodic memories are often implemented through few-shot example prompting, where agents learn from past sequences to perform tasks correctly. Sometimes it’s easier to “show” than “tell” and LLMs learn well from examples. Few-shot learning lets you [“program”](https://x.com/karpathy/status/1627366413840322562) your LLM by updating the prompt with input-output examples to illustrate the intended behavior. While various best-practices can be used to generate few-shot examples, often the challenge lies in selecting the most relevant examples based on user input.Note that the memory [store](https://docs.langchain.com/oss/python/langgraph/persistence#memory-store) is just one way to store data as few-shot examples. If you want to have more developer involvement, or tie few-shots more closely to your evaluation harness, you can also use a [LangSmith Dataset](https://docs.langchain.com/langsmith/index-datasets-for-dynamic-few-shot-example-selection) to store your data. Then dynamic few-shot example selectors can be used out-of-the box to achieve this same goal. LangSmith will index the dataset for you and enable retrieval of few shot examples that are most relevant to the user input based upon keyword similarity ([using a BM25-like algorithm](https://docs.langchain.com/langsmith/index-datasets-for-dynamic-few-shot-example-selection) for keyword based similarity).See this how-to [video](https://www.youtube.com/watch?v=37VaU7e7t5o) for example usage of dynamic few-shot example selection in LangSmith. Also, see this [blog post](https://blog.langchain.dev/few-shot-prompting-to-improve-tool-calling-performance/) showcasing few-shot prompting to improve tool calling performance and this [blog post](https://blog.langchain.dev/aligning-llm-as-a-judge-with-human-preferences/) using few-shot example to align an LLMs to human preferences.
-### [​](https://docs.langchain.com/oss/python/concepts/memory#procedural-memory)
+Conceptual guide cover core concepts abstractly, providing deep understanding.
 
-Procedural memory
+Characteristics
 
-[Procedural memory](https://en.wikipedia.org/wiki/Procedural_memory), in both humans and AI agents, involves remembering the rules used to perform tasks. In humans, procedural memory is like the internalized knowledge of how to perform tasks, such as riding a bike via basic motor skills and balance. Episodic memory, on the other hand, involves recalling specific experiences, such as the first time you successfully rode a bike without training wheels or a memorable bike ride through a scenic route. For AI agents, procedural memory is a combination of model weights, agent code, and agent’s prompt that collectively determine the agent’s functionality.In practice, it is fairly uncommon for agents to modify their model weights or rewrite their code. However, it is more common for agents to modify their own prompts.One effective approach to refining an agent’s instructions is through [“Reflection”](https://blog.langchain.dev/reflection-agents/) or meta-prompting. This involves prompting the agent with its current instructions (e.g., the system prompt) along with recent conversations or explicit user feedback. The agent then refines its own instructions based on this input. This method is particularly useful for tasks where instructions are challenging to specify upfront, as it allows the agent to learn and adapt from its interactions.For example, we built a [Tweet generator](https://www.youtube.com/watch?v=Vn8A3BxfplE) using external feedback and prompt re-writing to produce high-quality paper summaries for Twitter. In this case, the specific summarization prompt was difficult to specify _a priori_, but it was fairly easy for a user to critique the generated Tweets and provide feedback on how to improve the summarization process.The below pseudo-code shows how you might implement this with the LangGraph memory [store](https://docs.langchain.com/oss/python/langgraph/persistence#memory-store), using the store to save a prompt, the `update_instructions` node to get the current prompt (as well as feedback from the conversation with the user captured in `state["messages"]`), update the prompt, and save the new prompt back to the store. Then, the `call_model` get the updated prompt from the store and uses it to generate a response.
+* **Understanding-focused**: Explain why things work as they do
+* **Broad perspective**: Higher and wider view than other types
+* **Design-oriented**: Explain decisions and trade-offs
+* **Context-rich**: Use analogies and comparisons
 
-Copy
+Tips
 
-Ask AI
+* Explain design decisions - *“why does concept X exist?”*
+* Use analogies and reference alternatives
+* Avoid blending in too much reference content
+* Link to related tutorials and how-to guides
+* Focus on the **“why”** rather than the “how”
 
-```
-# Node that *uses* the instructions
-def call_model(state: State, store: BaseStore):
-    namespace = ("agent_instructions", )
-    instructions = store.get(namespace, key="agent_a")[0]
-    # Application logic
-    prompt = prompt_template.format(instructions=instructions.value["instructions"])
-    ...
+Examples
 
-# Node that updates instructions
-def update_instructions(state: State, store: BaseStore):
-    namespace = ("instructions",)
-    instructions = store.search(namespace)[0]
-    # Memory logic
-    prompt = prompt_template.format(instructions=instructions.value["instructions"], conversation=state["messages"])
-    output = llm.invoke(prompt)
-    new_instructions = output['new_instructions']
-    store.put(("agent_instructions",), "agent_a", {"instructions": new_instructions})
-    ...
-```
+[## Memory](/oss/python/concepts/memory)[## Context](/oss/python/concepts/context)
 
-![Image 7](https://mintcdn.com/langchain-5e9cc07a/ybiAaBfoBvFquMDz/oss/images/update-instructions.png?fit=max&auto=format&n=ybiAaBfoBvFquMDz&q=85&s=13644c954ed79a45b8a1a762b3e39da1)
-### [​](https://docs.langchain.com/oss/python/concepts/memory#writing-memories)
+### [​](#references) References
 
-Writing memories
+Reference documentation contains detailed, low-level information describing exactly what functionality exists and how to use it. [## Python reference](https://reference.langchain.com/python/) A good reference should:
 
-There are two primary methods for agents to write memories: [“in the hot path”](https://docs.langchain.com/oss/python/concepts/memory#in-the-hot-path) and [“in the background”](https://docs.langchain.com/oss/python/concepts/memory#in-the-background).![Image 8](https://mintcdn.com/langchain-5e9cc07a/dL5Sn6Cmy9pwtY0V/oss/images/hot_path_vs_background.png?fit=max&auto=format&n=dL5Sn6Cmy9pwtY0V&q=85&s=edd006d6189dc29a2edcba57c41fd744)
-#### [​](https://docs.langchain.com/oss/python/concepts/memory#in-the-hot-path)
+* Describe what exists (all parameters, options, return values)
+* Be comprehensive and structured for easy lookup
+* Serve as the authoritative source for technical details
 
-In the hot path
+Contributing to references
 
-Creating memories during runtime offers both advantages and challenges. On the positive side, this approach allows for real-time updates, making new memories immediately available for use in subsequent interactions. It also enables transparency, as users can be notified when memories are created and stored.However, this method also presents challenges. It may increase complexity if the agent requires a new tool to decide what to commit to memory. In addition, the process of reasoning about what to save to memory can impact agent latency. Finally, the agent must multitask between memory creation and its other responsibilities, potentially affecting the quantity and quality of memories created.As an example, ChatGPT uses a [save_memories](https://openai.com/index/memory-and-new-controls-for-chatgpt/) tool to upsert memories as content strings, deciding whether and how to use this tool with each user message. See our [memory-agent](https://github.com/langchain-ai/memory-agent) template as an reference implementation.
-#### [​](https://docs.langchain.com/oss/python/concepts/memory#in-the-background)
+See the contributing guide for [Python reference docs](https://github.com/langchain-ai/docs/blob/main/reference/python/README.md).
 
-In the background
+LangChain reference best practices
 
-Creating memories as a separate background task offers several advantages. It eliminates latency in the primary application, separates application logic from memory management, and allows for more focused task completion by the agent. This approach also provides flexibility in timing memory creation to avoid redundant work.However, this method has its own challenges. Determining the frequency of memory writing becomes crucial, as infrequent updates may leave other threads without new context. Deciding when to trigger memory formation is also important. Common strategies include scheduling after a set time period (with rescheduling if new events occur), using a cron schedule, or allowing manual triggers by users or the application logic.See our [memory-service](https://github.com/langchain-ai/memory-template) template as an reference implementation.
-### [​](https://docs.langchain.com/oss/python/concepts/memory#memory-storage)
+* **Be consistent**; follow existing patterns for provider-specific documentation
+* Include both basic usage (code snippets) and common edge cases/failure modes
+* Note when features require specific versions
 
-Memory storage
+When to create new reference documentation
 
-LangGraph stores long-term memories as JSON documents in a [store](https://docs.langchain.com/oss/python/langgraph/persistence#memory-store). Each memory is organized under a custom `namespace` (similar to a folder) and a distinct `key` (like a file name). Namespaces often include user or org IDs or other labels that makes it easier to organize information. This structure enables hierarchical organization of memories. Cross-namespace searching is then supported through content filters.
+* New integrations or providers need dedicated reference pages
+* Complex configuration options require detailed explanation
+* API changes introduce new parameters or behavior
+* Community frequently asks questions about specific functionality
+
+---
+
+## [​](#writing-standard) Writing standard
+
+Reference documentation has different standards - see the [reference docs contributing guide](https://github.com/langchain-ai/docs/blob/main/reference/python/README.md) for details.
+
+### [​](#mintlify-components) Mintlify components
+
+Use appropriate [Mintlify components](https://mintlify.com/docs/text) to enhance readability:
+
+* Callouts
+* Structure
+* Code
+
+* for helpful supplementary information
+* for important cautions and breaking changes
+* for best practices and advice
+* for neutral contextual information
+* for success confirmations
+
+### [​](#page-structure) Page structure
+
+Every documentation page must begin with YAML frontmatter:
 
 Copy
 
 Ask AI
 
 ```
-from langgraph.store.memory import InMemoryStore
-
-def embed(texts: list[str]) -> list[list[float]]:
-    # Replace with an actual embedding function or LangChain embeddings object
-    return [[1.0, 2.0] * len(texts)]
-
-# InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production use.
-store = InMemoryStore(index={"embed": embed, "dims": 2})
-user_id = "my-user"
-application_context = "chitchat"
-namespace = (user_id, application_context)
-store.put(
-    namespace,
-    "a-memory",
-    {
-        "rules": [
-            "User likes short, direct language",
-            "User only speaks English & python",
-        ],
-        "my-key": "my-value",
-    },
-)
-# get the "memory" by ID
-item = store.get(namespace, "a-memory")
-# search for "memories" within this namespace, filtering on content equivalence, sorted by vector similarity
-items = store.search(
-    namespace, filter={"my-key": "my-value"}, query="language preferences"
-)
+--- ---title: "Clear, specific title" title: "Clear, specific title" --- ---
 ```
 
-For more information about the memory store, see the [Persistence](https://docs.langchain.com/oss/python/langgraph/persistence#memory-store) guide.
+### [​](#co-locate-python-and-javascript%2Ftypescript-content) Co-locate Python and JavaScript/TypeScript content
 
-* * *
+All documentation must be written in both Python and JavaScript/TypeScript when possible. To do so, we use a custom in-line syntax to differentiate between sections that should appear in one or both languages:
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/concepts/memory.mdx)
+Copy
 
-[Connect these docs programmatically](https://docs.langchain.com/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
+Ask AI
+
+```
+:::python:::pythonPython-specific content. In real docs, the preceding backslash (before `python`) is omitted.Python-specific content. In real docs, the preceding backslash (before ` python `) is omitted.:::::: :::js:::jsJavaScript/TypeScript-specific content. In real docs, the preceding backslash (before `js`) is omitted.JavaScript/TypeScript-specific content. In real docs, the preceding backslash (before ` js `) is omitted.:::::: Content for both languages (not wrapped)Content for both languages (not wrapped)
+```
+
+We don’t want a lack of parity to block contributions. If a feature is only available in one language, it’s okay to have documentation only in that language until the other language catches up. In such cases, please include a note indicating that the feature is not yet available in the other language.
+
+If you need help translating content between Python and JavaScript/TypeScript, please ask in the [community slack](https://www.langchain.com/join-community) or tag a maintainer in your PR.
+
+### [​](#localization) Localization
+
+We are working to add support for other languages, thanks to our LangChain Ambassadors! 
+
+---
+
+## [​](#quality-standards) Quality standards
+
+### [​](#general-guidelines) General guidelines
+
+Avoid duplication
+
+Multiple pages covering the same material are difficult to maintain and cause confusion. There should be only one canonical page for each concept or feature. Link to other guides instead of re-explaining.
+
+Link frequently
+
+Documentation sections don’t exist in a vacuum. Link to other sections frequently to allow users to learn about unfamiliar topics. This includes linking to API references and conceptual sections.
+
+Be concise
+
+Take a less-is-more approach. If another section with a good explanation exists, link to it rather than re-explain, unless your content presents a new angle.
+
+### [​](#accessibility-requirements) Accessibility requirements
+
+Ensure documentation is accessible to all users:
+
+* Structure content for easy scanning with headers and lists
+* Use specific, actionable link text instead of “click here”
+* Include descriptive alt text for all images and diagrams
+
+### [​](#testing-and-validation) Testing and validation
+
+Before submitting documentation:
+
+1
+
+Test all code
+
+Run all code examples to ensure they work correctly
+
+2
+
+Check formatting
+
+Copy
+
+Ask AI
+
+```
+make lint make  lint make format make  format
+```
+
+3
+
+Build locally
+
+Copy
+
+Ask AI
+
+```
+docs build docs  build
+```
+
+Verify the build completes without errors
+
+4
+
+Review links
+
+Check that all internal links work correctly
+
+---
+
+## [​](#in-code-documentation) In-code documentation
+
+### [​](#language-and-style) Language and style
+
+Use [Google-style docstrings](https://google.github.io/styleguide/pyguide.html) with complete type hints for all public functions.
+
+Follow these standards for all documentation:
+
+* **Voice**: Use second person (“you”) for instructions
+* **Tense**: Use active voice and present tense
+* **Clarity**: Write clear, direct language for technical audiences
+* **Consistency**: Use consistent terminology throughout
+* **Conciseness**: Keep sentences concise while providing necessary context
+
+### [​](#code-examples) Code examples
+
+Always test code examples before publishing. Never include real API keys or secrets.
+
+Requirements for code examples:
+
+1
+
+Completeness
+
+Include complete, runnable examples that users can copy and execute without errors
+
+2
+
+Realism
+
+Use realistic data instead of placeholder values like “foo” or “example”
+
+3
+
+Error handling
+
+Show proper error handling and edge case management
+
+4
+
+Documentation
+
+Add explanatory comments for complex logic
+
+Example of a well-documented function:
+
+Copy
+
+Ask AI
+
+```
+def filter_unknown_users(users: list[str], known_users: set[str]) -> list[str]: def  filter_unknown_users(users: list[str], known_users: set[str]) -> list[str]: """Filter out users that are not in the known users set. """Filter out users that are not in the known users set.  Args: Args: users: List of user identifiers to filter. users: List of user identifiers to filter. known_users: Set of known/valid user identifiers. known_users: Set of known/valid user identifiers.  Returns: Returns: List of users that are not in the known_users set. List of users that are not in the known_users set.  Raises: Raises: ValueError: If users list contains invalid identifiers. ValueError: If users list contains invalid identifiers.  """  """ return [user for user in users if user not in known_users]  return [user for  user in  users if  user not  in known_users]
+```
+
+## [​](#getting-help) Getting help
+
+Our goal is to have the simplest developer setup possible. Should you experience any difficulty getting setup, please ask in the [community slack](https://www.langchain.com/join-community) or open a [forum post](https://forum.langchain.com/).
+
+You now have everything you need to contribute high-quality documentation to LangChain! 🎤🦜
+
+---
+
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/contributing/documentation.mdx)
+
+[Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-Yes No
-
-[Build a custom SQL agent Previous](https://docs.langchain.com/oss/python/langgraph/sql-agent)[Context overview Next](https://docs.langchain.com/oss/python/concepts/context)
-
-Ctrl+I
-
-[Docs by LangChain home page![Image 9: light logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-teal.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=16111530672bf976cb54ef2143478342)![Image 10: dark logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-lilac.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=b70fb1a2208670492ef94aef14b680be)](https://docs.langchain.com/)
-
-[github](https://github.com/langchain-ai)[x](https://x.com/LangChainAI)[linkedin](https://www.linkedin.com/company/langchain/)[youtube](https://www.youtube.com/@LangChain)
-
-Resources
-
-[Forum](https://forum.langchain.com/)[Changelog](https://changelog.langchain.com/)[LangChain Academy](https://academy.langchain.com/)[Trust Center](https://trust.langchain.com/)
-
-Company
-
-[About](https://langchain.com/about)[Careers](https://langchain.com/careers)[Blog](https://blog.langchain.com/)
-
-[github](https://github.com/langchain-ai)[x](https://x.com/LangChainAI)[linkedin](https://www.linkedin.com/company/langchain/)[youtube](https://www.youtube.com/@LangChain)
-
-[Powered by Mintlify](https://www.mintlify.com/?utm_campaign=poweredBy&utm_medium=referral&utm_source=langchain-5e9cc07a)
-
-Assistant
-
-Responses are generated using AI and may contain mistakes.
-
-![Image 11](https://mintcdn.com/langchain-5e9cc07a/dL5Sn6Cmy9pwtY0V/oss/images/short-vs-long.png?w=560&fit=max&auto=format&n=dL5Sn6Cmy9pwtY0V&q=85&s=52fb6135668273aa8dfc615536c489b3)
-
-![Image 12](https://mintcdn.com/langchain-5e9cc07a/-_xGPoyjhyiDWTPJ/oss/images/filter.png?w=560&fit=max&auto=format&n=-_xGPoyjhyiDWTPJ&q=85&s=5abdad922fc7ea2770fa48825eb210ed)
-
-![Image 13](https://mintcdn.com/langchain-5e9cc07a/ybiAaBfoBvFquMDz/oss/images/update-profile.png?w=560&fit=max&auto=format&n=ybiAaBfoBvFquMDz&q=85&s=3724f1b77f1f2fee60fa9fe5e8479fc7)
-
-![Image 14](https://mintcdn.com/langchain-5e9cc07a/ybiAaBfoBvFquMDz/oss/images/update-list.png?w=560&fit=max&auto=format&n=ybiAaBfoBvFquMDz&q=85&s=1e1b85bbc04bfef17f131e5b65cababc)
-
-![Image 15](https://mintcdn.com/langchain-5e9cc07a/ybiAaBfoBvFquMDz/oss/images/update-instructions.png?w=560&fit=max&auto=format&n=ybiAaBfoBvFquMDz&q=85&s=aefcc771a030a2d6a89f815b87e60fd4)
-
-![Image 16](https://mintcdn.com/langchain-5e9cc07a/dL5Sn6Cmy9pwtY0V/oss/images/hot_path_vs_background.png?w=560&fit=max&auto=format&n=dL5Sn6Cmy9pwtY0V&q=85&s=add54b5469d7b4a8f22d7da250c19ddf)
+[Contributing to code](/oss/python/contributing/code)

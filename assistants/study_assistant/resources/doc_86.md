@@ -1,243 +1,177 @@
 [Skip to content](#start-of-content)   
-  Enterprise-grade security now available for GitHub Team organizations.  [Explore now](https://www.github.com/security/advanced-security?utm_source=github&utm_medium=banner&utm_campaign=ghas-unbundle-team) 
+
 
 
 ## Navigation Menu
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fteam)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Flangchain-ai) 
+
+Appearance settings
 
 # Search code, repositories, users, issues, pull requests...
 
 [Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fteam)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Flangchain-ai)
 
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fteam&source=header)
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Corg-login%3E&source=header) 
+
+Appearance settings
 
 You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
 {{ message }}
 
-# GitHub for Teams
+# LangChain
 
-## Build like the best teams on the planet
 
-With CI/CD, Dependabot, and the world’s largest developer community, GitHub gives your team everything they need to ship better software faster.
 
-[Get started with Team](/join?plan=business&ref_cta=Get%2520started%2520with%2520Team&ref_loc=team-page-hero&ref_page=%2Fteam) 
+* [13.6k followers](/orgs/langchain-ai/followers)
+* United States of America
+* [https://www.langchain.com](https://www.langchain.com "https://www.langchain.com")
+* [@LangChainAI](https://twitter.com/LangChainAI)
+* [support@langchain.dev](mailto:support@langchain.dev)
 
-[Sign up for free](/join?plan=free&ref_cta=Sign%2520up%2520for%2520free&ref_loc=team-page-hero&ref_page=%2Fteam&setup_organization=true&source=team)
+[README.md](/langchain-ai/.github/tree/main/profile/README.md)
 
-## Compare Plans
+Build context-aware reasoning applications with LangChain’s flexible abstractions and AI-first toolkits.
 
-Ready to get your   
-team started?
+Core OSS libraries:
 
-### GitHub Free
+* [`LangChain`](https://github.com/langchain-ai/langchain) and [`LangChain.js`](https://github.com/langchain-ai/langchainjs) – reusable components and integrations for building LLM applications
+* [`LangGraph`](https://github.com/langchain-ai/langgraph) and [`LangGraph.js`](https://github.com/langchain-ai/langgraphjs) – build LLM agents as graphs
+* [`DeepAgents`](https://github.com/langchain-ai/deepagents) and [`DeepAgents.js`](https://github.com/langchain-ai/deepagentsjs) – agents that can plan, use subagents, and leverage file systems for complex tasks
 
-Basics for teams   
-and developers
+Commercial Platform:
 
-* Unlimited public/private repositories
-* 2,000 Actions minutes/month
-* 500MB of GitHub Packages storage
-* Dependabot
-* Community Support
+* [`LangSmith`](https://docs.smith.langchain.com) – platform for building and monitoring production-grade LLM applications
 
-[Get started for free](/join?plan=free&ref_cta=Get%2520started%2520for%2520free&ref_loc=bottom%2520plans&ref_page=%2Fteam&setup_organization=true&source=team)
+OSS extensions and apps:
 
-Need SAML, self-hosting, or priority support?
+* [`Open SWE`](https://github.com/langchain-ai/open-swe) – open source asynchronous coding agent
+* [`MCP Adapters`](https://github.com/langchain-ai/langchain-mcp-adapters) – make MCP tools compatible with LangChain and LangGraph
+* [`Open Canvas`](https://github.com/langchain-ai/open-canvas) – document & chat-based UX for writing code or markdown. Inspired by OpenAI's Canvas (TypeScript)
+* [`OpenGPTs`](https://github.com/langchain-ai/opengpts) – open source version of OpenAI's GPTs API (Python)
+* [`Email assistant`](https://github.com/langchain-ai/executive-ai-assistant) – AI assistant that helps you maintain your emails (Python)
+* [`LangChain + Next.js template`](https://github.com/langchain-ai/langchain-nextjs-template) – template LangChain.js + Next.js application
+* [`Social media agent`](https://github.com/langchain-ai/social-media-agent) – agent for sourcing, curating, and scheduling social media posts with human-in-the-loop (TypeScript)
+* [`Agent Protocol`](https://github.com/langchain-ai/agent-protocol) – our attempt at codifying the framework-agnostic APIs that are needed to serve LLM agents in production
 
- [Learn more about GitHub Enterprise](/enterprise)
+## Learn more
 
-### GitHub Team
+* [**Documentation**](https://docs.langchain.com/) – unified docs for LangChain projects and services [(source)](https://github.com/langchain-ai/docs)
+* [Community forum](https://forum.langchain.com/) – discuss, get help, and talk shop
+* [LangChain Academy](https://academy.langchain.com/) – comprehensive, free courses on LangChain libraries and products, made by the LangChain team
 
-Advanced collaboration and deployment  
-features for teams
+## Popular repositories Loading
 
-* Everything included in Free, plus ...
-* 3,000 Actions minutes/month
-* 2GB of GitHub Packages storage
-* GitHub Codespaces
-* Protected branches
-* Multiple reviewers in pull requests
-* Code owners
-* Draft pull requests
-* Required reviewers
-* Pages and Wikis
-* Web-based support
+1. [langchain](/langchain-ai/langchain)  langchain  Public
 
-#### Featured add-ons
+   🦜🔗 The platform for reliable agents.
 
-* GitHub Secret Protection
+   Python   [119k](/langchain-ai/langchain/stargazers)   [19.7k](/langchain-ai/langchain/forks)
+2. [langgraph](/langchain-ai/langgraph)  langgraph  Public
 
-   
+   Build resilient language agents as graphs.
 
-  Prevent secret leaks before they leak. Remediate those that exist.
+   Python   [20.9k](/langchain-ai/langgraph/stargazers)   [3.7k](/langchain-ai/langgraph/forks)
+3. [langchainjs](/langchain-ai/langchainjs)  langchainjs  Public
 
-  ### Uh oh!
+   🦜🔗 Build context-aware reasoning applications 🦜🔗
 
-  There was an error while loading. Please reload this page.
-* GitHub Code Security
+   TypeScript   [16.3k](/langchain-ai/langchainjs/stargazers)   [2.9k](/langchain-ai/langchainjs/forks)
+4. [open\_deep\_research](/langchain-ai/open_deep_research)  open\_deep\_research  Public
 
-   
+   Python   [9.5k](/langchain-ai/open_deep_research/stargazers)   [1.4k](/langchain-ai/open_deep_research/forks)
+5. [local-deep-researcher](/langchain-ai/local-deep-researcher)  local-deep-researcher  Public
 
-  Fix vulnerabilities in your code before they reach production.
+   Fully local web research and report writing assistant
 
-  ### Uh oh!
+   Python   [8.3k](/langchain-ai/local-deep-researcher/stargazers)   [870](/langchain-ai/local-deep-researcher/forks)
+6. [opengpts](/langchain-ai/opengpts)  opengpts  Public
 
-  There was an error while loading. Please reload this page.
+   Rich Text Format   [6.7k](/langchain-ai/opengpts/stargazers)   [911](/langchain-ai/opengpts/forks)
 
-[Continue with Team](/join?plan=business&ref_cta=Continue%2520with%2520Team&ref_loc=bottom%2520plans&ref_page=%2Fteam&setup_organization=true&source=bottom+plans-team)
+### Repositories
 
-Need something else?
+Showing 10 of 228 repositories
 
- [Compare all plans](/pricing)
+* [langchain-upstage](/langchain-ai/langchain-upstage)  Public
 
-## Collaboration
+   langchain-ai/langchain-upstage’s past year of commit activity
 
-Manage everything in one place
+  Python   [15](/langchain-ai/langchain-upstage/stargazers)  MIT   [9](/langchain-ai/langchain-upstage/forks)  [3](/langchain-ai/langchain-upstage/issues)  [1](/langchain-ai/langchain-upstage/pulls)  Updated Nov 11, 2025
+* [docs](/langchain-ai/docs)  Public 
 
-**Connect your favorite tools**
+  🦜🔗 Docs for LangChain projects
 
-Build the way that works best for you with support for all your go-to integrations, including [Slack](https://slack.github.com/), [Jira](https://github.com/marketplace/jira-software-github), and more.
+   langchain-ai/docs’s past year of commit activity
 
-**Add your team in a click**
+  MDX   [88](/langchain-ai/docs/stargazers)  MIT   [711](/langchain-ai/docs/forks)  [85](/langchain-ai/docs/issues)  [52](/langchain-ai/docs/pulls)  Updated Nov 11, 2025
+* [langchain-google](/langchain-ai/langchain-google)  Public 
 
-Seamlessly update permissions and add new users as you build, whether you’re on a team of two or two thousand.
+  🦜🔗 LangChain interfaces to Google's suite of AI products (Gemini, Vertex)
 
-**Speed up code review**
+   langchain-ai/langchain-google’s past year of commit activity
 
-Step up your code quality with code review tools that fit right into your workflow.
+  Python   [288](/langchain-ai/langchain-google/stargazers)  MIT   [323](/langchain-ai/langchain-google/forks)  [61](/langchain-ai/langchain-google/issues) [(7 issues need help)](/langchain-ai/langchain-google/issues?q=label%3A%22help+wanted%22+is%3Aissue+is%3Aopen)  [5](/langchain-ai/langchain-google/pulls)  Updated Nov 11, 2025
+* [langchain](/langchain-ai/langchain)  Public 
 
-**Plan together**
+  🦜🔗 The platform for reliable agents.
 
-Make it easy for project managers and developers to coordinate, track, and update their work in one place—so projects stay on schedule.
+   langchain-ai/langchain’s past year of commit activity
 
-> “As a team, we’re way more confident that we’re in tune. We can all see our work, feedback, and roadmap going through GitHub.”
+  Python   [119,375](/langchain-ai/langchain/stargazers)  MIT   [19,662](/langchain-ai/langchain/forks)  [188](/langchain-ai/langchain/issues) [(46 issues need help)](/langchain-ai/langchain/issues?q=label%3A%22help+wanted%22+is%3Aissue+is%3Aopen)  [51](/langchain-ai/langchain/pulls)  Updated Nov 10, 2025
+* [langchain-community](/langchain-ai/langchain-community)  Public 
 
-## Automation
+  Community-maintained LangChain integrations
 
-Build CI/CD workflows that work for you
+   langchain-ai/langchain-community’s past year of commit activity
 
-[**Checkout**
+  Python   [130](/langchain-ai/langchain-community/stargazers)  MIT   [274](/langchain-ai/langchain-community/forks)  [111](/langchain-ai/langchain-community/issues) [(3 issues need help)](/langchain-ai/langchain-community/issues?q=label%3A%22help+wanted%22+is%3Aissue+is%3Aopen)  [79](/langchain-ai/langchain-community/pulls)  Updated Nov 11, 2025
+* [langchain-aws](/langchain-ai/langchain-aws)  Public 
 
-Check out a Git repository at a particular version.
+  Build LangChain Applications on AWS
 
-name: Checkout  
-uses: actions/checkout@v2.1.0](/marketplace/actions/checkout)
+   langchain-ai/langchain-aws’s past year of commit activity
 
-[**Set up Node.js environment**
+  Python   [236](/langchain-ai/langchain-aws/stargazers)  MIT   [216](/langchain-ai/langchain-aws/forks)  [70](/langchain-ai/langchain-aws/issues) [(1 issue needs help)](/langchain-ai/langchain-aws/issues?q=label%3A%22good+first+issue%22+is%3Aissue+is%3Aopen)  [28](/langchain-ai/langchain-aws/pulls)  Updated Nov 11, 2025
+* [langchain-cerebras](/langchain-ai/langchain-cerebras)  Public
 
-Set up a Node.js environment and add it to the PATH, providing additional proxy support.
+   langchain-ai/langchain-cerebras’s past year of commit activity
 
-name: Set up Node.js for use with actions  
-uses: actions/setup-node@v1.1.0](/marketplace/actions/setup-node-js-environment)
+  Python   [4](/langchain-ai/langchain-cerebras/stargazers)  MIT   [2](/langchain-ai/langchain-cerebras/forks)  [2](/langchain-ai/langchain-cerebras/issues)  [1](/langchain-ai/langchain-cerebras/pulls)  Updated Nov 11, 2025
+* [langgraph-101](/langchain-ai/langgraph-101)  Public 
 
-[**NPM Publish**
+  Learn about the fundamentals of LangGraph through a series of notebooks
 
-Automatically publish packages to NPM.
+   langchain-ai/langgraph-101’s past year of commit activity
 
-name: NPM Publish  
-uses: JS DevTools/npm-publish@v1](/marketplace/actions/npm-publish)
+  Jupyter Notebook   [241](/langchain-ai/langgraph-101/stargazers)  MIT   [52](/langchain-ai/langgraph-101/forks)  [0](/langchain-ai/langgraph-101/issues)  [0](/langchain-ai/langgraph-101/pulls)  Updated Nov 11, 2025
+* [langchainjs](/langchain-ai/langchainjs)  Public 
 
-**Streamline your CI/CD**
+  🦜🔗 Build context-aware reasoning applications 🦜🔗
 
-Build, test, and deploy projects on any OS, language, or cloud.
+   langchain-ai/langchainjs’s past year of commit activity
 
-**Choose from thousands of actions**
+  TypeScript   [16,275](/langchain-ai/langchainjs/stargazers)  MIT   [2,856](/langchain-ai/langchainjs/forks)  [141](/langchain-ai/langchainjs/issues) [(7 issues need help)](/langchain-ai/langchainjs/issues?q=label%3A%22help+wanted%22+is%3Aissue+is%3Aopen)  [73](/langchain-ai/langchainjs/pulls)  Updated Nov 11, 2025
+* [deepagents](/langchain-ai/deepagents)  Public 
 
-Find community-built GitHub Actions workflows on GitHub Marketplace, or build your own.
+  Deepagents is an agent harness built on langchain and langgraph. Deep agents are equipped with a planning tool, a filesystem backend, and the ability to spawn subagents - making them well-equipped to handle complex agentic tasks.
 
-**Respond to GitHub events**
+   langchain-ai/deepagents’s past year of commit activity
 
-Trigger workflows based on GitHub events, including push, issue creation, new releases, and more.
+  Python   [5,599](/langchain-ai/deepagents/stargazers)  MIT   [825](/langchain-ai/deepagents/forks)  [40](/langchain-ai/deepagents/issues)  [47](/langchain-ai/deepagents/pulls)  Updated Nov 10, 2025
 
-**Collaborate on workflows**
+[View all repositories](/orgs/langchain-ai/repositories?type=all)
 
-Build, share, improve, and reuse actions just like code.
+#### Top languages
 
-[Explore GitHub Actions](/marketplace?type=actions)
+ [Python](/orgs/langchain-ai/repositories?language=python&type=all)   [TypeScript](/orgs/langchain-ai/repositories?language=typescript&type=all)   [Jupyter Notebook](/orgs/langchain-ai/repositories?language=jupyter+notebook&type=all)   [JavaScript](/orgs/langchain-ai/repositories?language=javascript&type=all)   [Rust](/orgs/langchain-ai/repositories?language=rust&type=all)
 
-> “With GitHub Actions, deployments happen 75 percent faster—taking about 10 minutes compared to the 40 minutes required when they were done manually.”
+#### Most used topics
 
-## Security
-
-Stay focused on development
-
-**Grant the right access to your team**
-
-Easily grant, limit, or revoke access for collaborators inside and outside your company.
-
-**Keep secrets safe**
-
-Get alerts when secrets are committed to your repositories—and notify over 30 cloud service providers automatically.
-
-**Find vulnerable dependencies**
-
-Scan your dependencies automatically. When a vulnerability is found, we’ll open a pull request with suggested fixes.
-
-[See how GitHub helps secure your applications](/features/security)
-
-> “GitHub’s Dependabot security updates are smarter than any other vulnerability tracking tools we’ve used.”
-
-## Users
-
-Home to the world’s software teams
-
-Meet your developers where they already are. GitHub is home to over 40 million developers and the world’s largest open source community.
-
-150M+ million developers
-
-1B+ billion contributions
-
-4M+ million organizations
-
-## Customer Stories
-
-You’re in good company
-
-[Front App
-
-Customer Story
-
-Read story](/customer-stories/front)
-
-[Customer Story
-
-Read story](/customer-stories/trayio)
-
-[Read more customer stories](/customer-stories?type=team)
-
-## Build like the best
-
-Get the complete developer platform
-
-[Get started with Team](/join?plan=business&ref_cta=Get%2520started%2520with%2520Team&ref_loc=team-page-footer&ref_page=%2Fteam) 
-
-[Sign up for free](/join?plan=free&ref_cta=Sign%2520up%2520for%2520free&ref_loc=team-page-footer&ref_page=%2Fteam&setup_organization=true&source=team)
-
-## Related resources
-
-[### GitHub Actions cheat sheet
-
-Everything you need to know about getting started with GitHub Actions.
-
-Learn more](https://resources.github.com/actions/github-actions-cheat/)
-
-[### Collaboration is the key to DevOps success
-
-In a recent TechTarget study, 70 percent of organizations reported they had adopted DevOps.
-
-Learn more](https://resources.github.com/whitepapers/Collaboration-DevOps-success/)
-
-[### How healthy teams build better software
-
-Your culture is key to recruiting and retaining the talent you need to ship exceptional customer experiences.
-
-Learn more](https://resources.github.com/webcasts/Culture-matters-CET/)
-
-     
+[langchain](/search?q=topic%3Alangchain+org%3Alangchain-ai+fork%3Atrue&type=repositories "Topic: langchain")   [langgraph](/search?q=topic%3Alanggraph+org%3Alangchain-ai+fork%3Atrue&type=repositories "Topic: langgraph")   [langgraph-template](/search?q=topic%3Alanggraph-template+org%3Alangchain-ai+fork%3Atrue&type=repositories "Topic: langgraph-template")   [llm](/search?q=topic%3Allm+org%3Alangchain-ai+fork%3Atrue&type=repositories "Topic: llm")   [agents](/search?q=topic%3Aagents+org%3Alangchain-ai+fork%3Atrue&type=repositories "Topic: agents")
 
 You can’t perform that action at this time.
 

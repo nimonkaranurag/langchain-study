@@ -4,6 +4,8 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 
 [LangChain](/oss/python/langchain/overview)[LangGraph](/oss/python/langgraph/overview)[Deep Agents](/oss/python/deepagents/overview)[Integrations](/oss/python/integrations/providers/overview)[Learn](/oss/python/learn)[Reference](/oss/python/reference/overview)[Contribute](/oss/python/contributing/overview)
 
+* [Overview](/oss/python/langgraph/overview)
+
 ##### LangGraph v1.0
 
 * [Release notes](/oss/python/releases/langgraph-v1)
@@ -40,410 +42,60 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 
 * [Runtime](/oss/python/langgraph/pregel)
 
-* [Threads](#threads)
-* [Checkpoints](#checkpoints)
-* [Get state](#get-state)
-* [Get state history](#get-state-history)
-* [Replay](#replay)
-* [Update state](#update-state)
-* [config](#config)
-* [values](#values)
-* [as\_node](#as-node)
-* [Memory Store](#memory-store)
-* [Basic Usage](#basic-usage)
-* [Semantic Search](#semantic-search)
-* [Using in LangGraph](#using-in-langgraph)
-* [Checkpointer libraries](#checkpointer-libraries)
-* [Checkpointer interface](#checkpointer-interface)
-* [Serializer](#serializer)
-* [Serialization with pickle](#serialization-with-pickle)
-* [Encryption](#encryption)
-* [Capabilities](#capabilities)
-* [Human-in-the-loop](#human-in-the-loop)
-* [Memory](#memory)
-* [Time Travel](#time-travel)
-* [Fault-tolerance](#fault-tolerance)
-* [Pending writes](#pending-writes)
+* [Setup](#setup)
+* [Invoke a graph from a node](#invoke-a-graph-from-a-node)
+* [Add a graph as a node](#add-a-graph-as-a-node)
+* [Add persistence](#add-persistence)
+* [View subgraph state](#view-subgraph-state)
+* [Stream subgraph outputs](#stream-subgraph-outputs)
 
 [Capabilities](/oss/python/langgraph/persistence)
 
-# Persistence
+# Subgraphs
 
-LangGraph has a built-in persistence layer, implemented through checkpointers. When you compile a graph with a checkpointer, the checkpointer saves a `checkpoint` of the graph state at every super-step. Those checkpoints are saved to a `thread`, which can be accessed after graph execution. Because `threads` allow access to graph’s state after execution, several powerful capabilities including human-in-the-loop, memory, time travel, and fault-tolerance are all possible. Below, we’ll discuss each of these concepts in more detail. 
+This guide explains the mechanics of using subgraphs. A subgraph is a [graph](/oss/python/langgraph/graph-api#graphs) that is used as a [node](/oss/python/langgraph/graph-api#nodes) in another graph. Subgraphs are useful for:
 
-**LangGraph API handles checkpointing automatically** When using the LangGraph API, you don’t need to implement or configure checkpointers manually. The API handles all persistence infrastructure for you behind the scenes.
+* Building [multi-agent systems](/oss/python/langchain/multi-agent)
+* Re-using a set of nodes in multiple graphs
+* Distributing development: when you want different teams to work on different parts of the graph independently, you can define each part as a subgraph, and as long as the subgraph interface (the input and output schemas) is respected, the parent graph can be built without knowing any details of the subgraph
 
-## [​](#threads) Threads
+When adding subgraphs, you need to define how the parent graph and the subgraph communicate:
 
-A thread is a unique ID or thread identifier assigned to each checkpoint saved by a checkpointer. It contains the accumulated state of a sequence of [runs](/langsmith/assistants#execution). When a run is executed, the [state](/oss/python/langgraph/graph-api#state) of the underlying graph of the assistant will be persisted to the thread. When invoking a graph with a checkpointer, you **must** specify a `thread_id` as part of the `configurable` portion of the config.
+* [Invoke a graph from a node](#invoke-a-graph-from-a-node) — subgraphs are called from inside a node in the parent graph
+* [Add a graph as a node](#add-a-graph-as-a-node) — a subgraph is added directly as a node in the parent and **shares [state keys](/oss/python/langgraph/graph-api#state)** with the parent
 
-Copy
-
-Ask AI
-
-```
-{"configurable": {"thread_id": "1"}}{"configurable": {"thread_id": "1"}}
-```
-
-A thread’s current and historical state can be retrieved. To persist state, a thread must be created prior to executing a run. The LangSmith API provides several endpoints for creating and managing threads and thread state. See the [API reference](https://langchain-ai.github.io/langgraph/cloud/reference/api/) for more details.
-
-## [​](#checkpoints) Checkpoints
-
-The state of a thread at a particular point in time is called a checkpoint. Checkpoint is a snapshot of the graph state saved at each super-step and is represented by `StateSnapshot` object with the following key properties:
-
-* `config`: Config associated with this checkpoint.
-* `metadata`: Metadata associated with this checkpoint.
-* `values`: Values of the state channels at this point in time.
-* `next` A tuple of the node names to execute next in the graph.
-* `tasks`: A tuple of `PregelTask` objects that contain information about next tasks to be executed. If the step was previously attempted, it will include error information. If a graph was interrupted [dynamically](/oss/python/langgraph/interrupts#pause-using-interrupt) from within a node, tasks will contain additional data associated with interrupts.
-
-Checkpoints are persisted and can be used to restore the state of a thread at a later time. Let’s see what checkpoints are saved when a simple graph is invoked as follows:
+## [​](#setup) Setup
 
 Copy
 
 Ask AI
 
 ```
-from langgraph.graph import StateGraph, START, END from langgraph.graph import StateGraph, START, ENDfrom langgraph.checkpoint.memory import InMemorySaver from langgraph.checkpoint.memory import  InMemorySaverfrom langchain_core.runnables import RunnableConfig from langchain_core.runnables import  RunnableConfig from typing import Annotated from  typing import  Annotated from typing_extensions import TypedDict from  typing_extensions import  TypedDict from operator import add from  operator import  add class State(TypedDict): class  State(TypedDict): foo: str foo: str bar: Annotated[list[str], add] bar: Annotated[list[str], add] def node_a(state: State): def  node_a(state: State): return {"foo": "a", "bar": ["a"]}  return {"foo": "a", "bar": ["a"]} def node_b(state: State): def  node_b(state: State): return {"foo": "b", "bar": ["b"]}  return {"foo": "b", "bar": ["b"]} workflow = StateGraph(State) workflow = StateGraph(State)workflow.add_node(node_a)workflow.add_node(node_a)workflow.add_node(node_b)workflow.add_node(node_b)workflow.add_edge(START, "node_a")workflow.add_edge(START, "node_a")workflow.add_edge("node_a", "node_b")workflow.add_edge("node_a", "node_b")workflow.add_edge("node_b", END)workflow.add_edge("node_b", END) checkpointer = InMemorySaver() checkpointer = InMemorySaver()graph = workflow.compile(checkpointer=checkpointer) graph = workflow.compile(checkpointer =checkpointer) config: RunnableConfig = {"configurable": {"thread_id": "1"}}config: RunnableConfig = {"configurable": {"thread_id": "1"}}graph.invoke({"foo": ""}, config)graph.invoke({"foo": ""}, config)
+pip install -U langgraph pip  install -U  langgraph
 ```
 
-After we run the graph, we expect to see exactly 4 checkpoints:
+**Set up LangSmith for LangGraph development** Sign up for [LangSmith](https://smith.langchain.com) to quickly spot issues and improve the performance of your LangGraph projects. LangSmith lets you use trace data to debug, test, and monitor your LLM apps built with LangGraph — read more about how to get started [here](https://docs.smith.langchain.com).
 
-* Empty checkpoint with [`START`](https://reference.langchain.com/python/langgraph/constants/#langgraph.constants.START) as the next node to be executed
-* Checkpoint with the user input `{'foo': '', 'bar': []}` and `node_a` as the next node to be executed
-* Checkpoint with the outputs of `node_a` `{'foo': 'a', 'bar': ['a']}` and `node_b` as the next node to be executed
-* Checkpoint with the outputs of `node_b` `{'foo': 'b', 'bar': ['a', 'b']}` and no next nodes to be executed
+## [​](#invoke-a-graph-from-a-node) Invoke a graph from a node
 
-Note that we `bar` channel values contain outputs from both nodes as we have a reducer for `bar` channel.
-
-### [​](#get-state) Get state
-
-When interacting with the saved graph state, you **must** specify a [thread identifier](#threads). You can view the *latest* state of the graph by calling `graph.get_state(config)`. This will return a `StateSnapshot` object that corresponds to the latest checkpoint associated with the thread ID provided in the config or a checkpoint associated with a checkpoint ID for the thread, if provided.
+A simple way to implement a subgraph is to invoke a graph from inside the node of another graph. In this case subgraphs can have **completely different schemas** from the parent graph (no shared keys). For example, you might want to keep a private message history for each of the agents in a [multi-agent](/oss/python/langchain/multi-agent) system. If that’s the case for your application, you need to define a node **function that invokes the subgraph**. This function needs to transform the input (parent) state to the subgraph state before invoking the subgraph, and transform the results back to the parent state before returning the state update from the node.
 
 Copy
 
 Ask AI
 
 ```
-# get the latest state snapshot # get the latest state snapshotconfig = {"configurable": {"thread_id": "1"}} config = {"configurable": {"thread_id": "1"}}graph.get_state(config)graph.get_state(config) # get a state snapshot for a specific checkpoint_id # get a state snapshot for a specific checkpoint_idconfig = {"configurable": {"thread_id": "1", "checkpoint_id": "1ef663ba-28fe-6528-8002-5a559208592c"}} config = {"configurable": {"thread_id": "1", "checkpoint_id": "1ef663ba-28fe-6528-8002-5a559208592c"}}graph.get_state(config)graph.get_state(config)
+from typing_extensions import TypedDict from  typing_extensions import  TypedDictfrom langgraph.graph.state import StateGraph, START from langgraph.graph.state import StateGraph, START class SubgraphState(TypedDict): class  SubgraphState(TypedDict): bar: str bar: str # Subgraph # Subgraph def subgraph_node_1(state: SubgraphState): def  subgraph_node_1(state: SubgraphState): return {"bar": "hi! " + state["bar"]}  return {"bar": "hi! " + state["bar"]} subgraph_builder = StateGraph(SubgraphState) subgraph_builder = StateGraph(SubgraphState)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge(START, "subgraph_node_1")subgraph = subgraph_builder.compile() subgraph = subgraph_builder.compile() # Parent graph # Parent graph class State(TypedDict): class  State(TypedDict): foo: str foo: str def call_subgraph(state: State): def  call_subgraph(state: State):  # Transform the state to the subgraph state  # Transform the state to the subgraph state subgraph_output = subgraph.invoke({"bar": state["foo"]})  subgraph_output = subgraph.invoke({"bar": state["foo"]})  # Transform response back to the parent state  # Transform response back to the parent state return {"foo": subgraph_output["bar"]}  return {"foo": subgraph_output["bar"]} builder = StateGraph(State) builder = StateGraph(State)builder.add_node("node_1", call_subgraph)builder.add_node("node_1", call_subgraph)builder.add_edge(START, "node_1")builder.add_edge(START, "node_1")graph = builder.compile() graph = builder.compile()
 ```
 
-In our example, the output of `get_state` will look like this:
+Full example: different state schemas
 
 Copy
 
 Ask AI
 
 ```
-StateSnapshot(StateSnapshot( values={'foo': 'b', 'bar': ['a', 'b']}, values={'foo': 'b', 'bar': ['a', 'b']}, next=(), next=(), config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28fe-6528-8002-5a559208592c'}}, config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28fe-6528-8002-5a559208592c'}}, metadata={'source': 'loop', 'writes': {'node_b': {'foo': 'b', 'bar': ['b']}}, 'step': 2}, metadata={'source': 'loop', 'writes': {'node_b': {'foo': 'b', 'bar': ['b']}}, 'step': 2}, created_at='2024-08-29T19:19:38.821749+00:00', created_at='2024-08-29T19:19:38.821749+00:00', parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f9-6ec4-8001-31981c2c39f8'}}, tasks=() parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f9-6ec4-8001-31981c2c39f8'}}, tasks=())) 
-```
-
-### [​](#get-state-history) Get state history
-
-You can get the full history of the graph execution for a given thread by calling [`graph.get_state_history(config)`](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.CompiledStateGraph.get_state_history). This will return a list of `StateSnapshot` objects associated with the thread ID provided in the config. Importantly, the checkpoints will be ordered chronologically with the most recent checkpoint / `StateSnapshot` being the first in the list.
-
-Copy
-
-Ask AI
-
-```
-config = {"configurable": {"thread_id": "1"}} config = {"configurable": {"thread_id": "1"}}list(graph.get_state_history(config)) list(graph.get_state_history(config))
-```
-
-In our example, the output of [`get_state_history`](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.CompiledStateGraph.get_state_history) will look like this:
-
-Copy
-
-Ask AI
-
-```
-[[ StateSnapshot( StateSnapshot( values={'foo': 'b', 'bar': ['a', 'b']}, values={'foo': 'b', 'bar': ['a', 'b']}, next=(), next=(), config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28fe-6528-8002-5a559208592c'}}, config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28fe-6528-8002-5a559208592c'}}, metadata={'source': 'loop', 'writes': {'node_b': {'foo': 'b', 'bar': ['b']}}, 'step': 2}, metadata={'source': 'loop', 'writes': {'node_b': {'foo': 'b', 'bar': ['b']}}, 'step': 2}, created_at='2024-08-29T19:19:38.821749+00:00', created_at='2024-08-29T19:19:38.821749+00:00', parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f9-6ec4-8001-31981c2c39f8'}}, parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f9-6ec4-8001-31981c2c39f8'}}, tasks=(), tasks=(), ), ), StateSnapshot( StateSnapshot( values={'foo': 'a', 'bar': ['a']}, values={'foo': 'a', 'bar': ['a']}, next=('node_b',), next=('node_b',), config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f9-6ec4-8001-31981c2c39f8'}}, config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f9-6ec4-8001-31981c2c39f8'}}, metadata={'source': 'loop', 'writes': {'node_a': {'foo': 'a', 'bar': ['a']}}, 'step': 1}, metadata={'source': 'loop', 'writes': {'node_a': {'foo': 'a', 'bar': ['a']}}, 'step': 1}, created_at='2024-08-29T19:19:38.819946+00:00', created_at='2024-08-29T19:19:38.819946+00:00', parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f4-6b4a-8000-ca575a13d36a'}}, parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f4-6b4a-8000-ca575a13d36a'}}, tasks=(PregelTask(id='6fb7314f-f114-5413-a1f3-d37dfe98ff44', name='node_b', error=None, interrupts=()),), tasks=(PregelTask(id='6fb7314f-f114-5413-a1f3-d37dfe98ff44', name='node_b', error=None, interrupts=()),), ), ), StateSnapshot( StateSnapshot( values={'foo': '', 'bar': []}, values={'foo': '', 'bar': []}, next=('node_a',), next=('node_a',), config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f4-6b4a-8000-ca575a13d36a'}}, config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f4-6b4a-8000-ca575a13d36a'}}, metadata={'source': 'loop', 'writes': None, 'step': 0}, metadata={'source': 'loop', 'writes': None, 'step': 0}, created_at='2024-08-29T19:19:38.817813+00:00', created_at='2024-08-29T19:19:38.817813+00:00', parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f0-6c66-bfff-6723431e8481'}}, parent_config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f0-6c66-bfff-6723431e8481'}}, tasks=(PregelTask(id='f1b14528-5ee5-579c-949b-23ef9bfbed58', name='node_a', error=None, interrupts=()),), tasks=(PregelTask(id='f1b14528-5ee5-579c-949b-23ef9bfbed58', name='node_a', error=None, interrupts=()),), ), ), StateSnapshot( StateSnapshot( values={'bar': []}, values={'bar': []}, next=('__start__',), next=('__start__',), config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f0-6c66-bfff-6723431e8481'}}, config={'configurable': {'thread_id': '1', 'checkpoint_ns': '', 'checkpoint_id': '1ef663ba-28f0-6c66-bfff-6723431e8481'}}, metadata={'source': 'input', 'writes': {'foo': ''}, 'step': -1}, metadata={'source': 'input', 'writes': {'foo': ''}, 'step': -1}, created_at='2024-08-29T19:19:38.816205+00:00', created_at='2024-08-29T19:19:38.816205+00:00', parent_config=None, parent_config=None, tasks=(PregelTask(id='6d27aa2e-d72b-5504-a36f-8620e54a76dd', name='__start__', error=None, interrupts=()),), tasks=(PregelTask(id='6d27aa2e-d72b-5504-a36f-8620e54a76dd', name='__start__', error=None, interrupts=()),), ) )]] 
-```
-
-### [​](#replay) Replay
-
-It’s also possible to play-back a prior graph execution. If we `invoke` a graph with a `thread_id` and a `checkpoint_id`, then we will *re-play* the previously executed steps *before* a checkpoint that corresponds to the `checkpoint_id`, and only execute the steps *after* the checkpoint.
-
-* `thread_id` is the ID of a thread.
-* `checkpoint_id` is an identifier that refers to a specific checkpoint within a thread.
-
-You must pass these when invoking the graph as part of the `configurable` portion of the config:
-
-Copy
-
-Ask AI
-
-```
-config = {"configurable": {"thread_id": "1", "checkpoint_id": "0c62ca34-ac19-445d-bbb0-5b4984975b2a"}} config = {"configurable": {"thread_id": "1", "checkpoint_id": "0c62ca34-ac19-445d-bbb0-5b4984975b2a"}}graph.invoke(None, config=config)graph.invoke(None, config =config)
-```
-
-Importantly, LangGraph knows whether a particular step has been executed previously. If it has, LangGraph simply *re-plays* that particular step in the graph and does not re-execute the step, but only for the steps *before* the provided `checkpoint_id`. All of the steps *after* `checkpoint_id` will be executed (i.e., a new fork), even if they have been executed previously. See this [how to guide on time-travel to learn more about replaying](/oss/python/langgraph/use-time-travel). 
-
-### [​](#update-state) Update state
-
-In addition to re-playing the graph from specific `checkpoints`, we can also *edit* the graph state. We do this using [`update_state`](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.CompiledStateGraph.update_state). This method accepts three different arguments:
-
-#### [​](#config) `config`
-
-The config should contain `thread_id` specifying which thread to update. When only the `thread_id` is passed, we update (or fork) the current state. Optionally, if we include `checkpoint_id` field, then we fork that selected checkpoint.
-
-#### [​](#values) `values`
-
-These are the values that will be used to update the state. Note that this update is treated exactly as any update from a node is treated. This means that these values will be passed to the [reducer](/oss/python/langgraph/graph-api#reducers) functions, if they are defined for some of the channels in the graph state. This means that [`update_state`](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.CompiledStateGraph.update_state) does NOT automatically overwrite the channel values for every channel, but only for the channels without reducers. Let’s walk through an example. Let’s assume you have defined the state of your graph with the following schema (see full example above):
-
-Copy
-
-Ask AI
-
-```
-from typing import Annotated from  typing import  Annotated from typing_extensions import TypedDict from  typing_extensions import  TypedDict from operator import add from  operator import  add class State(TypedDict): class  State(TypedDict): foo: int foo: int bar: Annotated[list[str], add] bar: Annotated[list[str], add]
-```
-
-Let’s now assume the current state of the graph is
-
-Copy
-
-Ask AI
-
-```
-{"foo": 1, "bar": ["a"]}{"foo": 1, "bar": ["a"]} 
-```
-
-If you update the state as below:
-
-Copy
-
-Ask AI
-
-```
-graph.update_state(config, {"foo": 2, "bar": ["b"]})graph.update_state(config, {"foo": 2, "bar": ["b"]})
-```
-
-Then the new state of the graph will be:
-
-Copy
-
-Ask AI
-
-```
-{"foo": 2, "bar": ["a", "b"]}{"foo": 2, "bar": ["a", "b"]} 
-```
-
-The `foo` key (channel) is completely changed (because there is no reducer specified for that channel, so [`update_state`](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.CompiledStateGraph.update_state) overwrites it). However, there is a reducer specified for the `bar` key, and so it appends `"b"` to the state of `bar`.
-
-#### [​](#as-node) `as_node`
-
-The final thing you can optionally specify when calling [`update_state`](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.CompiledStateGraph.update_state) is `as_node`. If you provided it, the update will be applied as if it came from node `as_node`. If `as_node` is not provided, it will be set to the last node that updated the state, if not ambiguous. The reason this matters is that the next steps to execute depend on the last node to have given an update, so this can be used to control which node executes next. See this [how to guide on time-travel to learn more about forking state](/oss/python/langgraph/use-time-travel). 
-
-## [​](#memory-store) Memory Store
-
- A [state schema](/oss/python/langgraph/graph-api#schema) specifies a set of keys that are populated as a graph is executed. As discussed above, state can be written by a checkpointer to a thread at each graph step, enabling state persistence. But, what if we want to retain some information *across threads*? Consider the case of a chatbot where we want to retain specific information about the user across *all* chat conversations (e.g., threads) with that user! With checkpointers alone, we cannot share information across threads. This motivates the need for the [`Store`](https://python.langchain.com/api_reference/langgraph/index.html#module-langgraph.store) interface. As an illustration, we can define an `InMemoryStore` to store information about a user across threads. We simply compile our graph with a checkpointer, as before, and with our new `in_memory_store` variable.
-
-**LangGraph API handles stores automatically** When using the LangGraph API, you don’t need to implement or configure stores manually. The API handles all storage infrastructure for you behind the scenes.
-
-### [​](#basic-usage) Basic Usage
-
-First, let’s showcase this in isolation without using LangGraph.
-
-Copy
-
-Ask AI
-
-```
-from langgraph.store.memory import InMemoryStore from langgraph.store.memory import  InMemoryStorein_memory_store = InMemoryStore() in_memory_store = InMemoryStore()
-```
-
-Memories are namespaced by a `tuple`, which in this specific example will be `(, "memories")`. The namespace can be any length and represent anything, does not have to be user specific.
-
-Copy
-
-Ask AI
-
-```
-user_id = "1" user_id =  "1"namespace_for_memory = (user_id, "memories") namespace_for_memory = (user_id, "memories")
-```
-
-We use the `store.put` method to save memories to our namespace in the store. When we do this, we specify the namespace, as defined above, and a key-value pair for the memory: the key is simply a unique identifier for the memory (`memory_id`) and the value (a dictionary) is the memory itself.
-
-Copy
-
-Ask AI
-
-```
-memory_id = str(uuid.uuid4()) memory_id =  str(uuid.uuid4())memory = {"food_preference" : "I like pizza"} memory = {"food_preference" : "I like pizza"}in_memory_store.put(namespace_for_memory, memory_id, memory)in_memory_store.put(namespace_for_memory, memory_id, memory)
-```
-
-We can read out memories in our namespace using the `store.search` method, which will return all memories for a given user as a list. The most recent memory is the last in the list.
-
-Copy
-
-Ask AI
-
-```
-memories = in_memory_store.search(namespace_for_memory) memories = in_memory_store.search(namespace_for_memory)memories[-1].dict()memories[- 1].dict(){'value': {'food_preference': 'I like pizza'},{'value': {'food_preference': 'I like pizza'}, 'key': '07e0caf4-1631-47b7-b15f-65515d4c1843',  'key': '07e0caf4-1631-47b7-b15f-65515d4c1843', 'namespace': ['1', 'memories'],  'namespace': ['1', 'memories'], 'created_at': '2024-10-02T17:22:31.590602+00:00',  'created_at': '2024-10-02T17:22:31.590602+00:00', 'updated_at': '2024-10-02T17:22:31.590605+00:00'}  'updated_at': '2024-10-02T17:22:31.590605+00:00'}
-```
-
-Each memory type is a Python class ([`Item`](https://langchain-ai.github.io/langgraph/reference/store/#langgraph.store.base.Item)) with certain attributes. We can access it as a dictionary by converting via `.dict` as above. The attributes it has are:
-
-* `value`: The value (itself a dictionary) of this memory
-* `key`: A unique key for this memory in this namespace
-* `namespace`: A list of strings, the namespace of this memory type
-* `created_at`: Timestamp for when this memory was created
-* `updated_at`: Timestamp for when this memory was updated
-
-### [​](#semantic-search) Semantic Search
-
-Beyond simple retrieval, the store also supports semantic search, allowing you to find memories based on meaning rather than exact matches. To enable this, configure the store with an embedding model:
-
-Copy
-
-Ask AI
-
-```
-from langchain.embeddings import init_embeddings from langchain.embeddings import  init_embeddings store = InMemoryStore(store = InMemoryStore( index={ index ={ "embed": init_embeddings("openai:text-embedding-3-small"), # Embedding provider  "embed": init_embeddings("openai:text-embedding-3-small"), # Embedding provider "dims": 1536, # Embedding dimensions  "dims": 1536, # Embedding dimensions "fields": ["food_preference", "$"] # Fields to embed  "fields": ["food_preference", "$"] # Fields to embed } }))
-```
-
-Now when searching, you can use natural language queries to find relevant memories:
-
-Copy
-
-Ask AI
-
-```
-# Find memories about food preferences # Find memories about food preferences# (This can be done after putting memories into the store)# (This can be done after putting memories into the store)memories = store.search(memories = store.search( namespace_for_memory, namespace_for_memory, query="What does the user like to eat?",  query = "What does the user like to eat?", limit=3 # Return top 3 matches  limit = 3  # Return top 3 matches))
-```
-
-You can control which parts of your memories get embedded by configuring the `fields` parameter or by specifying the `index` parameter when storing memories:
-
-Copy
-
-Ask AI
-
-```
-# Store with specific fields to embed # Store with specific fields to embedstore.put(store.put( namespace_for_memory, namespace_for_memory, str(uuid.uuid4()),  str(uuid.uuid4()), { { "food_preference": "I love Italian cuisine",  "food_preference": "I love Italian cuisine", "context": "Discussing dinner plans"  "context": "Discussing dinner plans" }, }, index=["food_preference"] # Only embed "food_preferences" field  index =["food_preference"] # Only embed "food_preferences" field)) # Store without embedding (still retrievable, but not searchable)# Store without embedding (still retrievable, but not searchable)store.put(store.put( namespace_for_memory, namespace_for_memory, str(uuid.uuid4()),  str(uuid.uuid4()), {"system_info": "Last updated: 2024-01-01"}, {"system_info": "Last updated: 2024-01-01"}, index=False  index = False))
-```
-
-### [​](#using-in-langgraph) Using in LangGraph
-
-With this all in place, we use the `in_memory_store` in LangGraph. The `in_memory_store` works hand-in-hand with the checkpointer: the checkpointer saves state to threads, as discussed above, and the `in_memory_store` allows us to store arbitrary information for access *across* threads. We compile the graph with both the checkpointer and the `in_memory_store` as follows.
-
-Copy
-
-Ask AI
-
-```
-from langgraph.checkpoint.memory import InMemorySaver from langgraph.checkpoint.memory import  InMemorySaver # We need this because we want to enable threads (conversations)# We need this because we want to enable threads (conversations)checkpointer = InMemorySaver() checkpointer = InMemorySaver() # ... Define the graph ...# ... Define the graph ... # Compile the graph with the checkpointer and store # Compile the graph with the checkpointer and storegraph = graph.compile(checkpointer=checkpointer, store=in_memory_store) graph = graph.compile(checkpointer =checkpointer, store =in_memory_store)
-```
-
-We invoke the graph with a `thread_id`, as before, and also with a `user_id`, which we’ll use to namespace our memories to this particular user as we showed above.
-
-Copy
-
-Ask AI
-
-```
-# Invoke the graph # Invoke the graphuser_id = "1" user_id =  "1"config = {"configurable": {"thread_id": "1", "user_id": user_id}} config = {"configurable": {"thread_id": "1", "user_id": user_id}} # First let's just say hi to the AI # First let's just say hi to the AIfor update in graph.stream(for  update in graph.stream( {"messages": [{"role": "user", "content": "hi"}]}, config, stream_mode="updates" {"messages": [{"role": "user", "content": "hi"}]}, config, stream_mode = "updates"):): print(update)  print(update)
-```
-
-We can access the `in_memory_store` and the `user_id` in *any node* by passing `store: BaseStore` and `config: RunnableConfig` as node arguments. Here’s how we might use semantic search in a node to find relevant memories:
-
-Copy
-
-Ask AI
-
-```
-def update_memory(state: MessagesState, config: RunnableConfig, *, store: BaseStore): def  update_memory(state: MessagesState, config: RunnableConfig, *, store: BaseStore):  # Get the user id from the config  # Get the user id from the config user_id = config["configurable"]["user_id"]  user_id = config["configurable"]["user_id"]  # Namespace the memory  # Namespace the memory namespace = (user_id, "memories")  namespace = (user_id, "memories")  # ... Analyze conversation and create a new memory # ... Analyze conversation and create a new memory  # Create a new memory ID  # Create a new memory ID memory_id = str(uuid.uuid4())  memory_id =  str(uuid.uuid4())  # We create a new memory  # We create a new memory store.put(namespace, memory_id, {"memory": memory}) store.put(namespace, memory_id, {"memory": memory}) 
-```
-
-As we showed above, we can also access the store in any node and use the `store.search` method to get memories. Recall the memories are returned as a list of objects that can be converted to a dictionary.
-
-Copy
-
-Ask AI
-
-```
-memories[-1].dict()memories[- 1].dict(){'value': {'food_preference': 'I like pizza'},{'value': {'food_preference': 'I like pizza'}, 'key': '07e0caf4-1631-47b7-b15f-65515d4c1843',  'key': '07e0caf4-1631-47b7-b15f-65515d4c1843', 'namespace': ['1', 'memories'],  'namespace': ['1', 'memories'], 'created_at': '2024-10-02T17:22:31.590602+00:00',  'created_at': '2024-10-02T17:22:31.590602+00:00', 'updated_at': '2024-10-02T17:22:31.590605+00:00'}  'updated_at': '2024-10-02T17:22:31.590605+00:00'}
-```
-
-We can access the memories and use them in our model call.
-
-Copy
-
-Ask AI
-
-```
-def call_model(state: MessagesState, config: RunnableConfig, *, store: BaseStore): def  call_model(state: MessagesState, config: RunnableConfig, *, store: BaseStore):  # Get the user id from the config  # Get the user id from the config user_id = config["configurable"]["user_id"]  user_id = config["configurable"]["user_id"]  # Namespace the memory  # Namespace the memory namespace = (user_id, "memories")  namespace = (user_id, "memories")  # Search based on the most recent message  # Search based on the most recent message memories = store.search( memories = store.search( namespace, namespace, query=state["messages"][-1].content,  query =state["messages"][- 1].content, limit=3  limit = 3 ) ) info = "\n".join([d.value["memory"] for d in memories])  info =  " \n ".join([d.value["memory"] for  d in memories])  # ... Use memories in the model call # ... Use memories in the model call
-```
-
-If we create a new thread, we can still access the same memories so long as the `user_id` is the same.
-
-Copy
-
-Ask AI
-
-```
-# Invoke the graph # Invoke the graphconfig = {"configurable": {"thread_id": "2", "user_id": "1"}} config = {"configurable": {"thread_id": "2", "user_id": "1"}} # Let's say hi again # Let's say hi againfor update in graph.stream(for  update in graph.stream( {"messages": [{"role": "user", "content": "hi, tell me about my memories"}]}, config, stream_mode="updates" {"messages": [{"role": "user", "content": "hi, tell me about my memories"}]}, config, stream_mode = "updates"):): print(update)  print(update)
-```
-
-When we use the LangSmith, either locally (e.g., in [Studio](/langsmith/studio)) or [hosted with LangSmith](/langsmith/platform-setup), the base store is available to use by default and does not need to be specified during graph compilation. To enable semantic search, however, you **do** need to configure the indexing settings in your `langgraph.json` file. For example:
-
-Copy
-
-Ask AI
-
-```
-{{ ... ... "store": { "store": { "index": { "index": { "embed": "openai:text-embeddings-3-small",  "embed": "openai:text-embeddings-3-small", "dims": 1536,  "dims": 1536, "fields": ["$"]  "fields": ["$"] } } } }}}
-```
-
-See the [deployment guide](/langsmith/semantic-search) for more details and configuration options.
-
-## [​](#checkpointer-libraries) Checkpointer libraries
-
-Under the hood, checkpointing is powered by checkpointer objects that conform to [`BaseCheckpointSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.base.BaseCheckpointSaver) interface. LangGraph provides several checkpointer implementations, all implemented via standalone, installable libraries:
-
-* `langgraph-checkpoint`: The base interface for checkpointer savers ([`BaseCheckpointSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.base.BaseCheckpointSaver)) and serialization/deserialization interface ([`SerializerProtocol`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.base.SerializerProtocol)). Includes in-memory checkpointer implementation ([`InMemorySaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.memory.InMemorySaver)) for experimentation. LangGraph comes with `langgraph-checkpoint` included.
-* `langgraph-checkpoint-sqlite`: An implementation of LangGraph checkpointer that uses SQLite database ([`SqliteSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.sqlite.SqliteSaver) / [`AsyncSqliteSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.sqlite.aio.AsyncSqliteSaver)). Ideal for experimentation and local workflows. Needs to be installed separately.
-* `langgraph-checkpoint-postgres`: An advanced checkpointer that uses Postgres database ([`PostgresSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.postgres.PostgresSaver) / [`AsyncPostgresSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.postgres.aio.AsyncPostgresSaver)), used in LangSmith. Ideal for using in production. Needs to be installed separately.
-
-### [​](#checkpointer-interface) Checkpointer interface
-
-Each checkpointer conforms to [`BaseCheckpointSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.base.BaseCheckpointSaver) interface and implements the following methods:
-
-* `.put` - Store a checkpoint with its configuration and metadata.
-* `.put_writes` - Store intermediate writes linked to a checkpoint (i.e. [pending writes](#pending-writes)).
-* `.get_tuple` - Fetch a checkpoint tuple using for a given configuration (`thread_id` and `checkpoint_id`). This is used to populate `StateSnapshot` in `graph.get_state()`.
-* `.list` - List checkpoints that match a given configuration and filter criteria. This is used to populate state history in `graph.get_state_history()`
-
-If the checkpointer is used with asynchronous graph execution (i.e. executing the graph via `.ainvoke`, `.astream`, `.abatch`), asynchronous versions of the above methods will be used (`.aput`, `.aput_writes`, `.aget_tuple`, `.alist`).
-
-For running your graph asynchronously, you can use [`InMemorySaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.memory.InMemorySaver), or async versions of Sqlite/Postgres checkpointers — [`AsyncSqliteSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.sqlite.aio.AsyncSqliteSaver) / [`AsyncPostgresSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.postgres.aio.AsyncPostgresSaver) checkpointers.
-
-### [​](#serializer) Serializer
-
-When checkpointers save the graph state, they need to serialize the channel values in the state. This is done using serializer objects. `langgraph_checkpoint` defines [protocol](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.base.SerializerProtocol) for implementing serializers provides a default implementation ([`JsonPlusSerializer`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.jsonplus.JsonPlusSerializer)) that handles a wide variety of types, including LangChain and LangGraph primitives, datetimes, enums and more.
-
-#### [​](#serialization-with-pickle) Serialization with `pickle`
-
-The default serializer, [`JsonPlusSerializer`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.jsonplus.JsonPlusSerializer), uses ormsgpack and JSON under the hood, which is not suitable for all types of objects. If you want to fallback to pickle for objects not currently supported by our msgpack encoder (such as Pandas dataframes), you can use the `pickle_fallback` argument of the [`JsonPlusSerializer`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.jsonplus.JsonPlusSerializer):
-
-Copy
-
-Ask AI
-
-```
-from langgraph.checkpoint.memory import InMemorySaver from langgraph.checkpoint.memory import  InMemorySaverfrom langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer from langgraph.checkpoint.serde.jsonplus import  JsonPlusSerializer # ... Define the graph ...# ... Define the graph ...graph.compile(graph.compile( checkpointer=InMemorySaver(serde=JsonPlusSerializer(pickle_fallback=True))  checkpointer =InMemorySaver(serde =JsonPlusSerializer(pickle_fallback = True))))
-```
-
-#### [​](#encryption) Encryption
-
-Checkpointers can optionally encrypt all persisted state. To enable this, pass an instance of [`EncryptedSerializer`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.encrypted.EncryptedSerializer) to the `serde` argument of any [`BaseCheckpointSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.base.BaseCheckpointSaver) implementation. The easiest way to create an encrypted serializer is via [`from_pycryptodome_aes`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.encrypted.EncryptedSerializer.from_pycryptodome_aes), which reads the AES key from the `LANGGRAPH_AES_KEY` environment variable (or accepts a `key` argument):
-
-Copy
-
-Ask AI
-
-```
-import sqlite3 import  sqlite3 from langgraph.checkpoint.serde.encrypted import EncryptedSerializer from langgraph.checkpoint.serde.encrypted import  EncryptedSerializerfrom langgraph.checkpoint.sqlite import SqliteSaver from langgraph.checkpoint.sqlite import  SqliteSaver serde = EncryptedSerializer.from_pycryptodome_aes() # reads LANGGRAPH_AES_KEY serde = EncryptedSerializer.from_pycryptodome_aes() # reads LANGGRAPH_AES_KEYcheckpointer = SqliteSaver(sqlite3.connect("checkpoint.db"), serde=serde) checkpointer = SqliteSaver(sqlite3.connect("checkpoint.db"), serde =serde)
+from typing_extensions import TypedDict from  typing_extensions import  TypedDictfrom langgraph.graph.state import StateGraph, START from langgraph.graph.state import StateGraph, START # Define subgraph # Define subgraphclass SubgraphState(TypedDict): class  SubgraphState(TypedDict):  # note that none of these keys are shared with the parent graph state  # note that none of these keys are shared with the parent graph state bar: str bar: str baz: str baz: str def subgraph_node_1(state: SubgraphState): def  subgraph_node_1(state: SubgraphState): return {"baz": "baz"}  return {"baz": "baz"} def subgraph_node_2(state: SubgraphState): def  subgraph_node_2(state: SubgraphState): return {"bar": state["bar"] + state["baz"]}  return {"bar": state["bar"] + state["baz"]} subgraph_builder = StateGraph(SubgraphState) subgraph_builder = StateGraph(SubgraphState)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_2)subgraph_builder.add_node(subgraph_node_2)subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge("subgraph_node_1", "subgraph_node_2")subgraph_builder.add_edge("subgraph_node_1", "subgraph_node_2")subgraph = subgraph_builder.compile() subgraph = subgraph_builder.compile() # Define parent graph # Define parent graphclass ParentState(TypedDict): class  ParentState(TypedDict): foo: str foo: str def node_1(state: ParentState): def  node_1(state: ParentState): return {"foo": "hi! " + state["foo"]}  return {"foo": "hi! " + state["foo"]} def node_2(state: ParentState): def  node_2(state: ParentState):  # Transform the state to the subgraph state  # Transform the state to the subgraph state response = subgraph.invoke({"bar": state["foo"]})  response = subgraph.invoke({"bar": state["foo"]})  # Transform response back to the parent state  # Transform response back to the parent state return {"foo": response["bar"]}  return {"foo": response["bar"]} builder = StateGraph(ParentState) builder = StateGraph(ParentState)builder.add_node("node_1", node_1)builder.add_node("node_1", node_1)builder.add_node("node_2", node_2)builder.add_node("node_2", node_2)builder.add_edge(START, "node_1")builder.add_edge(START, "node_1")builder.add_edge("node_1", "node_2")builder.add_edge("node_1", "node_2")graph = builder.compile() graph = builder.compile() for chunk in graph.stream({"foo": "foo"}, subgraphs=True): for  chunk in graph.stream({"foo": "foo"}, subgraphs = True): print(chunk)  print(chunk)
 ```
 
 Copy
@@ -451,39 +103,142 @@ Copy
 Ask AI
 
 ```
-from langgraph.checkpoint.serde.encrypted import EncryptedSerializer from langgraph.checkpoint.serde.encrypted import  EncryptedSerializerfrom langgraph.checkpoint.postgres import PostgresSaver from langgraph.checkpoint.postgres import  PostgresSaver serde = EncryptedSerializer.from_pycryptodome_aes() serde = EncryptedSerializer.from_pycryptodome_aes()checkpointer = PostgresSaver.from_conn_string("postgresql://...", serde=serde) checkpointer = PostgresSaver.from_conn_string("postgresql://...", serde =serde)checkpointer.setup()checkpointer.setup()
+((), {'node_1': {'foo': 'hi! foo'}})((), {'node_1': {'foo': 'hi! foo'}})(('node_2:9c36dd0f-151a-cb42-cbad-fa2f851f9ab7',), {'grandchild_1': {'my_grandchild_key': 'hi Bob, how are you'}})(('node_2:9c36dd0f-151a-cb42-cbad-fa2f851f9ab7',), {'grandchild_1': {'my_grandchild_key': 'hi Bob, how are you'}})(('node_2:9c36dd0f-151a-cb42-cbad-fa2f851f9ab7',), {'grandchild_2': {'bar': 'hi! foobaz'}})(('node_2:9c36dd0f-151a-cb42-cbad-fa2f851f9ab7',), {'grandchild_2': {'bar': 'hi! foobaz'}})((), {'node_2': {'foo': 'hi! foobaz'}})((), {'node_2': {'foo': 'hi! foobaz'}}) 
 ```
 
-When running on LangSmith, encryption is automatically enabled whenever `LANGGRAPH_AES_KEY` is present, so you only need to provide the environment variable. Other encryption schemes can be used by implementing [`CipherProtocol`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.base.CipherProtocol) and supplying it to [`EncryptedSerializer`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.serde.encrypted.EncryptedSerializer).
+ 
 
-## [​](#capabilities) Capabilities
+Full example: different state schemas (two levels of subgraphs)
 
-### [​](#human-in-the-loop) Human-in-the-loop
+This is an example with two levels of subgraphs: parent -> child -> grandchild.
 
-First, checkpointers facilitate [human-in-the-loop workflows](/oss/python/langgraph/interrupts) workflows by allowing humans to inspect, interrupt, and approve graph steps. Checkpointers are needed for these workflows as the human has to be able to view the state of a graph at any point in time, and the graph has to be to resume execution after the human has made any updates to the state. See [the how-to guides](/oss/python/langgraph/interrupts) for examples.
+Copy
 
-### [​](#memory) Memory
+Ask AI
 
-Second, checkpointers allow for [“memory”](/oss/python/concepts/memory) between interactions. In the case of repeated human interactions (like conversations) any follow up messages can be sent to that thread, which will retain its memory of previous ones. See [Add memory](/oss/python/langgraph/add-memory) for information on how to add and manage conversation memory using checkpointers.
+```
+# Grandchild graph # Grandchild graph from typing_extensions import TypedDict from  typing_extensions import  TypedDictfrom langgraph.graph.state import StateGraph, START, END from langgraph.graph.state import StateGraph, START, END class GrandChildState(TypedDict): class  GrandChildState(TypedDict): my_grandchild_key: str my_grandchild_key: str def grandchild_1(state: GrandChildState) -> GrandChildState: def  grandchild_1(state: GrandChildState) -> GrandChildState: # NOTE: child or parent keys will not be accessible here  # NOTE: child or parent keys will not be accessible here return {"my_grandchild_key": state["my_grandchild_key"] + ", how are you"}  return {"my_grandchild_key": state["my_grandchild_key"] + ", how are you"} grandchild = StateGraph(GrandChildState) grandchild = StateGraph(GrandChildState)grandchild.add_node("grandchild_1", grandchild_1)grandchild.add_node("grandchild_1", grandchild_1) grandchild.add_edge(START, "grandchild_1")grandchild.add_edge(START, "grandchild_1")grandchild.add_edge("grandchild_1", END)grandchild.add_edge("grandchild_1", END) grandchild_graph = grandchild.compile() grandchild_graph = grandchild.compile() # Child graph # Child graphclass ChildState(TypedDict): class  ChildState(TypedDict): my_child_key: str my_child_key: str def call_grandchild_graph(state: ChildState) -> ChildState: def  call_grandchild_graph(state: ChildState) -> ChildState: # NOTE: parent or grandchild keys won't be accessible here  # NOTE: parent or grandchild keys won't be accessible here grandchild_graph_input = {"my_grandchild_key": state["my_child_key"]}  grandchild_graph_input = {"my_grandchild_key": state["my_child_key"]} grandchild_graph_output = grandchild_graph.invoke(grandchild_graph_input)  grandchild_graph_output = grandchild_graph.invoke(grandchild_graph_input) return {"my_child_key": grandchild_graph_output["my_grandchild_key"] + " today?"}  return {"my_child_key": grandchild_graph_output["my_grandchild_key"] +  " today?"} child = StateGraph(ChildState) child = StateGraph(ChildState)# We're passing a function here instead of just compiled graph (`grandchild_graph`)# We're passing a function here instead of just compiled graph (`grandchild_graph`)child.add_node("child_1", call_grandchild_graph)child.add_node("child_1", call_grandchild_graph)child.add_edge(START, "child_1")child.add_edge(START, "child_1")child.add_edge("child_1", END)child.add_edge("child_1", END)child_graph = child.compile() child_graph = child.compile() # Parent graph # Parent graphclass ParentState(TypedDict): class  ParentState(TypedDict): my_key: str my_key: str def parent_1(state: ParentState) -> ParentState: def  parent_1(state: ParentState) -> ParentState: # NOTE: child or grandchild keys won't be accessible here  # NOTE: child or grandchild keys won't be accessible here return {"my_key": "hi " + state["my_key"]}  return {"my_key": "hi " + state["my_key"]} def parent_2(state: ParentState) -> ParentState: def  parent_2(state: ParentState) -> ParentState: return {"my_key": state["my_key"] + " bye!"}  return {"my_key": state["my_key"] + " bye!"} def call_child_graph(state: ParentState) -> ParentState: def  call_child_graph(state: ParentState) -> ParentState: child_graph_input = {"my_child_key": state["my_key"]}  child_graph_input = {"my_child_key": state["my_key"]} child_graph_output = child_graph.invoke(child_graph_input)  child_graph_output = child_graph.invoke(child_graph_input) return {"my_key": child_graph_output["my_child_key"]}  return {"my_key": child_graph_output["my_child_key"]} parent = StateGraph(ParentState) parent = StateGraph(ParentState)parent.add_node("parent_1", parent_1)parent.add_node("parent_1", parent_1)# We're passing a function here instead of just a compiled graph (`child_graph`)# We're passing a function here instead of just a compiled graph (`child_graph`)parent.add_node("child", call_child_graph)parent.add_node("child", call_child_graph)parent.add_node("parent_2", parent_2)parent.add_node("parent_2", parent_2) parent.add_edge(START, "parent_1")parent.add_edge(START, "parent_1")parent.add_edge("parent_1", "child")parent.add_edge("parent_1", "child")parent.add_edge("child", "parent_2")parent.add_edge("child", "parent_2")parent.add_edge("parent_2", END)parent.add_edge("parent_2", END) parent_graph = parent.compile() parent_graph = parent.compile() for chunk in parent_graph.stream({"my_key": "Bob"}, subgraphs=True): for  chunk in parent_graph.stream({"my_key": "Bob"}, subgraphs = True): print(chunk)  print(chunk)
+```
 
-### [​](#time-travel) Time Travel
+Copy
 
-Third, checkpointers allow for [“time travel”](/oss/python/langgraph/use-time-travel), allowing users to replay prior graph executions to review and / or debug specific graph steps. In addition, checkpointers make it possible to fork the graph state at arbitrary checkpoints to explore alternative trajectories.
+Ask AI
 
-### [​](#fault-tolerance) Fault-tolerance
+```
+((), {'parent_1': {'my_key': 'hi Bob'}})((), {'parent_1': {'my_key': 'hi Bob'}})(('child:2e26e9ce-602f-862c-aa66-1ea5a4655e3b', 'child_1:781bb3b1-3971-84ce-810b-acf819a03f9c'), {'grandchild_1': {'my_grandchild_key': 'hi Bob, how are you'}})(('child:2e26e9ce-602f-862c-aa66-1ea5a4655e3b', 'child_1:781bb3b1-3971-84ce-810b-acf819a03f9c'), {'grandchild_1': {'my_grandchild_key': 'hi Bob, how are you'}})(('child:2e26e9ce-602f-862c-aa66-1ea5a4655e3b',), {'child_1': {'my_child_key': 'hi Bob, how are you today?'}})(('child:2e26e9ce-602f-862c-aa66-1ea5a4655e3b',), {'child_1': {'my_child_key': 'hi Bob, how are you today?'}})((), {'child': {'my_key': 'hi Bob, how are you today?'}})((), {'child': {'my_key': 'hi Bob, how are you today?'}})((), {'parent_2': {'my_key': 'hi Bob, how are you today? bye!'}})((), {'parent_2': {'my_key': 'hi Bob, how are you today? bye!'}}) 
+```
 
-Lastly, checkpointing also provides fault-tolerance and error recovery: if one or more nodes fail at a given superstep, you can restart your graph from the last successful step. Additionally, when a graph node fails mid-execution at a given superstep, LangGraph stores pending checkpoint writes from any other nodes that completed successfully at that superstep, so that whenever we resume graph execution from that superstep we don’t re-run the successful nodes.
+## [​](#add-a-graph-as-a-node) Add a graph as a node
 
-#### [​](#pending-writes) Pending writes
+When the parent graph and subgraph can communicate over a shared state key (channel) in the [schema](/oss/python/langgraph/graph-api#state), you can add a graph as a [node](/oss/python/langgraph/graph-api#nodes) in another graph. For example, in [multi-agent](/oss/python/langchain/multi-agent) systems, the agents often communicate over a shared [messages](/oss/python/langgraph/graph-api#why-use-messages) key.  If your subgraph shares state keys with the parent graph, you can follow these steps to add it to your graph:
 
-Additionally, when a graph node fails mid-execution at a given superstep, LangGraph stores pending checkpoint writes from any other nodes that completed successfully at that superstep, so that whenever we resume graph execution from that superstep we don’t re-run the successful nodes. 
+1. Define the subgraph workflow (`subgraph_builder` in the example below) and compile it
+2. Pass compiled subgraph to the [`add_node`](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.StateGraph.add_node) method when defining the parent graph workflow
+
+Copy
+
+Ask AI
+
+```
+from typing_extensions import TypedDict from  typing_extensions import  TypedDictfrom langgraph.graph.state import StateGraph, START from langgraph.graph.state import StateGraph, START class State(TypedDict): class  State(TypedDict): foo: str foo: str # Subgraph # Subgraph def subgraph_node_1(state: State): def  subgraph_node_1(state: State): return {"foo": "hi! " + state["foo"]}  return {"foo": "hi! " + state["foo"]} subgraph_builder = StateGraph(State) subgraph_builder = StateGraph(State)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge(START, "subgraph_node_1")subgraph = subgraph_builder.compile() subgraph = subgraph_builder.compile() # Parent graph # Parent graph builder = StateGraph(State) builder = StateGraph(State)builder.add_node("node_1", subgraph) builder.add_node("node_1", subgraph) builder.add_edge(START, "node_1")builder.add_edge(START, "node_1")graph = builder.compile() graph = builder.compile()
+```
+
+Full example: shared state schemas
+
+Copy
+
+Ask AI
+
+```
+from typing_extensions import TypedDict from  typing_extensions import  TypedDictfrom langgraph.graph.state import StateGraph, START from langgraph.graph.state import StateGraph, START # Define subgraph # Define subgraphclass SubgraphState(TypedDict): class  SubgraphState(TypedDict): foo: str # shared with parent graph state foo: str  # shared with parent graph state bar: str # private to SubgraphState bar: str  # private to SubgraphState def subgraph_node_1(state: SubgraphState): def  subgraph_node_1(state: SubgraphState): return {"bar": "bar"}  return {"bar": "bar"} def subgraph_node_2(state: SubgraphState): def  subgraph_node_2(state: SubgraphState): # note that this node is using a state key ('bar') that is only available in the subgraph # note that this node is using a state key ('bar') that is only available in the subgraph # and is sending update on the shared state key ('foo') # and is sending update on the shared state key ('foo') return {"foo": state["foo"] + state["bar"]}  return {"foo": state["foo"] + state["bar"]} subgraph_builder = StateGraph(SubgraphState) subgraph_builder = StateGraph(SubgraphState)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_2)subgraph_builder.add_node(subgraph_node_2)subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge("subgraph_node_1", "subgraph_node_2")subgraph_builder.add_edge("subgraph_node_1", "subgraph_node_2")subgraph = subgraph_builder.compile() subgraph = subgraph_builder.compile() # Define parent graph # Define parent graphclass ParentState(TypedDict): class  ParentState(TypedDict): foo: str foo: str def node_1(state: ParentState): def  node_1(state: ParentState): return {"foo": "hi! " + state["foo"]}  return {"foo": "hi! " + state["foo"]} builder = StateGraph(ParentState) builder = StateGraph(ParentState)builder.add_node("node_1", node_1)builder.add_node("node_1", node_1)builder.add_node("node_2", subgraph)builder.add_node("node_2", subgraph)builder.add_edge(START, "node_1")builder.add_edge(START, "node_1")builder.add_edge("node_1", "node_2")builder.add_edge("node_1", "node_2")graph = builder.compile() graph = builder.compile() for chunk in graph.stream({"foo": "foo"}): for  chunk in graph.stream({"foo": "foo"}): print(chunk)  print(chunk)
+```
+
+Copy
+
+Ask AI
+
+```
+{'node_1': {'foo': 'hi! foo'}}{'node_1': {'foo': 'hi! foo'}}{'node_2': {'foo': 'hi! foobar'}}{'node_2': {'foo': 'hi! foobar'}} 
+```
+
+## [​](#add-persistence) Add persistence
+
+You only need to **provide the checkpointer when compiling the parent graph**. LangGraph will automatically propagate the checkpointer to the child subgraphs.
+
+Copy
+
+Ask AI
+
+```
+from langgraph.graph import START, StateGraph from langgraph.graph import  START, StateGraphfrom langgraph.checkpoint.memory import MemorySaver from langgraph.checkpoint.memory import  MemorySaver from typing_extensions import TypedDict from  typing_extensions import  TypedDict class State(TypedDict): class  State(TypedDict): foo: str foo: str # Subgraph # Subgraph def subgraph_node_1(state: State): def  subgraph_node_1(state: State): return {"foo": state["foo"] + "bar"}  return {"foo": state["foo"] +  "bar"} subgraph_builder = StateGraph(State) subgraph_builder = StateGraph(State)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge(START, "subgraph_node_1")subgraph = subgraph_builder.compile() subgraph = subgraph_builder.compile() # Parent graph # Parent graph builder = StateGraph(State) builder = StateGraph(State)builder.add_node("node_1", subgraph)builder.add_node("node_1", subgraph)builder.add_edge(START, "node_1")builder.add_edge(START, "node_1") checkpointer = MemorySaver() checkpointer = MemorySaver()graph = builder.compile(checkpointer=checkpointer) graph = builder.compile(checkpointer =checkpointer)
+```
+
+If you want the subgraph to **have its own memory**, you can compile it with the appropriate checkpointer option. This is useful in [multi-agent](/oss/python/langchain/multi-agent) systems, if you want agents to keep track of their internal message histories:
+
+Copy
+
+Ask AI
+
+```
+subgraph_builder = StateGraph(...) subgraph_builder = StateGraph(...)subgraph = subgraph_builder.compile(checkpointer=True) subgraph = subgraph_builder.compile(checkpointer = True)
+```
+
+## [​](#view-subgraph-state) View subgraph state
+
+When you enable [persistence](/oss/python/langgraph/persistence), you can [inspect the graph state](/oss/python/langgraph/persistence#checkpoints) (checkpoint) via the appropriate method. To view the subgraph state, you can use the subgraphs option. You can inspect the graph state via `graph.get_state(config)`. To view the subgraph state, you can use `graph.get_state(config, subgraphs=True)`.
+
+**Available **only** when interrupted** Subgraph state can only be viewed **when the subgraph is interrupted**. Once you resume the graph, you won’t be able to access the subgraph state.
+
+View interrupted subgraph state
+
+Copy
+
+Ask AI
+
+```
+from langgraph.graph import START, StateGraph from langgraph.graph import  START, StateGraphfrom langgraph.checkpoint.memory import MemorySaver from langgraph.checkpoint.memory import  MemorySaverfrom langgraph.types import interrupt, Command from langgraph.types import interrupt, Command from typing_extensions import TypedDict from  typing_extensions import  TypedDict class State(TypedDict): class  State(TypedDict): foo: str foo: str # Subgraph # Subgraph def subgraph_node_1(state: State): def  subgraph_node_1(state: State): value = interrupt("Provide value:")  value = interrupt("Provide value:") return {"foo": state["foo"] + value}  return {"foo": state["foo"] + value} subgraph_builder = StateGraph(State) subgraph_builder = StateGraph(State)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge(START, "subgraph_node_1") subgraph = subgraph_builder.compile() subgraph = subgraph_builder.compile() # Parent graph # Parent graph builder = StateGraph(State) builder = StateGraph(State)builder.add_node("node_1", subgraph)builder.add_node("node_1", subgraph)builder.add_edge(START, "node_1")builder.add_edge(START, "node_1") checkpointer = MemorySaver() checkpointer = MemorySaver()graph = builder.compile(checkpointer=checkpointer) graph = builder.compile(checkpointer =checkpointer) config = {"configurable": {"thread_id": "1"}} config = {"configurable": {"thread_id": "1"}} graph.invoke({"foo": ""}, config)graph.invoke({"foo": ""}, config)parent_state = graph.get_state(config) parent_state = graph.get_state(config) # This will be available only when the subgraph is interrupted.# This will be available only when the subgraph is interrupted.# Once you resume the graph, you won't be able to access the subgraph state.# Once you resume the graph, you won't be able to access the subgraph state.subgraph_state = graph.get_state(config, subgraphs=True).tasks[0].state subgraph_state = graph.get_state(config, subgraphs = True).tasks[0].state # resume the subgraph # resume the subgraphgraph.invoke(Command(resume="bar"), config)graph.invoke(Command(resume = "bar"), config)
+```
+
+1. This will be available only when the subgraph is interrupted. Once you resume the graph, you won’t be able to access the subgraph state.
+
+## [​](#stream-subgraph-outputs) Stream subgraph outputs
+
+To include outputs from subgraphs in the streamed outputs, you can set the subgraphs option in the stream method of the parent graph. This will stream outputs from both the parent graph and any subgraphs.
+
+Copy
+
+Ask AI
+
+```
+for chunk in graph.stream(for  chunk in graph.stream( {"foo": "foo"}, {"foo": "foo"}, subgraphs=True,  subgraphs = True,  stream_mode="updates",  stream_mode = "updates",):): print(chunk)  print(chunk)
+```
+
+Stream from subgraphs
+
+Copy
+
+Ask AI
+
+```
+from typing_extensions import TypedDict from  typing_extensions import  TypedDictfrom langgraph.graph.state import StateGraph, START from langgraph.graph.state import StateGraph, START # Define subgraph # Define subgraphclass SubgraphState(TypedDict): class  SubgraphState(TypedDict): foo: str foo: str bar: str bar: str def subgraph_node_1(state: SubgraphState): def  subgraph_node_1(state: SubgraphState): return {"bar": "bar"}  return {"bar": "bar"} def subgraph_node_2(state: SubgraphState): def  subgraph_node_2(state: SubgraphState): # note that this node is using a state key ('bar') that is only available in the subgraph # note that this node is using a state key ('bar') that is only available in the subgraph # and is sending update on the shared state key ('foo') # and is sending update on the shared state key ('foo') return {"foo": state["foo"] + state["bar"]}  return {"foo": state["foo"] + state["bar"]} subgraph_builder = StateGraph(SubgraphState) subgraph_builder = StateGraph(SubgraphState)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_1)subgraph_builder.add_node(subgraph_node_2)subgraph_builder.add_node(subgraph_node_2)subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge(START, "subgraph_node_1")subgraph_builder.add_edge("subgraph_node_1", "subgraph_node_2")subgraph_builder.add_edge("subgraph_node_1", "subgraph_node_2")subgraph = subgraph_builder.compile() subgraph = subgraph_builder.compile() # Define parent graph # Define parent graphclass ParentState(TypedDict): class  ParentState(TypedDict): foo: str foo: str def node_1(state: ParentState): def  node_1(state: ParentState): return {"foo": "hi! " + state["foo"]}  return {"foo": "hi! " + state["foo"]} builder = StateGraph(ParentState) builder = StateGraph(ParentState)builder.add_node("node_1", node_1)builder.add_node("node_1", node_1)builder.add_node("node_2", subgraph)builder.add_node("node_2", subgraph)builder.add_edge(START, "node_1")builder.add_edge(START, "node_1")builder.add_edge("node_1", "node_2")builder.add_edge("node_1", "node_2")graph = builder.compile() graph = builder.compile() for chunk in graph.stream(for  chunk in graph.stream( {"foo": "foo"}, {"foo": "foo"}, stream_mode="updates",  stream_mode = "updates", subgraphs=True,  subgraphs = True, ):): print(chunk)  print(chunk)
+```
+
+Copy
+
+Ask AI
+
+```
+((), {'node_1': {'foo': 'hi! foo'}})((), {'node_1': {'foo': 'hi! foo'}})(('node_2:e58e5673-a661-ebb0-70d4-e298a7fc28b7',), {'subgraph_node_1': {'bar': 'bar'}})(('node_2:e58e5673-a661-ebb0-70d4-e298a7fc28b7',), {'subgraph_node_1': {'bar': 'bar'}})(('node_2:e58e5673-a661-ebb0-70d4-e298a7fc28b7',), {'subgraph_node_2': {'foo': 'hi! foobar'}})(('node_2:e58e5673-a661-ebb0-70d4-e298a7fc28b7',), {'subgraph_node_2': {'foo': 'hi! foobar'}})((), {'node_2': {'foo': 'hi! foobar'}})((), {'node_2': {'foo': 'hi! foobar'}}) 
+```
+
+ 
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langgraph/persistence.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langgraph/use-subgraphs.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Workflows and agents](/oss/python/langgraph/workflows-agents)[Durable execution](/oss/python/langgraph/durable-execution)
+[Memory](/oss/python/langgraph/add-memory)[Application structure](/oss/python/langgraph/application-structure)

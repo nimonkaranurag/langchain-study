@@ -1,130 +1,112 @@
+Anthropic (Claude) - Docs by LangChain
+
+===============
+
+[Skip to main content](https://docs.langchain.com/oss/python/integrations/providers/anthropic#content-area)
+
 We've raised a $125M Series B to build the platform for agent engineering. [Read more](https://blog.langchain.com/series-b/?utm_medium=internal&utm_source=docs&utm_campaign=q4-2025_october-launch-week_aw).
 
-[Docs by LangChain home page](/)
+[Docs by LangChain home page![Image 1: light logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-teal.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=16111530672bf976cb54ef2143478342)![Image 2: dark logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-lilac.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=b70fb1a2208670492ef94aef14b680be)](https://docs.langchain.com/)LangChain + LangGraph
 
-[LangChain](/oss/python/langchain/overview)[LangGraph](/oss/python/langgraph/overview)[Deep Agents](/oss/python/deepagents/overview)[Integrations](/oss/python/integrations/providers/overview)[Learn](/oss/python/learn)[Reference](/oss/python/reference/overview)[Contribute](/oss/python/contributing/overview)
+Search...
 
-* [Overview](/oss/python/contributing/overview)
+Ctrl K Ask AI
 
-##### Contribute
+*   [GitHub](https://github.com/langchain-ai)
+*   [Try LangSmith](https://smith.langchain.com/)
+*   [Try LangSmith](https://smith.langchain.com/)
 
-* [Documentation](/oss/python/contributing/documentation)
-* [Code](/oss/python/contributing/code)
+Search...
 
-##### Integrations
+Navigation
 
-* + [Guide](/oss/python/contributing/integrations-langchain)
-  + [Implement](/oss/python/contributing/implement-langchain)
-  + [Standard tests](/oss/python/contributing/standard-tests-langchain)
-  + [Publish](/oss/python/contributing/publish-langchain)
-* [Co-marketing](/oss/python/contributing/comarketing)
+Popular Providers
 
-* [Why contribute an integration to LangChain?](#why-contribute-an-integration-to-langchain%3F)
-* [Components to integrate](#components-to-integrate)
-* [How to contribute an integration](#how-to-contribute-an-integration)
+Anthropic (Claude)
 
-[Integrations](/oss/python/contributing/integrations-langchain)
+[LangChain](https://docs.langchain.com/oss/python/langchain/overview)[LangGraph](https://docs.langchain.com/oss/python/langgraph/overview)[Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview)[Integrations](https://docs.langchain.com/oss/python/integrations/providers/overview)[Learn](https://docs.langchain.com/oss/python/learn)[Reference](https://docs.langchain.com/oss/python/reference/overview)[Contribute](https://docs.langchain.com/oss/python/contributing/overview)
 
-[LangChain](/oss/python/contributing/integrations-langchain)
+Python
 
-# Contributing integrations
+*   [Overview](https://docs.langchain.com/oss/python/integrations/providers/overview)
 
-**Integrations are a core component of LangChain.** LangChain provides standard interfaces for several different components (language models, vector stores, etc) that are crucial when building LLM applications. Contributing an integration helps expand LangChain’s ecosystem and makes your service discoverable to millions of developers.
+*   [All providers](https://docs.langchain.com/oss/python/integrations/providers/all_providers)
 
-## [​](#why-contribute-an-integration-to-langchain%3F) Why contribute an integration to LangChain?
+##### Popular Providers
 
-## Discoverability
+*   [OpenAI](https://docs.langchain.com/oss/python/integrations/providers/openai)
+*   [Anthropic (Claude)](https://docs.langchain.com/oss/python/integrations/providers/anthropic)
+*   [Google](https://docs.langchain.com/oss/python/integrations/providers/google)
+*   [AWS (Amazon)](https://docs.langchain.com/oss/python/integrations/providers/aws)
+*   [Hugging Face](https://docs.langchain.com/oss/python/integrations/providers/huggingface)
+*   [Microsoft](https://docs.langchain.com/oss/python/integrations/providers/microsoft)
+*   [Ollama](https://docs.langchain.com/oss/python/integrations/providers/ollama)
 
-LangChain is the most used framework for building LLM applications, with over 20 million monthly downloads.
+##### Integrations by component
 
-## Interoperability
+*   [Chat models](https://docs.langchain.com/oss/python/integrations/chat)
+*   [Tools and toolkits](https://docs.langchain.com/oss/python/integrations/tools)
+*   [Retrievers](https://docs.langchain.com/oss/python/integrations/retrievers)
+*   [Text splitters](https://docs.langchain.com/oss/python/integrations/splitters)
+*   [Embedding models](https://docs.langchain.com/oss/python/integrations/text_embedding)
+*   [Vector stores](https://docs.langchain.com/oss/python/integrations/vectorstores)
+*   [Document loaders](https://docs.langchain.com/oss/python/integrations/document_loaders)
+*   [Key-value stores](https://docs.langchain.com/oss/python/integrations/stores)
 
-LangChain components expose a standard interface, allowing developers to easily swap them for each other. If you implement a LangChain integration, any developer using a different component will easily be able to swap yours in.
+![Image 3: US](https://d3gk2c5xim1je2.cloudfront.net/flags/US.svg)
 
-## Best Practices
+English
 
-Through their standard interface, LangChain components encourage and facilitate best practices (streaming, async, etc.) that improve developer experience and application performance.
+close
 
-## [​](#components-to-integrate) Components to integrate
+On this page
+*   [Model interfaces](https://docs.langchain.com/oss/python/integrations/providers/anthropic#model-interfaces)
 
-While any component can be integrated into LangChain, there are specific types of integrations we encourage more: **Integrate these ✅**:
+[Popular Providers](https://docs.langchain.com/oss/python/integrations/providers/openai)
 
-* [**Chat Models**](/oss/python/integrations/chat): Most actively used component type
-* [**Tools/Toolkits**](/oss/python/integrations/tools): Enable agent capabilities
-* [**Retrievers**](/oss/python/integrations/retrievers): Core to RAG applications
-* [**Embedding Models**](/oss/python/integrations/text_embedding): Foundation for vector operations
-* [**Vector Stores**](/oss/python/integrations/vectorstores): Essential for semantic search
+Anthropic (Claude)
+==================
 
-**Not these ❌**:
+Copy page
 
-* **LLMs (Text-Completion Models)**: Deprecated in favor of [Chat Models](/oss/python/integrations/chat)
-* [**Document Loaders**](/oss/python/integrations/document_loaders): High maintenance burden
-* [**Key-Value Stores**](/oss/python/integrations/stores): Limited usage
-* **Document Transformers**: Niche use cases
-* **Model Caches**: Infrastructure concerns
-* **Graphs**: Complex abstractions
-* **Message Histories**: Storage abstractions
-* **Callbacks**: System-level components
-* **Chat Loaders**: Limited demand
-* **Adapters**: Edge case utilities
+Copy page
 
-## [​](#how-to-contribute-an-integration) How to contribute an integration
+All LangChain integrations with [Anthropic](https://www.anthropic.com/).
+[​](https://docs.langchain.com/oss/python/integrations/providers/anthropic#model-interfaces)
 
-1
+Model interfaces
+--------------------------------------------------------------------------------------------------------------
 
-Confirm eligibility
+[ChatAnthropic ------------- Anthropic chat models. Get started](https://docs.langchain.com/oss/python/integrations/chat/anthropic)[AnthropicLLM ------------ (Legacy) Anthropic text completion models. Get started](https://docs.langchain.com/oss/python/integrations/llms/anthropic)
 
-Verify that your integration is in the list of [encouraged components](#components-to-integrate) we are currently accepting.
+* * *
 
-2
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/python/integrations/providers/anthropic.mdx)
 
-Implement your package
-
-[## How to implement a LangChain integration](/oss/python/contributing/implement-langchain)
-
-3
-
-Pass standard tests
-
-If applicable, implement support for LangChain’s [standard test](/oss/python/contributing/standard-tests-langchain) suite for your integration and successfully run them.
-
-4
-
-Publish integration
-
-[## How to publish an integration](/oss/python/contributing/publish-langchain)
-
-5
-
-Add documentation
-
-Open a PR to add documentation for your integration to the official LangChain docs.
-
-Integration documentation guide
-
-An integration is only as useful as its documentation. To ensure a consistent experience for users, docs are required for all new integrations. We have a standard starting-point template for each type of integration for you to copy and modify.In a new PR to the LangChain [docs repo](https://github.com/langchain-ai/docs), create a new file in the relevant directory under `src/oss/python/integrations//integration_name.mdx` using the appropriate template file:
-
-* [Chat models](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/chat/TEMPLATE.mdx)
-* [Tools and toolkits](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/tools/TEMPLATE.mdx)
-* [Retrievers](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/retrievers/TEMPLATE.mdx)
-* Text splitters - Coming soon
-* Embedding models - Coming soon
-* [Vector stores](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/vectorstores/TEMPLATE.mdx)
-* Document loaders - Coming soon
-* Key-value stores - Coming soon
-
-For reference docs, please open an issue on the repo so that a maintainer can add them.
-
-Co-marketing
-
-(Optional) Engage with the LangChain team for joint [co-marketing](/oss/python/contributing/comarketing).
-
----
-
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/contributing/integrations-langchain.mdx)
-
-[Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
+[Connect these docs programmatically](https://docs.langchain.com/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Contributing to code](/oss/python/contributing/code)[Implement a LangChain integration](/oss/python/contributing/implement-langchain)
+Yes No
+
+[OpenAI Previous](https://docs.langchain.com/oss/python/integrations/providers/openai)[Google Next](https://docs.langchain.com/oss/python/integrations/providers/google)
+
+[Docs by LangChain home page![Image 4: light logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-teal.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=16111530672bf976cb54ef2143478342)![Image 5: dark logo](https://mintcdn.com/langchain-5e9cc07a/Xbr8HuVd9jPi6qTU/images/brand/langchain-docs-lilac.svg?fit=max&auto=format&n=Xbr8HuVd9jPi6qTU&q=85&s=b70fb1a2208670492ef94aef14b680be)](https://docs.langchain.com/)
+
+[github](https://github.com/langchain-ai)[x](https://x.com/LangChainAI)[linkedin](https://www.linkedin.com/company/langchain/)[youtube](https://www.youtube.com/@LangChain)
+
+Resources
+
+[Forum](https://forum.langchain.com/)[Changelog](https://changelog.langchain.com/)[LangChain Academy](https://academy.langchain.com/)[Trust Center](https://trust.langchain.com/)
+
+Company
+
+[About](https://langchain.com/about)[Careers](https://langchain.com/careers)[Blog](https://blog.langchain.com/)
+
+[github](https://github.com/langchain-ai)[x](https://x.com/LangChainAI)[linkedin](https://www.linkedin.com/company/langchain/)[youtube](https://www.youtube.com/@LangChain)
+
+[Powered by Mintlify](https://www.mintlify.com/?utm_campaign=poweredBy&utm_medium=referral&utm_source=langchain-5e9cc07a)
+
+Assistant
+
+Responses are generated using AI and may contain mistakes.

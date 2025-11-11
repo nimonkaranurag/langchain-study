@@ -47,63 +47,125 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 * [Agent Chat UI](/oss/python/langchain/ui)
 * [Observability](/oss/python/langchain/observability)
 
-* [Overview](#overview)
-* [Memory storage](#memory-storage)
-* [Read long-term memory in tools](#read-long-term-memory-in-tools)
-* [Write long-term memory from tools](#write-long-term-memory-from-tools)
+* [Prerequisites](#prerequisites)
+* [Enable tracing](#enable-tracing)
+* [Quick start](#quick-start)
+* [Trace selectively](#trace-selectively)
+* [Log to a project](#log-to-a-project)
+* [Add metadata to traces](#add-metadata-to-traces)
 
-[Advanced usage](/oss/python/langchain/guardrails)
+[Use in production](/oss/python/langchain/studio)
 
-# Long-term memory
+# Observability
 
-## [​](#overview) Overview
+Observability is crucial for understanding how your agents behave in production. With LangChain’s [`create_agent`](https://reference.langchain.com/python/langchain/agents/#langchain.agents.create_agent), you get built-in observability through [LangSmith](https://smith.langchain.com/) - a powerful platform for tracing, debugging, evaluating, and monitoring your LLM applications. Traces capture every step your agent takes, from the initial user input to the final response, including all tool calls, model interactions, and decision points. This enables you to debug your agents, evaluate performance, and monitor usage.
 
-LangChain agents use [LangGraph persistence](/oss/python/langgraph/persistence#memory-store) to enable long-term memory. This is a more advanced topic and requires knowledge of LangGraph to use.
+## [​](#prerequisites) Prerequisites
 
-## [​](#memory-storage) Memory storage
+Before you begin, ensure you have the following:
 
-LangGraph stores long-term memories as JSON documents in a [store](/oss/python/langgraph/persistence#memory-store). Each memory is organized under a custom `namespace` (similar to a folder) and a distinct `key` (like a file name). Namespaces often include user or org IDs or other labels that makes it easier to organize information. This structure enables hierarchical organization of memories. Cross-namespace searching is then supported through content filters.
+* A [LangSmith account](https://smith.langchain.com/) (free to sign up)
 
-Copy
+## [​](#enable-tracing) Enable tracing
 
-Ask AI
-
-```
-from langgraph.store.memory import InMemoryStore from langgraph.store.memory import  InMemoryStore def embed(texts: list[str]) -> list[list[float]]: def  embed(texts: list[str]) -> list[list[float]]:  # Replace with an actual embedding function or LangChain embeddings object  # Replace with an actual embedding function or LangChain embeddings object return [[1.0, 2.0] * len(texts)]  return [[1.0, 2.0] *  len(texts)] # InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production use.# InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production use.store = InMemoryStore(index={"embed": embed, "dims": 2}) store = InMemoryStore(index ={"embed": embed, "dims": 2}) user_id = "my-user" user_id = "my-user"application_context = "chitchat" application_context =  "chitchat"namespace = (user_id, application_context) namespace = (user_id, application_context) store.put( store.put(  namespace, namespace, "a-memory", "a-memory", { { "rules": [ "rules": [ "User likes short, direct language", "User likes short, direct language", "User only speaks English & python",  "User only speaks English & python", ], ], "my-key": "my-value", "my-key": "my-value", }, },)) # get the "memory" by ID # get the "memory" by IDitem = store.get(namespace, "a-memory") item = store.get(namespace, "a-memory") # search for "memories" within this namespace, filtering on content equivalence, sorted by vector similarity# search for "memories" within this namespace, filtering on content equivalence, sorted by vector similarityitems = store.search( items = store.search(  namespace, filter={"my-key": "my-value"}, query="language preferences" namespace, filter ={"my-key": "my-value"}, query = "language preferences"))
-```
-
-For more information about the memory store, see the [Persistence](/oss/python/langgraph/persistence#memory-store) guide.
-
-## [​](#read-long-term-memory-in-tools) Read long-term memory in tools
-
-A tool the agent can use to look up user information
+All LangChain agents automatically support LangSmith tracing. To enable it, set the following environment variables:
 
 Copy
 
 Ask AI
 
 ```
-from dataclasses import dataclass from  dataclasses import  dataclass from langchain_core.runnables import RunnableConfig from langchain_core.runnables import  RunnableConfigfrom langchain.agents import create_agent from langchain.agents import  create_agentfrom langchain.tools import tool, ToolRuntime from langchain.tools import tool, ToolRuntimefrom langgraph.store.memory import InMemoryStore from langgraph.store.memory import  InMemoryStore  @dataclass @dataclassclass Context: class  Context: user_id: str user_id: str # InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.# InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.store = InMemoryStore() store = InMemoryStore()  # Write sample data to the store using the put method # Write sample data to the store using the put methodstore.put( store.put(  ("users",), # Namespace to group related data together (users namespace for user data) ("users",), # Namespace to group related data together (users namespace for user data) "user_123", # Key within the namespace (user ID as key)  "user_123", # Key within the namespace (user ID as key) { { "name": "John Smith",  "name": "John Smith", "language": "English",  "language": "English", } # Data to store for the given user } # Data to store for the given user)) @tool @tooldef get_user_info(runtime: ToolRuntime[Context]) -> str: def  get_user_info(runtime: ToolRuntime[Context]) -> str: """Look up user info.""" """Look up user info.""" # Access the store - same as that provided to `create_agent` # Access the store - same as that provided to `create_agent` store = runtime.store  store = runtime.store  user_id = runtime.context.user_id  user_id = runtime.context.user_id # Retrieve data from store - returns StoreValue object with value and metadata # Retrieve data from store - returns StoreValue object with value and metadata user_info = store.get(("users",), user_id)  user_info = store.get(("users",), user_id)  return str(user_info.value) if user_info else "Unknown user"  return  str(user_info.value) if  user_info else  "Unknown user" agent = create_agent(agent = create_agent( model="claude-sonnet-4-5-20250929",  model ="claude-sonnet-4-5-20250929", tools=[get_user_info],  tools =[get_user_info], # Pass store to agent - enables agent to access store when running tools # Pass store to agent - enables agent to access store when running tools store=store,  store =store,  context_schema=Context  context_schema = Context)) # Run the agent # Run the agentagent.invoke(agent.invoke( {"messages": [{"role": "user", "content": "look up user information"}]}, {"messages": [{"role": "user", "content": "look up user information"}]}, context=Context(user_id="user_123")  context =Context(user_id = "user_123") ))
+export LANGSMITH_TRACING=true export  LANGSMITH_TRACING = trueexport LANGSMITH_API_KEY=<your-api-key> export  LANGSMITH_API_KEY =<your-api-key>
 ```
 
-## [​](#write-long-term-memory-from-tools) Write long-term memory from tools
+You can get your API key from your [LangSmith settings](https://smith.langchain.com/settings).
 
-Example of a tool that updates user information
+## [​](#quick-start) Quick start
+
+No extra code is needed to log a trace to LangSmith. Just run your agent code as you normally would:
 
 Copy
 
 Ask AI
 
 ```
-from dataclasses import dataclass from  dataclasses import  dataclass from typing_extensions import TypedDict from  typing_extensions import  TypedDict from langchain.agents import create_agent from langchain.agents import  create_agentfrom langchain.tools import tool, ToolRuntime from langchain.tools import tool, ToolRuntimefrom langgraph.store.memory import InMemoryStore from langgraph.store.memory import  InMemoryStore # InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.# InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.store = InMemoryStore() store = InMemoryStore()  @dataclass @dataclassclass Context: class  Context: user_id: str user_id: str # TypedDict defines the structure of user information for the LLM # TypedDict defines the structure of user information for the LLMclass UserInfo(TypedDict): class  UserInfo(TypedDict): name: str name: str # Tool that allows agent to update user information (useful for chat applications)# Tool that allows agent to update user information (useful for chat applications) @tool @tooldef save_user_info(user_info: UserInfo, runtime: ToolRuntime[Context]) -> str: def  save_user_info(user_info: UserInfo, runtime: ToolRuntime[Context]) -> str: """Save user info.""" """Save user info.""" # Access the store - same as that provided to `create_agent` # Access the store - same as that provided to `create_agent` store = runtime.store  store = runtime.store  user_id = runtime.context.user_id  user_id = runtime.context.user_id  # Store data in the store (namespace, key, data) # Store data in the store (namespace, key, data) store.put(("users",), user_id, user_info)  store.put(("users",), user_id, user_info)  return "Successfully saved user info."  return "Successfully saved user info." agent = create_agent(agent = create_agent( model="claude-sonnet-4-5-20250929",  model ="claude-sonnet-4-5-20250929", tools=[save_user_info],  tools =[save_user_info], store=store,  store =store,  context_schema=Context  context_schema = Context)) # Run the agent # Run the agentagent.invoke(agent.invoke( {"messages": [{"role": "user", "content": "My name is John Smith"}]}, {"messages": [{"role": "user", "content": "My name is John Smith"}]},  # user_id passed in context to identify whose information is being updated  # user_id passed in context to identify whose information is being updated context=Context(user_id="user_123")  context =Context(user_id = "user_123") )) # You can access the store directly to get the value # You can access the store directly to get the valuestore.get(("users",), "user_123").valuestore.get(("users",), "user_123").value
+from langchain.agents import create_agent from langchain.agents import  create_agent def send_email(to: str, subject: str, body: str): def  send_email(to: str, subject: str, body: str): """Send an email to a recipient.""" """Send an email to a recipient.""" # ... email sending logic # ... email sending logic return f"Email sent to {to}"  return  f "Email sent to {to} " def search_web(query: str): def  search_web(query: str): """Search the web for information.""" """Search the web for information.""" # ... web search logic # ... web search logic return f"Search results for: {query}"  return  f"Search results for: {query} " agent = create_agent(agent = create_agent( model="gpt-4o",  model ="gpt-4o", tools=[send_email, search_web],  tools =[send_email, search_web], system_prompt="You are a helpful assistant that can send emails and search the web."  system_prompt ="You are a helpful assistant that can send emails and search the web.")) # Run the agent - all steps will be traced automatically# Run the agent - all steps will be traced automaticallyresponse = agent.invoke({response = agent.invoke({ "messages": [{"role": "user", "content": "Search for the latest AI news and email a summary to john@example.com"}]  "messages": [{"role": "user", "content": "Search for the latest AI news and email a summary to john@example.com"}]})})
 ```
+
+By default, the trace will be logged to the project with the name `default`. To configure a custom project name, see [Log to a project](#log-to-a-project).
+
+## [​](#trace-selectively) Trace selectively
+
+You may opt to trace specific invocations or parts of your application using LangSmith’s `tracing_context` context manager:
+
+Copy
+
+Ask AI
+
+```
+import langsmith as ls import  langsmith as  ls # This WILL be traced # This WILL be tracedwith ls.tracing_context(enabled=True): with ls.tracing_context(enabled = True): agent.invoke({"messages": [{"role": "user", "content": "Send a test email to alice@example.com"}]}) agent.invoke({"messages": [{"role": "user", "content": "Send a test email to alice@example.com"}]}) # This will NOT be traced (if LANGSMITH_TRACING is not set)# This will NOT be traced (if LANGSMITH_TRACING is not set)agent.invoke({"messages": [{"role": "user", "content": "Send another email"}]})agent.invoke({"messages": [{"role": "user", "content": "Send another email"}]})
+```
+
+## [​](#log-to-a-project) Log to a project
+
+Statically
+
+You can set a custom project name for your entire application by setting the `LANGSMITH_PROJECT` environment variable:
+
+Copy
+
+Ask AI
+
+```
+export LANGSMITH_PROJECT=my-agent-project export  LANGSMITH_PROJECT =my-agent-project
+```
+
+ 
+
+Dynamically
+
+You can set the project name programmatically for specific operations:
+
+Copy
+
+Ask AI
+
+```
+import langsmith as ls import  langsmith as  ls with ls.tracing_context(project_name="email-agent-test", enabled=True): with ls.tracing_context(project_name ="email-agent-test", enabled = True): response = agent.invoke({ response = agent.invoke({ "messages": [{"role": "user", "content": "Send a welcome email"}]  "messages": [{"role": "user", "content": "Send a welcome email"}] }) })
+```
+
+## [​](#add-metadata-to-traces) Add metadata to traces
+
+You can annotate your traces with custom metadata and tags:
+
+Copy
+
+Ask AI
+
+```
+response = agent.invoke(response = agent.invoke( {"messages": [{"role": "user", "content": "Send a welcome email"}]}, {"messages": [{"role": "user", "content": "Send a welcome email"}]}, config={ config ={ "tags": ["production", "email-assistant", "v1.0"],  "tags": ["production", "email-assistant", "v1.0"], "metadata": { "metadata": { "user_id": "user_123",  "user_id": "user_123", "session_id": "session_456",  "session_id": "session_456", "environment": "production"  "environment": "production" } } } }))
+```
+
+`tracing_context` also accepts tags and metadata for fine-grained control:
+
+Copy
+
+Ask AI
+
+```
+with ls.tracing_context(with ls.tracing_context( project_name="email-agent-test",  project_name ="email-agent-test", enabled=True,  enabled = True, tags=["production", "email-assistant", "v1.0"],  tags =["production", "email-assistant", "v1.0"], metadata={"user_id": "user_123", "session_id": "session_456", "environment": "production"}):  metadata ={"user_id": "user_123", "session_id": "session_456", "environment": "production"}): response = agent.invoke( response = agent.invoke( {"messages": [{"role": "user", "content": "Send a welcome email"}]} {"messages": [{"role": "user", "content": "Send a welcome email"}]} ) )
+```
+
+This custom metadata and tags will be attached to the trace in LangSmith.
+
+To learn more about how to use traces to debug, evaluate, and monitor your agents, see the [LangSmith documentation](/langsmith/home).
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/long-term-memory.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/observability.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Retrieval](/oss/python/langchain/retrieval)[Studio](/oss/python/langchain/studio)
+[Agent Chat UI](/oss/python/langchain/ui)

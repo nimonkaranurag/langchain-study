@@ -4,6 +4,8 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 
 [LangChain](/oss/python/langchain/overview)[LangGraph](/oss/python/langgraph/overview)[Deep Agents](/oss/python/deepagents/overview)[Integrations](/oss/python/integrations/providers/overview)[Learn](/oss/python/learn)[Reference](/oss/python/reference/overview)[Contribute](/oss/python/contributing/overview)
 
+* [Overview](/oss/python/langchain/overview)
+
 ##### LangChain v1.0
 
 * [Release notes](/oss/python/releases/langchain-v1)
@@ -45,134 +47,115 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 * [Agent Chat UI](/oss/python/langchain/ui)
 * [Observability](/oss/python/langchain/observability)
 
-[Get started](/oss/python/langchain/install)
+* [Install](#install)
+* [Transport types](#transport-types)
+* [Use MCP tools](#use-mcp-tools)
+* [Custom MCP servers](#custom-mcp-servers)
+* [Stateful tool usage](#stateful-tool-usage)
+* [Additional resources](#additional-resources)
 
-# Philosophy
+[Advanced usage](/oss/python/langchain/guardrails)
 
-LangChain exists to be the easiest place to start building with LLMs, while also being flexible and production-ready.
+# Model Context Protocol (MCP)
 
-LangChain is driven by a few core beliefs:
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how applications provide tools and context to LLMs. LangChain agents can use tools defined on MCP servers using the [`langchain-mcp-adapters`](https://github.com/langchain-ai/langchain-mcp-adapters) library.
 
-* Large Language Models (LLMs) are great, powerful new technology.
-* LLMs are even better when you combine them with external sources of data.
-* LLMs will transform what the applications of the future look like. Specifically, the applications of the future will look more and more agentic.
-* It is still very early on in that transformation.
-* While it’s easy to build a prototype of those agentic applications, it’s still really hard to build agents that are reliable enough to put into production.
+## [​](#install) Install
 
-With LangChain, we have two core focuses:
+Install the `langchain-mcp-adapters` library to use MCP tools in LangGraph:
 
-1
+Copy
 
-We want to enable developers to build with the best models.
+Ask AI
 
-Different providers expose different APIs, with different model parameters and different message formats. Standardizing these model inputs and outputs is a core focus, making it easy for developer to easily change to the most recent state-of-the-art model, avoiding lock-in.
+```
+pip install langchain-mcp-adapters pip  install langchain-mcp-adapters
+```
 
-2
+## [​](#transport-types) Transport types
 
-We want to make it easy to use models to orchestrate more complex flows that interact with other data and computation.
+MCP supports different transport mechanisms for client-server communication:
 
-Models should be used for more than just *text generation* - they should also be used to orchestrate more complex flows that interact with other data. LangChain makes it easy to define [tools](/oss/python/langchain/tools) that LLMs can use dynamically, as well as help with parsing of and access to unstructured data.
+* **stdio** – Client launches server as a subprocess and communicates via standard input/output. Best for local tools and simple setups.
+* **Streamable HTTP** – Server runs as an independent process handling HTTP requests. Supports remote connections and multiple clients.
+* **Server-Sent Events (SSE)** – a variant of streamable HTTP optimized for real-time streaming communication.
 
-## [​](#history) History
+## [​](#use-mcp-tools) Use MCP tools
 
-Given the constant rate of change in the field, LangChain has also evolved over time. Below is a brief timeline of how LangChain has changed over the years, evolving alongside what it means to build with LLMs:
+`langchain-mcp-adapters` enables agents to use tools defined across one or more MCP server.
 
-[​](#2022-10-24)
+Accessing multiple MCP servers
 
-2022-10-24
+Copy
 
-v0.0.1
+Ask AI
 
-A month before ChatGPT, **LangChain was launched as a Python package**. It consisted of two main components:
+```
+from langchain_mcp_adapters.client import MultiServerMCPClient from langchain_mcp_adapters.client import  MultiServerMCPClient from langchain.agents import create_agent from langchain.agents import  create_agent client = MultiServerMCPClient( client = MultiServerMCPClient(  { { "math": { "math": { "transport": "stdio", # Local subprocess communication  "transport": "stdio", # Local subprocess communication "command": "python",  "command": "python", # Absolute path to your math_server.py file # Absolute path to your math_server.py file "args": ["/path/to/math_server.py"],  "args": ["/path/to/math_server.py"], }, }, "weather": { "weather": { "transport": "streamable_http", # HTTP-based remote server  "transport": "streamable_http", # HTTP-based remote server  # Ensure you start your weather server on port 8000  # Ensure you start your weather server on port 8000 "url": "http://localhost:8000/mcp",  "url": "http://localhost:8000/mcp", } } } })) tools = await client.get_tools() tools =  await client.get_tools() agent = create_agent(agent = create_agent( "claude-sonnet-4-5-20250929", "claude-sonnet-4-5-20250929",  tools  tools ))math_response = await agent.ainvoke(math_response =  await agent.ainvoke( {"messages": [{"role": "user", "content": "what's (3 + 5) x 12?"}]} {"messages": [{"role": "user", "content": "what's (3 + 5) x 12?"}]}))weather_response = await agent.ainvoke(weather_response =  await agent.ainvoke( {"messages": [{"role": "user", "content": "what is the weather in nyc?"}]} {"messages": [{"role": "user", "content": "what is the weather in nyc?"}]}))
+```
 
-* LLM abstractions
-* “Chains”, or predetermined steps of computation to run, for common use cases. For example - RAG: run a retrieval step, then run a generation step.
+`MultiServerMCPClient` is **stateless by default**. Each tool invocation creates a fresh MCP `ClientSession`, executes the tool, and then cleans up.
 
-The name LangChain comes from “Language” (like Language models) and “Chains”.
+## [​](#custom-mcp-servers) Custom MCP servers
 
-[​](#2022-12)
+To create your own MCP servers, you can use the `mcp` library. This library provides a simple way to define [tools](https://modelcontextprotocol.io/docs/learn/server-concepts#tools-ai-actions) and run them as servers.
 
-2022-12
+Copy
 
-The first general purpose agents were added to LangChain.These general purpose agents were based on the [ReAct paper](https://arxiv.org/abs/2210.03629) (ReAct standing for Reasoning and Acting). They used LLMs to generate JSON that represented tool calls, and then parsed that JSON to determine what tools to call.
+Ask AI
 
-[​](#2023-01)
+```
+pip install mcp pip  install  mcp
+```
 
-2023-01
+Use the following reference implementations to test your agent with MCP tool servers.
 
-OpenAI releases a ‘Chat Completion’ API.Previously, models took in strings and returned a string. In the ChatCompletions API, they evolved to take in a list of messages and return a message. Other model providers followed suit, and LangChain updated to work with lists of messages.
+Math server (stdio transport)
 
-[​](#2023-01-2)
+Copy
 
-2023-01
+Ask AI
 
-LangChain releases a JavaScript version.LLMs and agents will change how applications are built and JavaScript is the language of application developers.
+```
+from mcp.server.fastmcp import FastMCP from mcp.server.fastmcp import  FastMCP mcp = FastMCP("Math") mcp = FastMCP("Math") @mcp.tool()@mcp.tool()def add(a: int, b: int) -> int: def  add(a: int, b: int) -> int:  """Add two numbers"""  """Add two numbers""" return a + b  return  a +  b @mcp.tool()@mcp.tool()def multiply(a: int, b: int) -> int: def  multiply(a: int, b: int) -> int:  """Multiply two numbers"""  """Multiply two numbers""" return a * b  return  a *  b if __name__ == "__main__": if  __name__ ==  "__main__": mcp.run(transport="stdio") mcp.run(transport = "stdio")
+```
 
-[​](#2023-02)
+Weather server (streamable HTTP transport)
 
-2023-02
+Copy
 
-**LangChain Inc. was formed as a company** around the open source LangChain project.The main goal was to “make intelligent agents ubiquitous”. The team recognized that while LangChain was a key part (LangChain made it simple to get started with LLMs), there was also a need for other components.
+Ask AI
 
-[​](#2023-03)
+```
+from mcp.server.fastmcp import FastMCP from mcp.server.fastmcp import  FastMCP mcp = FastMCP("Weather") mcp = FastMCP("Weather") @mcp.tool()@mcp.tool()async def get_weather(location: str) -> str: async  def  get_weather(location: str) -> str: """Get weather for location.""" """Get weather for location."""  return "It's always sunny in New York"  return  "It's always sunny in New York" if __name__ == "__main__": if  __name__ ==  "__main__": mcp.run(transport="streamable-http") mcp.run(transport ="streamable-http")
+```
 
-2023-03
+## [​](#stateful-tool-usage) Stateful tool usage
 
-OpenAI releases ‘function calling’ in their API.This allowed the API to explicitly generate payloads that represented tool calls. Other model providers followed suit, and LangChain was updated to use this as the preferred method for tool calling (rather than parsing JSON).
+For stateful servers that maintain context between tool calls, use `client.session()` to create a persistent `ClientSession`.
 
-[​](#2023-06)
+Using MCP ClientSession for stateful tool usage
 
-2023-06
+Copy
 
-**LangSmith is released** as closed source platform by LangChain Inc., providing observability and evalsThe main issue with building agents is getting them to be reliable, and LangSmith, which provides observability and evals, was built to solve that need. LangChain was updated to integrate seamlessly with LangSmith.
+Ask AI
 
-[​](#2024-01)
+```
+from langchain_mcp_adapters.tools import load_mcp_tools from langchain_mcp_adapters.tools import  load_mcp_tools client = MultiServerMCPClient({...}) client = MultiServerMCPClient({...})async with client.session("math") as session: async  with client.session("math") as session: tools = await load_mcp_tools(session)  tools =  await load_mcp_tools(session)
+```
 
-2024-01
+## [​](#additional-resources) Additional resources
 
-v0.1.0
-
-**LangChain releases 0.1.0**, its first non-0.0.x.The industry matured from prototypes to production, and as such, LangChain increased its focus on stability.
-
-[​](#2024-02)
-
-2024-02
-
-**LangGraph is released** as an open-source library.The original LangChain had two focuses: LLM abstractions, and high-level interfaces for getting started with common applications; however, it was missing a low-level orchestration layer that allowed developers to control the exact flow of their agent. Enter: LangGraph.When building LangGraph, we learned from lessons when building LangChain and added functionality we discovered was needed: streaming, durable execution, short-term memory, human-in-the-loop, and more.
-
-[​](#2024-06)
-
-2024-06
-
-**LangChain has over 700 integrations.**Integrations were split out of the core LangChain package, and either moved into their own standalone packages (for the core integrations) or `langchain-community`.
-
-[​](#2024-10)
-
-2024-10
-
-LangGraph becomes the preferred way to build any AI application that is more than a single LLM call.As developers tried to improve the reliability of their applications, they needed more control than the high-level interfaces provided. LangGraph provided that low-level flexibility. Most chains and agents were marked as deprecated in LangChain with guides on how to migrate them to LangGraph. There is still one high-level abstraction created in LangGraph: an agent abstraction. It is built on top of low-level LangGraph and has the same interface as the ReAct agents from LangChain.
-
-[​](#2025-04)
-
-2025-04
-
-Model APIs become more multimodal.Models started to accept files, images, videos, and more. We updated the `langchain-core` message format accordingly to allow developers to specify these multimodal inputs in a standard way.
-
-[​](#2025-10-20)
-
-2025-10-20
-
-**LangChain releases 1.0** with two major changes:
-
-1. Complete revamp of all chains and agents in `langchain`. All chains and agents are now replaced with only one high level abstraction: an agent abstraction built on top of LangGraph. This was the high-level abstraction that was originally created in LangGraph, but just moved to LangChain. For users still using old LangChain chains/agents who do NOT want to upgrade (note: we recommend you do), you can continue using old LangChain by installing the `langchain-classic` package.
-2. A standard message content format: Model APIs evolved from returning messages with a simple content string to more complex output types - reasoning blocks, citations, server-side tool calls, etc. LangChain evolved its message formats to standardize these across providers.
+* [MCP documentation](https://modelcontextprotocol.io/introduction)
+* [MCP Transport documentation](https://modelcontextprotocol.io/docs/concepts/transports)
+* [`langchain-mcp-adapters`](https://github.com/langchain-ai/langchain-mcp-adapters)
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/philosophy.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/mcp.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Quickstart](/oss/python/langchain/quickstart)[Agents](/oss/python/langchain/agents)
+[Context engineering in agents](/oss/python/langchain/context-engineering)[Human-in-the-loop](/oss/python/langchain/human-in-the-loop)

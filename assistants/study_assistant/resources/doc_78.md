@@ -1,52 +1,111 @@
-[Skip to main content](#main-container)
+[Skip to content](#start-of-content)   
+  Explore GitHub's latest Universe launches —   [join the Product Roadmap webinar](https://github.com/resources/events/github-roadmap-webinar-q4?utm_source=github&utm_medium=banner&utm_campaign=AMER-FY26Q2-AMER_EMEA-WBRL-Roadmap_website_banner-20251113&utm_content=website_banner) 
 
 
+## Navigation Menu
 
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fsponsors)
 
+# Search code, repositories, users, issues, pull requests...
 
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-Welcome to the LangChain Forum
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fsponsors)
 
-[​](/search?expanded=true "Open advanced search")
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fsponsors&source=header)
 
-Welcome to LangChain Forum!
+You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
-[​](/search?expanded=true "Open advanced search")
+{{ message }}
 
-**Welcome to the LangChain Forum** – a space for developers to ask questions and connect with others building with LangChain products.
+GitHub Sponsors
 
-Looking for broader conversation, events, or want to showcase your agents? Join our **[LangChain Slack Community](https://www.langchain.com/join-community)**.
+# Support the developers who power open source
 
-Before you dive in, here’s what to know:
+[See your top dependencies](https://github.com/sponsors/explore?locale=en-US)[Get sponsored](https://github.com/sponsors/accounts?locale=en-US)
 
-* This forum is **community-run** and not all posts are monitored by the LangChain team.
-* Keep discussions **focused on technical topics related to LangChain**. Promotional content or solicitation of any kind will result in an immediate ban.
-* Before starting a new topic, please **search** to see if the topic has already been discussed.
-* If you are helping someone, **do** **not** answer by linking to an external link (unless it is the LangChain Docs), as external articles may be incorrect and are impossible for us to update.
+## *GitHub Sponsors allows the developer community* to financially support the open source projects they depend on, directly on GitHub
 
-By participating, you agree to follow our Community Code of Conduct. Read the full guidelines **[here](https://www.langchain.com/community-code)**.
+### $40M+
 
+Given back to our maintainers
 
+### 103
 
-# All categories
+Regions supported globally
 
-1. categories
-2. tags
+### 4.2K+
 
-* [Categories](/categories)
-* [Latest](/latest)
-* [Hot](/hot)
+Organizations sponsoring
 
-| Category | Topics |
-| --- | --- |
-| [Announcements](/c/announcements/15)  Official updates from the LangChain team including product updates. | 3 / month |
+### For maintainers
 
-| [OSS Product Help](/c/oss-product-help-lc-and-lg/16)  Get help with using our OSS frameworks from experts in the community.  [LangGraph](/c/oss-product-help-lc-and-lg/langgraph/13)      [LangChain](/c/oss-product-help-lc-and-lg/langchain/14) | 119 / month |
+Launch a page in minutes and showcase Sponsors buttons on your GitHub profile and repositories! You will automatically appear in worldwide recommendations to partners who are eager to invest in their open source dependencies.
 
-| [LangSmith Product Help](/c/help/9)  Get help with using LangSmith from experts in the community.  [Deployment](/c/help/langsmith-deployment/6)      [Observability & Evals](/c/help/langsmith/8) | 38 / month |
+[Get sponsored](https://github.com/sponsors/accounts?locale=en-US)
 
-| [LangChain Academy](/c/langchain-academy/10)  For questions and discussions about LangChain Academy courses. | 8 / month |
+### For sponsors
 
-| [Talking Shop](/c/talking-shop/12)  For discussion about LangChain or anything related to building agentic applications. | 9 / month |
+Find and fund your dependencies in a single transaction. The discovery and bulk sponsorship tools are easy to use. Flexible payment enables you to choose when and how you pay. Corporations like Microsoft like it because all their payments go out as a single invoice.
 
-| [Forum Feedback](/c/forum-feedback/2)  Discussion about our Help Forums, its organization, how it works, and how we can improve it. | 1 / month |
+[Learn about invoiced billing](https://docs.github.com/en/billing/managing-billing-for-github-sponsors/about-billing-for-github-sponsors)
+
+### Help open source thrive
+
+Everyone should be able to contribute to open source. Making open source a viable, financially rewarding career path helps contribute to our digital infrastructure. More funding, more projects, more software to power our world.
+
+[See your top dependencies](https://github.com/sponsors/explore?locale=en-US)
+
+### Invest in open source. It powers your world.
+
+[See your top dependencies](https://github.com/sponsors/explore?locale=en-US)[Get sponsored](https://github.com/sponsors/accounts?locale=en-US)
+
+### The internet depends on open source, everywhere
+
+### [Comprehensive website security and health monitoring with performance analysis](https://github.com/sponsors/Lissy93?locale=en-US)
+
+web-check
+
+Web-Check provides real-time monitoring for uptime, speed, and user experience, trusted by businesses like Amazon, Shopify, and Airbnb.
+
+Sponsor web-check
+
+### [Intuitive, open-source interface for native GenAI applications](https://github.com/sponsors/tjbck?locale=en-US)
+
+OpenWebUI
+
+OpenWebUI simplifies the development of interactive GenAI apps using LLMs, used by developers at companies like Microsoft, IBM, and GitHub.
+
+Sponsor OpenWebUI
+
+### [A command line tool and library for transferring data with URL syntax](https://github.com/sponsors/curl?locale=en-US)
+
+cURL
+
+cURL is included in almost every modern device–smartphones, cars, TVs, laptops, servers, consoles, printers, and beyond.
+
+Sponsor cURL
+
+### Frequently asked questions
+
+#### How do I sponsor a project?
+
+Sign in and start by navigating to [your dependencies](https://github.com/sponsors/explore?locale=en-US), your [explore tab](https://github.com/explore?locale=en-US), [trending repositories](https://github.com/explore?locale=en-US), or [collections](https://github.com/collections?locale=en-US). When a repository has the Sponsor graphic, you can sponsor them directly.
+
+#### How do I get paid for my contributions?
+
+You can become a sponsored developer by joining GitHub Sponsors, completing your sponsored developer profile, creating sponsorship tiers, submitting your bank and tax information, and enabling two-factor authentication for your account on GitHub.com. [Learn more about getting paid for contributions](https://docs.github.com/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-personal-account)
+
+#### Do I need to fill out a tax form to receive sponsorships?
+
+Yes. Your tax information must be on file in order for GitHub to make payments to your bank account. The required tax documents may vary based on your location.
+
+Note that we do our best to help you with the Sponsors program, but we’re unable to provide tax guidance.
+
+[Learn more about tax information for GitHub Sponsors](https://docs.github.com/sponsors/receiving-sponsorships-through-github-sponsors/tax-information-for-github-sponsors)
+
+   
+
+You can’t perform that action at this time.
+
+ 

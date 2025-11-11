@@ -1,253 +1,179 @@
-LangChain (@LangChainAI) / X
+# Engineer reliable agents
 
-===============
+Ship agents to production with LangChain's comprehensive platform for agent engineering.
 
-Don’t miss what’s happening
+[Request a demo](/contact-sales)[Sign up](https://smith.langchain.com)
 
-People on X are the first to know.
+We've raised a **$125M Series B** to build the platform for agent engineering.
 
-[Log in](https://x.com/login)
+[Read more](http://blog.langchain.com/series-b/?utm_medium=internal&utm_source=banner&utm_campaign=q4-2025_october-launch-week_aw)
 
-[Sign up](https://x.com/i/flow/signup)
+#### LangChain products power top engineering teams, from AI startups to global enterprises
 
-[](https://x.com/)
-==================
+#### Visibility & control
+
+See exactly what's happening at every step of your agent. Steer your agent to accomplish critical tasks the way you intended.
+
+#### Fast iteration
+
+Rapidly move through build, test, deploy, learn, repeat with workflows across the entire agent engineering lifecycle.
+
+#### Durable performance
+
+Ship at scale with agent infrastructure designed for long-running workloads and human oversight.
+
+#### Model neutral
+
+Swap models, tools, and databases without rewriting your app. Future-proof your stack as AI advances with no vendor lock-in.
+
+#### Your agent engineering stack
+
+Open Source Frameworks
 
 LangChain
----------
 
-9,641 posts
+LangChain helps you ship quickly with less code using a pre-built agent architecture and model integrations.
 
-See new posts
+LangGraph
 
-[![Image 1](https://pbs.twimg.com/profile_banners/1589007443853340672/1760970172/600x200)](https://x.com/LangChainAI/header_photo)
+LangGraph puts you in control with low-level primitives to build custom agent workflows.
 
-[![Image 2: Opens profile photo](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_200x200.jpg)](https://x.com/LangChainAI/photo)
+Agent Engineering Platform
 
-Follow
+LangSmith
 
-Click to Follow LangChainAI
+[Observability](#)[Evaluation](#)[Deployment](#)
 
-LangChain
+[Observability](#observability)[Evaluation](#evaluation)[Deployment](#deployment)
 
-@LangChainAI
+## See exactly what your agent is doing
 
-The platform for agent engineering.
+Agents create dense outputs that make debugging hard. Tracing gives you clear visibility into each step, so you can quickly identify issues and confidently explain what your agent is actually doing.
 
-[langchain.com](https://t.co/Sh5ftHbph2)Joined November 2022
+[LangSmith Observability](/langsmith/observability)
 
-[73 Following](https://x.com/LangChainAI/following)
+## Improve agent quality with evals
 
-[220K Followers](https://x.com/LangChainAI/verified_followers)
+LLMs are non-deterministic and output natural language, making responses hard to evaluate for accuracy and quality. Build realistic test sets from production data, score performance with evaluators and expert feedback, and iterate to get your agent from 'okay' to 'great'.
 
-[Posts](https://x.com/LangChainAI)
+[LangSmith Evaluation](/langsmith/evaluation)
 
-[Replies](https://x.com/LangChainAI/with_replies)
+## Deploy with infrastructure built for agents
 
-[Highlights](https://x.com/LangChainAI/highlights)
+Standard infrastructure can’t handle long-running agent workloads that need human collaboration. Deploy in one click with APIs that handle memory, auto-scaling, and enterprise-grade security out of the box — built for agent workflows that run for hours or days.
 
-[Media](https://x.com/LangChainAI/media)
+[LangSmith Deployment](/langsmith/deployment)
 
-LangChain’s posts
-=================
+### Build agents your way, with templates or custom control
 
-Pinned
+## Bring your own framework
 
-[![Image 3](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://x.com/LangChainAI)
+LangSmith is framework-agnostic. Trace using the TypeScript or Python SDK to gain visibility into your agent interactions, whether you use LangChain's frameworks or not.
 
-[LangChain](https://x.com/LangChainAI)
+Open Source Frameworks
 
-[@LangChainAI](https://x.com/LangChainAI)
+Bring your own
 
-·
+Agent Engineering Platform
 
-[Oct 21](https://x.com/LangChainAI/status/1980678921839603948)
+LangSmith
 
-We raised $125M to build the platform for agent engineering. Thank you to our investors (
+[Observability](#)[Evaluation](#)[Deployment](#)
 
-[@IVP](https://x.com/IVP)
+#### Your agent engineering stack
 
-, 
+Open Source Frameworks
 
-[@sequoia](https://x.com/sequoia)
+### Build agents your way, with templates or custom control
 
-, 
+LangChain helps you ship quickly with less code using a pre-built agent architecture and model integrations.
 
-[@benchmark](https://x.com/benchmark)
+LangGraph puts you in control with low-level primitives to build custom agent workflows.
 
-, 
+LangSmith Agent Engineering Platform
 
-[@AmplifyPartners](https://x.com/AmplifyPartners)
+### See exactly what your agent is doing
 
-, 
+Agents create dense outputs that make debugging hard. Tracing gives you clear visibility into each step, so you can quickly identify issues and confidently explain what your agent is actually doing.
 
-[@SapphireVC](https://x.com/SapphireVC)
+[LangSmith Observability](/langsmith/observability)
 
-, 
+LangSmith Agent Engineering Platform
 
-[@CapitalG](https://x.com/CapitalG)
+### Improve agent quality with evals
 
-, and more) for their belief in us, and to our customers like 
+LLMs are non-deterministic and output natural language, making responses hard to evaluate for accuracy and quality. Build realistic test sets from production data, score performance with evaluators and expert feedback, and iterate to get your agent from 'okay' to 'great'.
 
-[@Replit](https://x.com/Replit)
+[LangSmith Evaluation](/langsmith/evaluation)
 
-, 
+LangSmith Agent Engineering Platform
 
-[@clay](https://x.com/clay)
+### Deploy with infrastructure built for agents
 
-, 
+Standard infrastructure can’t handle long-running agent workloads that need human collaboration. Deploy in one click with APIs that handle memory, auto-scaling, and enterprise-grade security out of the box — built for agent workflows that run for hours or days.
 
-[@TrustVanta](https://x.com/TrustVanta)
+[LangSmith Deployment](/langsmith/deployment)
 
-, 
+## Explore top agent use cases
 
-[@Cloudflare](https://x.com/Cloudflare)
+#### Copilots
 
-, 
+Build native co-pilots into your application to unlock new end user experiences for domain-specific tasks.
 
-[@Rippling](https://x.com/Rippling)
+#### Enterprise GPT
 
-, 
+Give all employees access to information and tools in a compliant manner so they can perform their best.
 
-[@Cisco](https://x.com/Cisco)
+#### Customer Support
 
-,
+Improve the speed and efficiency of support teams that handle customer requests.
 
-Show more
+#### Research
 
-![Image 4](https://pbs.twimg.com/amplify_video_thumb/1980678860472492032/img/oD4Pq07IY-DzFtks.jpg)
+Synthesize data, summarize sources, and uncover insights faster for knowledge work.
 
-45
+#### Code generation
 
-128
+Accelerate software development by automating code writing, refactoring, and documentation for your team.
 
-648
+#### AI Search
 
-[148K](https://x.com/LangChainAI/status/1980678921839603948/analytics)
+Offer a concierge experience to guide users to products or information in a personalized way.
 
-[![Image 5](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://x.com/LangChainAI)
+## Get inspired by companies who have done it
 
-[LangChain](https://x.com/LangChainAI)
+Teams building with LangChain products are driving operational efficiency, increasing discovery & personalization, and delivering premium products that generate revenue.
 
-[@LangChainAI](https://x.com/LangChainAI)
+[Read their stories](/customers)
 
-·
+[Financial Services
 
-[Nov 6, 2023](https://x.com/LangChainAI/status/1721605114639892493)
+Klarna's AI assistant reduced customer query resolution time by 80%, powered by LangSmith and LangGraph.](https://blog.langchain.dev/customers-klarna/)[B2B SaaS
 
-![Image 6: 🦜](https://abs-0.twimg.com/emoji/v2/svg/1f99c.svg)![Image 7: 🤖](https://abs-0.twimg.com/emoji/v2/svg/1f916.svg)OpenGPTs OpenAI just announced "GPTs" - chatbots augmented with custom tools and custom instructions that anyone can create We're excited to announce OpenGPTs - a open source GitHub repo enabling similar functionality. This will allow: ![Image 8: 🛠️](https://abs-0.twimg.com/emoji/v2/svg/1f6e0.svg)Easier tool definition ![Image 9: 🧠](https://abs-0.twimg.com/emoji/v2/svg/1f9e0.svg)Usage of
+Elastic’s AI security assistant, built with LangSmith and LangGraph, cut alert response times for 20,000+ customers.](https://blog.langchain.com/langchain-partners-with-elastic-to-launch-the-elastic-ai-assistant/)[AI/ML
 
-Show more
+Rakuten’s GenAI platform, built with LangGraph and LangSmith, lets employees across 70+ businesses create AI agents.](https://www.youtube.com/watch?v=gD1LIjCkuA8&list=PLfaIDFEXuae1aUEcWMYTKwbnc1E2cFH7Y&index=5)
 
-[![Image 10: Image](https://pbs.twimg.com/media/F-RehxYaYAEyKnm?format=jpg&name=small)](https://x.com/LangChainAI/status/1721605114639892493/photo/1)
+#### Learn alongside the 1 million+ practitioners who are pushing the industry forward
 
-64
+#### 90M
 
-484
+#### Monthly downloads
 
-1.9K
+#### 100k+
 
-[450K](https://x.com/LangChainAI/status/1721605114639892493/analytics)
+#### GitHub stars
 
-[![Image 11](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://x.com/LangChainAI)
+#### #1
 
-[LangChain](https://x.com/LangChainAI)
+#### Downloaded agent framework
 
-[@LangChainAI](https://x.com/LangChainAI)
+#### 1000
 
-·
+#### Integrations
 
-[Aug 1, 2024](https://x.com/LangChainAI/status/1819052975295270949)
+## Ready to start shipping  reliable agents faster?
 
-![Image 12: 🚀](https://abs-0.twimg.com/emoji/v2/svg/1f680.svg)Announcing LangGraph Studio: The first agent IDE LangGraph Studio offers a new way to develop LLM applications by providing a specialized agent IDE that enables visualization, interaction, and debugging of complex agentic applications With visual graphs and the ability to
+Get started with tools from the LangChain product suite for every step of the agent development lifecycle.
 
-Show more
-
-![Image 13](https://pbs.twimg.com/ext_tw_video_thumb/1819050889925042187/pu/img/JNCZAhBa_oEIW14A.jpg)
-
-47
-
-415
-
-1.8K
-
-[185K](https://x.com/LangChainAI/status/1819052975295270949/analytics)
-
-[![Image 14](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://x.com/LangChainAI)
-
-[LangChain](https://x.com/LangChainAI)
-
-[@LangChainAI](https://x.com/LangChainAI)
-
-·
-
-[Jan 4](https://x.com/LangChainAI/status/1875603106328637905)
-
-![Image 15: 🎃](https://abs-0.twimg.com/emoji/v2/svg/1f383.svg)Khoj - your AI second brain Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, qwen, mistral) [https://github.com/khoj-ai/khoj](https://t.co/kv74zyBxyI)
-
-[![Image 16: Image](https://pbs.twimg.com/media/Ggd4UCQbIAAaKfY?format=jpg&name=small)](https://x.com/LangChainAI/status/1875603106328637905/photo/1)
-
-25
-
-280
-
-1.6K
-
-[108K](https://x.com/LangChainAI/status/1875603106328637905/analytics)
-
-[![Image 17](https://pbs.twimg.com/profile_images/1980278545692676096/r3u3CYOs_normal.jpg)](https://x.com/LangChainAI)
-
-[LangChain](https://x.com/LangChainAI)
-
-[@LangChainAI](https://x.com/LangChainAI)
-
-·
-
-[Jan 15](https://x.com/LangChainAI/status/1879576930347073873)
-
-![Image 18: 📲](https://abs-0.twimg.com/emoji/v2/svg/1f4f2.svg) Open Source Social Media Agent For the past three weeks, we've been using an ambient agent to draft and schedule social media posts highlighting community content Think of it as an "AI Social media intern" Today we're releasing it as an open source repo ![Image 19: 🧵](https://abs-0.twimg.com/emoji/v2/svg/1f9f5.svg)
-
-[![Image 20: The image showcases a screenshot of a software interface titled "LangGraph" with the text "Open Source Social Media Agent" prominently displayed. The interface appears to be part of a tool named AgentInbox, which is used for generating and scheduling social media posts. The background features a gradient of purple and red, giving a modern and tech-savvy aesthetic. The post context reveals that this tool has been utilized for three weeks to draft and schedule social media posts, highlighting community content, and is now being released as an open-source repository. This suggests the image is promoting the tool's functionality and its availability to the public.](https://pbs.twimg.com/media/GhWY2QwakAA25S8?format=jpg&name=small)](https://x.com/LangChainAI/status/1879576930347073873/photo/1)
-
-26
-
-203
-
-1.3K
-
-[198K](https://x.com/LangChainAI/status/1879576930347073873/analytics)
-
-New to X?
----------
-
-Sign up now to get your own personalized timeline!
-
-Sign up with Apple
-
-[Create account](https://x.com/i/flow/signup)
-
-By signing up, you agree to the [Terms of Service](https://x.com/tos) and [Privacy Policy](https://x.com/privacy), including [Cookie Use.](https://help.x.com/rules-and-policies/twitter-cookies)
-
-[Terms of Service](https://x.com/tos)
-
-|
-
-[Privacy Policy](https://x.com/privacy)
-
-|
-
-[Cookie Policy](https://support.x.com/articles/20170514)
-
-|
-
-[Accessibility](https://help.x.com/resources/accessibility)
-
-|
-
-[Ads info](https://business.x.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo)
-
-|
-
-More
-
-© 2025 X Corp.
+[Get a demo](/contact-sales)[Sign up for free](https://smith.langchain.com/)

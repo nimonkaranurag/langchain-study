@@ -1,27 +1,49 @@
-Sign in for Software Support and Product Help - GitHub Support
+## LangChain Academy
 
-===============
-[Skip to content](https://support.github.com/#start-of-content)
+ 
 
-[GitHub Support](https://support.github.com/)
 
-[Sign in](https://support.github.com/session/login?return_to=/request/landing)
+## Level up with LangChain Academy
 
-Open column options
+Dive into self-paced, comprehensive courses designed to help you build relevant skills and knowledge to succeed with LangChain products.
 
-[GitHub Support](https://support.github.com/)
+[Watch Intro Video](https://www.youtube.com/watch?v=4dh0b-gM1m0)
 
-Welcome to GitHub Support
--------------------------
+## Course Categories
 
-Sign in for support and to view your existing tickets
+* [### Quickstart](/collections/quickstart)
+* [### Foundation](/collections/foundation)
+* [### Project](/collections/project)
 
-[Sign in via GitHub](https://support.github.com/session/login)Sign in via GitHub - Data-Resident[Sign up for GitHub](https://github.com/signup)[Can't sign in?](https://support.github.com/contact/cannot_sign_in)
+## Featured Courses
 
-Loading
+* [### Quickstart: LangGraph Essentials - Python
 
-© 2025 GitHub, Inc.
+   Course 
 
-[Terms](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)[Privacy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)[Contacting Support](https://docs.github.com/en/support/contacting-github-support)[Manage cookies](https://support.github.com/#)
+  Learn the essential components of LangGraph — including State, Nodes, Edges, and Memory — and put them into practice by building an email workflow.](/courses/langgraph-essentials-python)
+* [### Quickstart: LangGraph Essentials - TypeScript
 
-[![Image 1: Twitter](https://support-assets.githubassets.com/packs/static/app/assets/images/footer/twitter-0f757c30303936ee3905.svg)](https://twitter.com/github)[![Image 2: Facebook](https://support-assets.githubassets.com/packs/static/app/assets/images/footer/facebook-b91e34eaebe0060af556.svg)](https://www.facebook.com/GitHub)[![Image 3: LinkedIn](https://support-assets.githubassets.com/packs/static/app/assets/images/footer/linkedin-7fa1568cc4fcd510c8fd.svg)](https://www.linkedin.com/company/github)[![Image 4: YouTube](https://support-assets.githubassets.com/packs/static/app/assets/images/footer/youtube-7718be0bb97da4e845d2.svg)](https://youtube.com/github)[![Image 5: Twitch](https://support-assets.githubassets.com/packs/static/app/assets/images/footer/twitch-b25488e773a895e86eb3.svg)](https://www.twitch.tv/github)[![Image 6: TikTok](https://support-assets.githubassets.com/packs/static/app/assets/images/footer/tiktok-bcf6b169f0ae70a90f93.svg)](https://www.tiktok.com/@github)[![Image 7: Github](https://support-assets.githubassets.com/packs/static/app/assets/images/footer/github-mark-05574c4cb5a730cda292.svg)](https://github.com/)
+   Course 
+
+  Learn the essential components of LangGraph — including State, Nodes, Edges, and Memory — and put them into practice by building an email workflow.](/courses/quickstart-langgraph-essentials-typescript)
+* [### Project: Deep Agents with LangGraph
+
+   Course 
+
+  Learn the fundamental characteristics of Deep Agents and how to implement your own Deep Agent for complex, long-running tasks.](/courses/deep-agents-with-langgraph)
+
+[See all courses](/collections)
+
+## Ready to start shipping reliable GenAI apps faster?
+
+Get in touch with our team to see how LangSmith can accelerate your agent development lifecycle. We’ll answer your questions and walk you through a tailored demo.
+
+[Contact Sales](https://www.langchain.com/contact-sales)
+
+## Learn with the community
+
+Learn alongside other builders at in-person LangChain meetups.   
+Subscribe to our calendar to be the first to know about upcoming events near you.
+
+ 

@@ -1,153 +1,233 @@
-# Resources to help enterprise teams do their best work
+[Skip to content](#start-of-content)   
+ 
 
-Set your business up for success with solutions to any number of common questions.
+[GitHub Universe 2025](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post)
 
-[Learn about DevSecOps](https://github.com/solutions/devsecops)[Learn about DevOps](https://github.com/solutions/devops)
+---
 
-### [Copilot](/copilot-demo/)
+Catch up on the latest keynote highlights.  • 00 : 00 : 00 : 00
 
-Bring the power of generative AI to engineering teams with GitHub Copilot. Learn how you can maximize developer velocity and innovation.
+---
 
-Read more about Copilot
+  [See what’s new](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post) 
 
-### [Security](/security/what-is-github-advanced-security/)
 
-Stay one step ahead by shipping your software securely within GitHub: Identify and fix security issues directly in the developer flow.
+## Navigation Menu
 
-Read more about Security
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Freadme)
 
-### [Why GitHub?](/devops/tools/compare/)
+# Search code, repositories, users, issues, pull requests...
 
-Learn why more than 90% of the Fortune 100 use GitHub—the leading developer platform compared to alternative solutions.
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-Compare GitHub
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Freadme)
 
-## GitHub Learning Pathways
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Freadme&source=header)
 
-Become a GitHub expert in CI/CD, application security, governance, and AI-developer tools through expert-guided learning pathways with tips and insights from leading enterprise organizations.
+You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
-[Start your learning journey](/learn/pathways/)
+{{ message }}
 
-## Latest articles
+# The ReadME Project
 
-[See all articles](/articles/)
+## Featured stories
 
-### Playbook series: Creating clear AI policies and guardrails
+Featured Article
 
-By creating clear, practical policies and a framework for tiered tool usage, companies can build the trust necessary to empower employees and safely scale AI adoption.
+[### Coding accessibility: Software by the blind, for the blind](/readme/featured/nvda-coding-accessibility-software-blind)
 
-[AI](/topics/ai/), [Software Development](/topics/software-development/)
+The NVDA screen reader has helped empower a new generation of blind and low-vision developers
 
-### October ‘25 enterprise roundup
+Featured Article
 
-In case you missed it…
+[### Coding accessibility: Disability as catalyst for creativity](/readme/featured/disability-creativity)
 
-[Platform](/topics/platform/), [Security](/topics/security/), [AI](/topics/ai/), [Software Development](/topics/software-development/)
+Faced with accessibility barriers, developer Paul Chiou turns obstacles into innovative solutions.
 
-### How GitHub's Licensing team used AI agents to champion accessibility
+Annalu Waller
 
-Facing a critical accessibility deadline, a GitHub team decided to experiment with a new approach: delegating the work to AI agents.
+[### Champion accessibility to unleash untapped potential](/readme/stories/annalu-waller)
 
-[AI](/topics/ai/), [Software Development](/topics/software-development/)
+Dr. Annalu Waller on the intricate, interdependent network of support that shapes our lives.
 
-## Browse by topic
+Featured Article
 
-Explore all the GitHub offerings by topic.
+[### Coding accessibility: How Della found her voice with open source AAC](/readme/featured/open-source-aac)
 
-[See all topics](/topics/)
+When proprietary apps failed, Della’s brother built an app that incorporated her needs and feedback into the design.
 
-[AI](/topics/ai/)
+Featured Article
 
-[Case Studies](/topics/case-studies/)
+[### Coding accessibility: Building autonomy with AI](/readme/featured/accessibility-artificial-intelligence)
 
-[Cloud](/topics/cloud/)
+After bringing Braille to the digital world and creating the first screen reader for the web, Dr. Asakawa is now working on an AI-enabled suitcase to help blind people navigate the world independently.
 
-[Developer Productivity](/topics/developer-productivity/)
+[The ReadME Project](/readme)
 
-[DevOps](/topics/devops/)
+## Stories by topic
 
-[Enterprise](/topics/enterprise/)
+The ReadME Project amplifies the voices of the developer community by telling stories about:
 
-[GitHub Actions](/topics/github-actions/)
+* [AI](/readme/topics/artificial-intelligence) ,
+* [Application Security](/readme/topics/application-security) ,
+* [Career Development](/readme/topics/career-development) ,
+* [DevOps & Automation](/readme/topics/devops-automation) ,
+* and [more topics](/readme/topics).
 
-[GitHub Advanced Security](/topics/github-advanced-security/)
+## Community stories
 
-[GitHub Enterprise](/topics/github-enterprise/)
+[Maintainer](/readme/topics/maintainer)
 
-[Innersource](/topics/innersource/)
+THE README PODCAST // EPISODE 31
 
-[Integrations](/topics/integrations/)
+[### Bridging code and community](/readme/podcast/code-and-community)
 
-[Open Source](/topics/opensource/)
+Navigating open source in a regulated environment, the crucial role of non-code contributions to open source success, and lessons from scaling projects like Kubernetes.
 
-[Platform](/topics/platform/)
+[AI](/readme/topics/artificial-intelligence)
 
-[Product Management](/topics/product-management/)
+THE README PODCAST // EPISODE 33
 
-[Security](/topics/security/)
+[### Powering public goods](/readme/podcast/powering-public-goods)
 
-[Security Lab](/topics/security-lab/)
+Exploring developer happiness through the vibrant Laravel community and the impact of digital public goods on open source, AI models, Wikipedia, and more.
 
-[Software Development](/topics/software-development/)
+Anton Mirhorodchenko
 
-[Startups](/topics/startups/)
+[### Harness the power of generative AI for software development](/readme/guides/coding-generative-ai)
 
-[Tools](/topics/tools/)
+Tools like GitHub Copilot and ChatGPT can change the way you build software.
 
-[Web Development](/topics/web-development/)
+Aaron Francis // PlanetScale
 
-[Whitepapers](/topics/whitepapers/)
+[### Finish your projects](/readme/guides/finish-your-projects)
 
-## Latest videos
+Don’t let fear, or that last 10%, hold you back.
 
-[See all videos](/videos/)
+Cassidy Williams // Contenda
 
-### Video and materials released: GitHub Latest Information Webinar held on September 29th
+[### Get your first software developer job](/readme/guides/first-job-in-tech)
 
-This webinar is in Japanese only: GitHub Latest Updates Webinar on September 29th
+Tips, tricks, and general advice for how to get in the door in tech.
 
-[AI](/topics/ai/)
+> [We all have the potential to become who we're meant to be, even when societal and socioeconomic challenges get in our way.](/readme/stories/annalu-waller)
 
-### Video and slides published: GitHub update webinar on Aug 21 (in Korean)
+[Accessibility](/readme/topics/accessibility)
 
-This webinar is in Korean only: Introducing the latest GitHub updates
+[### Champion accessibility to unleash untapped potential](/readme/stories/annalu-waller)
 
-### GitHub Roadmap Webinar, Q3 2025 - The Americas and Europe
+Annalu Waller
 
-Get a first look at what’s next from GitHub
+## The ReadMe Podcast
 
-> “ Designed to empower Developers with access to the tools and features they need for streamlined collaboration.
+ [See all The ReadMe Podcast  stories from The ReadMe Podcast](/readme/podcast)
 
-## Accelerate innovation with the platform developers love
+THE README PODCAST // EPISODE 32
 
-At GitHub, you can build what’s next with the industry’s most complete developer platform. Grow your business by investing in end-to-end software delivery and advanced security capabilities that simplify how you ship software at scale.
+[### (De)coding conventions](/readme/podcast/decoding-conventions)
 
-### [Codespaces](https://github.com/features/codespaces)
+The evolution of TypeScript and the future of coding conventions, AI’s role in improving accessibility, and practical advice on encouraging non-code contributions.
 
-Curate blazing fast developer environments and help your organization be more agile, secure, and efficient.
+THE README PODCAST // EPISODE 30
 
-Learn more
+[### Kelsey Hightower—Present](/readme/podcast/kelsey-hightower)
 
-### [Advanced Security](https://github.com/enterprise/advanced-security)
+Kelsey shares his origin story, insights on the future of Kubernetes, and advice on making complicated technology easier to understand.
 
-Ship secure applications with a community-driven, developer-first approach.
+## Featured Articles
 
-Learn more
+ [See all Featured Articles  stories from Featured Articles](/readme/featured)
 
-### [Actions](https://github.com/features/actions)
+[Programming](/readme/topics/programming)
 
-Automate your software workflows with a powerful DevOps toolkit and built-in CI/CD.
+### [Is Laravel the happiest developer community on the planet?](/readme/featured/laravel-community)
 
-Learn more
+How the PHP framework maintains a perpetual honeymoon period.
 
-### [Packages](https://github.com/features/packages)
+## Developer Stories
 
-Safely publish and consume packages within your organization.
+ [See all Developer Stories  stories from Developer Stories](/readme/stories)
 
-Learn more
+Anton Mirhorodchenko
 
-## Questions? Reach out to our sales team
+[### Realizing potential with AI](/readme/stories/anton-mirhorodchenko)
 
-Over 100M developers and 4M+ organizations worldwide trust GitHub to ship better software. Need help picking a plan? No problem—we’ll walk you through each one.
+Anton uses AI to write code and tackle more projects.
 
-[Find my plan](https://github.com/pricing)
+Kyler Middleton
+
+[### From fixing computers on farms to democratizing DevOps](/readme/stories/kyler-middleton)
+
+Kyler discusses her path from rural tech repair jobs to revolutionizing tech education.
+
+Aaron Gustafson
+
+[### Advancing inclusion with progressive enhancement](/readme/stories/aaron-gustafson)
+
+Aaron’s journey towards progressive enhancement and inclusive design.
+
+Ruth Ikegah
+
+[### Putting the African open source community on the map](/readme/stories/ruth-ikegah)
+
+Ruth’s dream is to show people that Africans aren’t just consumers of open source: They’re creators as well.
+
+## Guides
+
+ [See all Guides  stories from Guides](/readme/guides)
+
+[Application Security](/readme/topics/application-security)
+
+Denys Lashchevskyi // Betsson
+
+[### A beginner’s guide to running and managing custom CodeQL queries](/readme/guides/custom-codeql-queries)
+
+Transform your code into a structured database that you can use to surface security vulnerabilities and discover new insights.
+
+[Career Development](/readme/topics/career-development)
+
+Nick Penston // Fidelity Investments
+
+[### Scaling standards and community in your organization](/readme/guides/federated-model)
+
+Learn how to implement open source community ideas to spread best practices.
+
+[Open Source](/readme/topics/open-source)
+
+Mike Gifford // CivicActions
+
+[### Treat accessibility issues as bugs, not feature requests](/readme/guides/fix-accessibility-bugs)
+
+Follow Drupal’s lead: Prioritize and systematically squash accessibility bugs.
+
+Niek Palm // Philips
+
+[### Provisioning self-hosted GitHub Actions runners on demand](/readme/guides/github-runners-philips)
+
+How Philips optimized their CI/CD process using GitHub Actions and self-hosted runners.
+
+## About The ReadME Project
+
+Coding is usually seen as a solitary activity, but it’s actually the world’s largest community effort led by open source maintainers, contributors, and teams. These unsung heroes put in long hours to build software, fix issues, field questions, and manage communities.
+
+The ReadME Project is part of GitHub’s ongoing effort to amplify the voices of the developer community. It’s an evolving space to engage with the community and explore the stories, challenges, technology, and culture that surround the world of open source.
+
+### Follow us:
+
+#### [Nominate a developer](https://github.com/readme/nominate)
+
+Nominate inspiring developers and projects you think we should feature in The ReadME Project.
+
+#### [Support the community](https://github.com/sponsors)
+
+Recognize developers working behind the scenes and help open source projects get the resources they need.
+
+#### [Sign up for the newsletter](https://resources.github.com/newsletter-open-source/)
+
+Sharpen your open source skills with tips, tools, and insights. Delivered monthly.
+
+   
+
+You can’t perform that action at this time.
+
+ 

@@ -1,163 +1,322 @@
-[Built for fast-moving teams](/startups)[Scalable for large organizations](/enterprise)[Seamless migration tools](/switch)
+[Skip to content](#start-of-content)   
+ 
 
-[Join our growing team](/careers)[Wall of Love
+[GitHub Universe 2025](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post)
 
-Customer testimonials](/wall-of-love)[Guides
+---
 
-Guide to technical writing](/guides)
+Catch up on the latest keynote highlights.  • 00 : 00 : 00 : 00
 
-Documentation
+---
 
-Guides
+  [See what’s new](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post) 
 
-[Getting Started
 
-Deploy in minutes](/docs)[Components
+## Navigation Menu
 
-Customizable components library](/docs/components)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fcustomer-stories)
 
-Developers
+# Search code, repositories, users, issues, pull requests...
 
-[API Reference
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-Build integrations and custom workflows](/docs/api-reference)[Changelog
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fcustomer-stories)
 
-Learn what's new](/docs/changelog)
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fcustomer-stories&source=header)
 
-[Customers](/customers)[Blog](/blog)[Pricing](/pricing)
+You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
-[Contact sales](/contact/sales)[Start for free](https://dashboard.mintlify.com/signup)
+{{ message }}
 
-[Contact sales](/contact/sales)[Start for free](https://dashboard.mintlify.com/signup)
+[Customer Stories](/customer-stories)
 
-# The Intelligent Documentation Platform
+[Enterprise](/customer-stories/enterprise) [Team](/customer-stories/team) [All stories](/customer-stories/all)
 
-Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for collaboration.
+[Start a free trial](/organizations/enterprise_plan?ref_cta=Start+a+free+trial&ref_loc=customer+stories+nav&ref_page=%2Fcustomer-stories)
 
-## Built for the intelligence age
+# Meet the companies who build with GitHub
 
-Integrate AI into every part of your docs lifecycle. Woven into how your knowledge is written, maintained, and understood by both users and LLMs.
+[See all stories](/customer-stories/all)
 
-LLMs.txt & MCP
+[With 12,000 developers using GitHub Copilot, Accenture doubles down on GitHub’s platform.
 
-### Built for both people and AI
+Read the story](/customer-stories/accenture) [Automotive excellence at Mercedes-Benz and seamless developer experience on GitHub go hand in hand.
 
-Ensure your product shows up in the AI workflows users already rely on. We support llms.txt, MCP, and whatever comes next.
+Read the story](/customer-stories/mercedes-benz) [Cathay embraces AI-powered development to deliver securely at scale.
 
-agent
+Read the story](/customer-stories/cathay)
 
-### Self-updating knowledge management
+## The world's largest developer platform
 
-Draft, edit, and maintain content with a context-aware agent. Move faster and more consistently without the documentation debt.
+Leading organizations choose GitHub to plan, build, secure and ship software.
 
-Assistant
+* 180M+ Developers
+* 90% Fortune 100
+* 4M+ Organizations
 
-#### Intelligent assistance for your users
+Businesses that utilize GitHub Enterprise:
 
-Turn every documentation visit into a guided conversation. Your AI assistant understands context and delivers what users need.
+## GitHub Enterprise provides an end-to-end developer platform to accelerate businesses.
 
-#### Enterprise-reinvention
+* [All](/customer-stories/enterprise?industry=All#browse)
+* [Advertising & Marketing](/customer-stories/enterprise?industry=Advertising%2B%2526%2BMarketing#browse)
+* [Automotive](/customer-stories/enterprise?industry=Automotive#browse)
+* [Education](/customer-stories/enterprise?industry=Education#browse)
+* [Energy & Utilities](/customer-stories/enterprise?industry=Energy%2B%2526%2BUtilities#browse)
+* [Financial services](/customer-stories/enterprise?industry=Financial%2Bservices#browse)
+* [Food & Beverage](/customer-stories/enterprise?industry=Food%2B%2526%2BBeverage#browse)
+* [Government](/customer-stories/enterprise?industry=Government#browse)
+* [Healthcare & Life Sciences](/customer-stories/enterprise?industry=Healthcare%2B%2526%2BLife%2BSciences#browse)
+* [Manufacturing](/customer-stories/enterprise?industry=Manufacturing#browse)
+* [Media & Entertainment](/customer-stories/enterprise?industry=Media%2B%2526%2BEntertainment#browse)
+* [Nonprofit](/customer-stories/enterprise?industry=Nonprofit#browse)
+* [Professional services](/customer-stories/enterprise?industry=Professional%2Bservices#browse)
+* [Real Estate](/customer-stories/enterprise?industry=Real%2BEstate#browse)
+* [Retail & ecommerce](/customer-stories/enterprise?industry=Retail%2B%2526%2Becommerce#browse)
+* [Social & Messaging](/customer-stories/enterprise?industry=Social%2B%2526%2BMessaging#browse)
+* [Software, Hardware & Technology](/customer-stories/enterprise?industry=Software%252C%2BHardware%2B%2526%2BTechnology#browse)
+* [Telecommunications](/customer-stories/enterprise?industry=Telecommunications#browse)
+* [Transportation & Logistics](/customer-stories/enterprise?industry=Transportation%2B%2526%2BLogistics#browse)
+* [Travel & Hospitality](/customer-stories/enterprise?industry=Travel%2B%2526%2BHospitality#browse)
 
-### Bring intelligence to enterprise knowledge
+     
 
-Modernize without the rebuild with enterprise-grade professional service & security.
+* [All](/customer-stories/enterprise?feature=All#browse)
+* [GitHub Actions](/customer-stories/enterprise?feature=GitHub%2BActions#browse)
+* [GitHub Advanced Security](/customer-stories/enterprise?feature=GitHub%2BAdvanced%2BSecurity#browse)
+* [GitHub Codespaces](/customer-stories/enterprise?feature=GitHub%2BCodespaces#browse)
+* [GitHub Copilot](/customer-stories/enterprise?feature=GitHub%2BCopilot#browse)
+* [GitHub Discussions](/customer-stories/enterprise?feature=GitHub%2BDiscussions#browse)
+* [GitHub Enterprise](/customer-stories/enterprise?feature=GitHub%2BEnterprise#browse)
+* [GitHub Expert Services](/customer-stories/enterprise?feature=GitHub%2BExpert%2BServices#browse)
+* [GitHub Issues](/customer-stories/enterprise?feature=GitHub%2BIssues#browse)
+* [GitHub Packages](/customer-stories/enterprise?feature=GitHub%2BPackages#browse)
+* [GitHub Team](/customer-stories/enterprise?feature=GitHub%2BTeam#browse)
 
-[Explore for enterprise](/enterprise)
+     
 
-#### Build with partnership
+* [All](/customer-stories/enterprise?region=All#browse)
+* [Americas](/customer-stories/enterprise?region=Americas#browse)
+* [Asia Pacific](/customer-stories/enterprise?region=Asia%2BPacific#browse)
+* [Europe](/customer-stories/enterprise?region=Europe#browse)
+* [Middle East & Africa](/customer-stories/enterprise?region=Middle%2BEast%2B%2526%2BAfrica#browse)
 
-Direct, white-glove access to our documentation experts. Dedicated migration support and guidance tailored to your setup, and elevated support SLAs.
+     
 
-#### Compliance and access control
+* [Startup](/customer-stories/enterprise?size=Startup#browse)
+* [Growth](/customer-stories/enterprise?size=Growth#browse)
+* [Enterprise](/customer-stories/enterprise?size=Enterprise#browse)
 
-Compliant with SOC 2, GDPR, and ISO/27001 to meet your internal and external data requirements. Secure access and provisioning with SAML-based SSO.
+[Learn more about Enterprise](/enterprise)   [View Enterprise stories](/customer-stories/enterprise)
 
-[Customer story
+[Read more about 3M's customer story
 
-### See how Anthropic accelerates AI development with Mintlify
+### 3M
 
-Read story
+3M transforms its software toolchain to bring cutting-edge science to customers, faster.
 
-2M+
+Read story](/customer-stories/3m)
 
-Monthly active developers
+[Read more about ADEO's customer story
 
-3+
+### ADEO
 
-Products serviced: Claude API, MCP, and Claude Code](/customers/anthropic)
+ADEO works more efficiently across teams and time zones with a global innersource program.
 
-customers
+Read story](/customer-stories/adeo)
 
-## Unlock knowledge for any industry
+[Read more about Adobe's customer story
 
-From frontier AI companies to consumer brands, leaders across industries scale with Mintlify.
+### Adobe
 
-[How Perplexity transformed its documentation into an AI-native developer experience that matches the pace of its product development
+Adobe’s family of technology services finds common ground in GitHub.
 
-Read story](/customers/perplexity)
+Read story](/customer-stories/adobe)
 
-[How Cursor scaled with just 12 employees by turning documentation into a self-serve engine that lets developers find answers instantly while their lean team ships product at breakneck speed.
+[Read more about Ahold Delhaize's customer story
 
-Read story](/customers/cursor)
+### Ahold Delhaize
 
-[How X is using Mintlify to power the developer experience for the global town square
+Ahold Delhaize keeps engineers focused on code through automation with GitHub Enterprise and Actions.
 
-Read story](/customers/x)
+Read story](/customer-stories/ahold-delhaize)
 
-[How Kalshi helps developers discover what's possible faster and ultimately drive broader adoption of its prediction markets.
+[Read more about American Airlines's customer story
 
-Read story](/customers/kalshi)
+### American Airlines
 
-[How Cognition scaled their documentation to mirror their product ethods
+American Airlines fosters innovation by using GitHub as an incubator for ideas.
 
-Read story](/customers/cognition)
+Read story](/customer-stories/american-airlines)
 
-[How Together AI scaled their documentation into a developer experience that mirrors their own ethos
+[Read more about Amplifon's customer story
 
-Read story](/customers/togetherai)
+### Amplifon
 
-[How Laravel scaled world-class documentation across 10+ products
+Amplifon centralizes development on GitHub to accelerate healthcare innovation.
 
-Read story](/customers/laravel)
+Read story](/customer-stories/amplifon)
 
-[Learn how Replit transformed their documentation to scale with their rapid growth
+GitHub Enterprise
 
-Read story](/customers/replit)
+### Duolingo empowers its engineers to be force multipliers for expertise with GitHub Copilot.
 
-[How Glean unified its scattered documentation from Google Docs to Zendesk to custom markdown into a single branded hub where enterprise customers self-serve answers and developers ship faster.
+ [Read more about Duolingo and GitHub's story Read story](/customer-stories/duolingo) 
 
-Read story](/customers/glean)
+* 25% increase in developer speed with GitHub Copilot
+* 1m set-up time for largest repo with Codespaces
+* 67% decrease in median code review turnaround time
+* 70% increase in pull requests
 
-[How Lovable scaled their onboarding and support with Mintlify's AI-native documentation
+Problem
+:   Inconsistent standards and workflows limited developer mobility and efficiency, limiting Duolingo’s ability to expand its content and deliver on its core mission.
 
-Read story](/customers/lovable)
+Solution
+:   GitHub Copilot, Codespaces, and custom API integrations enforce code consistency, accelerate developer speed, and remove the barriers to using engineering as a force multiplier for expertise.
 
-[How Vercel scaled their API reference collection with Mintlify to meet the needs of their growing developer community
+Products
+:   * [GitHub Enterprise](/enterprise)
+    * [GitHub Codespaces](/features/codespaces)
+    * [GitHub Copilot](/features/copilot)
 
-Read story](/customers/vercel)
+## Discover how high-growth companies innovate faster with GitHub Team.
 
-[Read more about how Fidelity meets enterprise-level documentation needs with Mintlify
+* [All](/customer-stories/team?industry=All#browse)
+* [Advertising & Marketing](/customer-stories/team?industry=Advertising%2B%2526%2BMarketing#browse)
+* [Automotive](/customer-stories/team?industry=Automotive#browse)
+* [Education](/customer-stories/team?industry=Education#browse)
+* [Energy & Utilities](/customer-stories/team?industry=Energy%2B%2526%2BUtilities#browse)
+* [Financial services](/customer-stories/team?industry=Financial%2Bservices#browse)
+* [Food & Beverage](/customer-stories/team?industry=Food%2B%2526%2BBeverage#browse)
+* [Government](/customer-stories/team?industry=Government#browse)
+* [Healthcare & Life Sciences](/customer-stories/team?industry=Healthcare%2B%2526%2BLife%2BSciences#browse)
+* [Manufacturing](/customer-stories/team?industry=Manufacturing#browse)
+* [Media & Entertainment](/customer-stories/team?industry=Media%2B%2526%2BEntertainment#browse)
+* [Nonprofit](/customer-stories/team?industry=Nonprofit#browse)
+* [Professional services](/customer-stories/team?industry=Professional%2Bservices#browse)
+* [Real Estate](/customer-stories/team?industry=Real%2BEstate#browse)
+* [Retail & ecommerce](/customer-stories/team?industry=Retail%2B%2526%2Becommerce#browse)
+* [Social & Messaging](/customer-stories/team?industry=Social%2B%2526%2BMessaging#browse)
+* [Software, Hardware & Technology](/customer-stories/team?industry=Software%252C%2BHardware%2B%2526%2BTechnology#browse)
+* [Telecommunications](/customer-stories/team?industry=Telecommunications#browse)
+* [Transportation & Logistics](/customer-stories/team?industry=Transportation%2B%2526%2BLogistics#browse)
+* [Travel & Hospitality](/customer-stories/team?industry=Travel%2B%2526%2BHospitality#browse)
 
-Read story](/customers/fidelity)
+     
 
-[Anaconda freed its engineers from maintaining custom documentation infrastructure to focus on what matters: helping 50 million data scientists build better models faster.
+* [All](/customer-stories/team?feature=All#browse)
+* [GitHub Actions](/customer-stories/team?feature=GitHub%2BActions#browse)
+* [GitHub Advanced Security](/customer-stories/team?feature=GitHub%2BAdvanced%2BSecurity#browse)
+* [GitHub Codespaces](/customer-stories/team?feature=GitHub%2BCodespaces#browse)
+* [GitHub Copilot](/customer-stories/team?feature=GitHub%2BCopilot#browse)
+* [GitHub Discussions](/customer-stories/team?feature=GitHub%2BDiscussions#browse)
+* [GitHub Enterprise](/customer-stories/team?feature=GitHub%2BEnterprise#browse)
+* [GitHub Expert Services](/customer-stories/team?feature=GitHub%2BExpert%2BServices#browse)
+* [GitHub Issues](/customer-stories/team?feature=GitHub%2BIssues#browse)
+* [GitHub Packages](/customer-stories/team?feature=GitHub%2BPackages#browse)
+* [GitHub Team](/customer-stories/team?feature=GitHub%2BTeam#browse)
 
-Read story](/customers/anaconda)
+     
 
-### Make documentation your winning advantage
+* [All](/customer-stories/team?region=All#browse)
+* [Americas](/customer-stories/team?region=Americas#browse)
+* [Asia Pacific](/customer-stories/team?region=Asia%2BPacific#browse)
+* [Europe](/customer-stories/team?region=Europe#browse)
+* [Middle East & Africa](/customer-stories/team?region=Middle%2BEast%2B%2526%2BAfrica#browse)
 
-Join the leaders of tomorrow to future proof your documentation today.
+     
 
-[Get started for free](https://dashboard.mintlify.com/signup)[Get a demo](/contact/sales)
+* [Startup](/customer-stories/team?size=Startup#browse)
+* [Growth](/customer-stories/team?size=Growth#browse)
+* [Enterprise](/customer-stories/team?size=Enterprise#browse)
 
-#### Pricing on your terms
+[Learn more about Team](/team)   [View Team stories](/customer-stories/team)
 
-Pick the plan that works best for you
+[Read more about Trustpilot's customer story
 
-[Pricing details](/pricing)
+### Trustpilot
 
-#### Start building
+Global review platform Trustpilot uses GitHub Team to build a better product, faster, with 300 releases per week.
 
-Deploy your documentation in minutes
+Read story](/customer-stories/trustpilot)
 
-[Quickstart](/docs)
+[Read more about Buffer's customer story
+
+### Buffer
+
+Buffer goes from siloed to synced for better production releases.
+
+Read story](/customer-stories/buffer)
+
+[Read more about Cesium's customer story
+
+### Cesium
+
+Cesium leverages an open source community to support the development of 3D geospatial applications.
+
+Read story](/customer-stories/cesium)
+
+[Read more about Knock's customer story
+
+### Knock
+
+Knock pivots to new products, with the help of GitHub’s fast, flexible developer workflows.
+
+Read story](/customer-stories/knock)
+
+[Read more about Tray.io's customer story
+
+### Tray.io
+
+GitHub Team helps the general automation platform build, package, and deploy code faster than ever.
+
+Read story](/customer-stories/trayio)
+
+[Read more about Sketch's customer story
+
+### Sketch
+
+Sketch streamlines their workflows to provide teams with a comprehensive digital design editor.
+
+Read story](/customer-stories/sketch)
+
+### Here's what software leaders have to say about GitHub Testimonials from our developers.
+
+1 / 4 1 of 4
+
+## What will your story be?
+
+Start collaborating with your team on GitHub
+
+### Free
+
+The basics for individuals and organizations
+
+**$0 USD** per month
+
+ [Create a free organization](/account/organizations/new?plan=free&ref_cta=Create+a+free+organization&ref_loc=Footer+cards&ref_page=%2Fcustomer-stories)
+
+### Team
+
+Advanced collaboration for individuals and organizations
+
+**$4 USD** per month
+
+ [Continue with Team](/join?plan=business&ref_cta=Continue+with+Team&ref_loc=Footer+Cards&ref_page=%2Fcustomer-stories)
+
+### Enterprise
+
+Security, compliance, and flexible deployment
+
+**$21 USD** per month
+
+ [Enterprise](/organizations/enterprise_plan?ref_cta=Enterprise&ref_loc=Footer+Cards&ref_page=%2Fcustomer-stories)
+
+Want to use GitHub on your own?   
+ [Check out our plans for individuals](/pricing)
+
+   
+
+You can’t perform that action at this time.
+
+ 

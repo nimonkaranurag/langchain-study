@@ -47,115 +47,95 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 * [Agent Chat UI](/oss/python/langchain/ui)
 * [Observability](/oss/python/langchain/observability)
 
-* [Install](#install)
-* [Transport types](#transport-types)
-* [Use MCP tools](#use-mcp-tools)
-* [Custom MCP servers](#custom-mcp-servers)
-* [Stateful tool usage](#stateful-tool-usage)
-* [Additional resources](#additional-resources)
+* [Interrupt decision types](#interrupt-decision-types)
+* [Configuring interrupts](#configuring-interrupts)
+* [Responding to interrupts](#responding-to-interrupts)
+* [Decision types](#decision-types)
+* [Execution lifecycle](#execution-lifecycle)
+* [Custom HITL logic](#custom-hitl-logic)
 
 [Advanced usage](/oss/python/langchain/guardrails)
 
-# Model Context Protocol (MCP)
+# Human-in-the-loop
 
-[Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how applications provide tools and context to LLMs. LangChain agents can use tools defined on MCP servers using the [`langchain-mcp-adapters`](https://github.com/langchain-ai/langchain-mcp-adapters) library.
+The Human-in-the-Loop (HITL) middleware lets you add human oversight to agent tool calls. When a model proposes an action that might require review — for example, writing to a file or executing SQL — the middleware can pause execution and wait for a decision. It does this by checking each tool call against a configurable policy. If intervention is needed, the middleware issues an [interrupt](https://reference.langchain.com/python/langgraph/types/#langgraph.types.interrupt) that halts execution. The graph state is saved using LangGraph’s [persistence layer](/oss/python/langgraph/persistence), so execution can pause safely and resume later. A human decision then determines what happens next: the action can be approved as-is (`approve`), modified before running (`edit`), or rejected with feedback (`reject`).
 
-## [​](#install) Install
+## [​](#interrupt-decision-types) Interrupt decision types
 
-Install the `langchain-mcp-adapters` library to use MCP tools in LangGraph:
+The middleware defines three built-in ways a human can respond to an interrupt:
 
-Copy
+| Decision Type | Description | Example Use Case |
+| --- | --- | --- |
+| ✅ `approve` | The action is approved as-is and executed without changes. | Send an email draft exactly as written |
+| ✏️ `edit` | The tool call is executed with modifications. | Change the recipient before sending an email |
+| ❌ `reject` | The tool call is rejected, with an explanation added to the conversation. | Reject an email draft and explain how to rewrite it |
 
-Ask AI
+The available decision types for each tool depend on the policy you configure in `interrupt_on`. When multiple tool calls are paused at the same time, each action requires a separate decision. Decisions must be provided in the same order as the actions appear in the interrupt request.
 
-```
-pip install langchain-mcp-adapters pip  install langchain-mcp-adapters
-```
+When **editing** tool arguments, make changes conservatively. Significant modifications to the original arguments may cause the model to re-evaluate its approach and potentially execute the tool multiple times or take unexpected actions.
 
-## [​](#transport-types) Transport types
+## [​](#configuring-interrupts) Configuring interrupts
 
-MCP supports different transport mechanisms for client-server communication:
-
-* **stdio** – Client launches server as a subprocess and communicates via standard input/output. Best for local tools and simple setups.
-* **Streamable HTTP** – Server runs as an independent process handling HTTP requests. Supports remote connections and multiple clients.
-* **Server-Sent Events (SSE)** – a variant of streamable HTTP optimized for real-time streaming communication.
-
-## [​](#use-mcp-tools) Use MCP tools
-
-`langchain-mcp-adapters` enables agents to use tools defined across one or more MCP server.
-
-Accessing multiple MCP servers
+To use HITL, add the middleware to the agent’s `middleware` list when creating the agent. You configure it with a mapping of tool actions to the decision types that are allowed for each action. The middleware will interrupt execution when a tool call matches an action in the mapping.
 
 Copy
 
 Ask AI
 
 ```
-from langchain_mcp_adapters.client import MultiServerMCPClient from langchain_mcp_adapters.client import  MultiServerMCPClient from langchain.agents import create_agent from langchain.agents import  create_agent client = MultiServerMCPClient( client = MultiServerMCPClient(  { { "math": { "math": { "transport": "stdio", # Local subprocess communication  "transport": "stdio", # Local subprocess communication "command": "python",  "command": "python", # Absolute path to your math_server.py file # Absolute path to your math_server.py file "args": ["/path/to/math_server.py"],  "args": ["/path/to/math_server.py"], }, }, "weather": { "weather": { "transport": "streamable_http", # HTTP-based remote server  "transport": "streamable_http", # HTTP-based remote server  # Ensure you start your weather server on port 8000  # Ensure you start your weather server on port 8000 "url": "http://localhost:8000/mcp",  "url": "http://localhost:8000/mcp", } } } })) tools = await client.get_tools() tools =  await client.get_tools() agent = create_agent(agent = create_agent( "claude-sonnet-4-5-20250929", "claude-sonnet-4-5-20250929",  tools  tools ))math_response = await agent.ainvoke(math_response =  await agent.ainvoke( {"messages": [{"role": "user", "content": "what's (3 + 5) x 12?"}]} {"messages": [{"role": "user", "content": "what's (3 + 5) x 12?"}]}))weather_response = await agent.ainvoke(weather_response =  await agent.ainvoke( {"messages": [{"role": "user", "content": "what is the weather in nyc?"}]} {"messages": [{"role": "user", "content": "what is the weather in nyc?"}]}))
+from langchain.agents import create_agent from langchain.agents import  create_agentfrom langchain.agents.middleware import HumanInTheLoopMiddleware from langchain.agents.middleware import  HumanInTheLoopMiddleware from langgraph.checkpoint.memory import InMemorySaver from langgraph.checkpoint.memory import  InMemorySaver  agent = create_agent(agent = create_agent( model="gpt-4o",  model ="gpt-4o", tools=[write_file_tool, execute_sql_tool, read_data_tool],  tools =[write_file_tool, execute_sql_tool, read_data_tool], middleware=[ middleware =[ HumanInTheLoopMiddleware(  HumanInTheLoopMiddleware(  interrupt_on={ interrupt_on ={ "write_file": True, # All decisions (approve, edit, reject) allowed  "write_file": True, # All decisions (approve, edit, reject) allowed "execute_sql": {"allowed_decisions": ["approve", "reject"]}, # No editing allowed  "execute_sql": {"allowed_decisions": ["approve", "reject"]}, # No editing allowed # Safe operation, no approval needed # Safe operation, no approval needed "read_data": False,  "read_data": False, }, }, # Prefix for interrupt messages - combined with tool name and args to form the full message # Prefix for interrupt messages - combined with tool name and args to form the full message # e.g., "Tool execution pending approval: execute_sql with query='DELETE FROM...'" # e.g., "Tool execution pending approval: execute_sql with query='DELETE FROM...'"  # Individual tools can override this by specifying a "description" in their interrupt config  # Individual tools can override this by specifying a "description" in their interrupt config description_prefix="Tool execution pending approval",  description_prefix = "Tool execution pending approval", ), ), ], ], # Human-in-the-loop requires checkpointing to handle interrupts. # Human-in-the-loop requires checkpointing to handle interrupts. # In production, use a persistent checkpointer like AsyncPostgresSaver. # In production, use a persistent checkpointer like AsyncPostgresSaver. checkpointer=InMemorySaver(),  checkpointer =InMemorySaver(), ))
 ```
 
-`MultiServerMCPClient` is **stateless by default**. Each tool invocation creates a fresh MCP `ClientSession`, executes the tool, and then cleans up.
+You must configure a checkpointer to persist the graph state across interrupts. In production, use a persistent checkpointer like [`AsyncPostgresSaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.postgres.aio.AsyncPostgresSaver). For testing or prototyping, use [`InMemorySaver`](https://reference.langchain.com/python/langgraph/checkpoints/#langgraph.checkpoint.memory.InMemorySaver).When invoking the agent, pass a `config` that includes the **thread ID** to associate execution with a conversation thread. See the [LangGraph interrupts documentation](/oss/python/langgraph/interrupts) for details.
 
-## [​](#custom-mcp-servers) Custom MCP servers
+## [​](#responding-to-interrupts) Responding to interrupts
 
-To create your own MCP servers, you can use the `mcp` library. This library provides a simple way to define [tools](https://modelcontextprotocol.io/docs/learn/server-concepts#tools-ai-actions) and run them as servers.
+When you invoke the agent, it runs until it either completes or an interrupt is raised. An interrupt is triggered when a tool call matches the policy you configured in `interrupt_on`. In that case, the invocation result will include an `__interrupt__` field with the actions that require review. You can then present those actions to a reviewer and resume execution once decisions are provided.
 
 Copy
 
 Ask AI
 
 ```
-pip install mcp pip  install  mcp
+from langgraph.types import Command from langgraph.types import  Command # Human-in-the-loop leverages LangGraph's persistence layer.# Human-in-the-loop leverages LangGraph's persistence layer.# You must provide a thread ID to associate the execution with a conversation thread,# You must provide a thread ID to associate the execution with a conversation thread,# so the conversation can be paused and resumed (as is needed for human review).# so the conversation can be paused and resumed (as is needed for human review).config = {"configurable": {"thread_id": "some_id"}} config = {"configurable": {"thread_id": "some_id"}} # Run the graph until the interrupt is hit.# Run the graph until the interrupt is hit.result = agent.invoke(result = agent.invoke( { { "messages": [ "messages": [ { { "role": "user",  "role": "user", "content": "Delete old records from the database",  "content": "Delete old records from the database", } } ] ] }, }, config=config  config = config )) # The interrupt contains the full HITL request with action_requests and review_configs # The interrupt contains the full HITL request with action_requests and review_configsprint(result['__interrupt__']) print(result['__interrupt__'])# > [# > [# > Interrupt(# > Interrupt(# > value={# > value={# > 'action_requests': [# > 'action_requests': [# > {# > {# > 'name': 'execute_sql',# > 'name': 'execute_sql',# > 'arguments': {'query': 'DELETE FROM records WHERE created_at < NOW() - INTERVAL \'30 days\';'},# > 'arguments': {'query': 'DELETE FROM records WHERE created_at < NOW() - INTERVAL \'30 days\';'},# > 'description': 'Tool execution pending approval\n\nTool: execute_sql\nArgs: {...}'# > 'description': 'Tool execution pending approval\n\nTool: execute_sql\nArgs: {...}'# > }# > }# > ],# > ],# > 'review_configs': [# > 'review_configs': [# > {# > {# > 'action_name': 'execute_sql',# > 'action_name': 'execute_sql',# > 'allowed_decisions': ['approve', 'reject']# > 'allowed_decisions': ['approve', 'reject']# > }# > }# > ]# > ]# > }# > }# > )# > )# > ]# > ]  # Resume with approval decision # Resume with approval decisionagent.invoke(agent.invoke( Command(  Command(  resume={"decisions": [{"type": "approve"}]} # or "edit", "reject"  resume ={"decisions": [{"type": "approve"}]} # or "edit", "reject" ),  ),  config=config # Same thread ID to resume the paused conversation  config = config # Same thread ID to resume the paused conversation))
 ```
 
-Use the following reference implementations to test your agent with MCP tool servers.
+### [​](#decision-types) Decision types
 
-Math server (stdio transport)
+* ✅ approve
+* ✏️ edit
+* ❌ reject
+
+Use `approve` to approve the tool call as-is and execute it without changes.
 
 Copy
 
 Ask AI
 
 ```
-from mcp.server.fastmcp import FastMCP from mcp.server.fastmcp import  FastMCP mcp = FastMCP("Math") mcp = FastMCP("Math") @mcp.tool()@mcp.tool()def add(a: int, b: int) -> int: def  add(a: int, b: int) -> int:  """Add two numbers"""  """Add two numbers""" return a + b  return  a +  b @mcp.tool()@mcp.tool()def multiply(a: int, b: int) -> int: def  multiply(a: int, b: int) -> int:  """Multiply two numbers"""  """Multiply two numbers""" return a * b  return  a *  b if __name__ == "__main__": if  __name__ ==  "__main__": mcp.run(transport="stdio") mcp.run(transport = "stdio")
+agent.invoke(agent.invoke( Command( Command( # Decisions are provided as a list, one per action under review. # Decisions are provided as a list, one per action under review.  # The order of decisions must match the order of actions  # The order of decisions must match the order of actions # listed in the `__interrupt__` request. # listed in the `__interrupt__` request. resume={ resume ={ "decisions": [ "decisions": [ { { "type": "approve",  "type": "approve", } } ] ] } } ), ), config=config # Same thread ID to resume the paused conversation  config = config # Same thread ID to resume the paused conversation))
 ```
 
-Weather server (streamable HTTP transport)
+## [​](#execution-lifecycle) Execution lifecycle
 
-Copy
+The middleware defines an `after_model` hook that runs after the model generates a response but before any tool calls are executed:
 
-Ask AI
+1. The agent invokes the model to generate a response.
+2. The middleware inspects the response for tool calls.
+3. If any calls require human input, the middleware builds a `HITLRequest` with `action_requests` and `review_configs` and calls [interrupt](https://reference.langchain.com/python/langgraph/types/#langgraph.types.interrupt).
+4. The agent waits for human decisions.
+5. Based on the `HITLResponse` decisions, the middleware executes approved or edited calls, synthesizes [ToolMessage](https://reference.langchain.com/python/langchain/messages/#langchain.messages.ToolMessage)’s for rejected calls, and resumes execution.
 
-```
-from mcp.server.fastmcp import FastMCP from mcp.server.fastmcp import  FastMCP mcp = FastMCP("Weather") mcp = FastMCP("Weather") @mcp.tool()@mcp.tool()async def get_weather(location: str) -> str: async  def  get_weather(location: str) -> str: """Get weather for location.""" """Get weather for location."""  return "It's always sunny in New York"  return  "It's always sunny in New York" if __name__ == "__main__": if  __name__ ==  "__main__": mcp.run(transport="streamable-http") mcp.run(transport ="streamable-http")
-```
+## [​](#custom-hitl-logic) Custom HITL logic
 
-## [​](#stateful-tool-usage) Stateful tool usage
-
-For stateful servers that maintain context between tool calls, use `client.session()` to create a persistent `ClientSession`.
-
-Using MCP ClientSession for stateful tool usage
-
-Copy
-
-Ask AI
-
-```
-from langchain_mcp_adapters.tools import load_mcp_tools from langchain_mcp_adapters.tools import  load_mcp_tools client = MultiServerMCPClient({...}) client = MultiServerMCPClient({...})async with client.session("math") as session: async  with client.session("math") as session: tools = await load_mcp_tools(session)  tools =  await load_mcp_tools(session)
-```
-
-## [​](#additional-resources) Additional resources
-
-* [MCP documentation](https://modelcontextprotocol.io/introduction)
-* [MCP Transport documentation](https://modelcontextprotocol.io/docs/concepts/transports)
-* [`langchain-mcp-adapters`](https://github.com/langchain-ai/langchain-mcp-adapters)
+For more specialized workflows, you can build custom HITL logic directly using the [interrupt](https://reference.langchain.com/python/langgraph/types/#langgraph.types.interrupt) primitive and [middleware](/oss/python/langchain/middleware) abstraction. Review the [execution lifecycle](#execution-lifecycle) above to understand how to integrate interrupts into the agent’s operation. 
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/mcp.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/human-in-the-loop.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Context engineering in agents](/oss/python/langchain/context-engineering)[Human-in-the-loop](/oss/python/langchain/human-in-the-loop)
+[Model Context Protocol (MCP)](/oss/python/langchain/mcp)[Multi-agent](/oss/python/langchain/multi-agent)

@@ -1,122 +1,84 @@
-[Skip to main content](#content-area)
+We've raised a $125M Series B to build the platform for agent engineering. [Read more](https://blog.langchain.com/series-b/?utm_medium=internal&utm_source=docs&utm_campaign=q4-2025_october-launch-week_aw).
 
-* [Overview](/oss/javascript/langgraph/overview)
+[Docs by LangChain home page](/)
 
-##### LangGraph v1.0
+[Get started](/langsmith/home)[Observability](/langsmith/observability)[Evaluation](/langsmith/evaluation)[Prompt engineering](/langsmith/prompt-engineering)[Deployment](/langsmith/deployments)[Agent Builder](/langsmith/agent-builder)[Platform setup](/langsmith/platform-setup)
 
-* [Release notes](/oss/javascript/releases/langgraph-v1)
-* [Migration guide](/oss/javascript/migrate/langgraph-v1)
+* [Overview](/langsmith/home)
 
-##### Get started
+* [Plans](https://langchain.com/pricing)
 
-* [Install](/oss/javascript/langgraph/install)
-* [Quickstart](/oss/javascript/langgraph/quickstart)
-* [Local server](/oss/javascript/langgraph/local-server)
-* [Thinking in LangGraph](/oss/javascript/langgraph/thinking-in-langgraph)
-* [Workflows + agents](/oss/javascript/langgraph/workflows-agents)
+* [Create an account and API key](/langsmith/create-account-api-key)
 
-##### Capabilities
+##### Account administration
 
-* [Persistence](/oss/javascript/langgraph/persistence)
-* [Durable execution](/oss/javascript/langgraph/durable-execution)
-* [Streaming](/oss/javascript/langgraph/streaming)
-* [Interrupts](/oss/javascript/langgraph/interrupts)
-* [Time travel](/oss/javascript/langgraph/use-time-travel)
-* [Memory](/oss/javascript/langgraph/add-memory)
-* [Subgraphs](/oss/javascript/langgraph/use-subgraphs)
+* [Overview](/langsmith/administration-overview)
+* [Set up a workspace](/langsmith/set-up-a-workspace)
+* [Manage organizations using the API](/langsmith/manage-organization-by-api)
+* [Manage billing](/langsmith/billing)
+* [Set up resource tags](/langsmith/set-up-resource-tags)
+* [User management](/langsmith/user-management)
 
-##### Production
+##### Reference
 
-* [Application structure](/oss/javascript/langgraph/application-structure)
-* [Studio](/oss/javascript/langgraph/studio)
-* [Test](/oss/javascript/langgraph/test)
-* [Deploy](/oss/javascript/langgraph/deploy)
-* [Agent Chat UI](/oss/javascript/langgraph/ui)
-* [Observability](/oss/javascript/langgraph/observability)
+* [LangSmith Python SDK](https://reference.langchain.com/python/langsmith/observability/sdk/)
+* [LangSmith JS/TS SDK](https://reference.langchain.com/javascript/modules/langsmith.html)
+* [LangGraph Python SDK](https://reference.langchain.com/python/langgraph/)
+* [LangGraph JS/TS SDK](https://reference.langchain.com/javascript/modules/_langchain_langgraph-sdk.html)
+* [LangSmith API](https://api.smith.langchain.com/redoc)
 
-##### LangGraph APIs
+##### Additional resources
 
-* [Runtime](/oss/javascript/langgraph/pregel)
+* [Scalability & resilience](/langsmith/scalability-and-resilience)
+* [Authentication methods](/langsmith/authentication-methods)
+* [FAQs](/langsmith/faq)
+* [Regions FAQ](/langsmith/regions-faq)
+* [Pricing FAQ](/langsmith/pricing-faq)
 
-* [Install](#install)
-* [Core benefits](#core-benefits)
-* [LangGraph ecosystem](#langgraph-ecosystem)
-* [Acknowledgements](#acknowledgements)
+# LangSmith docs
 
-# LangGraph overview
+**LangSmith provides tools for developing, debugging, and deploying LLM applications.** It helps you trace requests, evaluate outputs, test prompts, and manage deployments in one place. LangSmith is framework agnostic, so you can use it with or without LangChain’s open-source libraries [`langchain`](/oss/python/langchain/overview) and [`langgraph`](/oss/python/langgraph/overview). Prototype locally, then move to production with integrated monitoring and evaluation to build more reliable AI systems.
 
-**LangGraph v1.0 is now available!**For a complete list of changes and instructions on how to upgrade your code, see the [release notes](/oss/javascript/releases/langgraph-v1) and [migration guide](/oss/javascript/migrate/langgraph-v1).If you encounter any issues or have feedback, please [open an issue](https://github.com/langchain-ai/docs/issues/new?template=02-langgraph.yml&labels=langgraph,js/ts) so we can improve. To view v0.x documentation, [go to the archived content](https://github.com/langchain-ai/langgraphjs/tree/main/docs/docs).
+LangGraph Platform is now [LangSmith Deployment](/langsmith/deployments). For more information, check out the [Changelog](https://changelog.langchain.com/announcements/product-naming-changes-langsmith-deployment-and-langsmith-studio).
 
-Trusted by companies shaping the future of agents— including Klarna, Replit, Elastic, and more— LangGraph is a low-level orchestration framework and runtime for building, managing, and deploying long-running, stateful agents.
-LangGraph is very low-level, and focused entirely on agent **orchestration**. Before using LangGraph, we recommend you familiarize yourself with some of the components used to build agents, starting with [models](/oss/javascript/langchain/models) and [tools](/oss/javascript/langchain/tools).
-We will commonly use [LangChain](/oss/javascript/langchain/overview) components throughout the documentation to integrate models and tools, but you don’t need to use LangChain to use LangGraph. If you are just getting started with agents or want a higher-level abstraction, we recommend you use LangChain’s [agents](/oss/javascript/langchain/agents) that provide pre-built architectures for common LLM and tool-calling loops.
-LangGraph is focused on the underlying capabilities important for agent orchestration: durable execution, streaming, human-in-the-loop, and more.
+## [​](#get-started) Get started
 
-## [​](#install) Install
+Create an account
 
-Copy
+Sign up at [smith.langchain.com](https://smith.langchain.com) (no credit card required). You can log in with **Google**, **GitHub**, or **email**.
 
-Ask AI
+Create an API key
 
-```
-npm install @langchain/langgraph @langchain/core
+Go to your [Settings page](https://smith.langchain.com/settings) → **API Keys** → **Create API Key**. Copy the key and save it securely.
 
-```
+Once your account and API key are ready, choose a quickstart to begin building with LangSmith:
 
-Then, create a simple hello world example:
+[## Observability
 
-Copy
+Gain visibility into every step your application takes to debug faster and improve reliability.](/langsmith/observability-quickstart)[## Evaluation
 
-Ask AI
+Measure and track quality over time to ensure your AI applications are consistent and trustworthy.](/langsmith/evaluation-quickstart)[## Deployment
 
-```
-import { MessagesAnnotation, StateGraph, START, END } from "@langchain/langgraph";
+Deploy your agents as Agent Servers, ready to scale in production.](/langsmith/deployments)[## Platform setup
 
-const mockLlm = (state: typeof MessagesAnnotation.State) => {
-  return { messages: [{ role: "ai", content: "hello world" }] };
-};
+Use LangSmith in managed cloud, in a self-hosted environment, or hybrid to match your infrastructure and compliance needs.](/langsmith/platform-setup)[## Prompt Testing
 
-const graph = new StateGraph(MessagesAnnotation)
-  .addNode("mock_llm", mockLlm)
-  .addEdge(START, "mock_llm")
-  .addEdge("mock_llm", END)
-  .compile();
+Iterate on prompts with built-in versioning and collaboration to ship improvements faster.](/langsmith/prompt-engineering-quickstart)[## Studio
 
-await graph.invoke({ messages: [{ role: "user", content: "hi!" }] });
+Use a visual interface to design, test, and refine applications end-to-end.](/langsmith/quick-start-studio)
 
-```
+LangSmith meets the highest standards of data security and privacy with HIPAA, SOC 2 Type 2, and GDPR compliance. For more information, see the [Trust Center](https://trust.langchain.com/).
 
-## [​](#core-benefits) Core benefits
+## [​](#workflow) Workflow
 
-LangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent. LangGraph does not abstract prompts or architecture, and provides the following central benefits:
-
-* [Durable execution](/oss/javascript/langgraph/durable-execution): Build agents that persist through failures and can run for extended periods, resuming from where they left off.
-* [Human-in-the-loop](/oss/javascript/langgraph/interrupts): Incorporate human oversight by inspecting and modifying agent state at any point.
-* [Comprehensive memory](/oss/javascript/concepts/memory): Create stateful agents with both short-term working memory for ongoing reasoning and long-term memory across sessions.
-* [Debugging with LangSmith](/langsmith/home): Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.
-* [Production-ready deployment](/langsmith/deployments): Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.
-
-## [​](#langgraph-ecosystem) LangGraph ecosystem
-
-While LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents. To improve your LLM application development, pair LangGraph with:
-
-* [LangSmith](http://www.langchain.com/langsmith) — Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.
-* [LangSmith](/langsmith/home) — Deploy and scale agents effortlessly with a purpose-built deployment platform for long running, stateful workflows. Discover, reuse, configure, and share agents across teams — and iterate quickly with visual prototyping in [Studio](/langsmith/studio).
-* [LangChain](/oss/javascript/langchain/overview) - Provides integrations and composable components to streamline LLM application development. Contains agent abstractions built on top of LangGraph.
-
-## [​](#acknowledgements) Acknowledgements
-
-LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
-
+LangSmith combines observability, evaluation, deployment, and platform setup in one integrated workflow—from local development to production.   
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langgraph/overview.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/langsmith/home.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[What's new in v1
-
-Next](/oss/javascript/releases/langgraph-v1)
+[Pricing plans](/langsmith/pricing-plans)

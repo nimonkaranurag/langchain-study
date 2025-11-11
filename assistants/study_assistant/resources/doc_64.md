@@ -1,149 +1,326 @@
-# Let’s build from here, together
+[Skip to content](#start-of-content)   
 
-Join the team accelerating human progress through developer collaboration.
 
-GitHub is the world’s leading AI-powered developer platform with over 150+ million developers and counting.   
-  
- For us, software is the means to an end. It’s how we can make the world a better place for everyone.
 
-[Explore all open roles](/jobs)
+## Navigation Menu
 
-### LP.SKU-D4.TITLE
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fcommunity%2Fdiscussions%2F) 
 
-We know you’re at your best when you can be your authentic self from a location that makes sense for you.  
-  
- Here at GitHub, we believe in true work/life balance. That’s why we offer health, wellness, learning and development and social impact opportunities in addition to competitive pay, remote work, and comprehensive benefits.
+Appearance settings
 
-[GitHub benefits](/benefits)
+# Search code, repositories, users, issues, pull requests...
 
-### LP.SKU-D4-1.TITLE
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-We’re proud of our global community of Hubbers who are changing the way the world builds software together.   
-  
- Communities of Belonging, affinity groups, and social Slack channels are foundational to our interconnected, remote-first culture.
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Forgs%2Fcommunity%2Fdiscussions%2F)
 
-[Life at GitHub](/life-at-github)
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Forgs%2Fdiscussions%2Findex&source=header-repo&source_repo=community%2Fcommunity) 
 
-Everyone starts somewhere.   
-  
- Maybe you’re ready for an internship. Or your college graduation is so close, you can almost touch it. Maybe you’re even considering a complete career change.
+Appearance settings
 
-[Early in Profession](/early-in-profession)
+You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
-## Who we are. What we believe.
+{{ message }}
 
-What
+# [GitHub Community](/community)
 
-The world's leading Al-powered developer platform.
+# community community Discussions
 
-Why
+## Pinned Discussions
 
-Accelerate human progress through developer collaboration.
+* ### [GitHub Community Discussions Billing & Subscription Guide 💳](/orgs/community/discussions/178128)
 
-How
+    [💬 General](/orgs/community/discussions?discussions_q=category%3A%22General%22)  ·  [shinybrightstar](/shinybrightstar)
+* ### [🌌 GitHub Universe 2025 Community Release Recap](/orgs/community/discussions/178179)
 
-Our values guide our interactions, decision-making, and how we engage with each other.
+    [📣 Announcements](/orgs/community/discussions?discussions_q=category%3A%22Announcements%22)  ·  [ebndev](/ebndev)
+* ### [🚢 Upcoming Webinar: Recapping Universe 2025 releases](/orgs/community/discussions/178769)
 
-### GitHub values
+    [📣 Announcements](/orgs/community/discussions?discussions_q=category%3A%22Announcements%22)  ·  [queenofcorgis](/queenofcorgis)
+* ### [CodeOn 2025🚀- Developer Student Clubs UTP](/orgs/community/discussions/179291)
 
-We take a customer-centric view, anticipating their needs and striving to exceed them. We listen to feedback from our customers and developers to make sure we help them achieve success and validate our assumptions. Their success is our success.
+    [🎒 GitHub Education](/orgs/community/discussions?discussions_q=category%3A%22GitHub+Education%22)  ·  [Dav082004](/Dav082004)
 
-The journey is as valuable as the destination, and we’re dedicated to shipping often and taking calculated risks. When we’re wrong, we need to pivot quickly, learning from our failures. Each step brings us closer to excellence.
+Sort by: Latest activity
 
-Whatever challenges come our way, we approach with curiosity and use them as opportunities to learn and grow. We’re not limited by our current knowledge, but by how quickly we can grow as a team.
+     
 
-As a team, we take full responsibility and ownership of both our successes and failures. Developers and organizations world-wide depend on us, and we take that responsibility seriously.
+[Latest activity](/orgs/community/discussions?discussions_q=is%3Aopen) [Date created](/orgs/community/discussions?discussions_q=is%3Aopen+sort%3Adate_created) [Top: Past day](/orgs/community/discussions?discussions_q=is%3Aopen+sort%3Atop+created%3A%3E%3D2025-11-09) [Top: Past week](/orgs/community/discussions?discussions_q=is%3Aopen+sort%3Atop+created%3A%3E%3D2025-11-03) [Top: Past month](/orgs/community/discussions?discussions_q=is%3Aopen+sort%3Atop+created%3A%3E%3D2025-10-11) [Top: Past year](/orgs/community/discussions?discussions_q=is%3Aopen+sort%3Atop+created%3A%3E%3D2024-11-10) [Top: All](/orgs/community/discussions?discussions_q=is%3Aopen+sort%3Atop)
 
-Each Hubber brings unique strengths to the team, and we are stronger as a whole for it. We are kind, thoughtful, and considerate as we support and welcome others’ strengths because we know that every successful ship is built by a team.
+* [Open](/orgs/community/discussions)
+* [Closed](/orgs/community/discussions?discussions_q=is%3Aclosed)
+* [Locked](/orgs/community/discussions?discussions_q=is%3Aopen+is%3Alocked)
+* [Unlocked](/orgs/community/discussions?discussions_q=is%3Aopen+is%3Aunlocked)
+* [Answered](/orgs/community/discussions?discussions_q=is%3Aopen+is%3Aanswered)
+* [Unanswered](/orgs/community/discussions?discussions_q=is%3Aopen+is%3Aunanswered)
+* [All](/orgs/community/discussions?discussions_q=)
 
-Representation and diversity matter, and our teams need to be inclusive in order to reflect the global developer community. We are committed to providing a culture where all Hubbers and developers can do their best work.
+## Categories
 
-### Manager fundamentals
+Loading 
 
-GitHub managers are role models and personify our culture and values. They lead with integrity and are accountable to their teams, their peers, our customers, and GitHub as a whole.
+### Uh oh!
 
-GitHub managers help develop their team members by creating an empowering environment that enables others to succeed. They foster innovation and open learning by shipping to learn.
+There was an error while loading. Please reload this page.
 
-GitHub managers value others and create inclusive environments for people to succeed. They have a genuine interest in the well-being, growth, and success of others.
+* [Code of conduct](/community/community/blob/95989531d640a698e4588083df02aec09483a9b1/CODE_OF_CONDUCT.md)
 
-### Leadership principles
+## Discussions
 
-Leaders take the time to see the big picture and create a clear vision on how to proceed. We continuously check that vision and realign as necessary. We know that clarity requires working with others who have different perspectives and can help provide some guidance.
+* You must be logged in to vote
 
-Leaders create a positive environment that is optimistic and motivates others to thrive. We do this by leading by example and creating and growing teams that will be energized to develop skills and work together. By making bold moves and balancing both short and long-term needs, we create an organization that continues to grow.
+  💬
 
-Leaders focus on what’s possible and encourage innovative ideas that can have meaningful impact. We strive to find the best solutions for the organization and customers, even when it involves taking informed risks. Our tenacity leads to the best outcomes.
+  ### [Country code +880 (Bangladesh) not listed!!!](/orgs/community/discussions/178856)
 
-### Testimonials
+    [2FA](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A2FA)  For account two factor authentication discussions 
 
-Working at GitHub is the best place to work on open-source software, because open-source is in our DNA. I love to be able to tackle new challenges every day, and see the impact of my work affect millions of customers. There is no more interesting place on the planet to be able to do this kind of work."
+  [akib1050](/akib1050) asked Nov 5, 2025  in  [General](/orgs/community/discussions/categories/general?discussions_q=is%3Aopen+category%3AGeneral)   · Unanswered
 
-Taylor, Engineering
+  [9](/orgs/community/discussions/178856)
+* You must be logged in to vote
 
-Working here for me isn’t just a job, it’s truly a journey of growth and inspiration. The trust and support I receive from my leadership and colleagues empower me to explore new ideas, challenge the status quo, and truly make a difference in our field."
+  💭
 
-Stanley, Information Technology
+  ### [Copilot still blocks premium requests after increasing budget – stuck at 102% usage](/orgs/community/discussions/166810)
 
-### Diversity. Inclusion. Belonging.
+    [Bug](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ABug)  GitHub or a GitHub feature is not working as intended  [VS Code](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22VS+Code%22)  View and incorporate suggestions from GitHub Copilot directly within the VS Code editor. 
 
-If we’re going to have a true impact, we need our teams and community to represent the world we live in. To meet this goal, GitHub prioritizes diversity, inclusion, and belonging across our platform, people, philanthropy, and policy.
+  [sescanella](/sescanella) asked Jul 19, 2025  in  [Copilot Conversations](/orgs/community/discussions/categories/copilot-conversations?discussions_q=is%3Aopen+category%3A%22Copilot+Conversations%22)   · Answered
 
-[Learn more](https://github.com/about/diversity)
+  [31](/orgs/community/discussions/166810)
+* You must be logged in to vote
 
-See jobs by:
+  🎒
 
- [Categories](/careers-home/categories)   [Locations](/careers-home/locations)
+  ### [Constant Application Rejection](/orgs/community/discussions/179274)
 
-## Subscribe to our *developer newsletter*
+  [kosbornept](/kosbornept) asked Nov 10, 2025  in  [GitHub Education](/orgs/community/discussions/categories/github-education?discussions_q=is%3Aopen+category%3A%22GitHub+Education%22)   · Unanswered
 
-Get tips, technical guides, and best practices. Twice a month. Right in your inbox.
+  [1](/orgs/community/discussions/179274)
+* You must be logged in to vote
 
-[Subscribe](https://resources.github.com/newsletter/)
+  🎒
 
-## Product
+  ### [Student Pack stuck — denied once, now can’t reapply (error: outstanding discount request)](/orgs/community/discussions/179229)
 
-* [Features](https://github.com/features)
-* [Security](https://github.com/security)
-* [Team](https://github.com/team)
-* [Enterprise](https://github.com/enterprise)
-* [Customer stories](https://github.com/customer-stories?type=enterprise)
-* [The ReadME Project](https://github.com/readme)
-* [Pricing](https://github.com/pricing)
-* [Resources](https://resources.github.com/)
-* [Roadmap](https://github.com/github/roadmap)
-* [Compare GitHub](https://resources.github.com/devops/tools/compare/)
+  [DefinetlyNotRay](/DefinetlyNotRay) asked Nov 10, 2025  in  [GitHub Education](/orgs/community/discussions/categories/github-education?discussions_q=is%3Aopen+category%3A%22GitHub+Education%22)   · Unanswered
 
-## Platform
+  [1](/orgs/community/discussions/179229)
+* You must be logged in to vote
 
-* [Developer API](https://docs.github.com/en/get-started/exploring-integrations/about-building-integrations)
-* [Partners](https://partner.github.com/)
-* [Electron](https://www.electronjs.org/)
-* [GitHub Desktop](https://desktop.github.com/)
+  🆕
 
-## Support
+  ### [Cant contact support??](/orgs/community/discussions/163597)
 
-* [Docs](https://docs.github.com/en)
-* [Community Forum](https://github.com/orgs/community/discussions/)
-* [Professional Services](https://github.com/services/)
-* [Premium Support](https://github.com/premium-support)
-* [Skills](https://skills.github.com/)
-* [Status](https://www.githubstatus.com/)
-* [Contact GitHub](https://support.github.com/?tags=dotcom-footer)
+    [New To GitHub 👋](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22New+To+GitHub+%F0%9F%91%8B%22)  New To GitHub  [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements  [Question](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AQuestion)  Ask and answer questions about GitHub features and usage 
 
-## Company
+  [GDaly2](/GDaly2) asked Jun 20, 2025  in  [New to GitHub](/orgs/community/discussions/categories/new-to-github?discussions_q=is%3Aopen+category%3A%22New+to+GitHub%22)   · Unanswered
 
-* [About](https://github.com/about)
-* [Blog](https://github.blog/)
-* [Careers](https://github.com/about/careers)
-* [Press](https://github.com/about/press)
-* [Inclusion](https://github.com/about/diversity)
-* [Social Impact](https://socialimpact.github.com/)
-* [Shop](https://www.thegithubshop.com/)
+  [4](/orgs/community/discussions/163597)
+* You must be logged in to vote
 
-* © 2025 GitHub, Inc.
-* [Terms](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
-* [Privacy](https://docs.github.com/en/site-policy/privacy-policies/github-candidate-privacy-policy) ([Updated 08/2022](https://github.com/github/site-policy/pull/582))
-* [Sitemap](https://github.com/sitemap)
-* [What is Git?](https://github.com/git-guides)
+  🆕
 
-Cookies are used on this site to assist in continually improving the candidate experience and all the interaction data we store of our visitors is anonymous. Learn more about your rights on our [Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement) page.
+  ### [Introduce Yourself 👋🏻](/orgs/community/discussions/23204)
+
+    [New To GitHub 👋](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22New+To+GitHub+%F0%9F%91%8B%22)  New To GitHub 
+
+  [ettaboyle](/ettaboyle) asked Jul 26, 2022  in  [New to GitHub](/orgs/community/discussions/categories/new-to-github?discussions_q=is%3Aopen+category%3A%22New+to+GitHub%22)   · Unanswered
+
+  [4k](/orgs/community/discussions/23204)
+* You must be logged in to vote
+
+  💭
+
+  ### [Copilot Web does not fully apply custom instructions during PR review](/orgs/community/discussions/178538)
+
+    [Question](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AQuestion)  Ask and answer questions about GitHub features and usage  [Copilot in GitHub](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Copilot+in+GitHub%22)  Copilot functionality in GitHub Copilot Chat and in github.com 
+
+  [RP-julietesilva](/RP-julietesilva) asked Oct 31, 2025  in  [Copilot Conversations](/orgs/community/discussions/categories/copilot-conversations?discussions_q=is%3Aopen+category%3A%22Copilot+Conversations%22)   · Unanswered
+
+  [5](/orgs/community/discussions/178538)
+* You must be logged in to vote
+
+  🚢
+
+  ### [How to use Github actions self-hosted runner with personal account across many projects?](/orgs/community/discussions/179202)
+
+    [Actions](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AActions)  Build, test, and automate your deployment pipeline with world-class CI/CD  [Question](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AQuestion)  Ask and answer questions about GitHub features and usage  [Misc](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AMisc)  General discussions about GitHub Actions that don't fit other found themes. 
+
+  [ColtonIdle](/ColtonIdle) asked Nov 9, 2025  in  [Actions](/orgs/community/discussions/categories/actions?discussions_q=is%3Aopen+category%3AActions)   · Unanswered
+
+  [9](/orgs/community/discussions/179202)
+* You must be logged in to vote
+
+  🎒
+
+  ### [Continue button not enabled with joining GitHub Education](/orgs/community/discussions/179225)
+
+  [Tomahawk786](/Tomahawk786) asked Nov 9, 2025  in  [GitHub Education](/orgs/community/discussions/categories/github-education?discussions_q=is%3Aopen+category%3A%22GitHub+Education%22)   · Unanswered
+
+  [4](/orgs/community/discussions/179225)
+* You must be logged in to vote
+
+  🎒
+
+  ### [Unable to start an (new) application (after being unable to verify my academic affiliation)](/orgs/community/discussions/179222)
+
+  [AndiaMir1](/AndiaMir1) asked Nov 9, 2025  in  [GitHub Education](/orgs/community/discussions/categories/github-education?discussions_q=is%3Aopen+category%3A%22GitHub+Education%22)   · Unanswered
+
+  [1](/orgs/community/discussions/179222)
+* You must be logged in to vote
+
+  🎒
+
+  ### [Issues With Application Verification](/orgs/community/discussions/179223)
+
+  [Skurvied](/Skurvied) asked Nov 9, 2025  in  [GitHub Education](/orgs/community/discussions/categories/github-education?discussions_q=is%3Aopen+category%3A%22GitHub+Education%22)   · Unanswered
+
+  [1](/orgs/community/discussions/179223)
+* You must be logged in to vote
+
+  💬
+
+  ### [Ghost notification that can't be removed](/orgs/community/discussions/179275)
+
+    [Bug](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ABug)  GitHub or a GitHub feature is not working as intended  [Notifications](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ANotifications)  Keep track of everything happening across all your projects  [General](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AGeneral)  General topics and discussions that don't fit into other categories, but are related to GitHub 
+
+  [karel-brinda](/karel-brinda) asked Nov 10, 2025  in  [General](/orgs/community/discussions/categories/general?discussions_q=is%3Aopen+category%3AGeneral)   · Unanswered
+
+  [2](/orgs/community/discussions/179275)
+* You must be logged in to vote
+
+  ✔️
+
+  ### [Improved pull request "Files Changed" experience feedback](/orgs/community/discussions/163932)
+
+    [🚀 Shipped](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22%F0%9F%9A%80+Shipped%22)  A feature has been released  [📣 ANNOUNCEMENT](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22%F0%9F%93%A3+ANNOUNCEMENT%22)  Announcements from the GitHub Community team  [Pull Requests](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Pull+Requests%22)  Propose, review, and discuss changes to a repository's codebase 
+
+  [Akash1134](/Akash1134) asked Jun 24, 2025  in  [Pull Requests](/orgs/community/discussions/categories/pull-requests?discussions_q=is%3Aopen+category%3A%22Pull+Requests%22)   · Answered
+
+  [2k](/orgs/community/discussions/163932)
+* You must be logged in to vote
+
+  🐙
+
+  ### [[Enhancement] Expose issues via CalDAV.](/orgs/community/discussions/179302)
+
+    [Issues](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AIssues)  Repository issues let you track features, problems, and more alongside your code  [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements 
+
+  [RokeJulianLockhart](/RokeJulianLockhart) asked Nov 10, 2025  in  [Projects and Issues](/orgs/community/discussions/categories/projects-and-issues?discussions_q=is%3Aopen+category%3A%22Projects+and+Issues%22)   · Unanswered
+
+  [1](/orgs/community/discussions/179302)
+* You must be logged in to vote
+
+  🖼️
+
+  ### [My two cents on the "Open Sourcerer" and "Heart on Your Sleeve" achievements requirements](/orgs/community/discussions/55384)
+
+    [Profile](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AProfile)  Showcase your work on GitHub with a personalized profile, bio, contributions and pinned repositories  [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements 
+
+  [rickstaa](/rickstaa) asked May 13, 2023  in  [Profile](/orgs/community/discussions/categories/profile?discussions_q=is%3Aopen+category%3AProfile)   · Unanswered
+
+  [108](/orgs/community/discussions/55384)
+* You must be logged in to vote
+
+  ### [Scroll to Top Implementation](/orgs/community/discussions/168755)
+
+    [Accessibility](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AAccessibility)  Making GitHub useable for members of the disability community  [UI/UX](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AUI%2FUX)  Discuss and improve the user interface and experience of GitHub  [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements  [Question](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AQuestion)  Ask and answer questions about GitHub features and usage 
+
+  [bloo-berries](/bloo-berries) asked Aug 4, 2025  in  [Accessibility](/orgs/community/discussions/categories/accessibility?discussions_q=is%3Aopen+category%3AAccessibility)   · Unanswered
+
+  [8](/orgs/community/discussions/168755)
+* You must be logged in to vote
+
+  📣
+
+  ### [New public preview features in Copilot code review: AI reviews that see the full picture](/orgs/community/discussions/177790)
+
+    [🚀 Shipped](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22%F0%9F%9A%80+Shipped%22)  A feature has been released  [📣 ANNOUNCEMENT](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22%F0%9F%93%A3+ANNOUNCEMENT%22)  Announcements from the GitHub Community team  [Copilot](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ACopilot)  Code accurately and faster with your AI powered pair-programmer.  [Changelog](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AChangelog)  A discussion post associated with a Changelog post  [Copilot Coding Agent](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Copilot+Coding+Agent%22)  Implement a task or issue, run in the background with GitHub Actions, and more  [Universe 2025](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Universe+2025%22)  githubuniverse.com Oct. 28-29 
+
+  [Akash1134](/Akash1134) announced Oct 23, 2025  in  [Announcements](/orgs/community/discussions/categories/announcements?discussions_q=is%3Aopen+category%3AAnnouncements)
+
+  [8](/orgs/community/discussions/177790)
+* You must be logged in to vote
+
+  ### [Add an Accessibility Link to the footer & an Accessibility Statement on your site.](/orgs/community/discussions/168420)
+
+    [Accessibility](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AAccessibility)  Making GitHub useable for members of the disability community  [Discussions](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ADiscussions)  GitHub Discussions is a collaborative communication feature  [General](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AGeneral)  General topics and discussions that don't fit into other categories, but are related to GitHub  [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements 
+
+  [mgifford](/mgifford) asked Aug 1, 2025  in  [Accessibility](/orgs/community/discussions/categories/accessibility?discussions_q=is%3Aopen+category%3AAccessibility)   · Unanswered
+
+  [2](/orgs/community/discussions/168420)
+* You must be logged in to vote
+
+  🎒
+
+  ### [Issue redeeming GitHub Foundations Certification student voucher on November 10, 2025](/orgs/community/discussions/179164)
+
+  [UsmanNadeem575](/UsmanNadeem575) asked Nov 8, 2025  in  [GitHub Education](/orgs/community/discussions/categories/github-education?discussions_q=is%3Aopen+category%3A%22GitHub+Education%22)   · Unanswered
+
+  [5](/orgs/community/discussions/179164)
+* You must be logged in to vote
+
+  🚢
+
+  ### [Can we suppress 'Run cancelled' notifications?](/orgs/community/discussions/13015)
+
+    [Actions](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AActions)  Build, test, and automate your deployment pipeline with world-class CI/CD  [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements  [In Backlog](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22In+Backlog%22)  GitHub is aware of this and it's in the backlog 
+
+  [alec-maxoptra](/alec-maxoptra) asked Mar 18, 2022  in  [Actions](/orgs/community/discussions/categories/actions?discussions_q=is%3Aopen+category%3AActions)   · Unanswered
+* You must be logged in to vote
+
+  ### [Make déjà vu notifications more discernible](/orgs/community/discussions/179300)
+
+    [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements 
+
+  [jsoref](/jsoref) asked Nov 10, 2025  in  [Mobile](/orgs/community/discussions/categories/mobile?discussions_q=is%3Aopen+category%3AMobile)   · Answered
+
+  [1](/orgs/community/discussions/179300)
+* You must be logged in to vote
+
+  🚢
+
+  ### [Hitting (undocumented?) reusable workflow limit of 20](/orgs/community/discussions/32192)
+
+    [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements 
+
+  [JackCoplandGranta](/JackCoplandGranta) asked Sep 7, 2022  in  [Actions](/orgs/community/discussions/categories/actions?discussions_q=is%3Aopen+category%3AActions)   · Unanswered
+* You must be logged in to vote
+
+  ✔️
+
+  ### [Bad Performance in Pull Request File Tree](/orgs/community/discussions/39341)
+
+    [Bug](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ABug)  GitHub or a GitHub feature is not working as intended  [Pull Requests](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Pull+Requests%22)  Propose, review, and discuss changes to a repository's codebase  [Product Feedback](/orgs/community/discussions?discussions_q=is%3Aopen+label%3A%22Product+Feedback%22)  Share your thoughts and suggestions on GitHub features and improvements 
+
+  [joshuambg](/joshuambg) asked Nov 17, 2022  in  [Pull Requests](/orgs/community/discussions/categories/pull-requests?discussions_q=is%3Aopen+category%3A%22Pull+Requests%22)   · Unanswered
+* You must be logged in to vote
+
+  ### [Manage budget error](/orgs/community/discussions/179299)
+
+    [Bug](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ABug)  GitHub or a GitHub feature is not working as intended  [Enterprise](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AEnterprise)  Discussions related to GitHub Enterprise Cloud, Enterprise Server and Organizations 
+
+  [danlane-ceo](/danlane-ceo) asked Nov 10, 2025  in  [Enterprise](/orgs/community/discussions/categories/enterprise?discussions_q=is%3Aopen+category%3AEnterprise)   · Unanswered
+
+  [1](/orgs/community/discussions/179299)
+* You must be logged in to vote
+
+  💬
+
+  ### [Persistent notifications for non-existent repository "ycombinaattor/-co"](/orgs/community/discussions/178186)
+
+    [Bug](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ABug)  GitHub or a GitHub feature is not working as intended  [Notifications](/orgs/community/discussions?discussions_q=is%3Aopen+label%3ANotifications)  Keep track of everything happening across all your projects  [General](/orgs/community/discussions?discussions_q=is%3Aopen+label%3AGeneral)  General topics and discussions that don't fit into other categories, but are related to GitHub 
+
+  [shelltea](/shelltea) asked Oct 28, 2025  in  [General](/orgs/community/discussions/categories/general?discussions_q=is%3Aopen+category%3AGeneral)   · Answered
+
+  [5](/orgs/community/discussions/178186)
+
+Previous *1* [2](/orgs/community/discussions?page=2) [3](/orgs/community/discussions?page=3) [4](/orgs/community/discussions?page=4) [5](/orgs/community/discussions?page=5) … [39](/orgs/community/discussions?page=39) [40](/orgs/community/discussions?page=40) [Next](/orgs/community/discussions?page=2)
+
+ reacted with thumbs up emoji  reacted with thumbs down emoji  reacted with laugh emoji  reacted with hooray emoji  reacted with confused emoji  reacted with heart emoji  reacted with rocket emoji  reacted with eyes emoji
+
+You can’t perform that action at this time.
+
+ 

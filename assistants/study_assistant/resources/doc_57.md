@@ -1,131 +1,58 @@
-[Skip to content](#start-of-content)   
- 
-
-[GitHub Universe 2025](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post)
-
----
-
-Catch up on the latest keynote highlights.  • 00 : 00 : 00 : 00
-
----
-
-  [See what’s new](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post) 
-
-
-## Navigation Menu
-
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fsolutions)
-
-# Search code, repositories, users, issues, pull requests...
-
-[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
-
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fsolutions)
-
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fsolutions&source=header)
-
-You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
-
 {{ message }}
 
-# AI-powered platform solutions to solve your company’s challenges
+GitHub Social Impact
 
-GitHub empowers your team to deliver software faster and more efficiently, while maintaining robust security and compliance.
+# Driving positive and lasting contributions
 
-[Start a free trial](https://github.com/organizations/enterprise_plan?ref_cta=Start+a+free+trial&ref_loc=hero&ref_page=%2Fsolutions_overview)[Contact sales](https://github.com/enterprise/contact?ref_cta=Contact+sales&ref_loc=hero&ref_page=%2Fsolutions_overview)
+GitHub’s Social Impact team empowers current and future developers, nonprofits, and non-governmental organizations to drive positive and lasting contributions to the world with GitHub products, brand, resources, and employees.
 
-## GitHub scales with teams of any size.
+## GitHub is championing social impact and empowering positive change worldwide
 
-### [Enterprises](https://github.com/enterprise)
+### GitHub: a corporate and community leader
 
-Build, scale, and deliver secure software faster with GitHub’s AI-powered developer platform.
+GitHub has a responsibility to address key local and global societal issues. We deploy GitHub products for good, foster partnerships between private and social sectors, and empower employees to contribute to causes aligned with their values.
 
-Learn more
+### Four key focus areas
 
-### [Teams](https://github.com/team)
+Together with our employees, developers, and partners—and with a focus on skilling, accessibility, sustainability, and humanitarian response—we can drive positive and lasting contributions to the world.
 
-With CI/CD, Dependabot, and the world's largest developer community, GitHub provides everything your team needs to ship secure software faster.
+[Learn more](/social-impact/focus-areas)
 
-Learn more
+### Get exclusive discounts for verified nonprofits
 
-### [Startups](https://github.com/enterprise/startups)
+Qualifying nonprofits, 501(c)(3) or equivalent get exclusive access to a free GitHub Team plan or 25% off the GitHub Enterprise Cloud plan.
 
-Go from idea to IPO in one place, complete with personalized onboarding, office hours, and tailored product guidance.
+[Get exclusive discounts for verified nonprofits](https://github.com/solutions/industry/nonprofits?locale=en-US)[Email GitHub Social Impact](https://support.github.com/contact/social-impact)
 
-Learn more
+### Latest insights
 
-### The enterprise-grade platform that developers know and love.
+### [How GitHub protects developers from copyright enforcement overreach](https://github.blog/news-insights/policy-news-and-insights/how-github-protects-developers-from-copyright-enforcement-overreach/)
 
-[Learn more about GitHub Enterprise](https://github.com/enterprise)
+Developers
 
-## Solving industry-specific challenges
+26 September 2025
 
-[View all](https://github.com/solutions/industry)
+Read more
 
-### [Healthcare](https://github.com/solutions/industry/healthcare)
+### [Using AI to map hope for refugees with UNHCR, the UN Refugee Agency](https://github.blog/open-source/social-impact/using-ai-to-map-hope-for-refugees-with-unhcr-the-un-refugee-agency/)
 
-By incorporating security checks into developer workflows, you can build secure communication channels between patients and providers.
+Humanitarian Response
 
-Learn more
+24 September 2025
 
-### [Financial Services](https://github.com/solutions/industry/financial-services)
+Read more
 
-With an AI-powered developer platform, you can build innovative financial solutions that drive economic growth.
+### [Your guide to GitHub Universe 2025: The schedule just launched!](https://github.blog/news-insights/company-news/your-guide-to-github-universe-2025-the-schedule-just-launched/)
 
-Learn more
+Skilling
 
-### [Manufacturing](https://github.com/solutions/industry/manufacturing)
+10 September 2025
 
-With robust CI/CD that can handle the complex needs of manufacturing, you can securely transform operations at scale.
+Read more
 
-Learn more
 
-## The solutions you need to build what you want
 
-[View all](https://github.com/solutions/use-case)
 
-### [App Modernization](https://github.com/solutions/use-case/app-modernization)
 
-Assess, upgrade, and migrate apps to the cloud with GitHub Copilot.
-
-Learn more
-
-### [DevSecOps](https://github.com/solutions/use-case/devsecops)
-
-With comprehensive security tools built into the developer workflow, you can build, secure, and ship all in one place.
-
-Learn more
-
-### [DevOps](https://github.com/solutions/use-case/devops)
-
-Scale and deliver more secure software with GitHub's unified AI-powered developer platform.
-
-Learn more
-
-## Adopted by the world's leading organizations
-
-[View all](https://github.com/customer-stories)
-
-### [3M transforms its software toolchain to bring cutting-edge science to customers, faster.](https://github.com/customer-stories/3m)
-
-Read story
-
-### [Philips builds and deploys digital health technology faster with innersource on GitHub.](https://github.com/customer-stories/philips)
-
-Read story
-
-### [GitHub brings DevOps to life and enables streamlined developer experiences at Procter & Gamble.](https://github.com/customer-stories/pg)
-
-Read story
-
-### Get started
-
-Trusted by 90% of the Fortune 100, GitHub helps millions of developers and companies collaborate, build, and deliver secure software faster. And with thousands of DevOps integrations, developers can build smarter from day one with the tools they know and love—or discover new ones.
-
-[Start a free trial](https://github.com/organizations/enterprise_plan?ref_cta=Start+a+free+trial&ref_loc=footer&ref_page=%2Fsolutions_overview)[Contact sales](https://github.com/enterprise/contact?ref_cta=Contact+sales&ref_loc=footer&ref_page=%2Fsolutions_overview)
-
-     
 
 You can’t perform that action at this time.
-
- 

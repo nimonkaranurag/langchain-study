@@ -1,217 +1,1527 @@
 [Skip to content](#start-of-content)   
-
+  Explore GitHub's latest Universe launches —   [join the Product Roadmap webinar](https://github.com/resources/events/github-roadmap-webinar-q4?utm_source=github&utm_medium=banner&utm_campaign=AMER-FY26Q2-AMER_EMEA-WBRL-Roadmap_website_banner-20251113&utm_content=website_banner) 
 
 
 ## Navigation Menu
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Flangchain-ai%2Flangchainjs) 
-
-Appearance settings
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fpricing)
 
 # Search code, repositories, users, issues, pull requests...
 
 [Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Flangchain-ai%2Flangchainjs)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fpricing)
 
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=langchain-ai%2Flangchainjs) 
-
-Appearance settings
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fpricing&source=header)
 
 You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
 {{ message }}
 
-[langchain-ai](/langchain-ai)   /  **[langchainjs](/langchain-ai/langchainjs)**  Public
+# Try the Copilot-powered platform
 
-* [Notifications](/login?return_to=%2Flangchain-ai%2Flangchainjs)  You must be signed in to change notification settings
-* [Fork 2.9k](/login?return_to=%2Flangchain-ai%2Flangchainjs)
-* [Star  16.3k](/login?return_to=%2Flangchain-ai%2Flangchainjs)
+We get it, there's a lot you can do with GitHub. That’s why we've packed all of it into a single risk-free trial that includes GitHub Enterprise, Copilot, and Advanced Security.
 
-🦜🔗 Build context-aware reasoning applications 🦜🔗
+[Start free for 30 days](/organizations/enterprise_plan)
 
-[docs.langchain.com/oss/javascript/langchain/](https://docs.langchain.com/oss/javascript/langchain/ "https://docs.langchain.com/oss/javascript/langchain/")
+## Free
 
-### License
+The basics for individuals   
+and organizations
 
-[MIT license](/langchain-ai/langchainjs/blob/main/LICENSE)
+### $ 0 USD per month
 
-[16.3k stars](/langchain-ai/langchainjs/stargazers)   [2.9k forks](/langchain-ai/langchainjs/forks)   [Branches](/langchain-ai/langchainjs/branches)   [Tags](/langchain-ai/langchainjs/tags)   [Activity](/langchain-ai/langchainjs/activity)
+### $ 0 USD per month forever
 
-[Star](/login?return_to=%2Flangchain-ai%2Flangchainjs)
+[Join for free](/join?plan=free&ref_cta=Join%2520for%2520free&ref_loc=cards&ref_page=%2Fpricing&source=pricing-card-free)
 
-[Notifications](/login?return_to=%2Flangchain-ai%2Flangchainjs)  You must be signed in to change notification settings
+* Unlimited public/private repositories
 
-# langchain-ai/langchainjs
+   
 
-[Branches](/langchain-ai/langchainjs/branches)[Tags](/langchain-ai/langchainjs/tags)
+  Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.
 
-Open more actions menu
+  ### Uh oh!
 
-## Folders and files
+  There was an error while loading. Please reload this page.
+* Dependabot security and version updates
 
-| Name | Name | Last commit message | Last commit date |
-| --- | --- | --- | --- |
-| Latest commit   History[6,976 Commits](/langchain-ai/langchainjs/commits/main/) |
-| [.changeset](/langchain-ai/langchainjs/tree/main/.changeset ".changeset") | [.changeset](/langchain-ai/langchainjs/tree/main/.changeset ".changeset") |  |  |
-| [.devcontainer](/langchain-ai/langchainjs/tree/main/.devcontainer ".devcontainer") | [.devcontainer](/langchain-ai/langchainjs/tree/main/.devcontainer ".devcontainer") |  |  |
-| [.github](/langchain-ai/langchainjs/tree/main/.github ".github") | [.github](/langchain-ai/langchainjs/tree/main/.github ".github") |  |  |
-| [.vscode](/langchain-ai/langchainjs/tree/main/.vscode ".vscode") | [.vscode](/langchain-ai/langchainjs/tree/main/.vscode ".vscode") |  |  |
-| [cookbook](/langchain-ai/langchainjs/tree/main/cookbook "cookbook") | [cookbook](/langchain-ai/langchainjs/tree/main/cookbook "cookbook") |  |  |
-| [dependency\_range\_tests](/langchain-ai/langchainjs/tree/main/dependency_range_tests "dependency_range_tests") | [dependency\_range\_tests](/langchain-ai/langchainjs/tree/main/dependency_range_tests "dependency_range_tests") |  |  |
-| [docs/core\_docs](/langchain-ai/langchainjs/tree/main/docs/core_docs "This path skips through empty directories") | [docs/core\_docs](/langchain-ai/langchainjs/tree/main/docs/core_docs "This path skips through empty directories") |  |  |
-| [environment\_tests](/langchain-ai/langchainjs/tree/main/environment_tests "environment_tests") | [environment\_tests](/langchain-ai/langchainjs/tree/main/environment_tests "environment_tests") |  |  |
-| [examples](/langchain-ai/langchainjs/tree/main/examples "examples") | [examples](/langchain-ai/langchainjs/tree/main/examples "examples") |  |  |
-| [internal](/langchain-ai/langchainjs/tree/main/internal "internal") | [internal](/langchain-ai/langchainjs/tree/main/internal "internal") |  |  |
-| [libs](/langchain-ai/langchainjs/tree/main/libs "libs") | [libs](/langchain-ai/langchainjs/tree/main/libs "libs") |  |  |
-| [.editorconfig](/langchain-ai/langchainjs/blob/main/.editorconfig ".editorconfig") | [.editorconfig](/langchain-ai/langchainjs/blob/main/.editorconfig ".editorconfig") |  |  |
-| [.gitattributes](/langchain-ai/langchainjs/blob/main/.gitattributes ".gitattributes") | [.gitattributes](/langchain-ai/langchainjs/blob/main/.gitattributes ".gitattributes") |  |  |
-| [.gitignore](/langchain-ai/langchainjs/blob/main/.gitignore ".gitignore") | [.gitignore](/langchain-ai/langchainjs/blob/main/.gitignore ".gitignore") |  |  |
-| [.nvmrc](/langchain-ai/langchainjs/blob/main/.nvmrc ".nvmrc") | [.nvmrc](/langchain-ai/langchainjs/blob/main/.nvmrc ".nvmrc") |  |  |
-| [.pnpmrc](/langchain-ai/langchainjs/blob/main/.pnpmrc ".pnpmrc") | [.pnpmrc](/langchain-ai/langchainjs/blob/main/.pnpmrc ".pnpmrc") |  |  |
-| [.prettierrc](/langchain-ai/langchainjs/blob/main/.prettierrc ".prettierrc") | [.prettierrc](/langchain-ai/langchainjs/blob/main/.prettierrc ".prettierrc") |  |  |
-| [CONTRIBUTING.md](/langchain-ai/langchainjs/blob/main/CONTRIBUTING.md "CONTRIBUTING.md") | [CONTRIBUTING.md](/langchain-ai/langchainjs/blob/main/CONTRIBUTING.md "CONTRIBUTING.md") |  |  |
-| [LICENSE](/langchain-ai/langchainjs/blob/main/LICENSE "LICENSE") | [LICENSE](/langchain-ai/langchainjs/blob/main/LICENSE "LICENSE") |  |  |
-| [README.md](/langchain-ai/langchainjs/blob/main/README.md "README.md") | [README.md](/langchain-ai/langchainjs/blob/main/README.md "README.md") |  |  |
-| [SECURITY.md](/langchain-ai/langchainjs/blob/main/SECURITY.md "SECURITY.md") | [SECURITY.md](/langchain-ai/langchainjs/blob/main/SECURITY.md "SECURITY.md") |  |  |
-| [deno.json](/langchain-ai/langchainjs/blob/main/deno.json "deno.json") | [deno.json](/langchain-ai/langchainjs/blob/main/deno.json "deno.json") |  |  |
-| [package.json](/langchain-ai/langchainjs/blob/main/package.json "package.json") | [package.json](/langchain-ai/langchainjs/blob/main/package.json "package.json") |  |  |
-| [pnpm-lock.yaml](/langchain-ai/langchainjs/blob/main/pnpm-lock.yaml "pnpm-lock.yaml") | [pnpm-lock.yaml](/langchain-ai/langchainjs/blob/main/pnpm-lock.yaml "pnpm-lock.yaml") |  |  |
-| [pnpm-workspace.yaml](/langchain-ai/langchainjs/blob/main/pnpm-workspace.yaml "pnpm-workspace.yaml") | [pnpm-workspace.yaml](/langchain-ai/langchainjs/blob/main/pnpm-workspace.yaml "pnpm-workspace.yaml") |  |  |
-| [tsconfig.json](/langchain-ai/langchainjs/blob/main/tsconfig.json "tsconfig.json") | [tsconfig.json](/langchain-ai/langchainjs/blob/main/tsconfig.json "tsconfig.json") |  |  |
-| [turbo.json](/langchain-ai/langchainjs/blob/main/turbo.json "turbo.json") | [turbo.json](/langchain-ai/langchainjs/blob/main/turbo.json "turbo.json") |  |  |
-|  |
+   
 
-## Repository files navigation
+  Keep projects secure by automatically opening pull requests to update vulnerable dependencies and keep them up to date.
 
-# 🦜️🔗 LangChain.js
+  ### Uh oh!
 
-LangChain is a framework for building LLM-powered applications. It helps you chain together interoperable components and third-party integrations to simplify AI application development — all while future-proofing decisions as the underlying technology evolves.
+  There was an error while loading. Please reload this page.
+* 2,000 CI/CD minutes/month
 
-**Documentation**: To learn more about LangChain, check out [the docs](https://docs.langchain.com/oss/javascript/langchain/overview).
+  Free for public repositories
 
-If you're looking for more advanced customization or agent orchestration, check out [LangGraph.js](https://langchain-ai.github.io/langgraphjs/). our framework for building agents and controllable workflows.
+   
 
-Note
+  Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub.
 
-Looking for the Python version? Check out [LangChain](https://github.com/langchain-ai/langchain).
+  ### Uh oh!
 
-To help you ship LangChain apps to production faster, check out [LangSmith](https://smith.langchain.com). [LangSmith](https://smith.langchain.com) is a unified developer platform for building, testing, and monitoring LLM applications.
+  There was an error while loading. Please reload this page.
+* 500MB of Packages storage
 
-## ⚡️ Quick Install
+  Free for public repositories
 
-You can use npm, pnpm, or yarn to install LangChain.js
+   
 
-`npm install -S langchain` or `pnpm install langchain` or `yarn add langchain`
+  Host your own software packages or use them as dependencies in other projects. Both private and public hosting available.
 
-## 🚀 Why use LangChain?
+  ### Uh oh!
 
-LangChain helps developers build applications powered by LLMs through a standard interface for agents, models, embeddings, vector stores, and more.
+  There was an error while loading. Please reload this page.
+* Issues & Projects
 
-Use LangChain for:
+   
 
-* **Real-time data augmentation**. Easily connect LLMs to diverse data sources and external/internal systems, drawing from LangChain’s vast library of integrations with model providers, tools, vector stores, retrievers, and more.
-* **Model interoperability**. Swap models in and out as your engineering team experiments to find the best choice for your application’s needs. As the industry frontier evolves, adapt quickly — LangChain’s abstractions keep you moving without losing momentum.
+  Give your developers flexible features for project management that adapts to any team, project, and workflow — all alongside your code.
 
-## 📦 LangChain's ecosystem
+  ### Uh oh!
 
-* [LangSmith](https://www.langchain.com/langsmith) - Unified developer platform for building, testing, and monitoring LLM applications. With LangSmith, you can debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and deploy agents with confidence.
-* [LangGraph](https://docs.langchain.com/oss/javascript/langgraph/overview) - Build agents that can reliably handle complex tasks with LangGraph, our low-level agent orchestration framework. LangGraph offers customizable architecture, long-term memory, and human-in-the-loop workflows — and is trusted in production by companies like LinkedIn, Uber, Klarna, and GitLab.
+  There was an error while loading. Please reload this page.
+* Community support
 
-## 🌐 Supported Environments
+   
 
-LangChain.js is written in TypeScript and can be used in:
+  Get help with most of your GitHub questions and issues in our Community Forum.
 
-* Node.js (ESM and CommonJS) - 18.x, 19.x, 20.x, 22.x
-* Cloudflare Workers
-* Vercel / Next.js (Browser, Serverless and Edge functions)
-* Supabase Edge Functions
-* Browser
-* Deno
+  ### Uh oh!
 
-## 📖 Additional Resources
+  There was an error while loading. Please reload this page.
 
-* [Getting started](https://docs.langchain.com/oss/javascript/langchain/overview): Installation, setting up the environment, simple examples
-* [Learn](https://docs.langchain.com/oss/javascript/langchain/learn): Learn about the core concepts of LangChain.
-* [LangChain Forum](https://forum.langchain.com): Connect with the community and share all of your technical questions, ideas, and feedback.
-* [Chat LangChain](https://chat.langchain.com): Ask questions & chat with our documentaiton.
+#### Featured add-ons
 
-## 💁 Contributing
+* GitHub Copilot Access
 
-As an open-source project in a rapidly developing field, we are extremely open to contributions, whether it be in the form of a new feature, improved infrastructure, or better documentation.
+   
 
-For detailed information on how to contribute, see [here](https://github.com/langchain-ai/langchainjs/blob/main/CONTRIBUTING.md).
+  With [GitHub Copilot](/features/copilot), get suggestions for whole lines or entire functions—right inside your editor.
 
-Please report any security issues or concerns following our [security guidelines](https://github.com/langchain-ai/langchainjs/blob/main/SECURITY.md).
+  ### Uh oh!
 
-## About
+  There was an error while loading. Please reload this page.
+* GitHub Codespaces Access
 
-🦜🔗 Build context-aware reasoning applications 🦜🔗
+   
 
-[docs.langchain.com/oss/javascript/langchain/](https://docs.langchain.com/oss/javascript/langchain/ "https://docs.langchain.com/oss/javascript/langchain/")
+  With [GitHub Codespaces](/features/codespaces), get an instant dev environment in the cloud, so you can code anywhere on any device.
 
-### Resources
+  ### Uh oh!
 
-### License
+  There was an error while loading. Please reload this page.
 
-[MIT license](#MIT-1-ov-file)
+Most popular
 
-### Contributing
+## Team
 
-### Security policy
+Advanced collaboration for   
+individuals and organizations
 
-[Security policy](#security-ov-file)
+### $ 4 USD per user/month
+
+### $ 4 USD per user/month for the first 12 months\*
+
+[Continue with Team](/join?plan=business&pricing_exp=true&ref_cta=Continue%2520with%2520Team&ref_loc=cards&ref_page=%2Fpricing&setup_organization=true&source=pricing-card-team)
+
+* Everything included in Free, plus...
+* Access to GitHub Codespaces
+
+   
+
+  Blazing fast cloud developer environments with flexible compute and pre-configured containers, developers can code, collaborate, and debug from any browser. Pay only for what you use with compute fees starting at $0.18/hr and storage fees at $0.07/GB per month.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Repository rules
+
+   
+
+  Enforce restrictions on how code branches and tags are merged across your organization, including requiring reviews by selected collaborators, or allowing only specific contributors to work on a particular branch.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Multiple reviewers in pull requests
+
+   
+
+  Assign multiple users or a team to review a pull request.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Draft pull requests
+
+   
+
+  Easily discuss and collaborate on pull requests before submitting to formal review.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Code owners
+
+   
+
+  Automatically request reviews—or require approval—by selected contributors when changes are made to sections of code that they own.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Required reviewers
+
+   
+
+  Ensure that pull requests have a specific number of approving reviews before collaborators can make changes to a protected branch.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Pages and Wikis
+
+   
+
+  Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Environment deployment branches and secrets
+
+   
+
+  A job cannot access secrets that are defined in an environment unless it is running on the specified branch.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* 3,000 CI/CD minutes/month
+
+  Free for public repositories
+
+   
+
+  Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* 2GB of Packages storage
+
+  Free for public repositories
+
+   
+
+  Host your own software packages or use them as dependencies in other projects. Both private and public hosting available.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Web-based support
+
+   
+
+  GitHub Support can help you troubleshoot issues you run into while using GitHub.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+
+#### Featured add-ons
+
+* GitHub Secret Protection
+
+   
+
+  Ensure your secrets stay secure. Mitigate risk associated with exposed secrets in your repositories, while preventing new leaks before they happen with push protection.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* GitHub Code Security
+
+   
+
+  Find and fix vulnerabilities in your code before they reach production. Prioritize your Dependabot alerts with automated triage rules.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+
+Recommended
+
+## Enterprise
+
+Security, compliance,   
+and flexible deployment
+
+Starting at
+
+### $ 21 USD per user/month
+
+### $ 21 USD per user/month for the first 12 months\*
+
+[Start a free trial](/organizations/enterprise_plan?ref_cta=Start%2520a%2520free%2520trial&ref_loc=card&ref_page=pricing)
+
+[Contact Sales](https://github.com/enterprise/contact?ref_page=/pricing&ref_cta=Contact%20Sales&ref_loc=cards)
+
+* Everything included in Team, plus...
+* Data residency
+
+   
+
+  GitHub Enterprise Cloud offers a multi-tenant enterprise SaaS solution on Microsoft Azure, allowing you to choose a regional cloud deployment for data residency, so your in-scope data is stored at rest in a designated location. [Start a free 30 day trial](https://github.com/account/enterprises/new) today or [contact our sales team](/enterprise/contact/data-residency) for more information.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Enterprise Managed Users
+
+   
+
+  Own and control the user accounts of your enterprise members through your identity provider (IdP).
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* User provisioning through SCIM
+
+   
+
+  Automatically invite members to join your organization when you grant access on your IdP. If you remove a member's access to your GitHub organization on your SAML IdP, the member will be automatically removed from the GitHub organization.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Enterprise Account to centrally manage multiple organizations
+
+   
+
+  GitHub Enterprise Cloud includes the option to create an enterprise account, which enables collaboration between multiple organizations, gives administrators a single point of visibility and management and brings license cost savings for identical users in multiple organizations.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Environment protection rules
+
+   
+
+  When a workflow job references an environment, the job won't start until all of the environment's protection rules pass.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Repository rules
+
+   
+
+  Enforce branch and tag protections, as well as push rules across your enterprise. Rule insights allow you to assess impact of rules before and during enforcement.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Audit Log API
+
+   
+
+  As a GitHub Enterprise Cloud organization administrator, you can now access log events using our GraphQL API and monitor the activity in your organization.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* SOC1, SOC2, type 2 reports annually
+
+   
+
+  GitHub offers AICPA System and Organization Controls (SOC) 1 Type 2 and SOC 2 Type 2 reports with IAASB International Standards on Assurance Engagements, ISAE 3000, and ISAE 3402.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* FedRAMP Tailored Authority to Operate (ATO)
+
+   
+
+  Government users can host projects on GitHub Enterprise Cloud with the confidence that our platform meets the low impact software-as-a-service (SaaS) baseline of security standards set by our U.S. federal government partners.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* SAML single sign-on
+
+   
+
+  Use an identity provider to manage the identities of GitHub users and applications.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* Advanced auditing
+
+   
+
+  Quickly review the actions performed by members of your organization. Keep copies of audit log data to ensure secure IP and maintain compliance for your organization.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* GitHub Connect
+
+   
+
+  Share features and workflows between your GitHub Enterprise Server instance and GitHub Enterprise Cloud.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* 50,000 CI/CD minutes/month
+
+  Free for public repositories
+
+   
+
+  Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+* 50GB of Packages storage
+
+  Free for public repositories
+
+   
+
+  Host your own software packages or use them as dependencies in other projects. Both private and public hosting available.
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+
+#### Exclusive add-on
+
+* Premium support
+
+   
+
+  With Premium, get a 30-minute SLA on Urgent tickets and 24/7 web and phone support via callback request. With Premium Plus, get everything in Premium, assigned Customer Reliability Engineer and more.  
+    
+   [Learn more about Premium Support](/premium-support)
+
+  ### Uh oh!
+
+  There was an error while loading. Please reload this page.
+
+## Additional add-ons
+
+[### GitHub Copilot
+
+Get started for free with up to 2,000 completions and 50 chat requests per month.
+
+Compare plans](/features/copilot#pricing)
+
+[New
+
+### GitHub Models
+
+Bring industry-leading AI into your workflow, securely, scalably, and with full developer control.
+
+Learn more](/features/models)
+
+[### GitHub Advanced Security
+
+Gain peace of mind with our security, privacy, and responsible AI policies.
+
+Learn more](/security/plans)
+
+[### GitHub Codespaces
+
+Starting at $0.18 per hour of compute and $0.07 per GB of storage.
+
+Learn more](/features/codespaces)
+
+[### Premium support
+
+Get expert help for Enterprise Cloud and Enterprise—any hour your team needs it.
+
+Learn more](/enterprise/premium-support)
+
+[### Git Large File Storage
+
+$5 per month for 50 GB bandwidth and 50 GB of storage.
+
+Learn more](https://docs.github.com/repositories/working-with-files/managing-large-files/about-git-large-file-storage)
+
+[Compare all features](#compare-features)
+
+“GitHub is the world’s mono repository, so sharing our open source there is natural.”
+
+— Martin Andersen, VP of Engineering, Trustpilot
+
+ [Read the case study](/customer-stories/trustpilot)
+
+“GitHub Advanced Security is there for every pull request and excels compared to other static analysis tools we have used.”
+
+— Dimosthenis Kaponis, CTO, Netdata
+
+ [Read the case study](/customer-stories/netdata)
+
+“GitHub keeps us up to speed with the industry’s best tools. We want new hires to know GitHub is in our toolchain—it makes them excited to join us.”
+
+— Spencer Kaiser, Principal Architect of Emerging Tech, American Airlines
+
+ [Read the case study](/customer-stories/american-airlines)
+
+“This collaborative way of building software is unstoppable. It isn’t going away—and GitHub has its place in that. We can make the whole company rethink how they build software.”
+
+— Ingo Sauerzapf, SAP Cloud Development Tools Manager
+
+ [Read the case study](/customer-stories/sap)
+
+“People know what a pull request is because it’s how they contribute to open source projects. We have many developers who are well-versed with GitHub, either for personal development or previous roles. With GitHub Enterprise, no one has to relearn the wheel.”
+
+— Laurent Ploix, Product Manager, Spotify
+
+ [Read the case study](/customer-stories/spotify)
+
+“I have seen some truly revolutionary actions happen in communities on GitHub. People are collaborating on code but they’re also having foundational conversations on best practices and how software, as a whole, is built. More and more, GitHub is an internet archive. It’s a deeply social and critical piece of our infrastructure.”
+
+— Michael Glukhovsky, Developer, Stripe
+
+ [Read the case study](/customer-stories/stripe)
+
+“When we started talking about code reuse, we felt like we already had the perfect platform in place: GitHub.”
+
+— Timothy Carmean, Software Processes and Tools Supervisor, Ford
+
+ [Read the case study](/customer-stories/ford)
+
+“Using GitHub Enterprise Cloud removes the burden of managing infrastructure, and we don’t need to worry about the availability of our versioning code, source code and versioning tools. It lets us focus on what’s important for our business, and that’s our customers.”
+
+— Victor Gomes, Infosec Tech Manager, Nubank
+
+ [Read the case study](/customer-stories/nubank)
+
+# Compare features
+
+Features on team  Switch plans
+
+ 
+
+Select a plan to review its features
+
+ 
+
+Features
+
+## Free
+
+## Team
+
+## Enterprise
+
+Pricing
+
+$0 USD
+
+ per month
+
+$0 USD
+
+ per month forever
+
+$4 USD
+
+ per user/month
+
+$4 USD
+
+ per user/month for the first 12 months\*
+
+$21 USD
+
+ per user/month
+
+$21 USD
+
+ per user/month for the first 12 months\*
+
+How to get started
+
+[Join for free](/join?ref_cta=Join%2520for%2520free&ref_loc=pricing%2520comparison&ref_page=%2Fpricing&source=pricing-comparison-free)
+
+[Continue with Team](/join?plan=business&ref_cta=Continue%2520with%2520Team&ref_loc=pricing-comparison&ref_page=%2Fpricing&setup_organization=true&source=pricing-comparison-team)
+
+[Start a free trial](/organizations/enterprise_plan?ref_cta=Start%2520a%2520free%2520trial&ref_loc=card&ref_page=pricing)  [Contact Sales](https://github.com/enterprise/contact?ref_page=/pricing&ref_cta=Contact%20Sales&ref_loc=pricing%20comparison)
+
+### Code management
+
+Public repositories
+
+Unlimited
+
+Unlimited
+
+Unlimited
+
+ 
+
+Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.
 
 ### Uh oh!
 
 There was an error while loading. Please reload this page.
 
-[Custom properties](/langchain-ai/langchainjs/custom-properties)
+Unlimited
 
-### Stars
+Unlimited
 
-[**16.3k** stars](/langchain-ai/langchainjs/stargazers)
+Unlimited
 
-### Watchers
+Private repositories
 
-[**95** watching](/langchain-ai/langchainjs/watchers)
+Unlimited
 
-### Forks
+Unlimited
 
-[**2.9k** forks](/langchain-ai/langchainjs/forks)
+Unlimited
 
-[Report repository](/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Flangchain-ai%2Flangchainjs&report=langchain-ai+%28user%29)
+ 
 
-## [Releases 354](/langchain-ai/langchainjs/releases)
+Host code in private GitHub repositories, accessible via appliance, web, and command line. Private repositories are only accessible to you and people you share them with.
 
-[langchain==1.0.3  Latest
+### Uh oh!
 
-Nov 6, 2025](/langchain-ai/langchainjs/releases/tag/langchain%3D%3D1.0.3)
+There was an error while loading. Please reload this page.
 
-[+ 353 releases](/langchain-ai/langchainjs/releases)
+Unlimited
 
-## [Packages 0](/orgs/langchain-ai/packages?repo_name=langchainjs)
+Unlimited
 
-No packages published
+Unlimited
 
-## [Used by 48.2k](/langchain-ai/langchainjs/network/dependents)
+### Code workflow
 
-[+ 48,173](/langchain-ai/langchainjs/network/dependents)
+GitHub Codespaces
 
-## [Contributors 1,010](/langchain-ai/langchainjs/graphs/contributors)
+$0 spend limit  
+With policies and controls
 
+Ability to increase spend limit
 
+Ability to increase spend limit
 
-[+ 996 contributors](/langchain-ai/langchainjs/graphs/contributors)
+ 
 
-## Languages
+Spin up fully configured dev environments in the cloud with the power of your favorite editor. A "core hour" denotes compute usage. On a 2-core machine, you would get 60 hours free. On a 4-core machine, you would get 30 hours free, etc. Free hours are assigned to personal accounts, rather than free organizations.
 
-* [TypeScript 90.2%](/langchain-ai/langchainjs/search?l=typescript)
-* [Jupyter Notebook 5.1%](/langchain-ai/langchainjs/search?l=jupyter-notebook)
-* [HTML 3.6%](/langchain-ai/langchainjs/search?l=html)
-* [JavaScript 0.8%](/langchain-ai/langchainjs/search?l=javascript)
-* [Shell 0.2%](/langchain-ai/langchainjs/search?l=shell)
-* [CSS 0.1%](/langchain-ai/langchainjs/search?l=css)
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+$0 spend limit  
+With policies and controls
+
+Ability to increase spend limit
+
+Ability to increase spend limit
+
+GitHub Actions
+
+2,000 minutes/month
+
+Free for public repositories
+
+3,000 minutes/month
+
+Free for public repositories
+
+50,000 minutes/month
+
+Free for public repositories
+
+ 
+
+Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub. Minutes are free for public repositories.  
+  
+[Learn more about billing](https://docs.github.com/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+2,000 minutes/month
+
+Free for public repositories
+
+3,000 minutes/month
+
+Free for public repositories
+
+50,000 minutes/month
+
+Free for public repositories
+
+GitHub Packages
+
+500 MB
+
+Free for public repositories
+
+2GB
+
+Free for public repositories
+
+50GB
+
+Free for public repositories
+
+ 
+
+Host your own software packages or use them as dependencies in other projects. Both private and public hosting available. Packages are free for public repositories.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+500 MB
+
+Free for public repositories
+
+2GB
+
+Free for public repositories
+
+50GB
+
+Free for public repositories
+
+Code reviews
+
+ 
+
+Review new code, see visual code changes, and confidently merge code changes with automated status checks.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Pull requests
+
+ 
+
+Allow contributors to easily notify you of changes they've pushed to a repository – with access limited to the contributors you specify. Easily merge changes you accept.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Repository rules
+
+Public repositories
+
+ 
+
+Enforce restrictions on how code branches are merged, including requiring reviews by selected collaborators, or allowing only specific contributors to work on a particular branch.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Code owners
+
+Public repositories
+
+ 
+
+Automatically request reviews – or require approval – by selected contributors when changes are made to sections of code that they own.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Draft pull requests
+
+Public repositories
+
+ 
+
+Easily discuss and collaborate on pull requests before submitting to formal review.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Multiple pull request assignees
+
+Public repositories
+
+ 
+
+Assign more than one person to a pull request.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Repository insights
+
+Public repositories
+
+ 
+
+See data about activity and contributions within your repositories, including trends. You can use this data to improve collaboration and make development faster and more effective.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Scheduled reminders
+
+Public repositories
+
+ 
+
+Send scheduled messages to you or your team listing open pull requests.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Automatic code review assignment
+
+Public repositories
+
+ 
+
+Automatically assign code reviews to members of your team based on one of two algorithms.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Environment protection rules
+
+Public repositories
+
+Public repositories
+
+ 
+
+When a workflow job references an environment, the job won't start until all of the environment's protection rules pass.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Public repositories
+
+Environment deployment branches and secrets
+
+Public repositories
+
+ 
+
+A job cannot access secrets that are defined in an environment unless it is running on the specified branch.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+### Collaboration
+
+Collaborators for public repositories
+
+Unlimited
+
+Unlimited
+
+Unlimited
+
+ 
+
+Invite any GitHub member, or all GitHub members, to work with you on code in a public repository you control – including making changes and opening issues.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Unlimited
+
+Unlimited
+
+Unlimited
+
+Collaborators for private repositories
+
+Unlimited
+
+$4
+
+ per user/month
+
+$21
+
+ per user/month
+
+ 
+
+Invite any GitHub member, or all GitHub members, to work with you on code in a private repository you control – including making changes and opening issues.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Unlimited
+
+$4
+
+ per user/month
+
+$21
+
+ per user/month
+
+Issues
+
+ 
+
+Track bugs, enhancements, and other requests, prioritize work, and communicate with stakeholders as changes are proposed and merged.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Projects
+
+ 
+
+Visualize and manage issues and pull requests across tables, boards, and roadmaps with custom fields and views that you can arrange to suit your workflow.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Milestones
+
+ 
+
+Track progress on groups of issues or pull requests in a repository, and map groups to overall project goals.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Team discussions
+
+ 
+
+Discuss any topic, unattached to a specific project or issue. Control who has access, notify discussion participants with updates, and link from anywhere.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Organization and team management
+
+ 
+
+Manage access to projects on a team-by-team, or individual user, basis.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Pages and wikis
+
+Public repositories
+
+ 
+
+Host documentation and simple websites for your project in a wiki format that contributors can easily edit either on the web or command line.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Multiple issue assignees
+
+Public repositories
+
+ 
+
+Assign more than one person to an issue.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+### GitHub Secret Protection
+
+Push protection
+
+Public repositories
+
+ 
+
+Prevent secret exposures by proactively blocking secrets before they reach your code.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Secret scanning
+
+Public repositories
+
+ 
+
+Detect and manage exposed secrets across git history, pull requests, issues, and wikis.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Provider patterns
+
+Public repositories
+
+ 
+
+GitHub collaborates with AWS, Azure, and Google Cloud to detect secrets with high accuracy. This minimizes false positives, letting you focus on what matters.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Provider notification
+
+Public repositories
+
+Public repositories
+
+Public repositories
+
+ 
+
+Providers get real-time alerts when their tokens appear in public code, enabling them to notify, quarantine, or revoke secrets.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Public repositories
+
+Public repositories
+
+Validity checks
+
+ 
+
+Prioritize active secrets with validity checks for provider patterns.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Copilot secret scanning
+
+ 
+
+Use AI to detect unstructured like passwords—without the noise.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Generic patterns
+
+ 
+
+Detect tokens from unknown providers, including HTTP authentication headers, connection strings, and private keys.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Custom patterns
+
+ 
+
+Create your own patterns and find organization-specific secrets.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Push protection bypass controls
+
+ 
+
+Manage who can bypass push protection and when.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Insights in security overview
+
+ 
+
+Understand how risk is distributed across your organization with security metrics and insight dashboards.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Scan history API
+
+ 
+
+Review how and when GitHub scans your repositories for secrets.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+### Code Security
+
+Copilot Autofix
+
+Public repositories
+
+ 
+
+Powered by GitHub Copilot, generate automatic fixes for 90% of alert types in JavaScript, Typescript, Java, and Python.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Third party extensibility for code scanning alerts
+
+Public repositories
+
+ 
+
+Centralize your findings across all your scanning tools via SARIF upload to GitHub.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Contextual vulnerability intelligence and advice
+
+Public repositories
+
+ 
+
+Quickly remediate with context provided by Copilot Autofix.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+CodeQL
+
+Public repositories
+
+ 
+
+Uncover vulnerabilities in your code with our industry-leading semantic code analysis.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Security campaigns
+
+ 
+
+Reduce security debt and burn down your security backlog with security campaigns.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Dependency graph
+
+ 
+
+Get a clear view of your project’s dependencies with a summary of manifest, lock files, and submitted dependencies via the API.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Dependency review action
+
+ 
+
+Catch insecure dependencies before adding them and get insights on licenses, dependents, and age.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Dependabot custom auto-triage rules
+
+ 
+
+Define alert-centric policies to control how Dependabot handles alerts and pull requests.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Dependabot security updates with grouped updates
+
+ 
+
+Automated pull requests that batch dependency updates for known vulnerabilities.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Dependabot version updates
+
+ 
+
+Automated pull requests that keep your dependencies up to date.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Insights in security overview
+
+ 
+
+Get a clear view of risk distribution with security metrics and dashboards.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+### Platform security and compliance
+
+Repository rules
+
+Public repositories
+
+ 
+
+Enforce consistent code standards, security, and compliance across branches and tags.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+SBOMs
+
+ 
+
+Export a software bill of materials (SBOM) for your repository.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Artifact attestations
+
+Public repositories
+
+Public repositories
+
+ 
+
+Ensure unfalsifiable provenance and integrity for your software.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Public repositories
+
+Public repositories
+
+GitHub Security Advisories
+
+ 
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Role-based access control
+
+ 
+
+Define users' level of access to your code, data and settings.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Required 2FA
+
+ 
+
+Use an extra layer of security with two factor authentication (2FA) when logging into GitHub.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Audit log
+
+ 
+
+Quickly review the actions performed by members of your organization.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Audit log API
+
+ 
+
+Keep copies of audit log data to ensure secure IP and maintain compliance for your organization.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+GitHub Connect
+
+ 
+
+Share features and workflows between your GitHub Enterprise Server instance and GitHub Enterprise Cloud.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+SAML single sign-on (SSO)
+
+ 
+
+Use an identity provider to manage the identities of GitHub users and applications.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Access GitHub Enterprise Server using your existing accounts and centrally manage repository access.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+IP allow list
+
+Enterprise Cloud
+
+ 
+
+Limit access to known allowed IP addresses.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Enterprise Cloud
+
+### Marketplace and integrations
+
+GitHub Apps
+
+Unlimited
+
+Unlimited
+
+Unlimited
+
+ 
+
+Install apps that integrate directly with GitHub's API to improve development workflows – or build your own for private use or publication in the GitHub Marketplace.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Unlimited
+
+Unlimited
+
+Unlimited
+
+Status checks
+
+ 
+
+Define tests that GitHub automatically runs against code being committed to your repository, and get details about failures and what is causing them.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Pre-receive hooks
+
+Enterprise Server
+
+ 
+
+Create requirements for automatically accepting or rejecting a push based on the contents of the push.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Enterprise Server
+
+### Support and deployment
+
+Community Support
+
+ 
+
+Get help with most of your GitHub questions and issues in our Community Forum.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Standard Support
+
+ 
+
+GitHub Support can help you troubleshoot issues you run into while using GitHub. Get support via the web.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Premium and Premium Plus Support
+
+ 
+
+With Premium, get a 30-minute SLA on Urgent tickets and 24/7 web and phone support via callback request. With Premium Plus, get everything in Premium, assigned Customer Reliability Engineer and more.  
+  
+ [Learn more about Premium Support](/premium-support)
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Available
+
+Invoice billing
+
+ 
+
+Pay bills via invoice, rather than using your credit card.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Self-hosted deployment
+
+Enterprise Server
+
+ 
+
+Self-hosted GitHub for on-prem appliances or self-managed cloud tenants.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Enterprise Server
+
+Data residency
+
+Enterprise Cloud
+
+ 
+
+Multi-tenant enterprise SaaS solution on Microsoft Azure, allowing you to choose a regional cloud deployment for data residency, so your in-scope data is stored at rest in a designated location. This is available in the EU and Australia with additional regions coming soon. [Contact our sales team](/enterprise/contact/data-residency) to learn more.
+
+### Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Enterprise Cloud
+
+## We love people who are changing the world
+
+[### Open source teams
+
+If you manage multiple contributors, there’s a free option. We also run GitHub Sponsors, where we help fund your work.
+
+Learn more](/team)
+
+[### Students and teachers
+
+We’ve partnered with industry leaders to give students and teachers free access to the best developer tools—for the school year and beyond.
+
+Learn more](https://education.github.com/)
+
+[### Nonprofits
+
+Work for a government-recognized nonprofit, association, or 501(c)(3)? Get a discounted Organization on us.
+
+Learn more](/solutions/industry/nonprofits)
+
+     
 
 You can’t perform that action at this time.
 

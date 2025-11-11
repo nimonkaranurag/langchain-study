@@ -1,52 +1,81 @@
-# Careers
+[Skip to content](#start-of-content)   
+  Explore GitHub's latest Universe launches —   [join the Product Roadmap webinar](https://github.com/resources/events/github-roadmap-webinar-q4?utm_source=github&utm_medium=banner&utm_campaign=AMER-FY26Q2-AMER_EMEA-WBRL-Roadmap_website_banner-20251113&utm_content=website_banner) 
 
-We are a small team of builders making an outsized impact in our industry.
 
-## We’re on a mission to make software smarter. Come join us.
+## Navigation Menu
 
-## Our values
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fpartners%2F)
 
-### Work on what matters
+# Search code, repositories, users, issues, pull requests...
 
-We ruthlessly prioritize and focus on only the most important, making sure we do a few things extremely well.
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-### Trust and accountability
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fpartners%2F)
 
-We trust that everyone we hire can make a big impact, and we hold each other accountable to deliver great outcomes.
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fpartners&source=header)
 
-### Ship fast, ship robustly
+You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
-We learn the most by shipping. In service of the large LangChain community, we aim to keep the bar high in everything we do.
+{{ message }}
 
-### Push the industry forward
+GitHub Partner Program
 
-We are in a super early, very fast-moving industry. Our users trust us to be their guide and partner – we strive to stay ahead of the curve and innovate.
+# Building stronger solutions together
 
-## Backed by the best in the business
+Strengthen your market position, boost differentiation, and get access to specialist guidance across Technology, Service & Channel, Startups, and Education.
 
-## Explore our job opportunities
+[Explore Partner Programs](#programs)
 
-## Our Awards
+### Elevate your brand
 
-001
+Enhance your credibility, gain industry recognition, and expand your market visibility by co-branding and messaging with GitHub.
 
-[Enterprise   
-Tech
+### Sharpen your skillset
 
-30
+Leverage powerful training and enablement resources to earn certifications that differentiate you from the competition.
 
-2025](https://www.enterprisetech30.com/)[IA40
+### Optimize your solutions
 
-2025](https://www.ia40.com/the-list)[InfraRed 100 2025
+Engage GitHub experts and resources to refine, test, and improve performance.
 
-2025](https://www.redpoint.com/infrared/100/)[Forbes
+### Why partner with GitHub?
 
-AI 50
+Partner with GitHub to open doors, accelerate delivery, and win together.
 
-2025](https://www.forbes.com/lists/ai50/)
+## GitHub Partner programs
 
-## Join us in San Francisco!
+### [Technology Partners](https://github.com/partners/technology-partners?locale=en-US)
 
-Don’t see an open role, but believe you can make a difference  on the team? Send us a note telling us how.
+Build innovative integrations and reach 100M+ developers.
 
-[Contact Us](mailto:jobs@langchain.dev)[About Us](/about)
+Learn more about Technology Partners
+
+### [Services & Channel Partners](https://github.com/partners/service-channel-partners?locale=en-US)
+
+Scale your business, expand customer reach, and unlock co-selling opportunities.
+
+Learn more about Services & Channel Partners
+
+### [Startup Partners](https://github.com/enterprise/startups?locale=en-US)
+
+Grow your portfolio with GitHub’s secure, AI-powered platform.
+
+Learn more about Startup Partners
+
+### [Education Partners](https://github.com/education/partners?locale=en-US)
+
+Empower learners and educators with GitHub tools.
+
+Learn more about Education Partners
+
+### Ready to grow with GitHub?
+
+Join a global community of innovators to build better together today.
+
+[Explore Partner Programs](#programs)
+
+   
+
+You can’t perform that action at this time.
+
+ 

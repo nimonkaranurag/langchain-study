@@ -48,72 +48,62 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 * [Observability](/oss/python/langchain/observability)
 
 * [Overview](#overview)
-* [Access](#access)
-* [Inside tools](#inside-tools)
-* [Inside middleware](#inside-middleware)
+* [Memory storage](#memory-storage)
+* [Read long-term memory in tools](#read-long-term-memory-in-tools)
+* [Write long-term memory from tools](#write-long-term-memory-from-tools)
 
 [Advanced usage](/oss/python/langchain/guardrails)
 
-# Runtime
+# Long-term memory
 
 ## [​](#overview) Overview
 
-LangChain’s [`create_agent`](https://reference.langchain.com/python/langchain/agents/#langchain.agents.create_agent) runs on LangGraph’s runtime under the hood. LangGraph exposes a [`Runtime`](https://reference.langchain.com/python/langgraph/runtime/#langgraph.runtime.Runtime) object with the following information:
+LangChain agents use [LangGraph persistence](/oss/python/langgraph/persistence#memory-store) to enable long-term memory. This is a more advanced topic and requires knowledge of LangGraph to use.
 
-1. **Context**: static information like user id, db connections, or other dependencies for an agent invocation
-2. **Store**: a [BaseStore](https://reference.langchain.com/python/langgraph/store/#langgraph.store.base.BaseStore) instance used for [long-term memory](/oss/python/langchain/long-term-memory)
-3. **Stream writer**: an object used for streaming information via the `"custom"` stream mode
+## [​](#memory-storage) Memory storage
 
-You can access the runtime information within [tools](#inside-tools) and [middleware](#inside-middleware).
-
-## [​](#access) Access
-
-When creating an agent with [`create_agent`](https://reference.langchain.com/python/langchain/agents/#langchain.agents.create_agent), you can specify a `context_schema` to define the structure of the `context` stored in the agent [`Runtime`](https://reference.langchain.com/python/langgraph/runtime/#langgraph.runtime.Runtime). When invoking the agent, pass the `context` argument with the relevant configuration for the run:
+LangGraph stores long-term memories as JSON documents in a [store](/oss/python/langgraph/persistence#memory-store). Each memory is organized under a custom `namespace` (similar to a folder) and a distinct `key` (like a file name). Namespaces often include user or org IDs or other labels that makes it easier to organize information. This structure enables hierarchical organization of memories. Cross-namespace searching is then supported through content filters.
 
 Copy
 
 Ask AI
 
 ```
-from dataclasses import dataclass from  dataclasses import  dataclass from langchain.agents import create_agent from langchain.agents import  create_agent  @dataclass @dataclassclass Context: class  Context: user_name: str user_name: str agent = create_agent(agent = create_agent( model="gpt-5-nano",  model ="gpt-5-nano", tools=[...],  tools =[...], context_schema=Context  context_schema = Context )) agent.invoke(agent.invoke( {"messages": [{"role": "user", "content": "What's my name?"}]}, {"messages": [{"role": "user", "content": "What's my name?"}]}, context=Context(user_name="John Smith")  context =Context(user_name = "John Smith") ))
+from langgraph.store.memory import InMemoryStore from langgraph.store.memory import  InMemoryStore def embed(texts: list[str]) -> list[list[float]]: def  embed(texts: list[str]) -> list[list[float]]:  # Replace with an actual embedding function or LangChain embeddings object  # Replace with an actual embedding function or LangChain embeddings object return [[1.0, 2.0] * len(texts)]  return [[1.0, 2.0] *  len(texts)] # InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production use.# InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production use.store = InMemoryStore(index={"embed": embed, "dims": 2}) store = InMemoryStore(index ={"embed": embed, "dims": 2}) user_id = "my-user" user_id = "my-user"application_context = "chitchat" application_context =  "chitchat"namespace = (user_id, application_context) namespace = (user_id, application_context) store.put( store.put(  namespace, namespace, "a-memory", "a-memory", { { "rules": [ "rules": [ "User likes short, direct language", "User likes short, direct language", "User only speaks English & python",  "User only speaks English & python", ], ], "my-key": "my-value", "my-key": "my-value", }, },)) # get the "memory" by ID # get the "memory" by IDitem = store.get(namespace, "a-memory") item = store.get(namespace, "a-memory") # search for "memories" within this namespace, filtering on content equivalence, sorted by vector similarity# search for "memories" within this namespace, filtering on content equivalence, sorted by vector similarityitems = store.search( items = store.search(  namespace, filter={"my-key": "my-value"}, query="language preferences" namespace, filter ={"my-key": "my-value"}, query = "language preferences"))
 ```
 
-### [​](#inside-tools) Inside tools
+For more information about the memory store, see the [Persistence](/oss/python/langgraph/persistence#memory-store) guide.
 
-You can access the runtime information inside tools to:
+## [​](#read-long-term-memory-in-tools) Read long-term memory in tools
 
-* Access the context
-* Read or write long-term memory
-* Write to the [custom stream](/oss/python/langchain/streaming#custom-updates) (ex, tool progress / updates)
-
-Use the `ToolRuntime` parameter to access the [`Runtime`](https://reference.langchain.com/python/langgraph/runtime/#langgraph.runtime.Runtime) object inside a tool.
+A tool the agent can use to look up user information
 
 Copy
 
 Ask AI
 
 ```
-from dataclasses import dataclass from  dataclasses import  dataclassfrom langchain.tools import tool, ToolRuntime from langchain.tools import tool, ToolRuntime  @dataclass @dataclassclass Context: class  Context: user_id: str user_id: str @tool @tooldef fetch_user_email_preferences(runtime: ToolRuntime[Context]) -> str: def  fetch_user_email_preferences(runtime: ToolRuntime[Context]) -> str:  """Fetch the user's email preferences from the store.""" """Fetch the user's email preferences from the store.""" user_id = runtime.context.user_id  user_id = runtime.context.user_id  preferences: str = "The user prefers you to write a brief and polite email." preferences: str = "The user prefers you to write a brief and polite email." if runtime.store:  if runtime.store:  if memory := runtime.store.get(("users",), user_id):  if  memory := runtime.store.get(("users",), user_id):  preferences = memory.value["preferences"]  preferences = memory.value["preferences"]  return preferences  return  preferences
+from dataclasses import dataclass from  dataclasses import  dataclass from langchain_core.runnables import RunnableConfig from langchain_core.runnables import  RunnableConfigfrom langchain.agents import create_agent from langchain.agents import  create_agentfrom langchain.tools import tool, ToolRuntime from langchain.tools import tool, ToolRuntimefrom langgraph.store.memory import InMemoryStore from langgraph.store.memory import  InMemoryStore  @dataclass @dataclassclass Context: class  Context: user_id: str user_id: str # InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.# InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.store = InMemoryStore() store = InMemoryStore()  # Write sample data to the store using the put method # Write sample data to the store using the put methodstore.put( store.put(  ("users",), # Namespace to group related data together (users namespace for user data) ("users",), # Namespace to group related data together (users namespace for user data) "user_123", # Key within the namespace (user ID as key)  "user_123", # Key within the namespace (user ID as key) { { "name": "John Smith",  "name": "John Smith", "language": "English",  "language": "English", } # Data to store for the given user } # Data to store for the given user)) @tool @tooldef get_user_info(runtime: ToolRuntime[Context]) -> str: def  get_user_info(runtime: ToolRuntime[Context]) -> str: """Look up user info.""" """Look up user info.""" # Access the store - same as that provided to `create_agent` # Access the store - same as that provided to `create_agent` store = runtime.store  store = runtime.store  user_id = runtime.context.user_id  user_id = runtime.context.user_id # Retrieve data from store - returns StoreValue object with value and metadata # Retrieve data from store - returns StoreValue object with value and metadata user_info = store.get(("users",), user_id)  user_info = store.get(("users",), user_id)  return str(user_info.value) if user_info else "Unknown user"  return  str(user_info.value) if  user_info else  "Unknown user" agent = create_agent(agent = create_agent( model="claude-sonnet-4-5-20250929",  model ="claude-sonnet-4-5-20250929", tools=[get_user_info],  tools =[get_user_info], # Pass store to agent - enables agent to access store when running tools # Pass store to agent - enables agent to access store when running tools store=store,  store =store,  context_schema=Context  context_schema = Context)) # Run the agent # Run the agentagent.invoke(agent.invoke( {"messages": [{"role": "user", "content": "look up user information"}]}, {"messages": [{"role": "user", "content": "look up user information"}]}, context=Context(user_id="user_123")  context =Context(user_id = "user_123") ))
 ```
 
-### [​](#inside-middleware) Inside middleware
+## [​](#write-long-term-memory-from-tools) Write long-term memory from tools
 
-You can access runtime information in middleware to create dynamic prompts, modify messages, or control agent behavior based on user context. Use `request.runtime` to access the [`Runtime`](https://reference.langchain.com/python/langgraph/runtime/#langgraph.runtime.Runtime) object inside middleware decorators. The runtime object is available in the [`ModelRequest`](https://reference.langchain.com/python/langchain/middleware/#langchain.agents.middleware.ModelRequest) parameter passed to middleware functions.
+Example of a tool that updates user information
 
 Copy
 
 Ask AI
 
 ```
-from dataclasses import dataclass from  dataclasses import  dataclass from langchain.messages import AnyMessage from langchain.messages import  AnyMessagefrom langchain.agents import create_agent, AgentState from langchain.agents import create_agent, AgentStatefrom langchain.agents.middleware import dynamic_prompt, ModelRequest, before_model, after_model from langchain.agents.middleware import dynamic_prompt, ModelRequest, before_model, after_modelfrom langgraph.runtime import Runtime from langgraph.runtime import  Runtime  @dataclass @dataclassclass Context: class  Context: user_name: str user_name: str # Dynamic prompts # Dynamic prompts @dynamic_prompt @dynamic_promptdef dynamic_system_prompt(request: ModelRequest) -> str: def  dynamic_system_prompt(request: ModelRequest) -> str: user_name = request.runtime.context.user_name  user_name = request.runtime.context.user_name  system_prompt = f"You are a helpful assistant. Address the user as {user_name}."  system_prompt =  f"You are a helpful assistant. Address the user as {user_name}."  return system_prompt  return  system_prompt # Before model hook # Before model hook @before_model @before_modeldef log_before_model(state: AgentState, runtime: Runtime[Context]) -> dict | None: def  log_before_model(state: AgentState, runtime: Runtime[Context]) -> dict  |  None:  print(f"Processing request for user: {runtime.context.user_name}")  print(f"Processing request for user: {runtime.context.user_name} ")  return None  return  None # After model hook # After model hook @after_model @after_modeldef log_after_model(state: AgentState, runtime: Runtime[Context]) -> dict | None: def  log_after_model(state: AgentState, runtime: Runtime[Context]) -> dict  |  None:  print(f"Completed request for user: {runtime.context.user_name}")  print(f"Completed request for user: {runtime.context.user_name} ")  return None  return  None agent = create_agent(agent = create_agent( model="gpt-5-nano",  model ="gpt-5-nano", tools=[...],  tools =[...], middleware=[dynamic_system_prompt, log_before_model, log_after_model],  middleware =[dynamic_system_prompt, log_before_model, log_after_model],  context_schema=Context  context_schema = Context)) agent.invoke(agent.invoke( {"messages": [{"role": "user", "content": "What's my name?"}]}, {"messages": [{"role": "user", "content": "What's my name?"}]}, context=Context(user_name="John Smith")  context =Context(user_name = "John Smith")))
+from dataclasses import dataclass from  dataclasses import  dataclass from typing_extensions import TypedDict from  typing_extensions import  TypedDict from langchain.agents import create_agent from langchain.agents import  create_agentfrom langchain.tools import tool, ToolRuntime from langchain.tools import tool, ToolRuntimefrom langgraph.store.memory import InMemoryStore from langgraph.store.memory import  InMemoryStore # InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.# InMemoryStore saves data to an in-memory dictionary. Use a DB-backed store in production.store = InMemoryStore() store = InMemoryStore()  @dataclass @dataclassclass Context: class  Context: user_id: str user_id: str # TypedDict defines the structure of user information for the LLM # TypedDict defines the structure of user information for the LLMclass UserInfo(TypedDict): class  UserInfo(TypedDict): name: str name: str # Tool that allows agent to update user information (useful for chat applications)# Tool that allows agent to update user information (useful for chat applications) @tool @tooldef save_user_info(user_info: UserInfo, runtime: ToolRuntime[Context]) -> str: def  save_user_info(user_info: UserInfo, runtime: ToolRuntime[Context]) -> str: """Save user info.""" """Save user info.""" # Access the store - same as that provided to `create_agent` # Access the store - same as that provided to `create_agent` store = runtime.store  store = runtime.store  user_id = runtime.context.user_id  user_id = runtime.context.user_id  # Store data in the store (namespace, key, data) # Store data in the store (namespace, key, data) store.put(("users",), user_id, user_info)  store.put(("users",), user_id, user_info)  return "Successfully saved user info."  return "Successfully saved user info." agent = create_agent(agent = create_agent( model="claude-sonnet-4-5-20250929",  model ="claude-sonnet-4-5-20250929", tools=[save_user_info],  tools =[save_user_info], store=store,  store =store,  context_schema=Context  context_schema = Context)) # Run the agent # Run the agentagent.invoke(agent.invoke( {"messages": [{"role": "user", "content": "My name is John Smith"}]}, {"messages": [{"role": "user", "content": "My name is John Smith"}]},  # user_id passed in context to identify whose information is being updated  # user_id passed in context to identify whose information is being updated context=Context(user_id="user_123")  context =Context(user_id = "user_123") )) # You can access the store directly to get the value # You can access the store directly to get the valuestore.get(("users",), "user_123").valuestore.get(("users",), "user_123").value
 ```
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/runtime.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langchain/long-term-memory.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Guardrails](/oss/python/langchain/guardrails)[Context engineering in agents](/oss/python/langchain/context-engineering)
+[Retrieval](/oss/python/langchain/retrieval)[Studio](/oss/python/langchain/studio)

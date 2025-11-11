@@ -1,323 +1,355 @@
-Get email notifications whenever GitHub **creates**, **updates** or **resolves** an incident.
+[Skip to content](#start-of-content)   
+ 
 
-Get text message notifications whenever GitHub **creates** or **resolves** an incident.
+[GitHub Universe 2025](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post)
 
-Get incident updates and maintenance status messages in Slack.
+---
 
-[Subscribe via Slack](https://subscriptions.statuspage.io/slack_authentication/kickoff?page_code=kctbh9vrtdwd)
+Catch up on the latest keynote highlights.  • 00 : 00 : 00 : 00
 
-By subscribing you acknowledge our [Privacy Policy](https://help.github.com/articles/github-privacy-statement/). In addition, you agree to the Atlassian [Cloud Terms of Service](https://www.atlassian.com/legal/cloud-terms-of-service) and acknowledge Atlassian's [Privacy Policy](https://www.atlassian.com/legal/privacy-policy).
+---
 
-Get webhook notifications whenever GitHub **creates** an incident, **updates** an incident, **resolves** an incident or **changes** a component status.
+  [See what’s new](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post) 
 
-[Follow @githubstatus](https://twitter.com/githubstatus) or  [view our profile](https://twitter.com/githubstatus).
 
-Visit our [support site](https://github.com/support).
+## Navigation Menu
 
-Get the [Atom Feed](https://www.githubstatus.com/history.atom) or [RSS Feed](https://www.githubstatus.com/history.rss).
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fservices%2F)
 
-[Larger hosted runners experiencing delays](/incidents/htcm010tcwjq) [Subscribe](#subscribe-modal-htcm010tcwjq)
+# Search code, repositories, users, issues, pull requests...
 
-**Update** - The team is continuing to apply the mitigation for Large Hosted Runners. We will provide updates as we progress.   
- Nov 11, 2025 - 19:40 UTC
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-**Update** - The team continues to investigate delays with Large Hosted Runners. We will continue providing updates on the progress towards mitigation.   
- Nov 11, 2025 - 18:37 UTC
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fservices%2F)
 
-**Investigating** - We are currently investigating this issue.   
- Nov 11, 2025 - 18:02 UTC
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fservices&source=header)
 
-## [About This Site](#about-this-site)
+You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
-For the status of GitHub Enterprise Cloud - EU, please visit: [eu.githubstatus.com](https://eu.githubstatus.com)   
-For the status of GitHub Enterprise Cloud - Australia, please visit: [au.githubstatus.com](https://au.githubstatus.com)   
-For the status of GitHub Enterprise Cloud - US, please visit: [us.githubstatus.com](https://us.githubstatus.com/)
+{{ message }}
 
-Git Operations  ?  Operational
+[Expert Services](/services/)
 
-Webhooks  ?  Operational
+[Introduction](/services#services-introduction) [Our Process](/services#services-process) [Services Catalog](/services#services-catalog)
 
-Visit www.githubstatus.com for more information   Operational
+[Contact Experts](#services-contact)
 
-API Requests  ?  Operational
+Introduction
 
-Issues  ?  Operational
+# The GitHub Expert Services Team
 
-Pull Requests  ?  Operational
+[Contact Experts](#services-contact)
 
-Actions  ?  Operational
+## Hands-on consulting, guided workshops, and training for your teams.
 
-Packages  ?  Operational
+*We’ll work alongside your developers* to bring insights, best practices, and knowledge from across hundreds of organizations to help you adopt GitHub quickly and efficiently.
 
-Pages  ?  Operational
+Companies we’ve trained
 
-Codespaces  ?  Operational
+Why Expert Services?
 
-Copilot   Operational
+## We tailor our services to suit your organization’s needs.
 
-Operational
+There’s no such thing as a one-size-fits-all solution, which is why we work across your org, whether you’re looking to pick up DevSecOps best practices, dive into Innersource, or try out GitHub Administration.
 
-Degraded Performance
+## How we help customers
 
-Partial Outage
+We take a multifaceted approach to improving your GitHub adoption journey. Here’s what we do best.
 
-Major Outage
+### Transform culture
 
-Maintenance
+We improve your visibility and attractiveness to developer communities by leveraging the best practices of InnerSource and open source.
 
-## Past Incidents
+### Streamline processes
 
-Nov 11, 2025
+Our automations, workflow implementations, and API integrations make your day-to-day workflow seamless.
 
-Unresolved incident: Larger hosted runners experiencing delays.
+### Implement strategy
 
-Nov 10, 2025
+Our Delivery Engineers work hand-in-hand with you to design a high-level strategy to achieve your goals.
 
-No incidents reported.
+### Empower people
 
-Nov  9, 2025
+We provide developers and team leaders with trainings, workshops, and hackathons.
 
-No incidents reported.
+### Improve technology
 
-Nov  8, 2025
+We build and develop tools to export code repositories and metadata.
 
-No incidents reported.
+### Provide support
 
-Nov  7, 2025
+We’re available through a shared communication and collaboration channel to assist on day-to-day tasks.
 
-No incidents reported.
+## Our catalog of services
 
-Nov  6, 2025
+Whether you use GitHub every day or you’re just getting started, we’ll provide you with the skills your organization needs to work smarter.
 
-[Incident with Copilot](/incidents/gnzclztblsh3)
+### GitHub Actions Training
 
-**Resolved** - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.   
- Nov  6, 00:06 UTC
+This training will enable your teams to start leveraging GitHub Actions in their own projects across a multitude of use cases.
 
-**Update** - We have recovered from our earlier performance issues. Copilot code completions should be functioning normally at this time.   
- Nov  6, 00:06 UTC
+[Learn more](/services/actions-training)
 
-**Update** - Copilot Code Completions are partially unavailable. Our engineering team is engaged and investigating.   
- Nov  5, 23:41 UTC
+### GitHub Admin Training (GitHub Enterprise Cloud)
 
-**Investigating** - We are investigating reports of degraded performance for Copilot   
- Nov  5, 23:41 UTC
+Prepare your GitHub Enterprise Cloud Administrators to maintain a healthy GitHub environment that supports the needs of your development team.
 
-Nov  5, 2025
+[Learn more](/services/admin-training-github-enterprise-cloud)
 
-[Copilot Code Completions partially unavailable](/incidents/d5c8rxcwt7xw)
+### GitHub Admin Training (GitHub Enterprise Server)
 
-**Resolved** - This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.   
- Nov  5, 23:26 UTC
+Prepare your GitHub Enterprise Server Administrators to maintain a healthy, scalable GitHub environment that supports the needs of your development team.
 
-**Update** - We have identified and resolved the underlying issues with Code Completions. Customers should see full recovery.   
- Nov  5, 23:26 UTC
+[Learn more](/services/admin-training-github-enterprise-server)
 
-**Update** - We are investigating increased error rates affecting Copilot Code Completions. Some users may experience delays or partial unavailability. Our engineering team is monitoring the situation and working to identify the cause.   
- Nov  5, 22:57 UTC
+### GitHub API Training
 
-**Investigating** - We are investigating reports of degraded performance for Copilot   
- Nov  5, 22:56 UTC
+GitHub’s extensive API allows you to extend the platform to accommodate most modern workflows and easily get the data you need.
 
-Nov  4, 2025
+[Learn more](/services/api-training)
 
-No incidents reported.
+### GitHub Advanced Security - Getting Started
 
-Nov  3, 2025
+Supports you in "Getting Started" with GitHub Advanced Security (GHAS) and helps accelerate adoption in the critical first few weeks of deployment.
 
-[Incident with Packages](/incidents/y8hlsmxtgf0w)
+[Learn more](/services/bundle-ghas-getting-started)
 
-**Resolved** - On November 3, 2025, between 14:10 UTC and 19:20 UTC, GitHub Packages experienced degraded performance, resulting in failures for 0.5% of Nuget package download requests. The incident resulted from an unexpected change in usage patterns affecting rate limiting infrastructure in the Packages service.  
-  
-We mitigated the issue by scaling up services and refining our rate limiting implementation to ensure more consistent and reliable service for all users. To prevent similar problems, we are enhancing our resilience to shifts in usage patterns, improving capacity planning, and implementing better monitoring to accelerate detection and mitigation in the future.   
- Nov  3, 19:20 UTC
+### CodeQL Query Customizations
 
-**Update** - We have applied the mitigation and are starting to see signs of recovery. We will continue to monitor the health of the system.   
- Nov  3, 17:27 UTC
+Commision GitHub to customize the existing CodeQL queries to provide better results for your organization.
 
-**Update** - We are continuing to work on mitigation.   
- Nov  3, 17:10 UTC
+[Learn more](/services/codeql-query-customizations)
 
-**Update** - Progress on mitigation continues but no recovery seen yet to error rates. We will continue to provide updates as we have them.   
- Nov  3, 15:58 UTC
+### CodeQL Query Development
 
-**Update** - We are continuing to see high error rates for package downloads. Our team is working on ways to mitigate this urgently  
-  
-Next update in 20 minutes   
- Nov  3, 15:33 UTC
+Commision GitHub to develop CodeQL queries based on your unique business needs.
 
-**Update** - Our investigations are continuing and we are working to mitigate impact. Thank you for your patience as we work on this.   
- Nov  3, 15:18 UTC
+[Learn more](/services/codeql-query-development)
 
-**Update** - We are seeing increased failure rates of up to 15% for GitHub Packages downloads with users experiencing 5xx errors.  
-  
-We are investigating and working towards mitigation. We will continue to provide updates as they are available.   
- Nov  3, 14:35 UTC
+### CodeQL Query Writing Tailored Workshop
 
-**Investigating** - We are investigating reports of degraded performance for Packages   
- Nov  3, 14:33 UTC
+This engagement creates a tailored 2 hour training course for using CodeQL to find a security vulnerbility or pattern of your choice.
 
-Nov  2, 2025
+[Learn more](/services/codeql-query-writing-tailored-workshop)
 
-No incidents reported.
+### CodeQL Query Writing Training
 
-Nov  1, 2025
+Learn how to write CodeQL to find new security vulnerabilities or customize the existing rules through our extensive catalog of 2 hour training courses.
 
-[Incident with using workflow\_dispatch for Actions](/incidents/xkvk1yhmqfdl)
+[Learn more](/services/codeql-query-writing-training)
 
-**Resolved** - On November 1, 2025, between 2:30 UTC and 6:14 UTC, Actions workflows could not be triggered manually from the UI. This impacted all customers queueing workflows from the UI for most of the impact window. The issue was caused by a faulty code change in the UI, which was promptly reverted once the impact was identified. Detection was delayed due to an alerting gap for UI breaks in this area when all underlying APIs are still healthy. We are implementing enhanced alerting and additional automated tests to prevent similar regressions and reduce detection time in the future.   
- Nov  1, 06:14 UTC
+### GitHub Copilot fundamentals
 
-**Update** - Actions is operating normally.   
- Nov  1, 06:14 UTC
+GitHub’s experts will equip participants with the knowledge of GitHub Copilot’s core features, business benefits, and practical usage.
 
-**Update** - We have mitigated the issue for manually dispatching workflows via the UI   
- Nov  1, 06:14 UTC
+[Learn more](/services/copilot-fundamentals)
 
-**Update** - We have identified the cause of the issue and are working towards a mitigation   
- Nov  1, 05:35 UTC
+### GitHub Capability Adoption Assessment
 
-**Update** - We are investigating issues manually dispatching workflows via the GitHub UI for Actions. The Workflow Dispatch API is unaffected.   
- Nov  1, 05:05 UTC
+This tailored assessment pairs you with a team of GitHub experts to help you assess and evaluate your current (or future) GitHub Platform usage. Through a series of interviews, we will help you understand the capabilities across the entire GitHub Platform and quickly identify opportunities for improvement based on recommended GitHub practices and offerings.
 
-**Investigating** - We are investigating reports of degraded performance for Actions   
- Nov  1, 04:43 UTC
+[Learn more](/services/gh-capability-adoption-assessment)
 
-Oct 31, 2025
+### GitHub Advanced Security Code Security
 
-No incidents reported.
+GitHub’s experts will guide participants through practical labs and exercises, enabling engineers to immediately apply GitHub Code Security features within their repositories.
 
-Oct 30, 2025
+[Learn more](/services/ghas-code-security-training)
 
-[Disruption with some GitHub services](/incidents/6hygvwpw2vr3)
+### GitHub Advanced Security - Developer Training
 
-**Resolved** - On October 30th we shipped a change that broke 3 links in the "Solutions" dropdown of the marketing navigation seen on <https://github.com/home>. We noticed internally the broken links and declared an incident so our users would know no other functionality was impacted. We were able to revert a change and are evaluating our testing and rollout processes to prevent future incidents like these.   
- Oct 30, 23:00 UTC
+Allows you to have a "developer-first" approach to Application Security, recognizing that developers have a critical role to play in securing your applications.
 
-**Update** - Links on GitHub's landing <https://github.com/home> are not working. Primary user workflows (PRs, Issues, Repos) are not impacted.   
- Oct 30, 22:54 UTC
+[Learn more](/services/ghas-developer-training)
 
-**Update** - Dotcom main navigation broken links.   
- Oct 30, 22:47 UTC
+### GitHub Advanced Security - Pilot Team Implementation
 
-**Investigating** - We are currently investigating this issue.   
- Oct 30, 22:47 UTC
+In this engagement we will work with a pilot or lighthouse team to help them enable GitHub Advanced Security for one or more key repositories.
 
-Oct 29, 2025
+[Learn more](/services/ghas-pilot-team-implementation)
 
-[Experiencing connection issues across Actions, Codespaces, and possibly other services](/incidents/4jxdz4m769gy)
+### GitHub Advanced Security - Rollout and Deployment Training
 
-**Resolved** - On October 29th, 2025 between 14:07 UTC and 23:15 UTC, multiple GitHub services were degraded due to a broad outage in one of our service providers:  
-  
-- Users of Codespaces experienced failures connecting to new and existing Codespaces through VSCode Desktop or Web. On average the Codespace connection error rate was 90% and peaked at 100% across all regions throughout the incident period.  
-- GitHub Actions larger hosted runners experienced degraded performance, with 0.5% of overall workflow runs and 9.8% of larger hosted runner jobs failing or not starting within 5 minutes. These recovered by 20:40 UTC.  
-- The GitHub Enterprise Importer service was degraded, with some users experiencing migration failures during git push operations and most users experiencing delayed migration processing.  
-- Initiation of new trials for GitHub Enterprise Cloud with Data Residency were also delayed during this time.  
-- Copilot Metrics via the API could not access the downloadable link during this time. There were approximately 100 requests during the incident that would have failed the download. Recovery began around 20:25 UTC.  
-  
-We were able to apply a number of mitigations to reduce impact over the course of the incident, but we did not achieve 100% recovery until our service provider’s incident was resolved.  
-  
-We are working to reduce critical path dependencies on the service provider and gracefully degrade experiences where possible so that we are more resilient to future dependency outages.   
- Oct 29, 23:15 UTC
+Provides support during the planning phases by providing best practices, recommended rollout strategies and identifying common pitfalls and issues.
 
-**Update** - Codespaces is operating normally.   
- Oct 29, 23:15 UTC
+[Learn more](/services/ghas-rollout-deployment-training)
 
-**Update** - Codespaces continues to recover   
- Oct 29, 22:06 UTC
+### GitHub Secret Protection Training
 
-**Update** - Actions is operating normally.   
- Oct 29, 21:02 UTC
+GitHub’s experts guide participants through practical labs and exercises, enabling engineers to immediately apply GitHub Secret Protection within their repositories.
 
-**Update** - Actions has fully recovered.  
-  
-Codespaces continues to recover. Regions across Europe and Asia are healthy, so US users may want to choose one of those regions following these instructions: <https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-default-region-for-github-codespaces>.  
-  
-We expect full recovery across the board before long.   
- Oct 29, 21:01 UTC
+[Learn more](/services/ghas-secret-protection-training)
 
-**Update** - Codespaces is experiencing degraded performance. We are continuing to investigate.   
- Oct 29, 20:56 UTC
+### GitHub Advanced Security - Security Advisory Services
 
-**Update** - We are beginning to see small signs of recovery, but connections are still inconsistent across services and regions. We expect to see gradual recovery from here.   
- Oct 29, 20:34 UTC
+Identify your organization’s top priorities for improving your Secure Software Development Lifecycle with GitHub Advanced Security.
 
-**Update** - We continue to see improvement in Actions larger runners jobs. Larger runners customers may still experience longer than normal queue times, but we expect this to rapidly improve across most runners.   
-  
-ARM64 runners, GPU runners, and some runners with private networking may still be impacted.  
-  
-Usage of Codespaces via VS Code (but not via SSH) is still degraded.  
-  
-GitHub and Azure teams continue to collaborate towards full resolution.   
- Oct 29, 19:21 UTC
+[Learn more](/services/ghas-security-advisory-services)
 
-**Update** - Codespaces is experiencing degraded availability. We are continuing to investigate.   
- Oct 29, 19:05 UTC
+### GitHub Advanced Security - Results Review
 
-**Update** - Codespaces is experiencing degraded performance. We are continuing to investigate.   
- Oct 29, 18:58 UTC
+Allows you to have a “developer-first” approach to Application Security, recognizing that developers have a critical role to play in securing your applications.
 
-**Update** - Impact to most larger runner jobs should now be mitigated. ARM64 runners are still impacted. GitHub and Azure teams continue to collaborate towards full resolution.   
- Oct 29, 18:12 UTC
+[Learn more](/services/ghas-security-results-review)
 
-**Update** - Codespaces is experiencing degraded availability. We are continuing to investigate.   
- Oct 29, 17:40 UTC
+### GitHub Advanced Security - Security Team Training
 
-**Update** - Additional impact from this incident:  
-  
-We’re currently investigating an issue causing the Copilot Metrics API report URLs to fail for 28-day and 1-day enterprise and user reports. We are collaborating with Azure teams to restore access as soon as possible.   
- Oct 29, 17:26 UTC
+Supports those who are responsible for reviewing, monitoring and driving remediation of security results across an enterprise.
 
-**Update** - We are seeing ongoing connection failures across Codespaces and Actions, including Enterprise Migrations.   
-  
-Linux ARM64 standard hosted runners are failing to start, but Ubuntu latest and Windows latest are not affected at this time.   
-  
-SSH connections to Codespaces may be successful, but connections via VS Code are consistently failing.   
-  
-GitHub and Azure teams are coordinating to mitigate impact and resolve the root issues.   
- Oct 29, 17:11 UTC
+[Learn more](/services/ghas-security-team-training)
 
-**Update** - Actions impact is primarily limited to larger runner jobs at this time. This also impacts enterprise migrations.   
- Oct 29, 16:31 UTC
+### GitHub supply chain security training
 
-**Update** - Codespaces is experiencing degraded performance. We are continuing to investigate.   
- Oct 29, 16:19 UTC
+GitHub’s experts guide participants through practical labs and exercises, enabling engineers to immediately apply GitHub supply chain security products and features within their repositories.
 
-**Investigating** - We are investigating reports of degraded performance for Actions   
- Oct 29, 16:17 UTC
+[Learn more](/services/ghas-supply-chain-security-training)
 
-[Disruption with Copilot Bing search tool](/incidents/pch0flk719dj)
+### GitHub Copilot administration and security
 
-**Resolved** - A cloud resource used by the Copilot bing-search tool was deleted as part of a resource cleanup operation. Once this was discovered, the resource was recreated. Going forward, more effective monitoring will be put in place to catch this issue earlier.   
- Oct 29, 21:49 UTC
+GitHub's experts will equip your team with the knowledge of GitHub Copilot's policies and settings, telemetry, data privacy, troubleshooting, Integrations, and frequently asked questions.
 
-**Investigating** - We are currently investigating this issue.   
- Oct 29, 21:34 UTC
+[Learn more](/services/github-copilot-administration-security)
 
-Oct 28, 2025
+### Measuring and accelerating GitHub Copilot impact
 
-[Inconsistent results when using the Haiku 4.5 model](/incidents/jlhnszknd9pj)
+GitHub’s experts will provide a comprehensive guide to leveraging qualitative and quantitative data, best practices, and frameworks to measure, monitor, and drive GitHub Copilot impact.
 
-**Resolved** - From October 28th at 16:03 UTC until 17:11 UTC, the Copilot service experienced degradation due to an infrastructure issue which impacted the Claude Haiku 4.5 model, leading to a spike in errors affecting 1% of users. No other models were impacted. The incident was caused due to an outage with an upstream provider. We are working to improve redundancy during future occurrences.   
- Oct 28, 17:11 UTC
+[Learn more](/services/github-copilot-adoption-usage-metrics)
 
-**Update** - The issues with our upstream model provider have been resolved, and Claude Haiku 4.5 is once again available in Copilot Chat and across IDE integrations.  
-  
-We will continue monitoring to ensure stability, but mitigation is complete.   
- Oct 28, 17:11 UTC
+### GitHub Copilot advanced
 
-**Update** - Usage of the Haiku 4.5 model with Copilot experiences is currently degraded. We are investigating and working to remediate. Other models should be unaffected.   
- Oct 28, 16:42 UTC
+GitHub’s experts will work closely with the customer’s developers and other engineers to teach them about the advanced capabilities of GitHub Copilot. Throughout the course, there will be a dialogue between the customer and GitHub’s experts to guide them towards effective prompt engineering skills, share best practices, and reveal some tips and tricks to unlock new levels of productivity.
 
-**Investigating** - We are currently investigating this issue.   
- Oct 28, 16:39 UTC
+[Learn more](/services/github-copilot-advanced)
 
-[← Incident History](/history) [Powered by Atlassian Statuspage](https://www.atlassian.com/software/statuspage?utm_campaign=www.githubstatus.com&utm_content=SP-notifications&utm_medium=powered-by&utm_source=inapp)
+### GitHub Copilot for Business Adoption at Scale
 
-### Subscribe to our developer newsletter
+GitHub Copilot is the world’s first at-scale AI developer tool. Sitting within the editor as a simple extension, GitHub Copilot draws context from a developer’s code to suggest new lines, entire functions, tests, and even complex algorithms.
 
-Get tips, technical guides, and best practices. Twice a month. Right in your inbox.
+[Learn more](/services/github-copilot-for-business-adoption-at-scale)
 
-[Subscribe](https://resources.github.com/newsletter/)
+### GitHub Copilot intermediate
+
+GitHub's experts will guide your team to leverage GitHub Copilot capabilities by enabling them on good coding techniques, best practices and prompt engineering, and secure coding. Attendees will also have the opportunity to try all of this themselves during a 1-hour guided exercise component during the training.
+
+[Learn more](/services/github-copilot-intermediate)
+
+### GitHub Copilot prompt engineering
+
+GitHub’s experts will provide the participants with the knowledge and techniques necessary to design and refine prompts to elicit the most accurate, relevant and valuable responses from large language model-based systems such as GitHub Copilot.
+
+[Learn more](/services/github-copilot-prompt-engineering)
+
+### GitHub for Developers Training
+
+Give your developers confidence with Git and GitHub with hands-on, practical training from GitHub Expert Services.
+
+[Learn more](/services/github-for-developers-training)
+
+### GitHub for Non-Developers
+
+Opening GitHub to a broad audience in your organization, gives your developers access to the expertise and diverse ways of thinking that represent your entire user population.
+
+[Learn more](/services/github-for-non-developers-training)
+
+### GitHub GHAS Webinars
+
+The GitHub Advanced Security webinar is a one-hour training session that introduces customers to the core features and benefits of GitHub Advanced Security products.
+
+[Learn more](/services/github-ghas-webinars)
+
+### Implementation (GitHub Enterprise Cloud)
+
+Equip your team with the knowledge they need to configure and manage your GitHub Enterprise Cloud account.
+
+[Learn more](/services/implementation-github-enterprise-cloud)
+
+### Implementation (GitHub Enterprise Server)
+
+GitHub Enterprise Server is the center of software development for your organization. In this highly tailored session, GitHub's implementation experts will equip your team with the knowledge they need to deploy and configure your GitHub Enterprise Server instance, providing long-term security and reliability.
+
+[Learn more](/services/implementation-github-enterprise-server)
+
+### Migrations to GitHub Enterprise (Standard)
+
+Ensure your Version Control System (VCS) data is migrated to your GitHub Enterprise platform account accurately and efficiently.
+
+[Learn more](/services/migrations)
+
+### Migrations to GitHub Enterprise (GitHub Enterprise Cloud to GitHub Enterprise Cloud EMU)
+
+Ensure your GitHub Enterprise Cloud data is migrated to your GitHub Enterprise Cloud plus Enterprise Managed Users (EMU) platform account accurately and efficiently.
+
+[Learn more](/services/migrations-emu)
+
+### Modernizing Legacy Apps with GitHub Copilot
+
+The Modernizing legacy apps with GitHub Copilot offering is a 3-hour interactive training designed to equip technical teams with the strategies and techniques needed to accelerate modernization efforts using AI-driven techniques through GitHub Copilot.
+
+[Learn more](/services/modernizing-legacy-apps-with-github-copilot)
+
+### GitHub Technical Advisory Services
+
+Identify your organization's top priorities for improving software delivery and enabling a digital transformation.
+
+[Learn more](/services/technical-advisory-services)
+
+### Workflow Consultation
+
+Equip your team with the knowledge they need to evaluate, implement, document, and design a workflow solution optimized for your branching and release management strategy.
+
+[Learn more](/services/workflow-consultation)
+
+## Our impact
+
+Learn how GitHub Expert Services has helped the world’s most innovative companies thrive.
+
+### How Stripe is changing financial technology on GitHub
+
+ [Read more](/customer-stories/stripe)
+
+### Why Adobe is building its SaaS platform on GitHub
+
+ [Read more](/customer-stories/adobe)
+
+## Find out why the world’s most innovative companies use GitHub
+
+ [Explore customer stories](/customer-stories)
+
+## Frequently asked questions
+
+### Do you provide hands-on migration services?
+
+Yes, we have providers who are able to assist our customers with hands-on migrations.
+
+### What is the lead time for the delivery of the services?
+
+Delivery of our services range from 4 to 6 weeks.
+
+### What is the schedule like for each training?
+
+Depending on the type of training, workshop or advisory services, the schedule can be anywhere between two days and an established cadence of follow ups with our delivery engineers.
+
+### Can the material be tailored and customized to our needs?
+
+Yes. While our offerings consist of fixed materials for trainings, we can work with our customers to provide a more tailored solution, if needed.
+
+### Can the training be provided on-site?
+
+Yes, we have on-site and remote trainings available.
+
+### What I’m after isn’t on your list. How do we get help with a specific project?
+
+Our Expert Services team will work with you regarding your goals and propose a custom engagement where needed.
+
+### How can we help?
+
+Let's build a customized solution that meets all of your needs.
+
+## Subscribe to The GitHub Insider
+
+A newsletter for developers covering techniques, technical guides, and the latest product innovations coming from GitHub.
+
+You can’t perform that action at this time.
 
  

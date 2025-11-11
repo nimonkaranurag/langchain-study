@@ -4,166 +4,127 @@ We've raised a $125M Series B to build the platform for agent engineering. [Read
 
 [LangChain](/oss/python/langchain/overview)[LangGraph](/oss/python/langgraph/overview)[Deep Agents](/oss/python/deepagents/overview)[Integrations](/oss/python/integrations/providers/overview)[Learn](/oss/python/learn)[Reference](/oss/python/reference/overview)[Contribute](/oss/python/contributing/overview)
 
-* [Overview](/oss/python/langgraph/overview)
+* [Overview](/oss/python/contributing/overview)
 
-##### LangGraph v1.0
+##### Contribute
 
-* [Release notes](/oss/python/releases/langgraph-v1)
-* [Migration guide](/oss/python/migrate/langgraph-v1)
+* [Documentation](/oss/python/contributing/documentation)
+* [Code](/oss/python/contributing/code)
 
-##### Get started
+##### Integrations
 
-* [Install](/oss/python/langgraph/install)
-* [Quickstart](/oss/python/langgraph/quickstart)
-* [Local server](/oss/python/langgraph/local-server)
-* [Thinking in LangGraph](/oss/python/langgraph/thinking-in-langgraph)
-* [Workflows + agents](/oss/python/langgraph/workflows-agents)
+* + [Guide](/oss/python/contributing/integrations-langchain)
+  + [Implement](/oss/python/contributing/implement-langchain)
+  + [Standard tests](/oss/python/contributing/standard-tests-langchain)
+  + [Publish](/oss/python/contributing/publish-langchain)
+* [Co-marketing](/oss/python/contributing/comarketing)
 
-##### Capabilities
+* [Why contribute an integration to LangChain?](#why-contribute-an-integration-to-langchain%3F)
+* [Components to integrate](#components-to-integrate)
+* [How to contribute an integration](#how-to-contribute-an-integration)
 
-* [Persistence](/oss/python/langgraph/persistence)
-* [Durable execution](/oss/python/langgraph/durable-execution)
-* [Streaming](/oss/python/langgraph/streaming)
-* [Interrupts](/oss/python/langgraph/interrupts)
-* [Time travel](/oss/python/langgraph/use-time-travel)
-* [Memory](/oss/python/langgraph/add-memory)
-* [Subgraphs](/oss/python/langgraph/use-subgraphs)
+[Integrations](/oss/python/contributing/integrations-langchain)
 
-##### Production
+[LangChain](/oss/python/contributing/integrations-langchain)
 
-* [Application structure](/oss/python/langgraph/application-structure)
-* [Studio](/oss/python/langgraph/studio)
-* [Test](/oss/python/langgraph/test)
-* [Deploy](/oss/python/langgraph/deploy)
-* [Agent Chat UI](/oss/python/langgraph/ui)
-* [Observability](/oss/python/langgraph/observability)
+# Contributing integrations
 
-##### LangGraph APIs
+**Integrations are a core component of LangChain.** LangChain provides standard interfaces for several different components (language models, vector stores, etc) that are crucial when building LLM applications. Contributing an integration helps expand LangChain’s ecosystem and makes your service discoverable to millions of developers.
 
-* [Runtime](/oss/python/langgraph/pregel)
+## [​](#why-contribute-an-integration-to-langchain%3F) Why contribute an integration to LangChain?
 
-* [Overview](#overview)
-* [Actors](#actors)
-* [Channels](#channels)
-* [Examples](#examples)
-* [High-level API](#high-level-api)
+## Discoverability
 
-[LangGraph APIs](/oss/python/langgraph/graph-api)
+LangChain is the most used framework for building LLM applications, with over 20 million monthly downloads.
 
-# LangGraph runtime
+## Interoperability
 
-[`Pregel`](https://reference.langchain.com/python/langgraph/pregel/) implements LangGraph’s runtime, managing the execution of LangGraph applications. Compiling a [StateGraph](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.StateGraph) or creating an [`@entrypoint`](https://reference.langchain.com/python/langgraph/func/#langgraph.func.entrypoint) produces a [`Pregel`](https://reference.langchain.com/python/langgraph/pregel/) instance that can be invoked with input. This guide explains the runtime at a high level and provides instructions for directly implementing applications with Pregel.
-> **Note:** The [`Pregel`](https://reference.langchain.com/python/langgraph/pregel/) runtime is named after [Google’s Pregel algorithm](https://research.google/pubs/pub37252/), which describes an efficient method for large-scale parallel computation using graphs.
+LangChain components expose a standard interface, allowing developers to easily swap them for each other. If you implement a LangChain integration, any developer using a different component will easily be able to swap yours in.
 
-## [​](#overview) Overview
+## Best Practices
 
-In LangGraph, Pregel combines [**actors**](https://en.wikipedia.org/wiki/Actor_model) and **channels** into a single application. **Actors** read data from channels and write data to channels. Pregel organizes the execution of the application into multiple steps, following the **Pregel Algorithm**/**Bulk Synchronous Parallel** model. Each step consists of three phases:
+Through their standard interface, LangChain components encourage and facilitate best practices (streaming, async, etc.) that improve developer experience and application performance.
 
-* **Plan**: Determine which **actors** to execute in this step. For example, in the first step, select the **actors** that subscribe to the special **input** channels; in subsequent steps, select the **actors** that subscribe to channels updated in the previous step.
-* **Execution**: Execute all selected **actors** in parallel, until all complete, or one fails, or a timeout is reached. During this phase, channel updates are invisible to actors until the next step.
-* **Update**: Update the channels with the values written by the **actors** in this step.
+## [​](#components-to-integrate) Components to integrate
 
-Repeat until no **actors** are selected for execution, or a maximum number of steps is reached.
+While any component can be integrated into LangChain, there are specific types of integrations we encourage more: **Integrate these ✅**:
 
-## [​](#actors) Actors
+* [**Chat Models**](/oss/python/integrations/chat): Most actively used component type
+* [**Tools/Toolkits**](/oss/python/integrations/tools): Enable agent capabilities
+* [**Retrievers**](/oss/python/integrations/retrievers): Core to RAG applications
+* [**Embedding Models**](/oss/python/integrations/text_embedding): Foundation for vector operations
+* [**Vector Stores**](/oss/python/integrations/vectorstores): Essential for semantic search
 
-An **actor** is a `PregelNode`. It subscribes to channels, reads data from them, and writes data to them. It can be thought of as an **actor** in the Pregel algorithm. `PregelNodes` implement LangChain’s Runnable interface.
+**Not these ❌**:
 
-## [​](#channels) Channels
+* **LLMs (Text-Completion Models)**: Deprecated in favor of [Chat Models](/oss/python/integrations/chat)
+* [**Document Loaders**](/oss/python/integrations/document_loaders): High maintenance burden
+* [**Key-Value Stores**](/oss/python/integrations/stores): Limited usage
+* **Document Transformers**: Niche use cases
+* **Model Caches**: Infrastructure concerns
+* **Graphs**: Complex abstractions
+* **Message Histories**: Storage abstractions
+* **Callbacks**: System-level components
+* **Chat Loaders**: Limited demand
+* **Adapters**: Edge case utilities
 
-Channels are used to communicate between actors (PregelNodes). Each channel has a value type, an update type, and an update function – which takes a sequence of updates and modifies the stored value. Channels can be used to send data from one chain to another, or to send data from a chain to itself in a future step. LangGraph provides a number of built-in channels:
+## [​](#how-to-contribute-an-integration) How to contribute an integration
 
-* [`LastValue`](https://reference.langchain.com/python/langgraph/channels/#langgraph.channels.LastValue): The default channel, stores the last value sent to the channel, useful for input and output values, or for sending data from one step to the next.
-* [`Topic`](https://reference.langchain.com/python/langgraph/channels/#langgraph.channels.Topic): A configurable PubSub Topic, useful for sending multiple values between **actors**, or for accumulating output. Can be configured to deduplicate values or to accumulate values over the course of multiple steps.
-* [`BinaryOperatorAggregate`](https://reference.langchain.com/python/langgraph/pregel/#langgraph.pregel.Pregel--advanced-channels-context-and-binaryoperatoraggregate): stores a persistent value, updated by applying a binary operator to the current value and each update sent to the channel, useful for computing aggregates over multiple steps; e.g.,`total = BinaryOperatorAggregate(int, operator.add)`
+1
 
-## [​](#examples) Examples
+Confirm eligibility
 
-While most users will interact with Pregel through the [StateGraph](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.StateGraph) API or the [`@entrypoint`](https://reference.langchain.com/python/langgraph/func/#langgraph.func.entrypoint) decorator, it is possible to interact with Pregel directly. Below are a few different examples to give you a sense of the Pregel API.
+Verify that your integration is in the list of [encouraged components](#components-to-integrate) we are currently accepting.
 
-* Single node
-* Multiple nodes
-* Topic
-* BinaryOperatorAggregate
-* Cycle
+2
 
-Copy
+Implement your package
 
-Ask AI
+[## How to implement a LangChain integration](/oss/python/contributing/implement-langchain)
 
-```
-from langgraph.channels import EphemeralValue from langgraph.channels import  EphemeralValuefrom langgraph.pregel import Pregel, NodeBuilder from langgraph.pregel import Pregel, NodeBuilder node1 = (node1 = ( NodeBuilder().subscribe_only("a") NodeBuilder().subscribe_only("a") .do(lambda x: x + x) .do(lambda  x: x + x) .write_to("b") .write_to("b"))) app = Pregel(app = Pregel( nodes={"node1": node1},  nodes ={"node1": node1}, channels={ channels ={ "a": EphemeralValue(str),  "a": EphemeralValue(str), "b": EphemeralValue(str),  "b": EphemeralValue(str), }, }, input_channels=["a"],  input_channels =["a"], output_channels=["b"],  output_channels =["b"],)) app.invoke({"a": "foo"})app.invoke({"a": "foo"})
-```
+3
 
-Copy
+Pass standard tests
 
-Ask AI
+If applicable, implement support for LangChain’s [standard test](/oss/python/contributing/standard-tests-langchain) suite for your integration and successfully run them.
 
-```
-{'b': 'foofoo'}{'b': 'foofoo'} 
-```
+4
 
-## [​](#high-level-api) High-level API
+Publish integration
 
-LangGraph provides two high-level APIs for creating a Pregel application: the [StateGraph (Graph API)](/oss/python/langgraph/graph-api) and the [Functional API](/oss/python/langgraph/functional-api).
+[## How to publish an integration](/oss/python/contributing/publish-langchain)
 
-* StateGraph (Graph API)
-* Functional API
+5
 
-The [StateGraph (Graph API)](https://reference.langchain.com/python/langgraph/graphs/#langgraph.graph.state.StateGraph) is a higher-level abstraction that simplifies the creation of Pregel applications. It allows you to define a graph of nodes and edges. When you compile the graph, the StateGraph API automatically creates the Pregel application for you.
+Add documentation
 
-Copy
+Open a PR to add documentation for your integration to the official LangChain docs.
 
-Ask AI
+Integration documentation guide
 
-```
-from typing import TypedDict from  typing import  TypedDict from langgraph.constants import START from langgraph.constants import  STARTfrom langgraph.graph import StateGraph from langgraph.graph import  StateGraph class Essay(TypedDict): class  Essay(TypedDict): topic: str topic: str content: str | None content: str  |  None score: float | None score: float  |  None def write_essay(essay: Essay): def  write_essay(essay: Essay): return { return { "content": f"Essay about {essay['topic']}",  "content": f "Essay about {essay['topic']} ", } } def score_essay(essay: Essay): def  score_essay(essay: Essay): return { return { "score": 10  "score": 10 } } builder = StateGraph(Essay) builder = StateGraph(Essay)builder.add_node(write_essay)builder.add_node(write_essay)builder.add_node(score_essay)builder.add_node(score_essay)builder.add_edge(START, "write_essay")builder.add_edge(START, "write_essay")builder.add_edge("write_essay", "score_essay")builder.add_edge("write_essay", "score_essay") # Compile the graph.# Compile the graph.# This will return a Pregel instance.# This will return a Pregel instance.graph = builder.compile() graph = builder.compile()
-```
+An integration is only as useful as its documentation. To ensure a consistent experience for users, docs are required for all new integrations. We have a standard starting-point template for each type of integration for you to copy and modify.In a new PR to the LangChain [docs repo](https://github.com/langchain-ai/docs), create a new file in the relevant directory under `src/oss/python/integrations//integration_name.mdx` using the appropriate template file:
 
-The compiled Pregel instance will be associated with a list of nodes and channels. You can inspect the nodes and channels by printing them.
+* [Chat models](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/chat/TEMPLATE.mdx)
+* [Tools and toolkits](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/tools/TEMPLATE.mdx)
+* [Retrievers](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/retrievers/TEMPLATE.mdx)
+* Text splitters - Coming soon
+* Embedding models - Coming soon
+* [Vector stores](https://github.com/langchain-ai/docs/blob/main/src/oss/python/integrations/vectorstores/TEMPLATE.mdx)
+* Document loaders - Coming soon
+* Key-value stores - Coming soon
 
-Copy
+For reference docs, please open an issue on the repo so that a maintainer can add them.
 
-Ask AI
+Co-marketing
 
-```
-print(graph.nodes) print(graph.nodes)
-```
-
-You will see something like this:
-
-Copy
-
-Ask AI
-
-```
-{'__start__': ,{'__start__': , 'write_essay': , 'write_essay': , 'score_essay': } 'score_essay': } 
-```
-
-Copy
-
-Ask AI
-
-```
-print(graph.channels) print(graph.channels)
-```
-
-You should see something like this
-
-Copy
-
-Ask AI
-
-```
-{'topic': ,{'topic': , 'content': , 'content': , 'score': , 'score': , '__start__': , '__start__': , 'write_essay': , 'write_essay': , 'score_essay': , 'score_essay': , 'branch:__start__:__self__:write_essay': , 'branch:__start__:__self__:write_essay': , 'branch:__start__:__self__:score_essay': , 'branch:__start__:__self__:score_essay': , 'branch:write_essay:__self__:write_essay': , 'branch:write_essay:__self__:write_essay': , 'branch:write_essay:__self__:score_essay': , 'branch:write_essay:__self__:score_essay': , 'branch:score_essay:__self__:write_essay': , 'branch:score_essay:__self__:write_essay': , 'branch:score_essay:__self__:score_essay': , 'branch:score_essay:__self__:score_essay': , 'start:write_essay': } 'start:write_essay': } 
-```
+(Optional) Engage with the LangChain team for joint [co-marketing](/oss/python/contributing/comarketing).
 
 ---
 
-[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/langgraph/pregel.mdx)
+[Edit the source of this page on GitHub.](https://github.com/langchain-ai/docs/edit/main/src/oss/contributing/integrations-langchain.mdx)
 
 [Connect these docs programmatically](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
 
 Was this page helpful?
 
-[Use the functional API](/oss/python/langgraph/use-functional-api)
+[Contributing to code](/oss/python/contributing/code)[Implement a LangChain integration](/oss/python/contributing/implement-langchain)

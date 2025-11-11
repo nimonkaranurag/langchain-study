@@ -1,78 +1,87 @@
 [Skip to content](#start-of-content)   
-  Explore GitHub's latest Universe launches —   [join the Product Roadmap webinar](https://github.com/resources/events/github-roadmap-webinar-q4?utm_source=github&utm_medium=banner&utm_campaign=AMER-FY26Q2-AMER_EMEA-WBRL-Roadmap_website_banner-20251113&utm_content=website_banner) 
+ 
+
+[GitHub Universe 2025](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post)
+
+---
+
+Catch up on the latest keynote highlights.  • 00 : 00 : 00 : 00
+
+---
+
+  [See what’s new](https://github.com/events/universe/recap?utm_source=github-banner-recap&utm_medium=web&utm_campaign=universe25post) 
 
 
 ## Navigation Menu
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fpartners%2F)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fapps%2Fdesktop)
 
 # Search code, repositories, users, issues, pull requests...
 
 [Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fpartners%2F)
+[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fapps%2Fdesktop)
 
- [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fpartners&source=header)
+ [Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fapps%2Fdesktop&source=header)
 
 You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
 
 {{ message }}
 
-GitHub Partner Program
+GitHub Desktop
 
-# Building stronger solutions together
+# Experience Git without the struggle
 
-Strengthen your market position, boost differentiation, and get access to specialist guidance across Technology, Service & Channel, Startups, and Education.
+Whether you're new to Git or a seasoned user, GitHub Desktop simplifies your development workflow.
 
-[Explore Partner Programs](#programs)
+[Download now](https://desktop.github.com/download)
 
-### Elevate your brand
+## *The ultimate GUI Git client* for streamlining and enhancing your local code management process
 
-Enhance your credibility, gain industry recognition, and expand your market visibility by co-branding and messaging with GitHub.
+### Review code changes with precision
 
-### Sharpen your skillset
+Easily compare versions to catch every detail and ensure your code update is flawless.
 
-Leverage powerful training and enablement resources to earn certifications that differentiate you from the competition.
+[Read more about diff options](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop#choosing-how-to-display-diffs)
 
-### Optimize your solutions
+### Drag and drop to cherry-pick, squash, or reorder commits
 
-Engage GitHub experts and resources to refine, test, and improve performance.
+Copy commits from one branch to another, combine multiple commits in your branch history, or alter your commit history with an intuitive drag and drop functionality unique to GitHub Desktop.
 
-### Why partner with GitHub?
+[Options for managing commits in GitHub Desktop](https://docs.github.com/en/desktop/managing-commits/options-for-managing-commits-in-github-desktop)
 
-Partner with GitHub to open doors, accelerate delivery, and win together.
+### Stash your changes without committing them to a branch
 
-## GitHub Partner programs
+*Stash your changes without committing them to a branch*
 
-### [Technology Partners](https://github.com/partners/technology-partners?locale=en-US)
+* Manage your work-in-progress by saving changes that you’re not ready to commit to quite yet.
+* This will maximize your efficiency, flexibility, and creativity.
 
-Build innovative integrations and reach 100M+ developers.
+### Maintain flexibility and seamless management of your codebase
 
-Learn more about Technology Partners
+Make adjustments to update messages, incorporate new changes, or revert to earlier states when needed. Easily make changes to your project’s history with simple adjustments and reversals.
 
-### [Services & Channel Partners](https://github.com/partners/service-channel-partners?locale=en-US)
+### Download now
 
-Scale your business, expand customer reach, and unlock co-selling opportunities.
+Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned user, GitHub Desktop enables collaboration from your desktop and can simplify your development workflow.
 
-Learn more about Services & Channel Partners
+[Download now](https://desktop.github.com/download)[Release Notes](https://desktop.github.com/release-notes/)
 
-### [Startup Partners](https://github.com/enterprise/startups?locale=en-US)
+### Get Involved
 
-Grow your portfolio with GitHub’s secure, AI-powered platform.
+### [Community-supported for collaboration](https://github.com/desktop/desktop?locale=en-US)
 
-Learn more about Startup Partners
+Check out our roadmap, contribute to projects, and help us make collaboration even easier.
 
-### [Education Partners](https://github.com/education/partners?locale=en-US)
+Contribute to GitHub Desktop
 
-Empower learners and educators with GitHub tools.
+### [Try beta features and help improve future releases](https://desktop.github.com/beta/)
 
-Learn more about Education Partners
+beta
 
-### Ready to grow with GitHub?
+Experience the latest features and bug fixes before they’re released.
 
-Join a global community of innovators to build better together today.
-
-[Explore Partner Programs](#programs)
+Check out Beta
 
    
 
