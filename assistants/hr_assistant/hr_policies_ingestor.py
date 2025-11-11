@@ -2,8 +2,7 @@ import os
 from pathlib import Path
 from typing import Any, List, Optional, Union
 
-from langchain_community.document_loaders import UnstructuredMarkdownLoader
-from langchain_core.documents.base import Document
+from langchain_core.documents import Document
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
 from langchain_text_splitters import (
     CharacterTextSplitter,
@@ -64,6 +63,8 @@ class HRPoliciesIngestor(Ingestor):
     @staticmethod
     def split_document_into_chunks(document: str) -> List[Document]:
 
+        logger.info("[b d]Splitting document by headers")
+
         header_splitter: MarkdownHeaderTextSplitter = (
             HRPoliciesIngestor._get_header_splitter()
         )
@@ -80,9 +81,9 @@ class HRPoliciesIngestor(Ingestor):
 
         if chunked_document:
             logger.debug(f"[b d]Final chunks count: {len(chunked_document)}")
-            for document_chunk in chunked_document:
+            for chunk_number, document_chunk in enumerate(chunked_document):
                 logger.debug(
-                    f"[b i d]Chunk preview:{document_chunk.page_content}"
+                    f"[b i d][red]Chunk {chunk_number}[/red]:[yellow]{document_chunk.page_content}[/yellow]"
                 )
         else:
             raise RuntimeError("Chunking unsuccessful")
@@ -90,7 +91,7 @@ class HRPoliciesIngestor(Ingestor):
         return chunked_document
 
     @staticmethod
-    def get_embedding_model() -> Optional[Any]:
+    def get_embedding_model() -> PineconeEmbeddings:
 
         logger.info("[b d]Using Pinecone's integrated embeddings model")
 
@@ -114,13 +115,6 @@ class HRPoliciesIngestor(Ingestor):
         )
 
         return 200
-
-    def _get_loader(self) -> UnstructuredMarkdownLoader:
-
-        return UnstructuredMarkdownLoader(
-            file_path=self.policies_document_path,
-            mode="elements",
-        )
 
     @staticmethod
     def _get_header_splitter() -> MarkdownHeaderTextSplitter:

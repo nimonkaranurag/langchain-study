@@ -1,24 +1,26 @@
 from abc import ABC, abstractmethod
-from typing import Any, List, Optional
+from typing import Any, List
+
+from langchain_core.documents import Document
 
 
 class Ingestor(ABC):
 
     @abstractmethod
-    def load_document(self):
+    def load_document(self) -> str:
         raise NotImplementedError
 
     @staticmethod
     @abstractmethod
-    def split_document_into_chunks(document: Any):
+    def split_document_into_chunks(document: str) -> List[Document]:
         raise NotImplementedError
 
     @abstractmethod
     def store_embeddings(
         self,
-        chunked_document: List[Any],
+        chunked_document: List[Document],
         embedding_model: Any,
-    ) -> int:
+    ) -> int:  # status code
         raise NotImplementedError
 
 
