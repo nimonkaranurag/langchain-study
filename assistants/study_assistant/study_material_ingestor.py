@@ -67,6 +67,7 @@ class LangChainNotesIngestor(Ingestor):
 
         document_split_by_headers = MarkdownHeaderTextSplitter(
             headers_to_split_on=[
+                ("#", "TITLE"),
                 ("##", "SECTION"),
                 ("###", "SUBSECTION"),
             ],
@@ -139,7 +140,7 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
                 continue
 
             logger.info(
-                f"[b d]Ingested {count} out of {len(documents)} documents"
+                f"[b d]Ingested {count} documents"
             )
 
         logger.info(f"[b d]Ingestion pipeline run is completed")

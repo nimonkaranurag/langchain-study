@@ -19,6 +19,7 @@ def main():
 
     document_split_by_headers = MarkdownHeaderTextSplitter(
         headers_to_split_on=[
+            ("#", "TITLE"),
             ("##", "SECTION"),
             ("###", "SUBSECTION"),
         ],
@@ -34,7 +35,7 @@ def main():
     PineconeVectorStore.from_documents(
         documents=chunked_document,
         embedding=PineconeEmbeddings(model="llama-text-embed-v2"),
-        namespace="study-assistant",
+        namespace="repo-readme",
         index_name=os.getenv("PINECONE_INDEX_NAME"),
     )
 

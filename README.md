@@ -22,6 +22,13 @@ Set the logging level using:
 export LANGCHAIN_STUDY_LOG_LEVEL=DEBUG
 ```
 
+The HR assistant can perform look-ups on a PINECONE Vector DB, to utilise this feature - provide your API KEY and index name like so:
+```bash
+PINECONE_API_KEY=<your_api_key>
+PINECONE_INDEX_NAME=langchain-study
+```
+For the `study_assistant`, the langchain docs are stored in a separate namespace.
+
 **Run the following commands in a Python (>=3.12) environment:**
 
 _a basic HR assistant, for now - it can:_
