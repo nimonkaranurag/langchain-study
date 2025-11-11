@@ -57,13 +57,10 @@ class LangChainNotesIngestor(Ingestor):
             "*.txt",
         ]
 
-        notes = (
-            Path.rglob(note_extension) for note_extension in notes_extensions
-        )
-
-        for notes_path in notes:
-            with open(notes_path, "r") as f:
-                yield f.read()
+        for note_extension in notes_extensions:
+            for notes_path in self.langchain_notes_path.rglob(note_extension):
+                with open(notes_path, "r") as f:
+                    yield f.read()
 
     @staticmethod
     def split_document_into_chunks(document: Any) -> List[Document]:
@@ -94,12 +91,19 @@ class LangChainNotesIngestor(Ingestor):
         embedding_model: PineconeEmbeddings,
     ) -> int:
 
-        PineconeVectorStore().from_documents(
-            index=self.index_name,
-            embedding=embedding_model,
-            namespace=self.notes_namespace,
-            documents=chunked_document,
-        )
+        try:
+            PineconeVectorStore.from_documents(
+                index_name=self.index_name,
+                embedding=embedding_model,
+                namespace=self.notes_namespace,
+                documents=chunked_document,
+            )
+        except Exception as e:
+            logger.error(
+                f"Could not ingest embeddings into vectorstore: {e}",
+                exc_info=True,
+                stack_info=True,
+            )
 
         return 200
 
@@ -114,10 +118,10 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
         logger.info("[b d]Beginning ingestion pipeline")
 
         documents = self.ingestor.load_document()
-        for document in documents:
+        for count, document in enumerate(documents):
 
             chunked_document = self.ingestor.split_document_into_chunks(
-                document=document
+                document=document,
             )
 
             embedding_model = LangChainNotesIngestor.get_embedding_model()
@@ -130,6 +134,11 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
                 logger.error(
                     f"[b d]Failed to store embeddings for a document, it is being skipped"
                 )
+                continue
+
+            logger.info(
+                f"[b d]Ingested {count} out of {len(documents)} documents"
+            )
 
         logger.info(f"[b d]Ingestion pipeline run is completed")
 

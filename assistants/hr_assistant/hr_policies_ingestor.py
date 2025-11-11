@@ -107,12 +107,19 @@ class HRPoliciesIngestor(Ingestor):
             f"[b d]Storing embeddings in the vector index: {self.index_name}"
         )
 
-        PineconeVectorStore.from_documents(
-            documents=chunked_document,
-            embedding=embedding_model,
-            index_name=self.index_name,
-            namespace=self.policies_namespace,
-        )
+        try:
+            PineconeVectorStore.from_documents(
+                documents=chunked_document,
+                embedding=embedding_model,
+                index_name=self.index_name,
+                namespace=self.policies_namespace,
+            )
+        except Exception as e:
+            logger.error(
+                f"Could not ingest embeddings into vectorstore: {e}",
+                exc_info=True,
+                stack_info=True,
+            )
 
         return 200
 
@@ -163,6 +170,8 @@ class HRPoliciesIngestionPipeline(IngestionPipeline):
             logger.info(
                 f"[b d]Policies ingested successfully into the vector index: {self.policies_ingestor.index_name}"
             )
+        else:
+            raise RuntimeError("Ingestion pipeline failed")
 
 
 if __name__ == "__main__":
