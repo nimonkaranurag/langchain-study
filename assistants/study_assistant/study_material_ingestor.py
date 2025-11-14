@@ -53,6 +53,18 @@ class LangChainNotesIngestor(Ingestor):
 
     def load_document(self):
 
+        # Handle single file
+        if self.langchain_notes_path.is_file():
+
+            logger.info(
+                f"[b d]Loading single file: {self.langchain_notes_path}"
+            )
+
+            with open(self.langchain_notes_path, "r") as f:
+                yield f.read()
+
+            return
+
         notes_extensions = [
             "*.md",
             "*.txt",
