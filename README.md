@@ -167,7 +167,7 @@ python -m assistants.study_assistant.main
     from langchain_core.runnables import RunnableLambda
     ```
 
-### Markdown 
+### Markdown Document Handling
 - For chunking documents with markdown formatting, `langchain` offers some useful resources:
     ```python
     from langchain_text_splitters import (
@@ -232,6 +232,7 @@ python -m assistants.study_assistant.main
         ```
     - In this case, the lowest "level" header has three hashtags: "###" therefore, `len(chunked_documents)` = number of headers at the level `###`.
     - Headers with a higher level (`#` and `##`) are included in the first chunk (assuming the remaining document only has headers at the level `###`).
+- For additional chunking, you can either use `langchain_text_splitters.CharacterTextSplitter` or alternatively, `langchain_text_splitters.RecursiveCharacterTextSplitter`(recommended) for more intelligent parsing of text; the `RecursiveCharacterTextSplitter` has stricter enforcement of the `chunk_size` since it uses fallback delimiters if a chunk exceeds the given limit.
 ## ReAct architecture
 
 - A `ReAct` styled agent implements the following loop for query resolution:
