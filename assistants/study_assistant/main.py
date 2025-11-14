@@ -1,5 +1,5 @@
 from rich.console import Console
-
+from datetime import datetime
 from assistants import init_env
 from assistants.logger import get_logger
 from assistants.study_assistant.study_assistant_builder import (
@@ -31,7 +31,7 @@ def main():
 
     readme_ingestor = LangChainNotesIngestor(
         langchain_notes_path="./README.md",
-        notes_namespace="repo-readme",
+        notes_namespace=f"repo-readme-{datetime.today().isoformat()}",
     )
     readme_ingestion_pipeline = LangChainNotesIngestionPipeline(
         ingestor=readme_ingestor,

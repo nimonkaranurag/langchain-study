@@ -3,10 +3,11 @@ import os
 from langchain.agents import tool
 from langchain_pinecone import PineconeEmbeddings
 from pinecone import Pinecone
+from datetime import datetime
 
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
-README_NAMESPACE = "repo-readme"
-LANGCHAIN_DOCS_NAMESPACE = "study-assistant"
+README_NAMESPACE = f"repo-readme-{datetime.today().isoformat()}"
+LANGCHAIN_DOCS_NAMESPACE = "study-assistant-batch"
 
 
 def _query_pinecone(query: str, top_k: int, namespace: str):
