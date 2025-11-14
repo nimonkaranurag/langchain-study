@@ -1,5 +1,5 @@
 import os
-from typing import Optional, Tuple
+from typing import Tuple
 
 from langchain.agents import tool
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore

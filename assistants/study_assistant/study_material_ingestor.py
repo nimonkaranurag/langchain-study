@@ -139,9 +139,7 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
                 )
                 continue
 
-            logger.info(
-                f"[b d]Ingested {count} documents"
-            )
+            logger.info(f"[b d]Ingested {count} documents")
 
         logger.info(f"[b d]Ingestion pipeline run is completed")
 

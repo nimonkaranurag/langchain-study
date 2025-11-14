@@ -5,8 +5,8 @@ from typing import Any, List, Optional, Union
 from langchain_core.documents import Document
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
 from langchain_text_splitters import (
-    CharacterTextSplitter,
     MarkdownHeaderTextSplitter,
+    RecursiveCharacterTextSplitter,
 )
 
 from assistants import __root_dir__, init_env
@@ -135,9 +135,9 @@ class HRPoliciesIngestor(Ingestor):
         )
 
     @staticmethod
-    def _get_text_splitter() -> CharacterTextSplitter:
+    def _get_text_splitter() -> RecursiveCharacterTextSplitter:
 
-        return CharacterTextSplitter(
+        return RecursiveCharacterTextSplitter(
             chunk_size=1000,
             chunk_overlap=200,
         )

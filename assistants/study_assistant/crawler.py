@@ -57,9 +57,7 @@ SSL certificate.
             },
         )
     except Exception as e:
-        raise RuntimeError(
-            f"Failed to performing web crawling: {e}"
-        )
+        raise RuntimeError(f"Failed to performing web crawling: {e}")
 
     logger.info(
         f"[b d]Finished web crawling operation, retrieved {len(results['results'])} pages"
@@ -86,8 +84,8 @@ SSL certificate.
                 "source": result["url"],
             },
         )
-        for result in results["results"] if \
-        result.get("raw_content") is not None
+        for result in results["results"]
+        if result.get("raw_content") is not None
     ]
 
     return langchain_documents

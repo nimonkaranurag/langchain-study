@@ -16,8 +16,9 @@ logger = get_logger()
 MAX_RETRIES = 5
 
 
-class AssistantFailedError(Exception):
-    pass
+class AssistantFailedError(RuntimeError):
+    def __init__(self, message: str):
+        super().__init__(message)
 
 
 class HRAssistant(Assistant):
@@ -92,7 +93,7 @@ class HRAssistant(Assistant):
             f"[b d]Last response contained tool calls: {assistant_response.tool_calls}"
         )
 
-        raise AssistantFailedError("Failed to process request.")
+        raise AssistantFailedError(message="Failed to process request.")
 
     def _execute_tool(self, tool_call: dict) -> ToolMessage:
 
