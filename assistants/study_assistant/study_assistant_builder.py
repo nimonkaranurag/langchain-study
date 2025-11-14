@@ -55,12 +55,4 @@ class StudyAssistantBuilder(AssistantBuilder):
 
     def render_prompt(self) -> str:
 
-        input_variables = list(self.system_instruction_variables.keys())
-
-        return PromptTemplate(
-            input_variables=input_variables,
-            template=self.raw_system_instructions,
-            template_format="f-string",
-        ).format(
-            **self.system_instruction_variables,
-        )
+        return self.raw_system_instructions
