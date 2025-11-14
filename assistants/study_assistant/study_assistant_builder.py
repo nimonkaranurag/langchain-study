@@ -15,9 +15,9 @@ class StudyAssistantBuilder(AssistantBuilder):
 
     def __init__(
         self,
-        system_instruction_variables: Optional[Dict[str, str]],
         raw_system_instructions: str,
         tools: list,
+        system_instruction_variables: Optional[Dict[str, str]] = None,
     ):
         self.raw_system_instructions = raw_system_instructions
         self.system_instruction_variables = system_instruction_variables

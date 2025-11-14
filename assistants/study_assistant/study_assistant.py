@@ -81,7 +81,7 @@ class StudyAssistant(Assistant):
                     ]
                 )
 
-                return structured_response["output"]
+                return structured_response
 
             for tool_call in assistant_response.tool_calls:
 
