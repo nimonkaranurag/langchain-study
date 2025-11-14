@@ -3,7 +3,6 @@ from datetime import datetime
 import streamlit as st
 
 from assistants import init_env
-from assistants.logger import get_logger
 from assistants.study_assistant.main import STUDY_ASSISTANT_TEMPLATE
 from assistants.study_assistant.study_assistant_builder import (
     StudyAssistantBuilder,
@@ -20,7 +19,6 @@ from assistants.study_assistant.tools import (
 st.set_page_config(page_title="Study Assistant", page_icon="📚", layout="wide")
 
 init_env()
-logger = get_logger()
 
 st.title("📚 Study Assistant")
 st.caption(
@@ -86,7 +84,8 @@ if not st.session_state.docs_ingested:
             st.rerun()
 
         if st.button(
-            "I have already ingested my docs, I want to use the assistant!",
+            "⏭️ Skip (Already Ingested)",
+            help="I have already ingested my docs, I want to use the assistant!",
             use_container_width=True,
             type="secondary",
         ):
@@ -129,7 +128,7 @@ if user_input := st.chat_input(
         st.markdown(user_input)
 
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
+        with st.spinner("🤔 Thinking..."):
             response = st.session_state.study_assistant.query(user_input)
             st.markdown(response.agent_response)
 

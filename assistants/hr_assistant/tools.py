@@ -4,14 +4,14 @@ from langchain.agents import tool
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
 from pinecone import Pinecone
 
+from assistants.hr_assistant.hr_policies_ingestor import (
+    PINECONE_INDEX_NAME,
+    PINECONE_INDEX_POLICIES_NAMESPACE,
+)
 from assistants.hr_assistant.schemas import (
     Date,
     TimeOffRequest,
     TimeOffResponse,
-)
-from assistants.hr_assistant.hr_policies_ingestor import (
-    PINECONE_INDEX_NAME,
-    PINECONE_INDEX_POLICIES_NAMESPACE,
 )
 
 

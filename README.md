@@ -1,5 +1,22 @@
 # Quick Run
 
+## Frontend Experience (Recommended!)
+
+There's a beautiful frontend I have designed for ease of navigation using `streamlit` that you can access (or, you could skip using it and just use the CLI instead). Here's the steps to launch it:
+**Run the following commands in a Python (>=3.12) environment:**
+```bash
+pip install -e .
+pip install tqdm
+streamlit run frontend/_🙋🏽<200d>♂️_welcome.py
+```
+
+### Expected Output
+
+![welcome](output/frontend/welcome.png)
+![hr assistant](output/frontend/hr_assistant.png)
+![study assistant](output/frontend/study_assistant.png)
+![search assistant](output/frontend/search_assistant.png)
+
 ## Environment Setup
 
 Create a `.env` file at the project root with the following properties:

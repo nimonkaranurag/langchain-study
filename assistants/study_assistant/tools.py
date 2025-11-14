@@ -5,6 +5,7 @@ from datetime import datetime
 from langchain.agents import tool
 from langchain_pinecone import PineconeEmbeddings
 from pinecone import Pinecone
+
 from assistants.study_assistant.study_material_ingestor import (
     PINECONE_INDEX_NAME,
     PINECONE_INDEX_NOTES_NAMESPACE,

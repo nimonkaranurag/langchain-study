@@ -1,8 +1,8 @@
 import math
 import os
+from datetime import datetime
 from pathlib import Path
 from typing import Any, List, Optional, Union
-from datetime import datetime
 
 from langchain_core.documents import Document
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
@@ -29,7 +29,9 @@ LANGCHAIN_NOTES_PATH = Path(
 PINECONE_INDEX_NAME = os.getenv(
     "PINECONE_INDEX_NAME",
 )
-PINECONE_INDEX_NOTES_NAMESPACE = f"study-assistant-batch-{datetime.today().date().isoformat()}"
+PINECONE_INDEX_NOTES_NAMESPACE = (
+    f"study-assistant-batch-{datetime.today().date().isoformat()}"
+)
 
 
 class LangChainNotesIngestor(Ingestor):
