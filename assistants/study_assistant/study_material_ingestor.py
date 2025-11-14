@@ -61,7 +61,7 @@ class LangChainNotesIngestor(Ingestor):
             )
 
             with open(self.langchain_notes_path, "r") as f:
-                yield f.read()
+                yield (f.read(), str(self.langchain_notes_path))
 
             return
 
@@ -73,10 +73,12 @@ class LangChainNotesIngestor(Ingestor):
         for note_extension in notes_extensions:
             for notes_path in self.langchain_notes_path.rglob(note_extension):
                 with open(notes_path, "r") as f:
-                    yield f.read()
+                    yield (f.read(), str(notes_path))
 
     @staticmethod
-    def split_document_into_chunks(document: Any) -> List[Document]:
+    def split_document_into_chunks(
+        document: Any, source_path: str
+    ) -> List[Document]:
 
         document_split_by_headers = MarkdownHeaderTextSplitter(
             headers_to_split_on=[
@@ -92,6 +94,9 @@ class LangChainNotesIngestor(Ingestor):
             chunk_size=4000,
             chunk_overlap=400,
         ).split_documents(document_split_by_headers)
+
+        for chunk in chunked_document:
+            chunk.metadata["source"] = source_path
 
         return chunked_document
 
@@ -138,9 +143,10 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
         embedding_model = LangChainNotesIngestor.get_embedding_model()
 
         all_chunks = []
-        for count, document in enumerate(documents):
+        for count, (document, source_path) in enumerate(documents):
             chunked_document = self.ingestor.split_document_into_chunks(
                 document=document,
+                source_path=source_path,
             )
             all_chunks.extend(chunked_document)
 

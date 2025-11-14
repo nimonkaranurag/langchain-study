@@ -12,7 +12,9 @@ class Ingestor(ABC):
 
     @staticmethod
     @abstractmethod
-    def split_document_into_chunks(document: str) -> List[Document]:
+    def split_document_into_chunks(
+        document: str, *args, **kwargs
+    ) -> List[Document]:
         raise NotImplementedError
 
     @abstractmethod

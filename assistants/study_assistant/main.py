@@ -33,7 +33,7 @@ def main():
 
     readme_ingestor = LangChainNotesIngestor(
         langchain_notes_path="./README.md",
-        notes_namespace=f"repo-readme-{datetime.today().isoformat()}",
+        notes_namespace=f"repo-readme-{datetime.today().date().isoformat()}",
     )
     readme_ingestion_pipeline = LangChainNotesIngestionPipeline(
         ingestor=readme_ingestor,

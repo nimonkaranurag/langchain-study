@@ -1,3 +1,4 @@
+import json
 import os
 from datetime import datetime
 
@@ -6,7 +7,7 @@ from langchain_pinecone import PineconeEmbeddings
 from pinecone import Pinecone
 
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
-README_NAMESPACE = f"repo-readme-{datetime.today().isoformat()}"
+README_NAMESPACE = f"repo-readme-{datetime.today().date().isoformat()}"
 LANGCHAIN_DOCS_NAMESPACE = "study-assistant-batch"
 
 
@@ -28,13 +29,16 @@ def _query_pinecone(query: str, top_k: int, namespace: str):
     return results
 
 
-def _format_response(intro_string: str, user_query: str, results) -> str:
+def _format_response(
+    intro_string: str, user_query: str, results
+) -> tuple[str, list[str]]:
 
     if not results or not results["matches"]:
-        return f"No results found for the query: {user_query}"
+        return f"No results found for the query: {user_query}", []
 
     response = ""
     response += intro_string
+    sources = []
     for result in results["matches"]:
 
         metadata = result.get("metadata", {})
@@ -44,7 +48,10 @@ def _format_response(intro_string: str, user_query: str, results) -> str:
         response += f"Subsection: {metadata.get("SUBSECTION", "N/A")}\n"
         response += f"{metadata.get("text", "N/A")}\n\n"
 
-    return response
+        if source := metadata.get("source"):
+            sources.append(source)
+
+    return response, sources
 
 
 @tool
@@ -66,10 +73,17 @@ def get_repo_readme(user_query: str, num_of_results_to_fetch: int = 5) -> str:
         top_k=num_of_results_to_fetch,
         namespace=README_NAMESPACE,
     )
-    return _format_response(
+    content, sources = _format_response(
         intro_string="Here are the relevant sections from the README:\n\n",
         user_query=user_query,
         results=results,
+    )
+
+    return json.dumps(
+        {
+            "content": content,
+            "sources": sources,
+        }
     )
 
 
@@ -91,8 +105,15 @@ def get_langchain_documentation(
         top_k=num_of_results_to_fetch,
         namespace=LANGCHAIN_DOCS_NAMESPACE,
     )
-    return _format_response(
+    content, sources = _format_response(
         intro_string="Here are the relevant sections from the Langchain documentation:\n\n",
         user_query=user_query,
         results=results,
+    )
+
+    return json.dumps(
+        {
+            "content": content,
+            "sources": sources,
+        }
     )
