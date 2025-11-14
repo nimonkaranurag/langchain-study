@@ -83,6 +83,9 @@ _a study assistant with structured outputs, can perform the following operations
 pip install -e .
 ```
 ```bash
+pip install tqdm
+```
+```bash
 python -m assistants.study_assistant.study_material_ingestor
 ```
 ```bash

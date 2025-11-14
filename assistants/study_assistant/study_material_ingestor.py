@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from typing import Any, List, Optional, Union
+import math
 
 from langchain_core.documents import Document
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
@@ -27,7 +28,7 @@ LANGCHAIN_NOTES_PATH = Path(
 PINECONE_INDEX_NAME = os.getenv(
     "PINECONE_INDEX_NAME",
 )
-PINECONE_INDEX_NOTES_NAMESPACE = "study-assistant"
+PINECONE_INDEX_NOTES_NAMESPACE = "study-assistant-batch"
 
 
 class LangChainNotesIngestor(Ingestor):
@@ -76,15 +77,15 @@ class LangChainNotesIngestor(Ingestor):
 
         chunked_document = CharacterTextSplitter(
             separator="\n\n",
-            chunk_size=1000,
-            chunk_overlap=200,
+            chunk_size=4000,
+            chunk_overlap=400,
         ).split_documents(document_split_by_headers)
 
         return chunked_document
 
     @staticmethod
     def get_embedding_model() -> PineconeEmbeddings:
-        return PineconeEmbeddings(model="llama-text-embed-v2")
+        return PineconeEmbeddings(model="llama-text-embed-v2", show_progress_bar=True)
 
     def store_embeddings(
         self,
@@ -122,26 +123,40 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
         documents = self.ingestor.load_document()
         embedding_model = LangChainNotesIngestor.get_embedding_model()
 
+        all_chunks = []
         for count, document in enumerate(documents):
-
             chunked_document = self.ingestor.split_document_into_chunks(
                 document=document,
             )
+            all_chunks.extend(chunked_document)
+        
+        BATCH_SIZE = 32
+        TOTAL_CHUNKS = len(all_chunks)
 
+        for current_batch_start_idx in range(0, TOTAL_CHUNKS, BATCH_SIZE):
+            
+            current_batch = all_chunks[current_batch_start_idx: current_batch_start_idx + BATCH_SIZE]
+
+            logger.info(
+                f"[b d]Processing batch {current_batch_start_idx//BATCH_SIZE + 1} out of {math.ceil(TOTAL_CHUNKS / BATCH_SIZE)} batches."
+            )
             status_code = self.ingestor.store_embeddings(
-                chunked_document=chunked_document,
+                chunked_document=current_batch,
                 embedding_model=embedding_model,
             )
-
-            if status_code != 200:
+            if status_code == 500:
                 logger.error(
-                    f"[b d]Failed to store embeddings for a document, it is being skipped"
+                    f"[b d]Failed to process batch: {current_batch_start_idx//BATCH_SIZE + 1}",
+                    exc_info=True,
+                    stack_info=True,
+                )
+                logger.info(
+                    "[b d]Skipping this batch"
                 )
                 continue
-
-            logger.info(f"[b d]Ingested {count} documents")
-
-        logger.info(f"[b d]Ingestion pipeline run is completed")
+        
+        logger.info(f"[b d]Successfully ingested {TOTAL_CHUNKS} chunks from {count + 1} documents")
+        logger.info("[b d]Ingestion pipeline run is completed")
 
 
 if __name__ == "__main__":
