@@ -33,7 +33,7 @@ class SystemInstructions:
     system_instruction_variables: List[str]
 
 
-def _load_system_instructions() -> SystemInstructions:
+def load_system_instructions() -> SystemInstructions:
 
     with open(HR_SYSTEM_INSTRUCTIONS_PATH, "r") as f:
         content = json.load(f)
@@ -51,7 +51,7 @@ def main():
 
     logger.info("[b d]⚙️ Loading system instructions...")
 
-    system_instructions = _load_system_instructions()
+    system_instructions = load_system_instructions()
 
     logger.info("[b d]🪄 Building assistant...")
 

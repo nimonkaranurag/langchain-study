@@ -1,4 +1,3 @@
-import os
 from typing import Tuple
 
 from langchain.agents import tool
@@ -9,6 +8,10 @@ from assistants.hr_assistant.schemas import (
     Date,
     TimeOffRequest,
     TimeOffResponse,
+)
+from assistants.hr_assistant.hr_policies_ingestor import (
+    PINECONE_INDEX_NAME,
+    PINECONE_INDEX_POLICIES_NAMESPACE,
 )
 
 
@@ -61,9 +64,6 @@ def get_relevant_company_policies(query: str, top_k: int = 5) -> str:
         A formatted string with the top policies matched for similarity against the "query" input.
     """
 
-    PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
-    POLICIES_NAMESPACE = "hr_policies"
-
     pinecone_client = Pinecone()
     policies_index = pinecone_client.Index(name=PINECONE_INDEX_NAME)
 
@@ -74,7 +74,7 @@ def get_relevant_company_policies(query: str, top_k: int = 5) -> str:
     raw_results = policies_index.query(
         vector=query_embedding,
         top_k=top_k,
-        namespace=POLICIES_NAMESPACE,
+        namespace=PINECONE_INDEX_POLICIES_NAMESPACE,
         include_metadata=True,
     )
     if not raw_results or not raw_results["matches"]:

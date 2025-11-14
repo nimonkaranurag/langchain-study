@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from typing import Any, List, Optional, Union
+from datetime import datetime
 
 from langchain_core.documents import Document
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
@@ -26,7 +27,7 @@ POLICIES_DOCUMENT_PATH = os.path.join(
 PINECONE_INDEX_NAME = os.getenv(
     "PINECONE_INDEX_NAME",
 )
-PINECONE_INDEX_POLICIES_NAMESPACE = "hr_policies"
+PINECONE_INDEX_POLICIES_NAMESPACE = f"hr-policies-{datetime.today().date().isoformat()}"
 
 
 class HRPoliciesIngestor(Ingestor):

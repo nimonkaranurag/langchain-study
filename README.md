@@ -32,7 +32,7 @@ Create a `.env` file at the project root with the following properties:
     PINECONE_INDEX_NAME=langchain-study
     ```
     - For the `study_assistant`, the langchain docs are stored in a separate namespace within Pinecone. 
-    - Effectively, three separate namespaces are created in the Pinecone index set in the `.env` file: `"repo-readme-<<today_date_stamp_in_iso_format>>"`, `"study-assistant-batch"` and `"hr_policies"`.
+    - Effectively, three separate namespaces are created in the Pinecone index set in the `.env` file: `"repo-readme-<<today_date_stamp_in_iso_format>>"`, `"study-assistant-batch-<<today_date_stamp_in_iso_format>>"` and `"hr-policies-<<today_date_stamp_in_iso_format>>"`.
 
 ## How to run and use assistants
 

@@ -5,10 +5,13 @@ from datetime import datetime
 from langchain.agents import tool
 from langchain_pinecone import PineconeEmbeddings
 from pinecone import Pinecone
+from assistants.study_assistant.study_material_ingestor import (
+    PINECONE_INDEX_NAME,
+    PINECONE_INDEX_NOTES_NAMESPACE,
+)
 
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 README_NAMESPACE = f"repo-readme-{datetime.today().date().isoformat()}"
-LANGCHAIN_DOCS_NAMESPACE = "study-assistant-batch"
 
 
 def _query_pinecone(query: str, top_k: int, namespace: str):
@@ -103,7 +106,7 @@ def get_langchain_documentation(
     results = _query_pinecone(
         query=user_query,
         top_k=num_of_results_to_fetch,
-        namespace=LANGCHAIN_DOCS_NAMESPACE,
+        namespace=PINECONE_INDEX_NOTES_NAMESPACE,
     )
     content, sources = _format_response(
         intro_string="Here are the relevant sections from the Langchain documentation:\n\n",

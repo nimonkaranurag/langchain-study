@@ -95,7 +95,7 @@ Pinecone provides vector storage for document retrieval in HR and Study assistan
 **Note:** 
 - Only needed for HR Assistant and Study Assistant
 - Free tier is sufficient for this project
-- Three namespaces will be created: `repo-readme-*`, `study-assistant-batch`, and `hr_policies`
+- Three namespaces will be created: `repo-readme-*`, `study-assistant-batch-*`, and `hr-policies-*`
 """
     )
     st.code(
