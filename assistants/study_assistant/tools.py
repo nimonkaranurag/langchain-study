@@ -53,6 +53,7 @@ def get_repo_readme(user_query: str, num_of_results_to_fetch: int = 5) -> str:
     This tool is to be used for user queries relating to how they can use the "langchain-study" repository.
     For example, if the user asks: "how do I run the hr_assistant?" then the README likely contains instructions on how this can be achieved.
     The query passed is used for fetching only the relevant section of the README.
+    In addition to instructions on how to set-up the "langchain-study" repo, the README also contains some basic (very minimal) information on LangChain so you can use this as a "fall-back" if the "get_langchain_documentation" tool doesn't return any results.
 
     Args:
         user_query (str): a paraphrasing of the user's question that is matched against the README for relevant sections.

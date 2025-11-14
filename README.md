@@ -1,59 +1,99 @@
-## Quick Run
+# Quick Run
 
-Sign into `Groq` (this is the inference endpoint provider/model provider default) and create an `.env` file with the key:
-```
-GROQ_API_KEY=<your_groq_api_key>
-```
+## Environment Setup
 
-For tracing with `langsmith`, set-up a `.env` file at the project root that has the following keys:
-```
-LANGSMITH_TRACING=true
-LANGSMITH_API_KEY=<your_langsmith_api_key>
-LANGSMITH_PROJECT=langchain-study
-```
+Create a `.env` file at the project root with the following properties:
 
-To use the react agent, you must also provide:
-```python
-TAVILY_API_KEY=<your_tavily_api_key>
-```
+- Sign into `Groq` (this is the inference endpoint provider/model provider default) and create an `.env` file with the key:
+    ```
+    GROQ_API_KEY=<your_groq_api_key>
+    ```
 
-Set the logging level using:
-```bash
-export LANGCHAIN_STUDY_LOG_LEVEL=DEBUG
-```
+- For tracing with `langsmith`, set-up a `.env` file at the project root that has the following keys:
+    ```
+    LANGSMITH_TRACING=true
+    LANGSMITH_API_KEY=<your_langsmith_api_key>
+    LANGSMITH_PROJECT=langchain-study
+    ```
 
-The HR assistant can perform look-ups on a PINECONE Vector DB, to utilise this feature - provide your API KEY and index name like so:
-```bash
-PINECONE_API_KEY=<your_api_key>
-PINECONE_INDEX_NAME=langchain-study
-```
-For the `study_assistant`, the langchain docs are stored in a separate namespace.
+- To use the react/search agent, you must also sign up with Tavily and provide:
+    ```python
+    TAVILY_API_KEY=<your_tavily_api_key>
+    ```
 
-**Run the following commands in a Python (>=3.12) environment:**
+- Set the logging level using:
+    ```bash
+    export LANGCHAIN_STUDY_LOG_LEVEL=DEBUG
+    ```
+
+- The HR assistant can perform look-ups on a PINECONE Vector DB, to utilise this feature - provide your API KEY and index name like so:
+    ```bash
+    PINECONE_API_KEY=<your_api_key>
+    PINECONE_INDEX_NAME=langchain-study
+    ```
+    - For the `study_assistant`, the langchain docs are stored in a separate namespace within Pinecone. 
+    - Effectively, three separate namespaces are created in the Pinecone index set in the `.env` file: `"repo-readme"`, `"study-assistant"` and `"hr_policies"`.
+
+## How to run and use assistants
+
+### HR Assitant
 
 _a basic HR assistant, for now - it can:_
 - apply for time-off requests for `"nimo@ibm.com"`
 - explain company policy, sample query: `"Can you tell me the company policy on data privacy?"`
 
+**Run the following commands in a Python (>=3.12) environment:**
 ```bash
 pip install -e .
+```
+```bash
+python -m assistants.hr_assistant.hr_policies_ingestor
+```
+```bash
 python -m assistants.hr_assistant.main
 ```
 
-### Expected Output
+#### Expected Output
 
 ![hr assistant](output/hr_assistant.png)
 
+### Search Assistant
+
 _a ReAct seach agent with structured outputs, can perform summarization of search results, powered by `TavilySearch`_
 
+**Run the following commands in a Python (>=3.12) environment:**
 ```bash
 pip install -e .
 python -m assistants.search_assistant.main
 ```
 
-### Expected Output
+#### Expected Output
 
 ![react agent](output/search_assistant.png)
+
+### Study Assistant
+
+_a study assistant with structured outputs, can perform the following operations:_
+- help navigate the langchain-study repo ("how-to") instructions
+- help study langchain!
+- **Note:** If ingesting langchain documents leads to errors in the free tier, my langchain notes should provide some basic insight at a minimum.
+
+**Run the following commands in a Python (>=3.12) environment:**
+```bash
+pip install -e .
+```
+```bash
+python -m assistants.study_assistant.study_material_ingestor
+```
+```bash
+python -m assistants.study_assistant.main
+```
+
+#### Expected Output
+
+![study agent](output/study_assistant_langchain.png)
+
+![study agent](output/study_assistant_repo.png)
 
 ## Langchain Notes
 
