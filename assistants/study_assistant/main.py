@@ -1,5 +1,7 @@
-from rich.console import Console
 from datetime import datetime
+
+from rich.console import Console
+
 from assistants import init_env
 from assistants.logger import get_logger
 from assistants.study_assistant.study_assistant_builder import (

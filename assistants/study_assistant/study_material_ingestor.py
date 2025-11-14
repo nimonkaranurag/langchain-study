@@ -1,7 +1,7 @@
+import math
 import os
 from pathlib import Path
 from typing import Any, List, Optional, Union
-import math
 
 from langchain_core.documents import Document
 from langchain_pinecone import PineconeEmbeddings, PineconeVectorStore
@@ -85,7 +85,9 @@ class LangChainNotesIngestor(Ingestor):
 
     @staticmethod
     def get_embedding_model() -> PineconeEmbeddings:
-        return PineconeEmbeddings(model="llama-text-embed-v2", show_progress_bar=True)
+        return PineconeEmbeddings(
+            model="llama-text-embed-v2", show_progress_bar=True
+        )
 
     def store_embeddings(
         self,
@@ -129,13 +131,15 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
                 document=document,
             )
             all_chunks.extend(chunked_document)
-        
+
         BATCH_SIZE = 32
         TOTAL_CHUNKS = len(all_chunks)
 
         for current_batch_start_idx in range(0, TOTAL_CHUNKS, BATCH_SIZE):
-            
-            current_batch = all_chunks[current_batch_start_idx: current_batch_start_idx + BATCH_SIZE]
+
+            current_batch = all_chunks[
+                current_batch_start_idx : current_batch_start_idx + BATCH_SIZE
+            ]
 
             logger.info(
                 f"[b d]Processing batch {current_batch_start_idx//BATCH_SIZE + 1} out of {math.ceil(TOTAL_CHUNKS / BATCH_SIZE)} batches."
@@ -150,12 +154,12 @@ class LangChainNotesIngestionPipeline(IngestionPipeline):
                     exc_info=True,
                     stack_info=True,
                 )
-                logger.info(
-                    "[b d]Skipping this batch"
-                )
+                logger.info("[b d]Skipping this batch")
                 continue
-        
-        logger.info(f"[b d]Successfully ingested {TOTAL_CHUNKS} chunks from {count + 1} documents")
+
+        logger.info(
+            f"[b d]Successfully ingested {TOTAL_CHUNKS} chunks from {count + 1} documents"
+        )
         logger.info("[b d]Ingestion pipeline run is completed")
 
 

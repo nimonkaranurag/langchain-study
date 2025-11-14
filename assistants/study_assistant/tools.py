@@ -1,9 +1,9 @@
 import os
+from datetime import datetime
 
 from langchain.agents import tool
 from langchain_pinecone import PineconeEmbeddings
 from pinecone import Pinecone
-from datetime import datetime
 
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 README_NAMESPACE = f"repo-readme-{datetime.today().isoformat()}"
