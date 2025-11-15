@@ -6,6 +6,11 @@ from langchain.agents import tool
 from langchain_pinecone import PineconeEmbeddings
 from pinecone import Pinecone
 
+from assistants.search_assistant.schemas import SearchAgentResponse
+from assistants.search_assistant.search_assistant import SearchAssistant
+from assistants.search_assistant.search_assistant_builder import (
+    SearchAssistantBuilder,
+)
 from assistants.study_assistant.study_material_ingestor import (
     PINECONE_INDEX_NAME,
     PINECONE_INDEX_NOTES_NAMESPACE,
@@ -13,6 +18,7 @@ from assistants.study_assistant.study_material_ingestor import (
 
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 README_NAMESPACE = f"repo-readme-{datetime.today().date().isoformat()}"
+_SEARCH_ASSISTANT: SearchAssistant = SearchAssistantBuilder().build()
 
 
 def _query_pinecone(query: str, top_k: int, namespace: str):
@@ -119,5 +125,30 @@ def get_langchain_documentation(
         {
             "content": content,
             "sources": sources,
+        }
+    )
+
+
+@tool
+def search_the_internet(user_query: str) -> str:
+    """
+    If a user asks a question relating to langchain and you fail to get results from any of these tools: "get_langchain_documentation" and "get_repo_readme" then,
+    use this tool to search the internet instead!
+    The user_query is simply typed into a search engine and the relevant results will be returned to you.
+    You can obviously use this tool for off-topic instructions that have nothing to do with langchain as well at your discretion.
+    Ideally, you should pass the information verbatim back to the user if it answers their query without any paraphrasing or additional comments.
+
+    Args:
+        user_query (str): the content that is typed into the search engine verbatim. Try to include keywords in a natural language for best results.
+    """
+
+    response: SearchAgentResponse = _SEARCH_ASSISTANT.query(
+        user_input=user_query
+    )
+
+    return json.dumps(
+        {
+            "description": "The content in the 'response' key was returned by the search engine.",
+            "response": response.model_dump(mode="json"),
         }
     )

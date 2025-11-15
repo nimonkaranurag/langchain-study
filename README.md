@@ -37,6 +37,7 @@ Create a `.env` file at the project root with the following properties:
     ```python
     TAVILY_API_KEY=<your_tavily_api_key>
     ```
+    - The study assistant also routes to this agent for web searches.
 
 - Set the logging level using:
     ```bash

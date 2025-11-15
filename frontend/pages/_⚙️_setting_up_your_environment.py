@@ -72,7 +72,7 @@ Tavily provides optimized search capabilities for the Search Assistant's ReAct a
 4. Copy your API key
 5. Add to your `.env` file
     
-**Note:** Only needed if you plan to use the Search Assistant.
+**Note:** Only needed if you plan to use the Search Assistant/Study Assistant.
 """
     )
     st.code("TAVILY_API_KEY=your_tavily_api_key_here", language="bash")
@@ -129,7 +129,7 @@ LANGSMITH_TRACING=true
 LANGSMITH_API_KEY=your_langsmith_api_key_here
 LANGSMITH_PROJECT=langchain-study
 
-# Optional - Search Assistant
+# Optional - Search Assistant and Study Assistant
 TAVILY_API_KEY=your_tavily_api_key_here
 
 # Optional - HR & Study Assistants

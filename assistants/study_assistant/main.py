@@ -14,6 +14,7 @@ from assistants.study_assistant.study_material_ingestor import (
 from assistants.study_assistant.tools import (
     get_langchain_documentation,
     get_repo_readme,
+    search_the_internet,
 )
 
 init_env()
@@ -62,6 +63,7 @@ def main():
         tools=[
             get_langchain_documentation,
             get_repo_readme,
+            search_the_internet,
         ],
     )
 
