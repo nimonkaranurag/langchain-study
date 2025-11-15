@@ -425,7 +425,36 @@ python -m assistants.study_assistant.main
     Native function call supported LLMs as agents ->
     LangGraph ReAct agents for production demands.
     ```
+### Chain of Thought Prompting
+- The first evolution of prompt engineering came from understanding that LLMs gave different (showed better fitting outputs for a use-case) through selection of an appropriate number of examples:
+    - Zero-shot prompting (no examples)
+        ```bash
+        User: Describe a natural scene for me
+        ```
+    - One-shot prompting (1 example)
+        ```bash
+        User: Describe a natural scene for me, here are some adjectives to use in your description:
+            vivid, sunny, fresh
+        ```
+    - Few-shot prompting (> 1 example)
+- Then came **CoT Prompting** which proved the hypothesis that typing out the "reasoning" in a question-answer style in the query helped better/more accurate outputs:
+    - Zero-shot CoT prompting:
+        ```
+        User: How would you learn maths from scratch?
+        Let's think through this step by step.
+        ```
+    - Few-shot CoT prompting:
+        ```
+        User: Q: How would you learn math from scratch?
+        A: I would hire a tutor, go to university and pursue a degree in maths.
 
+        Q: How would you learn english from scratch?
+        A: I would converse in english more often, read more literature and study etymology so I can correlate english origins to my native tongue.
+
+        Q: How would you learn history from scratch?
+        A: 
+        ```
+- **Combining CoT Prompting + the ability to execute/act on that reasoning lead to the ReAct architecture, thus using LLMs as the "reasoning engine".**
 ## RAG Notes
 
 - **Problem Statement:** When the answer to our question exists inside a specific part of a large document, we need an effective mechanism for breaking up the document into chunks.
