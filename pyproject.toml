@@ -16,6 +16,7 @@ dependencies = [
     "langchain-community~=0.3.14",
     "unstructured[md]~=0.18.15",
     "streamlit~=1.51.0",
+    "fastmcp==1.0",
 ]
 
 [project.optional-dependencies]

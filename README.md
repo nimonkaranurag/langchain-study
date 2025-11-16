@@ -1,5 +1,10 @@
 # Quick Run
 
+### For an enhanced learning experience, you can set-up Claude Desktop and ask it questions about the README or other repo implementations!
+
+[Click here to see how to set-up an MCP server that you can integrate with any MCP client!](./mcp/README.md)
+
+
 ## Frontend Experience (Recommended!)
 
 There's a beautiful frontend I have designed for ease of navigation using `streamlit` that you can access (or, you could skip using it and just use the CLI instead). Here's the steps to launch it:
