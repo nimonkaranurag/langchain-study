@@ -1,6 +1,17 @@
-# Quick Run
+## Index
+- [Quick Run](#quick-run)
+- [Launch Frontend UI](#frontend-experience-recommended)
+- [How to setup environment](#environment-setup)
+- [How to launch/use assistants](#how-to-run-and-use-assistants)
+- [Langchain Notes](#langchain-notes)
+- [ReAct Notes](#react-architecture)
+- [RAG Notes](#rag-notes)
+- [Reflection vs Self Reflection/"Reflexion"](#reflection-vs-reflexion)
+- [Agentic AI Notes](#agentic-ai-notes)
 
-### For an enhanced learning experience, you can set-up Claude Desktop and ask it questions about the README or other repo implementations!
+## Quick Run
+
+**For an enhanced learning experience, you can set-up Claude Desktop and ask it questions about the README or other repo implementations!**
 
 [Click here to see how to set-up an MCP server that you can integrate with any MCP client!](./mcp/README.md)
 
