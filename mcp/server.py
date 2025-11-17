@@ -21,7 +21,7 @@ class AssistantName(BaseModel):
 
 REPO_ROOT = Path(os.getenv("REPO_ROOT", ".")).resolve()
 
-mcp = FastMCP("helper")
+mcp = FastMCP("langchain-study")
 
 
 @mcp.resource(
@@ -45,10 +45,11 @@ def how_to_setup() -> str:
 @mcp.tool()
 def read_file(file_path: str) -> str:
     """
-    This tool can be be used to read the file, given its path.
-    To learn the exact location of the file, use the "get_project_directory_structure" tool.
+    This tool can be be used to read the file, given its path relative to the root.
+    To learn the exact relative location of any file, use the "get_project_directory_structure" tool.
+    NOTE: take care to pass the relative path to the file and do not use absolute paths, for example: if you want the "README.md" of this repo, `file_path` should be "README.md" (since the README is located at the project root).
     Args:
-        file_path (Path): the path to the file.
+        file_path (Path): the relative path to the file.
     Returns:
         The file whose path is passed, rendered as text.
     """
@@ -59,7 +60,7 @@ def read_file(file_path: str) -> str:
         return f"Error: Access denied. Path must be within the repository."
 
     if not target_path.exists():
-        return f"This file does not exist, please check the path: {str(file_path)}."
+        return f"This file does not exist, please check the path: {str(file_path)}. Use the path to the file relative to the `langchain-study` repo and do not use absolute paths."
 
     with open(target_path, mode="r") as f:
         return f.read()
@@ -74,7 +75,7 @@ def get_project_directory_structure(max_depth: int) -> str:
         max_depth (int): The maximum depth to traverse in the file tree.
     """
 
-    max_depth = min(max_depth, 5)
+    max_depth = min(max_depth, 5) # to prevent timeouts, the max depth is set to 5
 
     try:
         result = subprocess.run(
