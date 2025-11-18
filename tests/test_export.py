@@ -8,16 +8,21 @@ class TestExportFunctions(unittest.TestCase):
             {"role": "user", "content": "Hello!"},
             {"role": "assistant", "content": "Hi, how can I help you?"}
         ]
+        self.temp_files = []
 
     def test_export_json(self):
         filename = export_chat_json(self.chat_history, "test_chat.json")
         self.assertTrue(os.path.exists(filename))
-        os.remove(filename)
+        self.temp_files.append(filename)
 
     def test_export_markdown(self):
         filename = export_chat_markdown(self.chat_history, "test_chat.md")
         self.assertTrue(os.path.exists(filename))
-        os.remove(filename)
+        self.temp_files.append(filename)
 
+    def tearDown(self):
+        for filename in getattr(self, "temp_files", []):
+            if os.path.exists(filename):
+                os.remove(filename)
 if __name__ == "__main__":
     unittest.main()
