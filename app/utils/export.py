@@ -10,7 +10,7 @@ def export_chat_json(chat_history, filename="chat_export.json"):
     chat_history_copy = copy.deepcopy(chat_history)
     for msg in chat_history_copy:
         if "timestamp" not in msg:
-            msg["timestamp"] = datetime.now().isoformat()
+            raise ValueError("All messages must have a 'timestamp' key before export. Message: {}".format(msg))
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(chat_history_copy, f, indent=2)
     return filename
