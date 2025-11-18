@@ -1,13 +1,18 @@
 import json
 from datetime import datetime
+import copy
 
 def export_chat_json(chat_history, filename="chat_export.json"):
-    """Export chat history as JSON with timestamps."""
-    for msg in chat_history:
+    """Export chat history as JSON with timestamps.
+
+    Note: This function does not mutate the input chat_history.
+    """
+    chat_history_copy = copy.deepcopy(chat_history)
+    for msg in chat_history_copy:
         if "timestamp" not in msg:
             msg["timestamp"] = datetime.now().isoformat()
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(chat_history, f, indent=2)
+        json.dump(chat_history_copy, f, indent=2)
     return filename
 
 def export_chat_markdown(chat_history, filename="chat_export.md"):
