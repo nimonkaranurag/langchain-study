@@ -23,6 +23,10 @@ def export_chat_markdown(chat_history, filename="chat_export.md"):
         content = msg.get("content", "")
         timestamp = msg.get("timestamp", "")
         md_lines.append(f"**{role.title()}** ({timestamp}):\n{content}\n")
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write("\n".join(md_lines))
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write("\n".join(md_lines))
+    except Exception as e:
+        print(f"Error exporting chat to markdown: {e}")
+        raise
     return filename
