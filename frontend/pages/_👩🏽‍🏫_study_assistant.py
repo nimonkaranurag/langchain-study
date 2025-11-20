@@ -15,6 +15,9 @@ from assistants.study_assistant.tools import (
     get_langchain_documentation,
     get_repo_readme,
 )
+import os
+from app.utils.export import export_chat_json, export_chat_markdown
+from pages.stats import show_stats
 
 st.set_page_config(page_title="Study Assistant", page_icon="📚", layout="wide")
 
@@ -26,6 +29,31 @@ st.caption(
 )
 
 st.divider()
+
+# --- Sidebar: Export & Stats ---
+with st.sidebar:
+    st.subheader("Export Chat History")
+    chat_history = st.session_state.get("study_messages", [])
+    if chat_history:
+        json_bytes = str(chat_history).encode("utf-8")
+        md_content = "\n".join([
+            f"{msg['role'].title()}: {msg['content']}" for msg in chat_history
+        ])
+        st.download_button(
+            label="Download as JSON",
+            data=json_bytes,
+            file_name="chat_export.json",
+            mime="application/json",
+        )
+        st.download_button(
+            label="Download as Markdown",
+            data=md_content,
+            file_name="chat_export.md",
+            mime="text/markdown",
+        )
+    st.subheader("Chat Statistics")
+    if st.button("Show Stats Dashboard"):
+        show_stats(chat_history)
 
 if "docs_ingested" not in st.session_state:
     st.session_state.docs_ingested = False

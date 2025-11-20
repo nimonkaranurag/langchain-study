@@ -1,0 +1,32 @@
+import json
+from datetime import datetime
+import copy
+
+def export_chat_json(chat_history, filename="chat_export.json"):
+    """Export chat history as JSON with timestamps.
+
+    Note: This function does not mutate the input chat_history.
+    """
+    chat_history_copy = copy.deepcopy(chat_history)
+    for msg in chat_history_copy:
+        if "timestamp" not in msg:
+            raise ValueError("All messages must have a 'timestamp' key before export. Message: {}".format(msg))
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(chat_history_copy, f, indent=2)
+    return filename
+
+def export_chat_markdown(chat_history, filename="chat_export.md"):
+    """Export chat history as Markdown."""
+    md_lines = []
+    for msg in chat_history:
+        role = msg.get("role", "user")
+        content = msg.get("content", "")
+        timestamp = msg.get("timestamp", "")
+        md_lines.append(f"**{role.title()}** ({timestamp}):\n{content}\n")
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write("\n".join(md_lines))
+    except Exception as e:
+        print(f"Error exporting chat to markdown: {e}")
+        raise
+    return filename
